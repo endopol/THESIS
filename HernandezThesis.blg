@@ -1,0 +1,369 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: HernandezThesis.aux
+The style file: plain.bst
+Database file #1: Exploration/exploration.bib.bib
+Database file #2: Exploration/text.bib.bib
+Database file #3: Observability/self.bib.bib
+I was expecting a `,' or a `}'---line 885 of file Observability/self.bib.bib
+ :  
+ :  PAGES = {1958-1972},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1435 of file Observability/self.bib.bib
+ : JOURNAL = {Intl. Conf. on Comp. Vision (ICCV)}
+ :                                               .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 2357 of file Observability/self.bib.bib
+ : 
+ : %NOTE = {ONR,ARO,AFOSR}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 2375 of file Observability/self.bib.bib
+ : 
+ : %NOTE = {CENS,ONR,MURI,ARO,AFOSR}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 2393 of file Observability/self.bib.bib
+ : 
+ : %NOTE = {UCLA-CSD-090013,ARO,AFOSR,ONR}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4929 of file Observability/self.bib.bib
+ : JOURNAL = {NIPS}
+ :                 .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4945 of file Observability/self.bib.bib
+ : JOURNAL = {NIPS}
+ :                 .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4959 of file Observability/self.bib.bib
+ : JOURNAL = {NIPS}
+ :                 .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4975 of file Observability/self.bib.bib
+ : JOURNAL = {}
+ :             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4991 of file Observability/self.bib.bib
+ : JOURNAL = {}
+ :             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 5005 of file Observability/self.bib.bib
+ : JOURNAL = {}
+ :             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 5019 of file Observability/self.bib.bib
+ : JOURNAL = {}
+ :             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 5033 of file Observability/self.bib.bib
+ : JOURNAL = {}
+ :             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 5511 of file Observability/self.bib.bib
+ :  
+ :  MONTH = {}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Database file #4: Observability/filter.bib.bib
+Database file #5: Observability/total2.bib.bib
+Repeated entry---line 412 of file Observability/total2.bib.bib
+ : @article{soatto97
+ :                  ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 9586 of file Observability/total2.bib.bib
+ : 
+ : @TECHREPORT{tuM,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Unbalanced braces---line 10301 of file Observability/total2.bib.bib
+ : 
+ : }
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 10324 of file Observability/total2.bib.bib
+ : 
+ : pages = {316-327 },
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field part---line 10374 of file Observability/total2.bib.bib
+ :    year = 
+ :           ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `)'---line 11746 of file Observability/total2.bib.bib
+ :         YEAR = "2000"
+ :                      }
+I'm skipping whatever remains of this entry
+Repeated entry---line 11905 of file Observability/total2.bib.bib
+ : @inproceedings{soatto97
+ :                        ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `)'---line 12340 of file Observability/total2.bib.bib
+ :         PAGES = "18A9"
+ :                       }
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 14383 of file Observability/total2.bib.bib
+ :         
+ :         AUTHOR = {V. Pavlovic and B. J. Frey and T. S. Huang},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 14425 of file Observability/total2.bib.bib
+ : PAGES = {1216--}
+ :                 1227,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 15526 of file Observability/total2.bib.bib
+ : 
+ : pages = {316-327 },
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field part---line 18625 of file Observability/total2.bib.bib
+ :   OPTvolume =  
+ :                ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 19625 of file Observability/total2.bib.bib
+ : 
+ : %   author =  "P Saisan and  G Doretto and  Y N Wu and S Soatto",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 34913 of file Observability/total2.bib.bib
+ : @article{soatto97
+ :                  ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 48805 of file Observability/total2.bib.bib
+ : pages = 7
+ :          --18
+I'm skipping whatever remains of this entry
+Repeated entry---line 49718 of file Observability/total2.bib.bib
+ : @article{denzlerB02
+ :                    ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 50407 of file Observability/total2.bib.bib
+ : notes = "pac-learning analysis of object localization; active localization is efficiently learnable, passive localization is not"
+ :                                                                                                                                  .
+I'm skipping whatever remains of this entry
+You're missing a field name---line 51600 of file Observability/total2.bib.bib
+ : 
+ : %month={mar},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 53011 of file Observability/total2.bib.bib
+ :  
+ :  notes = {http://www.di.ens.fr/willow/pdfs/icml2010b.pdf}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Database file #6: SolidObjects/cvpr2015_solobj/bib/solidObjDet.bib.bib
+Repeated entry---line 71 of file SolidObjects/cvpr2015_solobj/bib/solidObjDet.bib.bib
+ : @inproceedings{Graber2011
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 254 of file SolidObjects/cvpr2015_solobj/bib/solidObjDet.bib.bib
+ : @inproceedings{Campbell13_NIPS
+ :                               ,
+I'm skipping whatever remains of this entry
+Database file #7: SolidObjects/cvpr2015_solobj/bib/solidObjDet2.bib.bib
+Repeated entry---line 1 of file SolidObjects/cvpr2015_solobj/bib/solidObjDet2.bib.bib
+ : @article{Zach2008
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 9 of file SolidObjects/cvpr2015_solobj/bib/solidObjDet2.bib.bib
+ : @article{Klein2007
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 49 of file SolidObjects/cvpr2015_solobj/bib/solidObjDet2.bib.bib
+ : @inproceedings{Graber2011
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 56 of file SolidObjects/cvpr2015_solobj/bib/solidObjDet2.bib.bib
+ : @inproceedings{Newcombe2011a
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 75 of file SolidObjects/cvpr2015_solobj/bib/solidObjDet2.bib.bib
+ : @inproceedings{Collins1996
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 112 of file SolidObjects/cvpr2015_solobj/bib/solidObjDet2.bib.bib
+ : @inproceedings{Zach2007
+ :                        ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 347 of file SolidObjects/cvpr2015_solobj/bib/solidObjDet2.bib.bib
+ : @article{wangA94
+ :                 ,
+I'm skipping whatever remains of this entry
+Database file #8: SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+Repeated entry---line 389 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ : @article{soatto97
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 9335 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ : @inproceedings{wangA94
+ :                       ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 9557 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ : 
+ : @TECHREPORT{tuM,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Unbalanced braces---line 10272 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ : 
+ : }
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 10295 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ : 
+ : pages = {316-327 },
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field part---line 10345 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ :    year = 
+ :           ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `)'---line 11717 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ :         YEAR = "2000"
+ :                      }
+I'm skipping whatever remains of this entry
+Repeated entry---line 11876 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ : @inproceedings{soatto97
+ :                        ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `)'---line 12311 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ :         PAGES = "18A9"
+ :                       }
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 14354 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ :         
+ :         AUTHOR = {V. Pavlovic and B. J. Frey and T. S. Huang},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 14396 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ : PAGES = {1216--}
+ :                 1227,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 15497 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ : 
+ : pages = {316-327 },
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field part---line 18596 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ :   OPTvolume =  
+ :                ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 19596 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ : 
+ : %   author =  "P Saisan and  G Doretto and  Y N Wu and S Soatto",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 34892 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ : @article{soatto97
+ :                  ,
+I'm skipping whatever remains of this entry
+"," immediately follows an entry type---line 44274 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ : @bookcChentsov72
+ :                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 49705 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ : @article{denzlerB02
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 50286 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ : @conference{kellyS09
+ :                     ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 50394 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ : notes = "pac-learning analysis of object localization; active localization is efficiently learnable, passive localization is not"
+ :                                                                                                                                  .
+I'm skipping whatever remains of this entry
+Repeated entry---line 51574 of file SolidObjects/cvpr2015_solobj/bib/total2.bib.bib
+ : @inproceedings{mourikisR07
+ :                           ,
+I'm skipping whatever remains of this entry
+Database file #9: SolidObjects/cvpr2015_solobj/bib/taylorARS12.bib.bib
+Repeated entry---line 286 of file SolidObjects/cvpr2015_solobj/bib/taylorARS12.bib.bib
+ : @article{wangA94
+ :                 ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 458 of file SolidObjects/cvpr2015_solobj/bib/taylorARS12.bib.bib
+ :   
+ :   title  = {}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Database file #10: SolidObjects/cvpr2015_solobj/bib/ayvaciS13.bib.bib
+Database file #11: SolidObjects/cvpr2015_solobj/bib/ayvaciS11mdl.bib.bib
+Repeated entry---line 90 of file SolidObjects/cvpr2015_solobj/bib/ayvaciS11mdl.bib.bib
+ : @article{wangA94
+ :                 ,
+I'm skipping whatever remains of this entry
+Database file #12: SolidObjects/cvpr2015_solobj/bib/trevor.bib.bib
+Warning--I didn't find a database entry for "roumeliotisM"
+Too many commas in name 1 of "G.A.\ Hollinger, B.\ Englot, F.\ Hover, U.\ Mitra and G.S.\ Sukhatme" for entry hollinger12
+while executing---line 1049 of file plain.bst
+Warning--empty journal in algoet94
+Warning--empty journal in cassandraKL94
+Warning--empty journal in arbelF01
+Warning--empty booktitle in burnsB03
+Warning--empty booktitle in connolly85
+Warning--empty journal in denzlerB02
+Too many commas in name 1 of "G.A.\ Hollinger, B.\ Englot, F.\ Hover, U.\ Mitra and G.S.\ Sukhatme" for entry hollinger12
+while executing---line 1090 of file plain.bst
+Warning--empty journal in hollinger12
+Warning--empty journal in geyer91
+Warning--empty journal in hauskrecht00
+Warning--empty booktitle in valenteTS12
+Warning--empty journal in Lempitsky11
+Warning--empty journal in liberzon2012invertibility
+Warning--empty journal in kearnsMN99
+Warning--empty journal in nieuwenhuis-et-al-ijcv12
+Warning--empty journal in krauseG07
+Warning--empty booktitle in dearden99
+Warning--empty journal in royCB04
+Warning--empty journal in grabowskiKC03
+Warning--empty journal in SimD04
+Warning--empty journal in ulen-strandmark-etal-itmi-12
+Warning--empty year in ulen-strandmark-etal-itmi-12
+Warning--empty journal in whaiteF97
+Warning--empty booktitle in yamauchi97
+Warning--empty booktitle in yuG00
+Warning--empty booktitle in yuWY96
+Warning--there's a number but no volume in GuofengZhang:jmb
+You've used 96 entries,
+            2118 wiz_defined-function locations,
+            1362 strings with 29004 characters,
+and the built_in function-call counts, 37448 in all, are:
+= -- 3740
+> -- 1691
+< -- 45
++ -- 676
+- -- 564
+* -- 2364
+:= -- 5818
+add.period$ -- 328
+call.type$ -- 96
+change.case$ -- 566
+chr.to.int$ -- 0
+cite$ -- 122
+duplicate$ -- 1616
+empty$ -- 2952
+format.name$ -- 564
+if$ -- 8197
+int.to.chr$ -- 0
+int.to.str$ -- 96
+missing$ -- 97
+newline$ -- 500
+num.names$ -- 194
+pop$ -- 729
+preamble$ -- 1
+purify$ -- 471
+quote$ -- 0
+skip$ -- 1263
+stack$ -- 0
+substring$ -- 2272
+swap$ -- 542
+text.length$ -- 45
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 382
+warning$ -- 26
+while$ -- 333
+width$ -- 98
+write$ -- 1060
+(There were 67 error messages)

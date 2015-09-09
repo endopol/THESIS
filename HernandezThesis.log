@@ -1,0 +1,2901 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2015/dev/Debian) (preloaded format=pdflatex 2015.6.2)  8 SEP 2015 20:32
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**HernandezThesis.tex
+(./HernandezThesis.tex
+LaTeX2e <2014/05/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(./uclathes.cls
+Document Class: uclathes 2012/05/02, 2.0
+UCLA 2.0 port copyright (C) 2012 by Jose Hales-Garcia.
+Please send bug reports and graduation notices to <jolohaga@me.com>.
+LaTeX2e port copyright (C) 1995 by John Heidemann.
+Copyright (C) 1988 by Richard B. Wales, copyright (C) 1985 by Leslie Lamport.
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (./uclathma.clo
+File: uclathma 2012/05/03, 2.0
+)
+(./uclath12.clo
+File: uclath12.clo 2012/05/03, 2.0
+)
+\descriptionmargin=\dimen102
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+ (./uclathti.clo
+File: uclathti 2012/05/03, 2.0
+\c@chairs=\count88
+\c@members=\count89
+\c@vitaitems=\count90
+\c@publications=\count91
+)) (./mymacros.tex
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2009/07/02 v2.20.1
+\thm@style=\toks14
+\thm@bodyfont=\toks15
+\thm@headfont=\toks16
+\thm@notefont=\toks17
+\thm@headpunct=\toks18
+\thm@preskip=\skip41
+\thm@postskip=\skip42
+\thm@headsep=\skip43
+\dth@everypar=\toks19
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip44
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks20
+\ex@=\dimen103
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen104
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count92
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count93
+\leftroot@=\count94
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count95
+\DOTSCASE@=\count96
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count97
+\c@MaxMatrixCols=\count98
+\dotsspace@=\muskip10
+\c@parentequation=\count99
+\dspbrk@lvl=\count100
+\tag@help=\toks21
+\row@=\count101
+\column@=\count102
+\maxfields@=\count103
+\andhelp@=\toks22
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks23
+\multlinegap=\skip45
+\multlinetaggap=\skip46
+\mathdisplay@stack=\toks24
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/bbm.sty
+Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
+LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
+(Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
+(Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2014/07/16 v1.15 mathematical typesetting tools
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks25
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count104
+\calc@Bcount=\count105
+\calc@Adimen=\dimen112
+\calc@Bdimen=\dimen113
+\calc@Askip=\skip47
+\calc@Bskip=\skip48
+LaTeX Info: Redefining \setlength on input line 75.
+LaTeX Info: Redefining \addtolength on input line 76.
+\calc@Ccount=\count106
+\calc@Cskip=\skip49
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count107
+\l_MT_multwidth_dim=\dimen114
+\origjot=\skip50
+\l_MT_shortvdotswithinadjustabove_dim=\dimen115
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen116
+\l_MT_above_intertext_sep=\dimen117
+\l_MT_below_intertext_sep=\dimen118
+\l_MT_above_shortintertext_sep=\dimen119
+\l_MT_below_shortintertext_sep=\dimen120
+)
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+
+
+Package subfigure Warning: Your document class has a bad definition
+ of \endfigure, most likely
+ \let\endfigure=\end@float
+ which has now been changed to
+ \def\endfigure{\end@float}
+ because otherwise subsequent changes to \end@float
+ (like done by several packages changing float behaviour)
+ can't take effect on \endfigure.
+ Please complain to your document class author.
+
+
+Package subfigure Warning: Your document class has a bad definition
+ of \endtable, most likely
+ \let\endtable=\end@float
+ which has now been changed to
+ \def\endtable{\end@float}
+ because otherwise subsequent changes to \end@float
+ (like done by several packages changing float behaviour)
+ can't take effect on \endtable.
+ Please complain to your document class author.
+
+\subfigtopskip=\skip51
+\subfigcapskip=\skip52
+\subfigcaptopadj=\dimen121
+\subfigbottomskip=\skip53
+\subfigcapmargin=\dimen122
+\subfiglabelskip=\skip54
+\c@subfigure=\count108
+\c@lofdepth=\count109
+\c@subtable=\count110
+\c@lotdepth=\count111
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip55
+\subfig@bottom=\skip56
+)
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
+(/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
+Package: import 2009/03/23  v 5.1
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count112
+))
+\Gin@req@height=\dimen123
+\Gin@req@width=\dimen124
+)
+(/usr/share/texlive/texmf-dist/tex/latex/todonotes/todonotes.sty
+Package: todonotes 2012/07/25 .dtx Todonotes source and documentation.
+Package: todonotes 2012/07/25
+
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/05/25 v2.7 package option processing (HA)
+
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks26
+\XKV@tempa@toks=\toks27
+)
+\XKV@depth=\count113
+File: xkeyval.tex 2014/05/25 v2.7 key=value parser (HA)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks28
+\pgfutil@tempdima=\dimen125
+\pgfutil@tempdimb=\dimen126
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box28
+(/usr/share/texlive/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+Package: pgfrcs 2013/12/20 v3.0.0 (rcs-revision 1.28)
+))
+Package: pgf 2013/12/18 v3.0.0 (rcs-revision 1.14)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2013/11/30 v3.0.0 (rcs-revision 1.47)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks29
+\pgfkeys@temptoks=\toks30
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
+\pgfkeys@tmptoks=\toks31
+))
+\pgf@x=\dimen127
+\pgf@y=\dimen128
+\pgf@xa=\dimen129
+\pgf@ya=\dimen130
+\pgf@xb=\dimen131
+\pgf@yb=\dimen132
+\pgf@xc=\dimen133
+\pgf@yc=\dimen134
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count114
+\c@pgf@countb=\count115
+\c@pgf@countc=\count116
+\c@pgf@countd=\count117
+\t@pgf@toka=\toks32
+\t@pgf@tokb=\toks33
+\t@pgf@tokc=\toks34
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2013/07/18  (rcs-revision 1.33)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count118
+\pgfsyssoftpath@bigbuffer@items=\count119
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2010/04/11 v3.0.0 (rcs-revision 1.7)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen135
+\pgfmath@count=\count120
+\pgfmath@box=\box29
+\pgfmath@toks=\toks35
+\pgfmath@stack@operand=\toks36
+\pgfmath@stack@operation=\toks37
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
+.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count121
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen136
+\pgf@picmaxx=\dimen137
+\pgf@picminy=\dimen138
+\pgf@picmaxy=\dimen139
+\pgf@pathminx=\dimen140
+\pgf@pathmaxx=\dimen141
+\pgf@pathminy=\dimen142
+\pgf@pathmaxy=\dimen143
+\pgf@xx=\dimen144
+\pgf@xy=\dimen145
+\pgf@yx=\dimen146
+\pgf@yy=\dimen147
+\pgf@zx=\dimen148
+\pgf@zy=\dimen149
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen150
+\pgf@path@lasty=\dimen151
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
+File: pgfcorepathusage.code.tex 2013/12/13  (rcs-revision 1.23)
+\pgf@shorten@end@additional=\dimen152
+\pgf@shorten@start@additional=\dimen153
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
+File: pgfcorescopes.code.tex 2013/10/09  (rcs-revision 1.44)
+\pgfpic=\box30
+\pgf@hbox=\box31
+\pgf@layerbox@main=\box32
+\pgf@picture@serial@count=\count122
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
+File: pgfcoregraphicstate.code.tex 2013/09/19  (rcs-revision 1.11)
+\pgflinewidth=\dimen154
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
+File: pgfcoretransformations.code.tex 2013/10/10  (rcs-revision 1.17)
+\pgf@pt@x=\dimen155
+\pgf@pt@y=\dimen156
+\pgf@pt@temp=\dimen157
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
+File: pgfcorearrows.code.tex 2013/11/07  (rcs-revision 1.40)
+\pgfarrowsep=\dimen158
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen159
+\pgf@sys@shading@range@num=\count123
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
+File: pgfcoreexternal.code.tex 2013/07/15  (rcs-revision 1.20)
+\pgfexternal@startupbox=\box33
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2013/10/31  (rcs-revision 1.34)
+\pgfnodeparttextbox=\box34
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2013/07/31  (rcs-revision 1.12)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.0 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen160
+\pgf@nodesepend=\dimen161
+)
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.0 (rcs-revision 1.1)
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2013/12/13 v3.0.0 (rcs-revision 1.25)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen162
+\pgffor@skip=\dimen163
+\pgffor@stack=\toks38
+\pgffor@toks=\toks39
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2013/12/13 v3.0.0 (rcs-revision 1.142)
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.0 (rcs-revision 1.20)
+\pgf@plot@mark@count=\count124
+\pgfplotmarksize=\dimen164
+)
+\tikz@lastx=\dimen165
+\tikz@lasty=\dimen166
+\tikz@lastxsaved=\dimen167
+\tikz@lastysaved=\dimen168
+\tikzleveldistance=\dimen169
+\tikzsiblingdistance=\dimen170
+\tikz@figbox=\box35
+\tikz@figbox@bg=\box36
+\tikz@tempbox=\box37
+\tikz@tempbox@bg=\box38
+\tikztreelevel=\count125
+\tikznumberofchildren=\count126
+\tikznumberofcurrentchild=\count127
+\tikz@fig@count=\count128
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count129
+\pgfmatrixcurrentcolumn=\count130
+\pgf@matrix@numberofcolumns=\count131
+)
+\tikz@expandcount=\count132
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.0 (rcs-revision 1.2)
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.0 (rcs-revision 1.7)
+)
+\c@@todonotes@numberoftodonotes=\count133
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen171
+\extrarowheight=\dimen172
+\NC@list=\toks40
+\extratabsurround=\skip57
+\backup@length=\skip58
+)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip59
+\bibsep=\skip60
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count134
+)
+(/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count135
+\c@@ppsavesec=\count136
+\c@@ppsaveapp=\count137
+)
+(/usr/share/texlive/texmf-dist/tex/latex/floatrow/floatrow.sty
+Package: floatrow 2008/08/02 v0.3b floatrow: float package extension
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen173
+\captionmargin@=\dimen174
+\captionwidth=\dimen175
+\caption@tempdima=\dimen176
+\caption@indent=\dimen177
+\caption@parindent=\dimen178
+\caption@hangindent=\dimen179
+\abovecaptionskip=\skip61
+\belowcaptionskip=\skip62
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+\c@float@type=\count138
+\float@exts=\toks41
+\float@box=\box39
+\@floatcapt=\box40
+Package floatrow Info: Modified float package code loaded on input line 455.
+Package floatrow Info: Modified rotfloat package code loaded on input line 473.
+
+\FR@everyfloat=\toks42
+\flrow@foot=\insert233
+\FB@wd=\dimen180
+\FBo@wd=\dimen181
+\FBc@wd=\dimen182
+\FBo@ht=\skip63
+\FBc@ht=\skip64
+\FBf@ht=\skip65
+\FBo@max=\skip66
+\FBc@max=\skip67
+\FBf@max=\skip68
+\c@FBl@b=\count139
+\floatbox@depth=\count140
+\c@FRobj=\count141
+\c@FRsobj=\count142
+\Xhsize=\skip69
+\sXhsize=\skip70
+\Zhsize=\skip71
+\sZhsize=\skip72
+\flrow@rowbox=\box41
+\FR@Zunitlength=\dimen183
+\c@FBcnt=\count143
+\FPOScnt=\count144
+\LTleft=\skip73
+\LTright=\skip74
+\LTleft=\skip75
+\LTright=\skip76
+\flrow@types=\toks43
+)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+\everycr=\toks44
+\minrowclearance=\skip77
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+\c@algorithm=\count145
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count146
+\c@ALC@line=\count147
+\c@ALC@rem=\count148
+\c@ALC@depth=\count149
+\ALC@tlm=\skip78
+\algorithmicindent=\skip79
+)
+(/usr/share/texlive/texmf-dist/tex/latex/cite/chapterbib.sty
+\c@inputfile=\count150
+Package: chapterbib 2010/09/18  v 1.17
+)
+\c@example=\count151
+\c@definition=\count152
+\c@conj=\count153
+\c@lemma=\count154
+\c@prop=\count155
+\c@notation=\count156
+)
+(./HernandezThesis.aux)
+\openout1 = `HernandezThesis.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count157
+\scratchdimen=\dimen184
+\scratchbox=\box42
+\nofMPsegments=\count158
+\nofMParguments=\count159
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count160
+\MPscratchDim=\dimen185
+\MPnumerator=\count161
+\makeMPintoPDFobject=\count162
+\everyMPtoPDFconversion=\toks46
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+ABD: EveryShipout initializing macros
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+ [0
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 83.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
+
+No abstract.
+[1
+
+] [2
+
+] (./HernandezThesis.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [3
+
+] [4])
+\tf@toc=\write4
+\openout4 = `HernandezThesis.toc'.
+
+ [5]
+Overfull \hbox (2.38628pt too wide) in paragraph at lines 83--83
+[]
+ []
+
+
+Overfull \hbox (2.38628pt too wide) in paragraph at lines 83--83
+[]
+ []
+
+
+Overfull \hbox (2.38628pt too wide) in paragraph at lines 83--83
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--83
+
+ []
+
+[6
+
+] [7]
+CHAPTER 1.
+[1
+
+]
+Overfull \hbox (32.11786pt too wide) in paragraph at lines 114--115
+\OT1/cmr/m/n/12 To this end, we ex-plore the pos-si-bil-ity of di-rectly en-cod
+-ing/representing/optimizing
+ []
+
+[2] [3]
+CHAPTER 2.
+(./Observability/soatto14imu.tex
+\c@defn=\count163
+\c@rem=\count164
+\c@theorem=\count165
+\c@claim=\count166
+\c@corollary=\count167
+ [4
+
+]
+LaTeX Font Info:    Try loading font information for U+euf on input line 78.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [5] [6] [7] [8]
+[9] [10] [11] [12] [13] [14]
+Overfull \hbox (15.2026pt too wide) detected at line 646
+\OMS/cmsy/m/n/12 I[]\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 y[]\OMS/cmsy/m/n/12 j\OML
+/cmm/m/it/12 u[]\OT1/cmr/m/n/12 ; []) [] \OMS/cmsy/m/n/12 f[] j 9 \OML/cmm/m/it
+/12 v[] [] y[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 h\OT1/cmr/m/n/12 ([])\OML/cmm
+/m/it/12 ;  []x\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) = \OML/cmm/
+m/it/12 f\OT1/cmr/m/n/12 ([]) + \OML/cmm/m/it/12 c\OT1/cmr/m/n/12 ([])\OML/cmm/
+m/it/12 u\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/1
+2 Dv\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 8 \OM
+L/cmm/m/it/12 t\OT1/cmr/m/n/12 ;  [](0) = []\OMS/cmsy/m/n/12 g
+ []
+
+[15] [16] [17] [18]
+Overfull \hbox (39.8145pt too wide) in paragraph at lines 795--795
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 809--811
+\OT1/cmr/bx/n/12 cit-ing \OT1/cmr/m/n/12 rel-a-tive to a point-
+ []
+
+[19]
+Overfull \hbox (51.41753pt too wide) in paragraph at lines 825--825
+[] 
+ []
+
+[20] [21]
+Overfull \hbox (38.74355pt too wide) in paragraph at lines 923--923
+[] 
+ []
+
+
+Overfull \hbox (29.95602pt too wide) in paragraph at lines 933--933
+[] 
+ []
+
+[22] [23] [24]
+Overfull \hbox (5.61751pt too wide) in paragraph at lines 1014--1015
+[]\OT1/cmr/bx/n/12 Claim 5 \OT1/cmr/m/n/12 (In-dis-tin-guish-able Tra-jec-to-ri
+es from IMU Data)\OT1/cmr/bx/n/12 . []\OT1/cmr/m/n/12 Let $\OML/cmm/m/it/12 g\O
+T1/cmr/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ) = (\OML/cmm/m/it/12 R\OT1/cm
+r/m/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; T\OT1/cmr/m/n/1
+2 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 )) \OMS/cmsy/m/n/12 2
+ []
+
+[25]
+Overfull \hbox (46.96297pt too wide) in paragraph at lines 1095--1095
+[] 
+ []
+
+[26]
+Overfull \hbox (53.28363pt too wide) in paragraph at lines 1141--1141
+[] 
+ []
+
+[27] [28] [29]
+
+LaTeX Warning: Reference `eq-alphatilde' on page 30 undefined on input line 136
+9.
+
+
+LaTeX Warning: Reference `eq-omtilde' on page 30 undefined on input line 1370.
+
+
+Overfull \hbox (9.24736pt too wide) in alignment at lines 1359--1377
+ [][][] []
+ []
+
+[30]
+
+Package natbib Warning: Citation `roumeliotisM' on page 31 undefined on input l
+ine 1381.
+
+) [31] [32]
+CHAPTER 3.
+(./SolidObjects/cvpr2015_solobj/tex/solobj.tex
+(./SolidObjects/cvpr2015_solobj/tex/abst_intro.tex
+
+LaTeX Warning: Reference `fig:pipeline' on page 33 undefined on input line 39.
+
+[33
+
+] [34] [35]) (./SolidObjects/cvpr2015_solobj/tex/methodology.tex [36]
+[37] [38]
+<SolidObjects/cvpr2015_solobj/figs/cos/depth.png, id=173, 642.4pt x 481.8pt>
+File: SolidObjects/cvpr2015_solobj/figs/cos/depth.png Graphic file (type png)
+
+<use SolidObjects/cvpr2015_solobj/figs/cos/depth.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/cos/depth.png used o
+n input line 196.
+(pdftex.def)             Requested size: 199.46341pt x 149.59906pt.
+
+<SolidObjects/cvpr2015_solobj/figs/cos/normal.png, id=174, 642.4pt x 481.8pt>
+File: SolidObjects/cvpr2015_solobj/figs/cos/normal.png Graphic file (type png)
+
+<use SolidObjects/cvpr2015_solobj/figs/cos/normal.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/cos/normal.png used 
+on input line 196.
+(pdftex.def)             Requested size: 199.46341pt x 149.59906pt.
+
+<SolidObjects/cvpr2015_solobj/figs/park4/depth.png, id=175, 1027.84pt x 770.88p
+t>
+File: SolidObjects/cvpr2015_solobj/figs/park4/depth.png Graphic file (type png)
+
+ <use SolidObjects/cvpr2015_solobj/figs/park4/depth.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/park4/depth.png used
+ on input line 196.
+(pdftex.def)             Requested size: 199.46341pt x 149.5976pt.
+
+<SolidObjects/cvpr2015_solobj/figs/park4/normal.png, id=176, 1027.84pt x 770.88
+pt>
+File: SolidObjects/cvpr2015_solobj/figs/park4/normal.png Graphic file (type png
+)
+ <use SolidObjects/cvpr2015_solobj/figs/park4/normal.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/park4/normal.png use
+d on input line 196.
+(pdftex.def)             Requested size: 199.46341pt x 149.5976pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes2/depth.png, id=177, 1027.84pt x 770.88
+pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes2/depth.png Graphic file (type png
+)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes2/depth.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes2/depth.png use
+d on input line 196.
+(pdftex.def)             Requested size: 199.46341pt x 149.5976pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes2/normal.png, id=178, 1027.84pt x 770.8
+8pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes2/normal.png Graphic file (type pn
+g)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes2/normal.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes2/normal.png us
+ed on input line 196.
+(pdftex.def)             Requested size: 199.46341pt x 149.5976pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes3/depth.png, id=179, 1027.84pt x 770.88
+pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes3/depth.png Graphic file (type png
+)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes3/depth.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes3/depth.png use
+d on input line 196.
+(pdftex.def)             Requested size: 199.46341pt x 149.5976pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes3/normal.png, id=180, 1027.84pt x 770.8
+8pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes3/normal.png Graphic file (type pn
+g)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes3/normal.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes3/normal.png us
+ed on input line 196.
+(pdftex.def)             Requested size: 199.46341pt x 149.5976pt.
+
+
+LaTeX Warning: Float too large for page by 82.609pt on input line 205.
+
+) (./SolidObjects/cvpr2015_solobj/tex/methodology2.tex [39] [40 <./SolidObjects
+/cvpr2015_solobj/figs/cos/depth.png> <./SolidObjects/cvpr2015_solobj/figs/cos/n
+ormal.png> <./SolidObjects/cvpr2015_solobj/figs/park4/depth.png> <./SolidObject
+s/cvpr2015_solobj/figs/park4/normal.png> <./SolidObjects/cvpr2015_solobj/figs/p
+ipes2/depth.png> <./SolidObjects/cvpr2015_solobj/figs/pipes2/normal.png> <./Sol
+idObjects/cvpr2015_solobj/figs/pipes3/depth.png> <./SolidObjects/cvpr2015_solob
+j/figs/pipes3/normal.png>]
+<SolidObjects/cvpr2015_solobj/figs/concavity.pdf, id=187, 387.4475pt x 292.0912
+5pt>
+File: SolidObjects/cvpr2015_solobj/figs/concavity.pdf Graphic file (type pdf)
+ <use SolidObjects/cvpr2015_solobj/figs/concavity.pdf>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/concavity.pdf used o
+n input line 34.
+(pdftex.def)             Requested size: 186.99734pt x 140.9777pt.
+
+<SolidObjects/cvpr2015_solobj/figs/concavity_vectors.pdf, id=188, 154.74997pt x
+ 120.93388pt>
+File: SolidObjects/cvpr2015_solobj/figs/concavity_vectors.pdf Graphic file (typ
+e pdf)
+ <use SolidObjects/cvpr2015_solobj/figs/concavity_vectors.pdf>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/concavity_vectors.pd
+f used on input line 35.
+(pdftex.def)             Requested size: 186.99734pt x 146.14775pt.
+
+[41 <./SolidObjects/cvpr2015_solobj/figs/concavity.pdf> <./SolidObjects/cvpr201
+5_solobj/figs/concavity_vectors.pdf>] [42]
+<SolidObjects/cvpr2015_solobj/figs/layer_histories.pdf, id=214, 452.08002pt x 2
+59.10638pt>
+File: SolidObjects/cvpr2015_solobj/figs/layer_histories.pdf Graphic file (type 
+pdf)
+ <use SolidObjects/cvpr2015_solobj/figs/layer_histories.pdf>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/layer_histories.pdf 
+used on input line 107.
+(pdftex.def)             Requested size: 186.99734pt x 107.17526pt.
+
+<SolidObjects/cvpr2015_solobj/figs/traversed_distances.pdf, id=215, 426.23116pt
+ x 239.40494pt>
+File: SolidObjects/cvpr2015_solobj/figs/traversed_distances.pdf Graphic file (t
+ype pdf)
+
+<use SolidObjects/cvpr2015_solobj/figs/traversed_distances.pdf>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/traversed_distances.
+pdf used on input line 108.
+(pdftex.def)             Requested size: 186.99734pt x 105.03163pt.
+ [43 <./SolidObjects/cvpr2015_solobj/figs/layer_histories.pdf> <./SolidObjects/
+cvpr2015_solobj/figs/traversed_distances.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./SolidObjects/cvpr2015_solobj/figs/tra
+versed_distances.pdf): PDF inclusion: multiple pdfs with page group included in
+ a single page
+>]
+<SolidObjects/cvpr2015_solobj/figs/saturating_distances.pdf, id=253, 397.94188p
+t x 171.3938pt>
+File: SolidObjects/cvpr2015_solobj/figs/saturating_distances.pdf Graphic file (
+type pdf)
+
+<use SolidObjects/cvpr2015_solobj/figs/saturating_distances.pdf>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/saturating_distances
+.pdf used on input line 158.
+(pdftex.def)             Requested size: 394.77359pt x 170.0282pt.
+
+<SolidObjects/cvpr2015_solobj/figs/cos/geotrav.png, id=254, 642.4pt x 481.8pt>
+File: SolidObjects/cvpr2015_solobj/figs/cos/geotrav.png Graphic file (type png)
+
+
+<use SolidObjects/cvpr2015_solobj/figs/cos/geotrav.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/cos/geotrav.png used
+ on input line 211.
+(pdftex.def)             Requested size: 186.99734pt x 140.24773pt.
+
+<SolidObjects/cvpr2015_solobj/figs/park4/geotrav.png, id=255, 1027.84pt x 770.8
+8pt>
+File: SolidObjects/cvpr2015_solobj/figs/park4/geotrav.png Graphic file (type pn
+g)
+ <use SolidObjects/cvpr2015_solobj/figs/park4/geotrav.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/park4/geotrav.png us
+ed on input line 211.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes2/geotrav.png, id=256, 1027.84pt x 770.
+88pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes2/geotrav.png Graphic file (type p
+ng)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes2/geotrav.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes2/geotrav.png u
+sed on input line 211.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes3/geotrav.png, id=257, 1027.84pt x 770.
+88pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes3/geotrav.png Graphic file (type p
+ng)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes3/geotrav.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes3/geotrav.png u
+sed on input line 211.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+ [44] [45 <./SolidObjects/cvpr2015_solobj/figs/saturating_distances.pdf>] [46 <
+./SolidObjects/cvpr2015_solobj/figs/cos/geotrav.png> <./SolidObjects/cvpr2015_s
+olobj/figs/park4/geotrav.png> <./SolidObjects/cvpr2015_solobj/figs/pipes2/geotr
+av.png> <./SolidObjects/cvpr2015_solobj/figs/pipes3/geotrav.png>])
+(./SolidObjects/cvpr2015_solobj/tex/evaluation.tex [47] [48] [49]
+<SolidObjects/cvpr2015_solobj/figs/cos/im_0001.png, id=297, 642.4pt x 481.8pt>
+File: SolidObjects/cvpr2015_solobj/figs/cos/im_0001.png Graphic file (type png)
+
+
+<use SolidObjects/cvpr2015_solobj/figs/cos/im_0001.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/cos/im_0001.png used
+ on input line 113.
+(pdftex.def)             Requested size: 186.99734pt x 140.24773pt.
+
+<SolidObjects/cvpr2015_solobj/figs/cos/gtseg_0001.png, id=298, 642.4pt x 481.8p
+t>
+File: SolidObjects/cvpr2015_solobj/figs/cos/gtseg_0001.png Graphic file (type p
+ng)
+ <use SolidObjects/cvpr2015_solobj/figs/cos/gtseg_0001.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/cos/gtseg_0001.png u
+sed on input line 113.
+(pdftex.def)             Requested size: 186.99734pt x 140.24773pt.
+
+<SolidObjects/cvpr2015_solobj/figs/park4/im_0024.png, id=299, 1027.84pt x 770.8
+8pt>
+File: SolidObjects/cvpr2015_solobj/figs/park4/im_0024.png Graphic file (type pn
+g)
+ <use SolidObjects/cvpr2015_solobj/figs/park4/im_0024.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/park4/im_0024.png us
+ed on input line 113.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/park4/gtseg_0024.png, id=300, 1027.84pt x 77
+0.88pt>
+File: SolidObjects/cvpr2015_solobj/figs/park4/gtseg_0024.png Graphic file (type
+ png)
+ <use SolidObjects/cvpr2015_solobj/figs/park4/gtseg_0024.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/park4/gtseg_0024.png
+ used on input line 113.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes2/im_0059.png, id=301, 1027.84pt x 770.
+88pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes2/im_0059.png Graphic file (type p
+ng)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes2/im_0059.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes2/im_0059.png u
+sed on input line 113.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes2/gtseg_0059.png, id=302, 1027.84pt x 7
+70.88pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes2/gtseg_0059.png Graphic file (typ
+e png)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes2/gtseg_0059.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes2/gtseg_0059.pn
+g used on input line 113.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes3/im_0007.png, id=303, 1027.84pt x 770.
+88pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes3/im_0007.png Graphic file (type p
+ng)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes3/im_0007.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes3/im_0007.png u
+sed on input line 113.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes3/gtseg_0007.png, id=304, 1027.84pt x 7
+70.88pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes3/gtseg_0007.png Graphic file (typ
+e png)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes3/gtseg_0007.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes3/gtseg_0007.pn
+g used on input line 113.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+
+LaTeX Warning: Float too large for page by 44.60783pt on input line 117.
+
+
+<SolidObjects/cvpr2015_solobj/figs/cos/det_0024.png, id=305, 642.4pt x 481.8pt>
+File: SolidObjects/cvpr2015_solobj/figs/cos/det_0024.png Graphic file (type png
+)
+<use SolidObjects/cvpr2015_solobj/figs/cos/det_0024.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/cos/det_0024.png use
+d on input line 133.
+(pdftex.def)             Requested size: 186.99734pt x 140.24773pt.
+
+<SolidObjects/cvpr2015_solobj/figs/park4/det_0034.png, id=306, 1027.84pt x 770.
+88pt>
+File: SolidObjects/cvpr2015_solobj/figs/park4/det_0034.png Graphic file (type p
+ng)
+ <use SolidObjects/cvpr2015_solobj/figs/park4/det_0034.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/park4/det_0034.png u
+sed on input line 133.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes2/det_0059.png, id=307, 1027.84pt x 770
+.88pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes2/det_0059.png Graphic file (type 
+png)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes2/det_0059.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes2/det_0059.png 
+used on input line 133.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes3/det_0081.png, id=308, 1027.84pt x 770
+.88pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes3/det_0081.png Graphic file (type 
+png)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes3/det_0081.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes3/det_0081.png 
+used on input line 133.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/cos/tra_0024.png, id=309, 642.4pt x 481.8pt>
+File: SolidObjects/cvpr2015_solobj/figs/cos/tra_0024.png Graphic file (type png
+)
+<use SolidObjects/cvpr2015_solobj/figs/cos/tra_0024.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/cos/tra_0024.png use
+d on input line 154.
+(pdftex.def)             Requested size: 186.99734pt x 140.24773pt.
+
+<SolidObjects/cvpr2015_solobj/figs/park4/tra_0072.png, id=310, 1027.84pt x 770.
+88pt>
+File: SolidObjects/cvpr2015_solobj/figs/park4/tra_0072.png Graphic file (type p
+ng)
+ <use SolidObjects/cvpr2015_solobj/figs/park4/tra_0072.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/park4/tra_0072.png u
+sed on input line 154.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes2/tra_0003.png, id=311, 1027.84pt x 770
+.88pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes2/tra_0003.png Graphic file (type 
+png)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes2/tra_0003.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes2/tra_0003.png 
+used on input line 154.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes3/tra_0059.png, id=312, 1027.84pt x 770
+.88pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes3/tra_0059.png Graphic file (type 
+png)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes3/tra_0059.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes3/tra_0059.png 
+used on input line 154.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/cos/geoseg_0001.png, id=313, 642.4pt x 481.8
+pt>
+File: SolidObjects/cvpr2015_solobj/figs/cos/geoseg_0001.png Graphic file (type 
+png)
+ <use SolidObjects/cvpr2015_solobj/figs/cos/geoseg_0001.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/cos/geoseg_0001.png 
+used on input line 174.
+(pdftex.def)             Requested size: 186.99734pt x 140.24773pt.
+
+<SolidObjects/cvpr2015_solobj/figs/park4/geoseg_0001.png, id=314, 1027.84pt x 7
+70.88pt>
+File: SolidObjects/cvpr2015_solobj/figs/park4/geoseg_0001.png Graphic file (typ
+e png)
+ <use SolidObjects/cvpr2015_solobj/figs/park4/geoseg_0001.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/park4/geoseg_0001.pn
+g used on input line 174.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes2/geoseg_0059.png, id=315, 1027.84pt x 
+770.88pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes2/geoseg_0059.png Graphic file (ty
+pe png)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes2/geoseg_0059.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes2/geoseg_0059.p
+ng used on input line 174.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes3/geoseg_0065.png, id=316, 1027.84pt x 
+770.88pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes3/geoseg_0065.png Graphic file (ty
+pe png)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes3/geoseg_0065.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes3/geoseg_0065.p
+ng used on input line 174.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/cos/sceneseg_0001.png, id=317, 642.4pt x 481
+.8pt>
+File: SolidObjects/cvpr2015_solobj/figs/cos/sceneseg_0001.png Graphic file (typ
+e png)
+ <use SolidObjects/cvpr2015_solobj/figs/cos/sceneseg_0001.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/cos/sceneseg_0001.pn
+g used on input line 200.
+(pdftex.def)             Requested size: 186.99734pt x 140.24773pt.
+
+<SolidObjects/cvpr2015_solobj/figs/cos/sceneseg_0150.png, id=318, 642.4pt x 481
+.8pt>
+File: SolidObjects/cvpr2015_solobj/figs/cos/sceneseg_0150.png Graphic file (typ
+e png)
+ <use SolidObjects/cvpr2015_solobj/figs/cos/sceneseg_0150.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/cos/sceneseg_0150.pn
+g used on input line 200.
+(pdftex.def)             Requested size: 186.99734pt x 140.24773pt.
+
+<SolidObjects/cvpr2015_solobj/figs/park4/sceneseg_0001.png, id=319, 1027.84pt x
+ 770.88pt>
+File: SolidObjects/cvpr2015_solobj/figs/park4/sceneseg_0001.png Graphic file (t
+ype png)
+ <use SolidObjects/cvpr2015_solobj/figs/park4/sceneseg_0001.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/park4/sceneseg_0001.
+png used on input line 200.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/park4/sceneseg_0034.png, id=320, 1027.84pt x
+ 770.88pt>
+File: SolidObjects/cvpr2015_solobj/figs/park4/sceneseg_0034.png Graphic file (t
+ype png)
+ <use SolidObjects/cvpr2015_solobj/figs/park4/sceneseg_0034.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/park4/sceneseg_0034.
+png used on input line 200.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes2/sceneseg_0059.png, id=321, 1027.84pt 
+x 770.88pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes2/sceneseg_0059.png Graphic file (
+type png)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes2/sceneseg_0059.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes2/sceneseg_0059
+.png used on input line 200.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes2/sceneseg_0045.png, id=322, 1027.84pt 
+x 770.88pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes2/sceneseg_0045.png Graphic file (
+type png)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes2/sceneseg_0045.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes2/sceneseg_0045
+.png used on input line 200.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes3/sceneseg_0007.png, id=323, 1027.84pt 
+x 770.88pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes3/sceneseg_0007.png Graphic file (
+type png)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes3/sceneseg_0007.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes3/sceneseg_0007
+.png used on input line 200.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes3/sceneseg_0081.png, id=324, 1027.84pt 
+x 770.88pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes3/sceneseg_0081.png Graphic file (
+type png)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes3/sceneseg_0081.png>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes3/sceneseg_0081
+.png used on input line 200.
+(pdftex.def)             Requested size: 186.99734pt x 140.24626pt.
+
+
+LaTeX Warning: Float too large for page by 44.59534pt on input line 206.
+
+
+<SolidObjects/cvpr2015_solobj/figs/cos/validation.pdf, id=325, 385.58609pt x 32
+6.90724pt>
+File: SolidObjects/cvpr2015_solobj/figs/cos/validation.pdf Graphic file (type p
+df)
+ <use SolidObjects/cvpr2015_solobj/figs/cos/validation.pdf>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/cos/validation.pdf u
+sed on input line 227.
+(pdftex.def)             Requested size: 186.99734pt x 158.53984pt.
+
+<SolidObjects/cvpr2015_solobj/figs/cos/frame_validation.pdf, id=326, 386.26112p
+t x 314.68402pt>
+File: SolidObjects/cvpr2015_solobj/figs/cos/frame_validation.pdf Graphic file (
+type pdf)
+
+<use SolidObjects/cvpr2015_solobj/figs/cos/frame_validation.pdf>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/cos/frame_validation
+.pdf used on input line 227.
+(pdftex.def)             Requested size: 186.99734pt x 152.34785pt.
+
+<SolidObjects/cvpr2015_solobj/figs/park4/validation.pdf, id=327, 385.58609pt x 
+326.90724pt>
+File: SolidObjects/cvpr2015_solobj/figs/park4/validation.pdf Graphic file (type
+ pdf)
+ <use SolidObjects/cvpr2015_solobj/figs/park4/validation.pdf>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/park4/validation.pdf
+ used on input line 227.
+(pdftex.def)             Requested size: 186.99734pt x 158.53984pt.
+
+<SolidObjects/cvpr2015_solobj/figs/park4/frame_validation.pdf, id=328, 386.2611
+2pt x 314.68402pt>
+File: SolidObjects/cvpr2015_solobj/figs/park4/frame_validation.pdf Graphic file
+ (type pdf)
+
+<use SolidObjects/cvpr2015_solobj/figs/park4/frame_validation.pdf>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/park4/frame_validati
+on.pdf used on input line 227.
+(pdftex.def)             Requested size: 186.99734pt x 152.34785pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes2/validation.pdf, id=329, 385.58609pt x
+ 326.90724pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes2/validation.pdf Graphic file (typ
+e pdf)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes2/validation.pdf>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes2/validation.pd
+f used on input line 227.
+(pdftex.def)             Requested size: 186.99734pt x 158.53984pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes2/frame_validation.pdf, id=330, 386.261
+12pt x 314.68402pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes2/frame_validation.pdf Graphic fil
+e (type pdf)
+
+<use SolidObjects/cvpr2015_solobj/figs/pipes2/frame_validation.pdf>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes2/frame_validat
+ion.pdf used on input line 227.
+(pdftex.def)             Requested size: 186.99734pt x 152.34785pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes3/validation.pdf, id=331, 385.58609pt x
+ 326.90724pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes3/validation.pdf Graphic file (typ
+e pdf)
+ <use SolidObjects/cvpr2015_solobj/figs/pipes3/validation.pdf>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes3/validation.pd
+f used on input line 227.
+(pdftex.def)             Requested size: 186.99734pt x 158.53984pt.
+
+<SolidObjects/cvpr2015_solobj/figs/pipes3/frame_validation.pdf, id=332, 386.261
+12pt x 314.68402pt>
+File: SolidObjects/cvpr2015_solobj/figs/pipes3/frame_validation.pdf Graphic fil
+e (type pdf)
+
+<use SolidObjects/cvpr2015_solobj/figs/pipes3/frame_validation.pdf>
+Package pdftex.def Info: SolidObjects/cvpr2015_solobj/figs/pipes3/frame_validat
+ion.pdf used on input line 227.
+(pdftex.def)             Requested size: 186.99734pt x 152.34785pt.
+
+
+LaTeX Warning: Float too large for page by 162.54437pt on input line 240.
+
+)) [50] [51 <./SolidObjects/cvpr2015_solobj/figs/cos/im_0001.png (PNG copy)> <.
+/SolidObjects/cvpr2015_solobj/figs/cos/gtseg_0001.png> <./SolidObjects/cvpr2015
+_solobj/figs/park4/im_0024.png (PNG copy)> <./SolidObjects/cvpr2015_solobj/figs
+/park4/gtseg_0024.png> <./SolidObjects/cvpr2015_solobj/figs/pipes2/im_0059.png 
+(PNG copy)> <./SolidObjects/cvpr2015_solobj/figs/pipes2/gtseg_0059.png> <./Soli
+dObjects/cvpr2015_solobj/figs/pipes3/im_0007.png (PNG copy)> <./SolidObjects/cv
+pr2015_solobj/figs/pipes3/gtseg_0007.png>] [52 <./SolidObjects/cvpr2015_solobj/
+figs/cos/det_0024.png> <./SolidObjects/cvpr2015_solobj/figs/park4/det_0034.png>
+ <./SolidObjects/cvpr2015_solobj/figs/pipes2/det_0059.png> <./SolidObjects/cvpr
+2015_solobj/figs/pipes3/det_0081.png>] [53 <./SolidObjects/cvpr2015_solobj/figs
+/cos/tra_0024.png> <./SolidObjects/cvpr2015_solobj/figs/park4/tra_0072.png> <./
+SolidObjects/cvpr2015_solobj/figs/pipes2/tra_0003.png> <./SolidObjects/cvpr2015
+_solobj/figs/pipes3/tra_0059.png>] [54 <./SolidObjects/cvpr2015_solobj/figs/cos
+/geoseg_0001.png> <./SolidObjects/cvpr2015_solobj/figs/park4/geoseg_0001.png> <
+./SolidObjects/cvpr2015_solobj/figs/pipes2/geoseg_0059.png> <./SolidObjects/cvp
+r2015_solobj/figs/pipes3/geoseg_0065.png>] [55 <./SolidObjects/cvpr2015_solobj/
+figs/cos/sceneseg_0001.png> <./SolidObjects/cvpr2015_solobj/figs/cos/sceneseg_0
+150.png> <./SolidObjects/cvpr2015_solobj/figs/park4/sceneseg_0001.png> <./Solid
+Objects/cvpr2015_solobj/figs/park4/sceneseg_0034.png> <./SolidObjects/cvpr2015_
+solobj/figs/pipes2/sceneseg_0059.png> <./SolidObjects/cvpr2015_solobj/figs/pipe
+s2/sceneseg_0045.png> <./SolidObjects/cvpr2015_solobj/figs/pipes3/sceneseg_0007
+.png> <./SolidObjects/cvpr2015_solobj/figs/pipes3/sceneseg_0081.png>] [56 <./So
+lidObjects/cvpr2015_solobj/figs/cos/validation.pdf> <./SolidObjects/cvpr2015_so
+lobj/figs/cos/frame_validation.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./SolidObjects/cvpr2015_solobj/figs/cos
+/frame_validation.pdf): PDF inclusion: multiple pdfs with page group included i
+n a single page
+> <./SolidObjects/cvpr2015_solobj/figs/park4/validation.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./SolidObjects/cvpr2015_solobj/figs/par
+k4/validation.pdf): PDF inclusion: multiple pdfs with page group included in a 
+single page
+> <./SolidObjects/cvpr2015_solobj/figs/park4/frame_validation.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./SolidObjects/cvpr2015_solobj/figs/par
+k4/frame_validation.pdf): PDF inclusion: multiple pdfs with page group included
+ in a single page
+> <./SolidObjects/cvpr2015_solobj/figs/pipes2/validation.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./SolidObjects/cvpr2015_solobj/figs/pip
+es2/validation.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+> <./SolidObjects/cvpr2015_solobj/figs/pipes2/frame_validation.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./SolidObjects/cvpr2015_solobj/figs/pip
+es2/frame_validation.pdf): PDF inclusion: multiple pdfs with page group include
+d in a single page
+> <./SolidObjects/cvpr2015_solobj/figs/pipes3/validation.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./SolidObjects/cvpr2015_solobj/figs/pip
+es3/validation.pdf): PDF inclusion: multiple pdfs with page group included in a
+ single page
+> <./SolidObjects/cvpr2015_solobj/figs/pipes3/frame_validation.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./SolidObjects/cvpr2015_solobj/figs/pip
+es3/frame_validation.pdf): PDF inclusion: multiple pdfs with page group include
+d in a single page
+>] [57]
+CHAPTER 4.
+(./Exploration/exploration.tex (./Exploration/Model/model.tex [58
+
+]
+<Exploration/IDE/world_map.pdf, id=3768, 642.4pt x 357.335pt>
+File: Exploration/IDE/world_map.pdf Graphic file (type pdf)
+
+<use Exploration/IDE/world_map.pdf>
+Package pdftex.def Info: Exploration/IDE/world_map.pdf used on input line 6.
+(pdftex.def)             Requested size: 194.88777pt x 108.405pt.
+
+<Exploration/IDE/world_map_belief.pdf, id=3769, 170.76428pt x 364.99135pt>
+File: Exploration/IDE/world_map_belief.pdf Graphic file (type pdf)
+
+<use Exploration/IDE/world_map_belief.pdf>
+Package pdftex.def Info: Exploration/IDE/world_map_belief.pdf used on input lin
+e 7.
+(pdftex.def)             Requested size: 50.71896pt x 108.405pt.
+
+<Exploration/IDE/random_block_marg.pdf, id=3770, 646.5393pt x 362.22723pt>
+File: Exploration/IDE/random_block_marg.pdf Graphic file (type pdf)
+
+<use Exploration/IDE/random_block_marg.pdf>
+Package pdftex.def Info: Exploration/IDE/random_block_marg.pdf used on input li
+ne 27.
+(pdftex.def)             Requested size: 128.98987pt x 72.26999pt.
+
+<Exploration/IDE/random_block.pdf, id=3771, 646.5393pt x 362.22723pt>
+File: Exploration/IDE/random_block.pdf Graphic file (type pdf)
+
+<use Exploration/IDE/random_block.pdf>
+Package pdftex.def Info: Exploration/IDE/random_block.pdf used on input line 27
+.
+(pdftex.def)             Requested size: 128.98987pt x 72.26999pt.
+
+<Exploration/IDE/random_room_belief.pdf, id=3772, 646.5393pt x 362.22795pt>
+File: Exploration/IDE/random_room_belief.pdf Graphic file (type pdf)
+
+<use Exploration/IDE/random_room_belief.pdf>
+Package pdftex.def Info: Exploration/IDE/random_room_belief.pdf used on input l
+ine 33.
+(pdftex.def)             Requested size: 128.98987pt x 72.26999pt.
+
+<Exploration/IDE/random_room.pdf, id=3773, 642.4pt x 357.335pt>
+File: Exploration/IDE/random_room.pdf Graphic file (type pdf)
+
+<use Exploration/IDE/random_room.pdf>
+Package pdftex.def Info: Exploration/IDE/random_room.pdf used on input line 33.
+
+(pdftex.def)             Requested size: 129.91864pt x 72.26999pt.
+
+<Exploration/first_view.pdf, id=3774, 311.564pt x 306.746pt>
+File: Exploration/first_view.pdf Graphic file (type pdf)
+
+<use Exploration/first_view.pdf>
+Package pdftex.def Info: Exploration/first_view.pdf used on input line 54.
+(pdftex.def)             Requested size: 108.405pt x 106.72615pt.
+
+<Exploration/first_hypoth.pdf, id=3775, 311.564pt x 306.746pt>
+File: Exploration/first_hypoth.pdf Graphic file (type pdf)
+
+<use Exploration/first_hypoth.pdf>
+Package pdftex.def Info: Exploration/first_hypoth.pdf used on input line 56.
+(pdftex.def)             Requested size: 108.405pt x 106.72615pt.
+
+<Exploration/Model/first_meas.pdf, id=3776, 311.564pt x 306.746pt>
+File: Exploration/Model/first_meas.pdf Graphic file (type pdf)
+
+<use Exploration/Model/first_meas.pdf>
+Package pdftex.def Info: Exploration/Model/first_meas.pdf used on input line 58
+.
+(pdftex.def)             Requested size: 108.405pt x 106.72615pt.
+ [59]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ú in font cmr12!
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ù in font cmr12!
+ [60 <./Exploration/IDE/world_map.pdf> <./Exploration/IDE/world_map_belief.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Exploration/IDE/world_map_belief.pdf)
+: PDF inclusion: multiple pdfs with page group included in a single page
+>] [61 <./Exploration/IDE/random_block_marg.pdf> <./Exploration/IDE/random_bloc
+k.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Exploration/IDE/random_block.pdf): PD
+F inclusion: multiple pdfs with page group included in a single page
+> <./Exploration/IDE/random_room_belief.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Exploration/IDE/random_room_belief.pd
+f): PDF inclusion: multiple pdfs with page group included in a single page
+> <./Exploration/IDE/random_room.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Exploration/IDE/random_room.pdf): PDF
+ inclusion: multiple pdfs with page group included in a single page
+> <./Exploration/first_view.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Exploration/first_view.pdf): PDF incl
+usion: multiple pdfs with page group included in a single page
+> <./Exploration/first_hypoth.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Exploration/first_hypoth.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+> <./Exploration/Model/first_meas.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Exploration/Model/first_meas.pdf): PD
+F inclusion: multiple pdfs with page group included in a single page
+>]
+LaTeX Font Info:    Try loading font information for U+bbm on input line 140.
+ (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/ubbm.fd
+File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
+) [62] [63]
+<Exploration/Model/JEnergy1.pdf, id=3939, 324.21124pt x 275.0275pt>
+File: Exploration/Model/JEnergy1.pdf Graphic file (type pdf)
+
+<use Exploration/Model/JEnergy1.pdf>
+Package pdftex.def Info: Exploration/Model/JEnergy1.pdf used on input line 226.
+
+(pdftex.def)             Requested size: 110.7498pt x 93.95122pt.
+
+<Exploration/Model/JEnergy25.pdf, id=3940, 335.2525pt x 275.0275pt>
+File: Exploration/Model/JEnergy25.pdf Graphic file (type pdf)
+
+<use Exploration/Model/JEnergy25.pdf>
+Package pdftex.def Info: Exploration/Model/JEnergy25.pdf used on input line 229
+.
+(pdftex.def)             Requested size: 114.52147pt x 93.95122pt.
+
+<Exploration/Model/penetration1.pdf, id=3941, 272.01625pt x 274.02374pt>
+File: Exploration/Model/penetration1.pdf Graphic file (type pdf)
+
+<use Exploration/Model/penetration1.pdf>
+Package pdftex.def Info: Exploration/Model/penetration1.pdf used on input line 
+231.
+(pdftex.def)             Requested size: 93.26462pt x 93.95122pt.
+ [64] [65 <./Exploration/Model/JEnergy1.pdf> <./Exploration/Model/JEnergy25.pdf
+> <./Exploration/Model/penetration1.pdf>] [66]
+<Exploration/Model/media/voronoi_grid.pdf, id=3976, 412.54124pt x 413.545pt>
+File: Exploration/Model/media/voronoi_grid.pdf Graphic file (type pdf)
+
+<use Exploration/Model/media/voronoi_grid.pdf>
+Package pdftex.def Info: Exploration/Model/media/voronoi_grid.pdf used on input
+ line 315.
+(pdftex.def)             Requested size: 86.51031pt x 86.72377pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 315--315
+[]\OT1/cmr/m/n/10 (a) Sam-pling Grid
+ []
+
+
+Underfull \hbox (badness 4378) in paragraph at lines 315--315
+\OT1/cmr/m/n/10 over ran-dom par-ti-
+ []
+
+
+<Exploration/Model/media/voronoi_grid_closeup.pdf, id=3977, 422.97124pt x 413.7
+5877pt>
+File: Exploration/Model/media/voronoi_grid_closeup.pdf Graphic file (type pdf)
+ <use Exploration/Model/media/voronoi_grid_closeup.pdf>
+Package pdftex.def Info: Exploration/Model/media/voronoi_grid_closeup.pdf used 
+on input line 318.
+(pdftex.def)             Requested size: 88.65231pt x 86.72377pt.
+
+Underfull \hbox (badness 4713) in paragraph at lines 318--318
+[]\OT1/cmr/m/n/10 (b) Count-ing neigh-
+ []
+
+
+<Exploration/Model/media/weight_profile.pdf, id=3978, 428.5016pt x 354.92245pt>
+File: Exploration/Model/media/weight_profile.pdf Graphic file (type pdf)
+<use Exploration/Model/media/weight_profile.pdf>
+Package pdftex.def Info: Exploration/Model/media/weight_profile.pdf used on inp
+ut line 321.
+(pdftex.def)             Requested size: 104.69939pt x 86.72377pt.
+
+<Exploration/Model/hilo_ising.pdf, id=3979, 487.43231pt x 181.88358pt>
+File: Exploration/Model/hilo_ising.pdf Graphic file (type pdf)
+
+<use Exploration/Model/hilo_ising.pdf>
+Package pdftex.def Info: Exploration/Model/hilo_ising.pdf used on input line 34
+5.
+(pdftex.def)             Requested size: 154.94026pt x 57.81621pt.
+File: Exploration/Model/hilo_ising.pdf Graphic file (type pdf)
+ <use Exploration/Model/hilo_ising.pdf>
+Package pdftex.def Info: Exploration/Model/hilo_ising.pdf used on input line 34
+7.
+(pdftex.def)             Requested size: 154.94026pt x 57.81621pt.
+
+<Exploration/Model/min_ising.pdf, id=3980, 490.40662pt x 181.47801pt>
+File: Exploration/Model/min_ising.pdf Graphic file (type pdf)
+
+<use Exploration/Model/min_ising.pdf>
+Package pdftex.def Info: Exploration/Model/min_ising.pdf used on input line 350
+.
+(pdftex.def)             Requested size: 156.22992pt x 57.81621pt.
+File: Exploration/Model/min_ising.pdf Graphic file (type pdf)
+ <use Exploration/Model/min_ising.pdf>
+Package pdftex.def Info: Exploration/Model/min_ising.pdf used on input line 352
+.
+(pdftex.def)             Requested size: 156.22992pt x 57.81621pt.
+
+[67] <Exploration/Model/ising000.pdf, id=3984, 375.4025pt x 288.07625pt>
+File: Exploration/Model/ising000.pdf Graphic file (type pdf)
+
+<use Exploration/Model/ising000.pdf>
+Package pdftex.def Info: Exploration/Model/ising000.pdf used on input line 395.
+
+(pdftex.def)             Requested size: 54.2025pt x 44.99995pt.
+
+<Exploration/Model/ising100.pdf, id=3986, 375.4025pt x 288.07625pt>
+File: Exploration/Model/ising100.pdf Graphic file (type pdf)
+
+<use Exploration/Model/ising100.pdf>
+Package pdftex.def Info: Exploration/Model/ising100.pdf used on input line 396.
+
+(pdftex.def)             Requested size: 54.2025pt x 44.99995pt.
+
+<Exploration/Model/ising225.pdf, id=3988, 375.4025pt x 288.07625pt>
+File: Exploration/Model/ising225.pdf Graphic file (type pdf)
+
+<use Exploration/Model/ising225.pdf>
+Package pdftex.def Info: Exploration/Model/ising225.pdf used on input line 397.
+
+(pdftex.def)             Requested size: 54.2025pt x 44.99995pt.
+
+<Exploration/Model/ising400.pdf, id=3990, 375.4025pt x 288.07625pt>
+File: Exploration/Model/ising400.pdf Graphic file (type pdf)
+
+<use Exploration/Model/ising400.pdf>
+Package pdftex.def Info: Exploration/Model/ising400.pdf used on input line 398.
+
+(pdftex.def)             Requested size: 54.2025pt x 44.99995pt.
+
+<Exploration/Model/visibility.pdf, id=3992, 375.4025pt x 288.07625pt>
+File: Exploration/Model/visibility.pdf Graphic file (type pdf)
+
+<use Exploration/Model/visibility.pdf>
+Package pdftex.def Info: Exploration/Model/visibility.pdf used on input line 39
+9.
+(pdftex.def)             Requested size: 54.2025pt x 44.99995pt.
+
+<Exploration/Model/marg000.pdf, id=3994, 375.4025pt x 288.07625pt>
+File: Exploration/Model/marg000.pdf Graphic file (type pdf)
+
+<use Exploration/Model/marg000.pdf>
+Package pdftex.def Info: Exploration/Model/marg000.pdf used on input line 400.
+(pdftex.def)             Requested size: 54.2025pt x 44.99995pt.
+
+<Exploration/Model/marg100.pdf, id=3996, 375.4025pt x 288.07625pt>
+File: Exploration/Model/marg100.pdf Graphic file (type pdf)
+
+<use Exploration/Model/marg100.pdf>
+Package pdftex.def Info: Exploration/Model/marg100.pdf used on input line 401.
+(pdftex.def)             Requested size: 54.2025pt x 44.99995pt.
+
+<Exploration/Model/marg225.pdf, id=3998, 375.4025pt x 288.07625pt>
+File: Exploration/Model/marg225.pdf Graphic file (type pdf)
+
+<use Exploration/Model/marg225.pdf>
+Package pdftex.def Info: Exploration/Model/marg225.pdf used on input line 402.
+(pdftex.def)             Requested size: 54.2025pt x 44.99995pt.
+
+<Exploration/Model/marg400.pdf, id=4000, 375.4025pt x 288.07625pt>
+File: Exploration/Model/marg400.pdf Graphic file (type pdf)
+
+<use Exploration/Model/marg400.pdf>
+Package pdftex.def Info: Exploration/Model/marg400.pdf used on input line 403.
+(pdftex.def)             Requested size: 54.2025pt x 44.99995pt.
+File: Exploration/Model/marg000.pdf Graphic file (type pdf)
+ <use Exploration/Model/marg000.pdf>
+Package pdftex.def Info: Exploration/Model/marg000.pdf used on input line 405.
+(pdftex.def)             Requested size: 54.2025pt x 44.99995pt.
+File: Exploration/Model/marg000.pdf Graphic file (type pdf)
+
+<use Exploration/Model/marg000.pdf>
+Package pdftex.def Info: Exploration/Model/marg000.pdf used on input line 407.
+(pdftex.def)             Requested size: 54.2025pt x 44.99995pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--407
+[]\OT1/cmr/m/n/10 (b) \OT1/cmr/m/n/8 0 It-er-a-
+ []
+
+File: Exploration/Model/marg100.pdf Graphic file (type pdf)
+<use Exploration/Model/marg100.pdf>
+Package pdftex.def Info: Exploration/Model/marg100.pdf used on input line 409.
+(pdftex.def)             Requested size: 54.2025pt x 44.99995pt.
+File: Exploration/Model/marg225.pdf Graphic file (type pdf)
+ <use Exploration/Model/marg225.pdf>
+Package pdftex.def Info: Exploration/Model/marg225.pdf used on input line 411.
+(pdftex.def)             Requested size: 54.2025pt x 44.99995pt.
+File: Exploration/Model/marg400.pdf Graphic file (type pdf)
+
+<use Exploration/Model/marg400.pdf>
+Package pdftex.def Info: Exploration/Model/marg400.pdf used on input line 413.
+(pdftex.def)             Requested size: 54.2025pt x 44.99995pt.
+
+<Exploration/Model/Penetration/ising_cell_001.png, id=4007, 219.219pt x 298.716
+pt>
+File: Exploration/Model/Penetration/ising_cell_001.png Graphic file (type png)
+ <use Exploration/Model/Penetration/ising_cell_001.png>
+Package pdftex.def Info: Exploration/Model/Penetration/ising_cell_001.png used 
+on input line 442.
+(pdftex.def)             Requested size: 63.64212pt x 86.72377pt.
+
+<Exploration/Model/Penetration/ising_penetration_001.pdf, id=4008, 471.7625pt x
+ 393.47pt>
+File: Exploration/Model/Penetration/ising_penetration_001.pdf Graphic file (typ
+e pdf)
+ <use Exploration/Model/Penetration/ising_penetration_001.pdf>
+Package pdftex.def Info: Exploration/Model/Penetration/ising_penetration_001.pd
+f used on input line 443.
+(pdftex.def)             Requested size: 103.97522pt x 86.72377pt.
+
+<Exploration/Model/Penetration/ising_extinction_001.pdf, id=4009, 468.75125pt x
+ 393.47pt>
+File: Exploration/Model/Penetration/ising_extinction_001.pdf Graphic file (type
+ pdf)
+ <use Exploration/Model/Penetration/ising_extinction_001.pdf>
+Package pdftex.def Info: Exploration/Model/Penetration/ising_extinction_001.pdf
+ used on input line 444.
+(pdftex.def)             Requested size: 103.31155pt x 86.72377pt.
+
+<Exploration/Model/Penetration/ising_cell_004.png, id=4010, 240.9pt x 321.2pt>
+File: Exploration/Model/Penetration/ising_cell_004.png Graphic file (type png)
+
+<use Exploration/Model/Penetration/ising_cell_004.png>
+Package pdftex.def Info: Exploration/Model/Penetration/ising_cell_004.png used 
+on input line 445.
+(pdftex.def)             Requested size: 65.04018pt x 86.72377pt.
+
+<Exploration/Model/Penetration/ising_penetration_004.pdf, id=4011, 471.7625pt x
+ 393.47pt>
+File: Exploration/Model/Penetration/ising_penetration_004.pdf Graphic file (typ
+e pdf)
+ <use Exploration/Model/Penetration/ising_penetration_004.pdf>
+Package pdftex.def Info: Exploration/Model/Penetration/ising_penetration_004.pd
+f used on input line 446.
+(pdftex.def)             Requested size: 103.97522pt x 86.72377pt.
+
+<Exploration/Model/Penetration/ising_extinction_004.pdf, id=4012, 468.75125pt x
+ 393.47pt>
+File: Exploration/Model/Penetration/ising_extinction_004.pdf Graphic file (type
+ pdf)
+ <use Exploration/Model/Penetration/ising_extinction_004.pdf>
+Package pdftex.def Info: Exploration/Model/Penetration/ising_extinction_004.pdf
+ used on input line 447.
+(pdftex.def)             Requested size: 103.31155pt x 86.72377pt.
+
+<Exploration/Model/Penetration/ising_cell_009.png, id=4013, 219.219pt x 298.716
+pt>
+File: Exploration/Model/Penetration/ising_cell_009.png Graphic file (type png)
+ <use Exploration/Model/Penetration/ising_cell_009.png>
+Package pdftex.def Info: Exploration/Model/Penetration/ising_cell_009.png used 
+on input line 448.
+(pdftex.def)             Requested size: 63.64212pt x 86.72377pt.
+
+<Exploration/Model/Penetration/ising_penetration_009.pdf, id=4014, 471.7625pt x
+ 393.47pt>
+File: Exploration/Model/Penetration/ising_penetration_009.pdf Graphic file (typ
+e pdf)
+ <use Exploration/Model/Penetration/ising_penetration_009.pdf>
+Package pdftex.def Info: Exploration/Model/Penetration/ising_penetration_009.pd
+f used on input line 449.
+(pdftex.def)             Requested size: 103.97522pt x 86.72377pt.
+
+<Exploration/Model/Penetration/ising_extinction_009.pdf, id=4015, 468.75125pt x
+ 393.47pt>
+File: Exploration/Model/Penetration/ising_extinction_009.pdf Graphic file (type
+ pdf)
+ <use Exploration/Model/Penetration/ising_extinction_009.pdf>
+Package pdftex.def Info: Exploration/Model/Penetration/ising_extinction_009.pdf
+ used on input line 450.
+(pdftex.def)             Requested size: 103.31155pt x 86.72377pt.
+
+<Exploration/Model/Penetration/ising_cell_016.png, id=4016, 219.219pt x 298.716
+pt>
+File: Exploration/Model/Penetration/ising_cell_016.png Graphic file (type png)
+ <use Exploration/Model/Penetration/ising_cell_016.png>
+Package pdftex.def Info: Exploration/Model/Penetration/ising_cell_016.png used 
+on input line 451.
+(pdftex.def)             Requested size: 63.64212pt x 86.72377pt.
+
+<Exploration/Model/Penetration/ising_penetration_016.pdf, id=4017, 471.7625pt x
+ 393.47pt>
+File: Exploration/Model/Penetration/ising_penetration_016.pdf Graphic file (typ
+e pdf)
+ <use Exploration/Model/Penetration/ising_penetration_016.pdf>
+Package pdftex.def Info: Exploration/Model/Penetration/ising_penetration_016.pd
+f used on input line 452.
+(pdftex.def)             Requested size: 103.97522pt x 86.72377pt.
+
+<Exploration/Model/Penetration/ising_extinction_016.pdf, id=4018, 468.75125pt x
+ 393.47pt>
+File: Exploration/Model/Penetration/ising_extinction_016.pdf Graphic file (type
+ pdf)
+ <use Exploration/Model/Penetration/ising_extinction_016.pdf>
+Package pdftex.def Info: Exploration/Model/Penetration/ising_extinction_016.pdf
+ used on input line 453.
+(pdftex.def)             Requested size: 103.31155pt x 86.72377pt.
+
+<Exploration/Model/Penetration/ising_cell_025.png, id=4019, 219.219pt x 298.716
+pt>
+File: Exploration/Model/Penetration/ising_cell_025.png Graphic file (type png)
+ <use Exploration/Model/Penetration/ising_cell_025.png>
+Package pdftex.def Info: Exploration/Model/Penetration/ising_cell_025.png used 
+on input line 454.
+(pdftex.def)             Requested size: 63.64212pt x 86.72377pt.
+
+<Exploration/Model/Penetration/ising_penetration_025.pdf, id=4020, 471.7625pt x
+ 393.47pt>
+File: Exploration/Model/Penetration/ising_penetration_025.pdf Graphic file (typ
+e pdf)
+ <use Exploration/Model/Penetration/ising_penetration_025.pdf>
+Package pdftex.def Info: Exploration/Model/Penetration/ising_penetration_025.pd
+f used on input line 455.
+(pdftex.def)             Requested size: 103.97522pt x 86.72377pt.
+
+<Exploration/Model/Penetration/ising_extinction_025.pdf, id=4021, 468.75125pt x
+ 393.47pt>
+File: Exploration/Model/Penetration/ising_extinction_025.pdf Graphic file (type
+ pdf)
+ <use Exploration/Model/Penetration/ising_extinction_025.pdf>
+Package pdftex.def Info: Exploration/Model/Penetration/ising_extinction_025.pdf
+ used on input line 456.
+(pdftex.def)             Requested size: 103.31155pt x 86.72377pt.
+
+<Exploration/Model/media/poisson_disk.pdf, id=4022, 214.8025pt x 215.80624pt>
+File: Exploration/Model/media/poisson_disk.pdf Graphic file (type pdf)
+
+<use Exploration/Model/media/poisson_disk.pdf>
+Package pdftex.def Info: Exploration/Model/media/poisson_disk.pdf used on input
+ line 486.
+(pdftex.def)             Requested size: 93.51372pt x 93.95122pt.
+
+<Exploration/Model/media/voronoi.png, id=4023, 210.897pt x 209.9115pt>
+File: Exploration/Model/media/voronoi.png Graphic file (type png)
+
+<use Exploration/Model/media/voronoi.png>
+Package pdftex.def Info: Exploration/Model/media/voronoi.png used on input line
+ 490.
+(pdftex.def)             Requested size: 94.39432pt x 93.95122pt.
+
+<Exploration/Model/media/voronoi_chex.pdf, id=4025, 204.765pt x 209.78375pt>
+File: Exploration/Model/media/voronoi_chex.pdf Graphic file (type pdf)
+
+<use Exploration/Model/media/voronoi_chex.pdf>
+Package pdftex.def Info: Exploration/Model/media/voronoi_chex.pdf used on input
+ line 494.
+(pdftex.def)             Requested size: 91.70284pt x 93.95122pt.
+ [68]
+<Exploration/Model/media/entropy_ising.pdf, id=4029, 1907.125pt x 333.69916pt>
+File: Exploration/Model/media/entropy_ising.pdf Graphic file (type pdf)
+
+<use Exploration/Model/media/entropy_ising.pdf>
+Package pdftex.def Info: Exploration/Model/media/entropy_ising.pdf used on inpu
+t line 529.
+(pdftex.def)             Requested size: 351.06659pt x 61.42993pt.
+
+<Exploration/Model/media/entropy_chex.pdf, id=4030, 1907.125pt x 333.69916pt>
+File: Exploration/Model/media/entropy_chex.pdf Graphic file (type pdf)
+
+<use Exploration/Model/media/entropy_chex.pdf>
+Package pdftex.def Info: Exploration/Model/media/entropy_chex.pdf used on input
+ line 532.
+(pdftex.def)             Requested size: 351.06659pt x 61.42993pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[69]
+<Exploration/Model/media/weight_profiles.pdf, id=4034, 607.54138pt x 271.13252p
+t>
+File: Exploration/Model/media/weight_profiles.pdf Graphic file (type pdf)
+ <use Exploration/Model/media/weight_profiles.pdf>
+Package pdftex.def Info: Exploration/Model/media/weight_profiles.pdf used on in
+put line 559.
+(pdftex.def)             Requested size: 361.34999pt x 161.26172pt.
+
+<Exploration/Model/samples.png, id=4035, 541.02126pt x 583.17876pt>
+File: Exploration/Model/samples.png Graphic file (type png)
+
+<use Exploration/Model/samples.png>
+Package pdftex.def Info: Exploration/Model/samples.png used on input line 572.
+(pdftex.def)             Requested size: 60.33804pt x 65.04256pt.
+
+<Exploration/Model/W02.pdf, id=4036, 416.55624pt x 313.17pt>
+File: Exploration/Model/W02.pdf Graphic file (type pdf)
+
+<use Exploration/Model/W02.pdf>
+Package pdftex.def Info: Exploration/Model/W02.pdf used on input line 576.
+(pdftex.def)             Requested size: 65.04256pt x 48.89923pt.
+
+<Exploration/Model/W04.pdf, id=4037, 416.55624pt x 313.17pt>
+File: Exploration/Model/W04.pdf Graphic file (type pdf)
+
+<use Exploration/Model/W04.pdf>
+Package pdftex.def Info: Exploration/Model/W04.pdf used on input line 578.
+(pdftex.def)             Requested size: 65.04256pt x 48.89923pt.
+
+<Exploration/Model/W06.pdf, id=4038, 422.57875pt x 312.16624pt>
+File: Exploration/Model/W06.pdf Graphic file (type pdf)
+
+<use Exploration/Model/W06.pdf>
+Package pdftex.def Info: Exploration/Model/W06.pdf used on input line 580.
+(pdftex.def)             Requested size: 65.04256pt x 48.04707pt.
+
+<Exploration/Model/W08.pdf, id=4039, 422.57875pt x 313.17pt>
+File: Exploration/Model/W08.pdf Graphic file (type pdf)
+
+<use Exploration/Model/W08.pdf>
+Package pdftex.def Info: Exploration/Model/W08.pdf used on input line 582.
+(pdftex.def)             Requested size: 65.04256pt x 48.20155pt.
+
+<Exploration/Model/media/left_combos_hilite.pdf, id=4040, 728.33421pt x 680.527
+13pt>
+File: Exploration/Model/media/left_combos_hilite.pdf Graphic file (type pdf)
+ <use Exploration/Model/media/left_combos_hilite.pdf>
+Package pdftex.def Info: Exploration/Model/media/left_combos_hilite.pdf used on
+ input line 594.
+(pdftex.def)             Requested size: 291.32852pt x 272.20602pt.
+
+<Exploration/Model/media/right_combos_hilite.pdf, id=4041, 728.33421pt x 680.52
+713pt>
+File: Exploration/Model/media/right_combos_hilite.pdf Graphic file (type pdf)
+ <use Exploration/Model/media/right_combos_hilite.pdf>
+Package pdftex.def Info: Exploration/Model/media/right_combos_hilite.pdf used o
+n input line 595.
+(pdftex.def)             Requested size: 291.32852pt x 272.20602pt.
+
+<Exploration/Model/2D/scene_01.png, id=4042, 353.6412pt x 354.123pt>
+File: Exploration/Model/2D/scene_01.png Graphic file (type png)
+
+<use Exploration/Model/2D/scene_01.png>
+Package pdftex.def Info: Exploration/Model/2D/scene_01.png used on input line 6
+56.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+
+<Exploration/Model/2D/marginal_01.png, id=4043, 353.6412pt x 354.123pt>
+File: Exploration/Model/2D/marginal_01.png Graphic file (type png)
+
+<use Exploration/Model/2D/marginal_01.png>
+Package pdftex.def Info: Exploration/Model/2D/marginal_01.png used on input lin
+e 657.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+
+<Exploration/Model/2D/energy_01.png, id=4044, 353.6412pt x 354.123pt>
+File: Exploration/Model/2D/energy_01.png Graphic file (type png)
+
+<use Exploration/Model/2D/energy_01.png>
+Package pdftex.def Info: Exploration/Model/2D/energy_01.png used on input line 
+658.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+
+<Exploration/Model/2D/scene_02.png, id=4045, 353.6412pt x 354.123pt>
+File: Exploration/Model/2D/scene_02.png Graphic file (type png)
+
+<use Exploration/Model/2D/scene_02.png>
+Package pdftex.def Info: Exploration/Model/2D/scene_02.png used on input line 6
+59.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+
+<Exploration/Model/2D/marginal_02.png, id=4046, 353.6412pt x 354.123pt>
+File: Exploration/Model/2D/marginal_02.png Graphic file (type png)
+
+<use Exploration/Model/2D/marginal_02.png>
+Package pdftex.def Info: Exploration/Model/2D/marginal_02.png used on input lin
+e 660.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+File: Exploration/Model/2D/energy_01.png Graphic file (type png)
+
+<use Exploration/Model/2D/energy_01.png>
+Package pdftex.def Info: Exploration/Model/2D/energy_01.png used on input line 
+661.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+
+<Exploration/Model/2D/scene_03.png, id=4047, 353.6412pt x 354.123pt>
+File: Exploration/Model/2D/scene_03.png Graphic file (type png)
+
+<use Exploration/Model/2D/scene_03.png>
+Package pdftex.def Info: Exploration/Model/2D/scene_03.png used on input line 6
+62.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+
+<Exploration/Model/2D/marginal_03.png, id=4048, 353.6412pt x 354.123pt>
+File: Exploration/Model/2D/marginal_03.png Graphic file (type png)
+
+<use Exploration/Model/2D/marginal_03.png>
+Package pdftex.def Info: Exploration/Model/2D/marginal_03.png used on input lin
+e 663.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+
+<Exploration/Model/2D/energy_03.png, id=4049, 353.6412pt x 354.123pt>
+File: Exploration/Model/2D/energy_03.png Graphic file (type png)
+
+<use Exploration/Model/2D/energy_03.png>
+Package pdftex.def Info: Exploration/Model/2D/energy_03.png used on input line 
+664.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+
+<Exploration/Model/2D/scene_04.png, id=4050, 353.6412pt x 354.123pt>
+File: Exploration/Model/2D/scene_04.png Graphic file (type png)
+
+<use Exploration/Model/2D/scene_04.png>
+Package pdftex.def Info: Exploration/Model/2D/scene_04.png used on input line 6
+65.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+
+<Exploration/Model/2D/marginal_04.png, id=4051, 353.6412pt x 354.123pt>
+File: Exploration/Model/2D/marginal_04.png Graphic file (type png)
+
+<use Exploration/Model/2D/marginal_04.png>
+Package pdftex.def Info: Exploration/Model/2D/marginal_04.png used on input lin
+e 666.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+
+<Exploration/Model/2D/energy_04.png, id=4052, 353.6412pt x 354.123pt>
+File: Exploration/Model/2D/energy_04.png Graphic file (type png)
+
+<use Exploration/Model/2D/energy_04.png>
+Package pdftex.def Info: Exploration/Model/2D/energy_04.png used on input line 
+667.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+
+<Exploration/Model/2D/scene_05.png, id=4053, 353.6412pt x 354.123pt>
+File: Exploration/Model/2D/scene_05.png Graphic file (type png)
+
+<use Exploration/Model/2D/scene_05.png>
+Package pdftex.def Info: Exploration/Model/2D/scene_05.png used on input line 6
+68.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+
+<Exploration/Model/2D/marginal_05.png, id=4054, 353.6412pt x 354.123pt>
+File: Exploration/Model/2D/marginal_05.png Graphic file (type png)
+
+<use Exploration/Model/2D/marginal_05.png>
+Package pdftex.def Info: Exploration/Model/2D/marginal_05.png used on input lin
+e 669.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+
+<Exploration/Model/2D/energy_05.png, id=4055, 353.6412pt x 354.123pt>
+File: Exploration/Model/2D/energy_05.png Graphic file (type png)
+
+<use Exploration/Model/2D/energy_05.png>
+Package pdftex.def Info: Exploration/Model/2D/energy_05.png used on input line 
+670.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+File: Exploration/Model/2D/scene_05.png Graphic file (type png)
+
+<use Exploration/Model/2D/scene_05.png>
+Package pdftex.def Info: Exploration/Model/2D/scene_05.png used on input line 6
+72.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+File: Exploration/Model/2D/marginal_05.png Graphic file (type png)
+
+<use Exploration/Model/2D/marginal_05.png>
+Package pdftex.def Info: Exploration/Model/2D/marginal_05.png used on input lin
+e 674.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+File: Exploration/Model/2D/energy_05.png Graphic file (type png)
+
+<use Exploration/Model/2D/energy_05.png>
+Package pdftex.def Info: Exploration/Model/2D/energy_05.png used on input line 
+676.
+(pdftex.def)             Requested size: 108.405pt x 108.5504pt.
+
+<Exploration/Model/view_01.png, id=4056, 421.575pt x 345.29pt>
+File: Exploration/Model/view_01.png Graphic file (type png)
+
+<use Exploration/Model/view_01.png>
+Package pdftex.def Info: Exploration/Model/view_01.png used on input line 683.
+(pdftex.def)             Requested size: 108.405pt x 88.78802pt.
+
+<Exploration/Model/marginal_01.png, id=4057, 421.575pt x 351.3125pt>
+File: Exploration/Model/marginal_01.png Graphic file (type png)
+
+<use Exploration/Model/marginal_01.png>
+Package pdftex.def Info: Exploration/Model/marginal_01.png used on input line 6
+84.
+(pdftex.def)             Requested size: 108.405pt x 90.33665pt.
+
+<Exploration/Model/energy_01.png, id=4058, 421.575pt x 351.3125pt>
+File: Exploration/Model/energy_01.png Graphic file (type png)
+
+<use Exploration/Model/energy_01.png>
+Package pdftex.def Info: Exploration/Model/energy_01.png used on input line 685
+.
+(pdftex.def)             Requested size: 108.405pt x 90.33665pt.
+
+<Exploration/Model/view_02.png, id=4059, 421.575pt x 345.29pt>
+File: Exploration/Model/view_02.png Graphic file (type png)
+
+<use Exploration/Model/view_02.png>
+Package pdftex.def Info: Exploration/Model/view_02.png used on input line 686.
+(pdftex.def)             Requested size: 108.405pt x 88.78802pt.
+
+<Exploration/Model/marginal_02.png, id=4060, 421.575pt x 351.3125pt>
+File: Exploration/Model/marginal_02.png Graphic file (type png)
+
+<use Exploration/Model/marginal_02.png>
+Package pdftex.def Info: Exploration/Model/marginal_02.png used on input line 6
+87.
+(pdftex.def)             Requested size: 108.405pt x 90.33665pt.
+
+<Exploration/Model/energy_02.png, id=4061, 421.575pt x 351.3125pt>
+File: Exploration/Model/energy_02.png Graphic file (type png)
+
+<use Exploration/Model/energy_02.png>
+Package pdftex.def Info: Exploration/Model/energy_02.png used on input line 688
+.
+(pdftex.def)             Requested size: 108.405pt x 90.33665pt.
+
+<Exploration/Model/view_03.png, id=4062, 421.575pt x 345.29pt>
+File: Exploration/Model/view_03.png Graphic file (type png)
+
+<use Exploration/Model/view_03.png>
+Package pdftex.def Info: Exploration/Model/view_03.png used on input line 689.
+(pdftex.def)             Requested size: 108.405pt x 88.78802pt.
+
+<Exploration/Model/marginal_03.png, id=4063, 421.575pt x 351.3125pt>
+File: Exploration/Model/marginal_03.png Graphic file (type png)
+
+<use Exploration/Model/marginal_03.png>
+Package pdftex.def Info: Exploration/Model/marginal_03.png used on input line 6
+90.
+(pdftex.def)             Requested size: 108.405pt x 90.33665pt.
+
+<Exploration/Model/energy_03.png, id=4064, 421.575pt x 351.3125pt>
+File: Exploration/Model/energy_03.png Graphic file (type png)
+
+<use Exploration/Model/energy_03.png>
+Package pdftex.def Info: Exploration/Model/energy_03.png used on input line 691
+.
+(pdftex.def)             Requested size: 108.405pt x 90.33665pt.
+
+<Exploration/Model/view_04.png, id=4065, 421.575pt x 345.29pt>
+File: Exploration/Model/view_04.png Graphic file (type png)
+
+<use Exploration/Model/view_04.png>
+Package pdftex.def Info: Exploration/Model/view_04.png used on input line 692.
+(pdftex.def)             Requested size: 108.405pt x 88.78802pt.
+
+<Exploration/Model/marginal_04.png, id=4066, 421.575pt x 350.30875pt>
+File: Exploration/Model/marginal_04.png Graphic file (type png)
+
+<use Exploration/Model/marginal_04.png>
+Package pdftex.def Info: Exploration/Model/marginal_04.png used on input line 6
+93.
+(pdftex.def)             Requested size: 108.405pt x 90.07855pt.
+
+<Exploration/Model/energy_04.png, id=4067, 421.575pt x 351.3125pt>
+File: Exploration/Model/energy_04.png Graphic file (type png)
+
+<use Exploration/Model/energy_04.png>
+Package pdftex.def Info: Exploration/Model/energy_04.png used on input line 694
+.
+(pdftex.def)             Requested size: 108.405pt x 90.33665pt.
+
+<Exploration/Model/view_05.png, id=4068, 421.575pt x 345.29pt>
+File: Exploration/Model/view_05.png Graphic file (type png)
+
+<use Exploration/Model/view_05.png>
+Package pdftex.def Info: Exploration/Model/view_05.png used on input line 695.
+(pdftex.def)             Requested size: 108.405pt x 88.78802pt.
+
+<Exploration/Model/marginal_05.png, id=4069, 421.575pt x 350.30875pt>
+File: Exploration/Model/marginal_05.png Graphic file (type png)
+
+<use Exploration/Model/marginal_05.png>
+Package pdftex.def Info: Exploration/Model/marginal_05.png used on input line 6
+96.
+(pdftex.def)             Requested size: 108.405pt x 90.07855pt.
+
+<Exploration/Model/energy_05.png, id=4070, 453.695pt x 410.53375pt>
+File: Exploration/Model/energy_05.png Graphic file (type png)
+
+<use Exploration/Model/energy_05.png>
+Package pdftex.def Info: Exploration/Model/energy_05.png used on input line 697
+.
+(pdftex.def)             Requested size: 108.405pt x 98.09161pt.
+File: Exploration/Model/view_05.png Graphic file (type png)
+ <use Exploration/Model/view_05.png>
+Package pdftex.def Info: Exploration/Model/view_05.png used on input line 699.
+(pdftex.def)             Requested size: 108.405pt x 88.78802pt.
+File: Exploration/Model/marginal_05.png Graphic file (type png)
+
+<use Exploration/Model/marginal_05.png>
+Package pdftex.def Info: Exploration/Model/marginal_05.png used on input line 7
+01.
+(pdftex.def)             Requested size: 108.405pt x 90.07855pt.
+File: Exploration/Model/energy_05.png Graphic file (type png)
+ <use Exploration/Model/energy_05.png>
+Package pdftex.def Info: Exploration/Model/energy_05.png used on input line 703
+.
+(pdftex.def)             Requested size: 108.405pt x 98.09161pt.
+
+[70] [71]
+<Exploration/Model/simple_stats.pdf, id=4078, 532.99126pt x 117.43875pt>
+File: Exploration/Model/simple_stats.pdf Graphic file (type pdf)
+
+<use Exploration/Model/simple_stats.pdf>
+Package pdftex.def Info: Exploration/Model/simple_stats.pdf used on input line 
+793.
+(pdftex.def)             Requested size: 433.62pt x 95.54596pt.
+
+<Exploration/Model/ising_cropped.pdf, id=4079, 532.99126pt x 118.4425pt>
+File: Exploration/Model/ising_cropped.pdf Graphic file (type pdf)
+
+<use Exploration/Model/ising_cropped.pdf>
+Package pdftex.def Info: Exploration/Model/ising_cropped.pdf used on input line
+ 796.
+(pdftex.def)             Requested size: 433.62pt x 96.3626pt.
+
+Overfull \hbox (25.90076pt too wide) in paragraph at lines 793--797
+ [][] 
+ []
+
+
+Overfull \hbox (25.90076pt too wide) in paragraph at lines 793--797
+ [] 
+ []
+
+[72]) (./Exploration/Speedup/speedup.tex
+<Exploration/Speedup/Parallel_Bits/iso-01.png, id=4084, 335.2525pt x 222.8325pt
+>
+File: Exploration/Speedup/Parallel_Bits/iso-01.png Graphic file (type png)
+ <use Exploration/Speedup/Parallel_Bits/iso-01.png>
+Package pdftex.def Info: Exploration/Speedup/Parallel_Bits/iso-01.png used on i
+nput line 8.
+(pdftex.def)             Requested size: 71.8576pt x 54.2025pt.
+
+<Exploration/Speedup/Parallel_Bits/iso-02.png, id=4086, 335.2525pt x 222.8325pt
+>
+File: Exploration/Speedup/Parallel_Bits/iso-02.png Graphic file (type png)
+ <use Exploration/Speedup/Parallel_Bits/iso-02.png>
+Package pdftex.def Info: Exploration/Speedup/Parallel_Bits/iso-02.png used on i
+nput line 9.
+(pdftex.def)             Requested size: 71.8576pt x 54.2025pt.
+
+<Exploration/Speedup/Parallel_Bits/iso-03.png, id=4088, 335.2525pt x 222.8325pt
+>
+File: Exploration/Speedup/Parallel_Bits/iso-03.png Graphic file (type png)
+ <use Exploration/Speedup/Parallel_Bits/iso-03.png>
+Package pdftex.def Info: Exploration/Speedup/Parallel_Bits/iso-03.png used on i
+nput line 10.
+(pdftex.def)             Requested size: 71.8576pt x 54.2025pt.
+
+<Exploration/Speedup/Parallel_Bits/iso-04.png, id=4090, 335.2525pt x 222.8325pt
+>
+File: Exploration/Speedup/Parallel_Bits/iso-04.png Graphic file (type png)
+ <use Exploration/Speedup/Parallel_Bits/iso-04.png>
+Package pdftex.def Info: Exploration/Speedup/Parallel_Bits/iso-04.png used on i
+nput line 11.
+(pdftex.def)             Requested size: 71.8576pt x 54.2025pt.
+
+<Exploration/Speedup/Parallel_Bits/par025.pdf, id=4092, 376.40625pt x 288.07625
+pt>
+File: Exploration/Speedup/Parallel_Bits/par025.pdf Graphic file (type pdf)
+ <use Exploration/Speedup/Parallel_Bits/par025.pdf>
+Package pdftex.def Info: Exploration/Speedup/Parallel_Bits/par025.pdf used on i
+nput line 13.
+(pdftex.def)             Requested size: 71.83784pt x 54.2025pt.
+
+<Exploration/Speedup/Parallel_Bits/par100.pdf, id=4094, 376.40625pt x 288.07625
+pt>
+File: Exploration/Speedup/Parallel_Bits/par100.pdf Graphic file (type pdf)
+ <use Exploration/Speedup/Parallel_Bits/par100.pdf>
+Package pdftex.def Info: Exploration/Speedup/Parallel_Bits/par100.pdf used on i
+nput line 14.
+(pdftex.def)             Requested size: 71.83784pt x 54.2025pt.
+
+<Exploration/Speedup/Parallel_Bits/par225.pdf, id=4096, 376.40625pt x 288.07625
+pt>
+File: Exploration/Speedup/Parallel_Bits/par225.pdf Graphic file (type pdf)
+ <use Exploration/Speedup/Parallel_Bits/par225.pdf>
+Package pdftex.def Info: Exploration/Speedup/Parallel_Bits/par225.pdf used on i
+nput line 15.
+(pdftex.def)             Requested size: 71.83784pt x 54.2025pt.
+
+<Exploration/Speedup/Parallel_Bits/par400.pdf, id=4098, 376.40625pt x 288.07625
+pt>
+File: Exploration/Speedup/Parallel_Bits/par400.pdf Graphic file (type pdf)
+ <use Exploration/Speedup/Parallel_Bits/par400.pdf>
+Package pdftex.def Info: Exploration/Speedup/Parallel_Bits/par400.pdf used on i
+nput line 16.
+(pdftex.def)             Requested size: 71.83784pt x 54.2025pt.
+ [73]
+<Exploration/Speedup/Parallel_Bits/isingup.pdf, id=4103, 386.44376pt x 317.185p
+t>
+File: Exploration/Speedup/Parallel_Bits/isingup.pdf Graphic file (type pdf)
+ <use Exploration/Speedup/Parallel_Bits/isingup.pdf>
+Package pdftex.def Info: Exploration/Speedup/Parallel_Bits/isingup.pdf used on 
+input line 81.
+(pdftex.def)             Requested size: 108.405pt x 88.97574pt.
+
+<Exploration/Speedup/Parallel_Bits/bitup.pdf, id=4104, 386.44376pt x 317.185pt>
+File: Exploration/Speedup/Parallel_Bits/bitup.pdf Graphic file (type pdf)
+<use Exploration/Speedup/Parallel_Bits/bitup.pdf>
+Package pdftex.def Info: Exploration/Speedup/Parallel_Bits/bitup.pdf used on in
+put line 82.
+(pdftex.def)             Requested size: 108.405pt x 88.97574pt.
+
+<Exploration/Speedup/Parallel_Bits/parcompare.pdf, id=4105, 386.44376pt x 307.1
+475pt>
+File: Exploration/Speedup/Parallel_Bits/parcompare.pdf Graphic file (type pdf)
+ <use Exploration/Speedup/Parallel_Bits/parcompare.pdf>
+Package pdftex.def Info: Exploration/Speedup/Parallel_Bits/parcompare.pdf used 
+on input line 83.
+(pdftex.def)             Requested size: 108.405pt x 86.16005pt.
+ [74])) [75]
+[76 <./Exploration/Model/media/voronoi_grid.pdf> <./Exploration/Model/media/vor
+onoi_grid_closeup.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Exploration/Model/media/voronoi_grid_
+closeup.pdf): PDF inclusion: multiple pdfs with page group included in a single
+ page
+> <./Exploration/Model/media/weight_profile.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Exploration/Model/media/weight_profil
+e.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [77 <./Exploration/Model/ising000.pdf> <./Exploration/Model/ising100.pdf> <.
+/Exploration/Model/ising225.pdf> <./Exploration/Model/ising400.pdf> <./Explorat
+ion/Model/visibility.pdf> <./Exploration/Model/marg000.pdf> <./Exploration/Mode
+l/marg100.pdf> <./Exploration/Model/marg225.pdf> <./Exploration/Model/marg400.p
+df> <./Exploration/Model/hilo_ising.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Exploration/Model/hilo_ising.pdf): PD
+F inclusion: multiple pdfs with page group included in a single page
+> <./Exploration/Model/min_ising.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Exploration/Model/min_ising.pdf): PDF
+ inclusion: multiple pdfs with page group included in a single page
+>] [78 <./Exploration/Model/Penetration/ising_cell_001.png (PNG copy)> <./Explo
+ration/Model/Penetration/ising_penetration_001.pdf> <./Exploration/Model/Penetr
+ation/ising_extinction_001.pdf> <./Exploration/Model/Penetration/ising_cell_004
+.png> <./Exploration/Model/Penetration/ising_penetration_004.pdf> <./Exploratio
+n/Model/Penetration/ising_extinction_004.pdf> <./Exploration/Model/Penetration/
+ising_cell_009.png> <./Exploration/Model/Penetration/ising_penetration_009.pdf>
+ <./Exploration/Model/Penetration/ising_extinction_009.pdf> <./Exploration/Mode
+l/Penetration/ising_cell_016.png> <./Exploration/Model/Penetration/ising_penetr
+ation_016.pdf> <./Exploration/Model/Penetration/ising_extinction_016.pdf> <./Ex
+ploration/Model/Penetration/ising_cell_025.png> <./Exploration/Model/Penetratio
+n/ising_penetration_025.pdf> <./Exploration/Model/Penetration/ising_extinction_
+025.pdf>] [79 <./Exploration/Model/media/poisson_disk.pdf> <./Exploration/Model
+/media/voronoi.png> <./Exploration/Model/media/voronoi_chex.pdf> <./Exploration
+/Model/media/entropy_ising.pdf> <./Exploration/Model/media/entropy_chex.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Exploration/Model/media/entropy_chex.
+pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [80 <./Exploration/Model/media/weight_profiles.pdf> <./Exploration/Model/sam
+ples.png (PNG copy)> <./Exploration/Model/W02.pdf> <./Exploration/Model/W04.pdf
+> <./Exploration/Model/W06.pdf> <./Exploration/Model/W08.pdf>] [81 <./Explorati
+on/Model/media/left_combos_hilite.pdf> <./Exploration/Model/media/right_combos_
+hilite.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./Exploration/Model/media/right_combos_
+hilite.pdf): PDF inclusion: multiple pdfs with page group included in a single 
+page
+>] [82 <./Exploration/Model/2D/scene_01.png> <./Exploration/Model/2D/marginal_0
+1.png (PNG copy)> <./Exploration/Model/2D/energy_01.png (PNG copy)> <./Explorat
+ion/Model/2D/scene_02.png> <./Exploration/Model/2D/marginal_02.png> <./Explorat
+ion/Model/2D/scene_03.png (PNG copy)> <./Exploration/Model/2D/marginal_03.png> 
+<./Exploration/Model/2D/energy_03.png (PNG copy)> <./Exploration/Model/2D/scene
+_04.png (PNG copy)> <./Exploration/Model/2D/marginal_04.png> <./Exploration/Mod
+el/2D/energy_04.png (PNG copy)> <./Exploration/Model/2D/scene_05.png> <./Explor
+ation/Model/2D/marginal_05.png (PNG copy)> <./Exploration/Model/2D/energy_05.pn
+g>] [83 <./Exploration/Model/view_01.png (PNG copy)> <./Exploration/Model/margi
+nal_01.png (PNG copy)> <./Exploration/Model/energy_01.png (PNG copy)> <./Explor
+ation/Model/view_02.png (PNG copy)> <./Exploration/Model/marginal_02.png (PNG c
+opy)> <./Exploration/Model/energy_02.png (PNG copy)> <./Exploration/Model/view_
+03.png (PNG copy)> <./Exploration/Model/marginal_03.png (PNG copy)> <./Explorat
+ion/Model/energy_03.png (PNG copy)> <./Exploration/Model/view_04.png (PNG copy)
+> <./Exploration/Model/marginal_04.png (PNG copy)> <./Exploration/Model/energy_
+04.png (PNG copy)> <./Exploration/Model/view_05.png (PNG copy)> <./Exploration/
+Model/marginal_05.png (PNG copy)> <./Exploration/Model/energy_05.png (PNG copy)
+>] [84 <./Exploration/Speedup/Parallel_Bits/iso-01.png> <./Exploration/Speedup/
+Parallel_Bits/iso-02.png> <./Exploration/Speedup/Parallel_Bits/iso-03.png> <./E
+xploration/Speedup/Parallel_Bits/iso-04.png> <./Exploration/Speedup/Parallel_Bi
+ts/par025.pdf> <./Exploration/Speedup/Parallel_Bits/par100.pdf> <./Exploration/
+Speedup/Parallel_Bits/par225.pdf> <./Exploration/Speedup/Parallel_Bits/par400.p
+df> <./Exploration/Model/simple_stats.pdf> <./Exploration/Model/ising_cropped.p
+df>] [85 <./Exploration/Speedup/Parallel_Bits/isingup.pdf> <./Exploration/Speed
+up/Parallel_Bits/bitup.pdf> <./Exploration/Speedup/Parallel_Bits/parcompare.pdf
+>]
+CHAPTER 5.
+(./MinRep/repredux.tex [86
+
+]
+Missing character: There is no ‚ in font cmr8!
+Missing character: There is no à in font cmr8!
+Missing character: There is no í in font cmr8!
+Missing character: There is no ‚ in font cmr8!
+Missing character: There is no à in font cmr8!
+Missing character: There is no í in font cmr8!
+Missing character: There is no ‚ in font cmr8!
+Missing character: There is no à in font cmr8!
+Missing character: There is no í in font cmr8!
+
+Overfull \hbox (71.80487pt too wide) in paragraph at lines 32--40
+[]\OT1/cmr/bx/n/12 Definition 5.2.4 \OT1/cmr/m/n/12 (Obe-di-ence)\OT1/cmr/bx/n/
+12 . []\OT1/cmr/m/n/12 Given the de-ci-sion pol-icy $\OML/cmm/m/it/12 P \OT1/cm
+r/m/n/12 = []$,
+ []
+
+<MinRep/media/overcomplete_decision.pdf, id=4877, 170.58376pt x 111.617pt>
+File: MinRep/media/overcomplete_decision.pdf Graphic file (type pdf)
+
+<use MinRep/media/overcomplete_decision.pdf>
+Package pdftex.def Info: MinRep/media/overcomplete_decision.pdf used on input l
+ine 73.
+(pdftex.def)             Requested size: 119.40779pt x 78.13135pt.
+File: MinRep/media/overcomplete_decision.pdf Graphic file (type pdf)
+
+<use MinRep/media/overcomplete_decision.pdf>
+Package pdftex.def Info: MinRep/media/overcomplete_decision.pdf used on input l
+ine 73.
+(pdftex.def)             Requested size: 119.40779pt x 78.13135pt.
+File: MinRep/media/overcomplete_decision.pdf Graphic file (type pdf)
+
+<use MinRep/media/overcomplete_decision.pdf>
+Package pdftex.def Info: MinRep/media/overcomplete_decision.pdf used on input l
+ine 73.
+(pdftex.def)             Requested size: 119.40779pt x 78.13135pt.
+
+<MinRep/media/overcomplete-2.pdf, id=4878, 145.1387pt x 91.24088pt>
+File: MinRep/media/overcomplete-2.pdf Graphic file (type pdf)
+
+<use MinRep/media/overcomplete-2.pdf>
+Package pdftex.def Info: MinRep/media/overcomplete-2.pdf used on input line 77.
+
+(pdftex.def)             Requested size: 101.59639pt x 63.86815pt.
+File: MinRep/media/overcomplete-2.pdf Graphic file (type pdf)
+ <use MinRep/media/overcomplete-2.pdf>
+Package pdftex.def Info: MinRep/media/overcomplete-2.pdf used on input line 77.
+
+(pdftex.def)             Requested size: 101.59639pt x 63.86815pt.
+File: MinRep/media/overcomplete-2.pdf Graphic file (type pdf)
+
+<use MinRep/media/overcomplete-2.pdf>
+Package pdftex.def Info: MinRep/media/overcomplete-2.pdf used on input line 77.
+
+(pdftex.def)             Requested size: 101.59639pt x 63.86815pt.
+
+<MinRep/media/complete_decision.pdf, id=4879, 143.53625pt x 112.42pt>
+File: MinRep/media/complete_decision.pdf Graphic file (type pdf)
+
+<use MinRep/media/complete_decision.pdf>
+Package pdftex.def Info: MinRep/media/complete_decision.pdf used on input line 
+100.
+(pdftex.def)             Requested size: 100.47467pt x 78.69345pt.
+File: MinRep/media/complete_decision.pdf Graphic file (type pdf)
+
+<use MinRep/media/complete_decision.pdf>
+Package pdftex.def Info: MinRep/media/complete_decision.pdf used on input line 
+100.
+(pdftex.def)             Requested size: 100.47467pt x 78.69345pt.
+File: MinRep/media/complete_decision.pdf Graphic file (type pdf)
+
+<use MinRep/media/complete_decision.pdf>
+Package pdftex.def Info: MinRep/media/complete_decision.pdf used on input line 
+100.
+(pdftex.def)             Requested size: 100.47467pt x 78.69345pt.
+
+<MinRep/media/complete-2.pdf, id=4880, 79.84476pt x 91.24088pt>
+File: MinRep/media/complete-2.pdf Graphic file (type pdf)
+
+<use MinRep/media/complete-2.pdf>
+Package pdftex.def Info: MinRep/media/complete-2.pdf used on input line 107.
+(pdftex.def)             Requested size: 55.89095pt x 63.86815pt.
+File: MinRep/media/complete-2.pdf Graphic file (type pdf)
+ <use MinRep/media/complete-2.pdf>
+Package pdftex.def Info: MinRep/media/complete-2.pdf used on input line 107.
+(pdftex.def)             Requested size: 55.89095pt x 63.86815pt.
+File: MinRep/media/complete-2.pdf Graphic file (type pdf)
+
+<use MinRep/media/complete-2.pdf>
+Package pdftex.def Info: MinRep/media/complete-2.pdf used on input line 107.
+(pdftex.def)             Requested size: 55.89095pt x 63.86815pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[87] [88 <./MinRep/media/overcomplete_decision.pdf> <./MinRep/media/overcomplet
+e-2.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./MinRep/media/overcomplete-2.pdf): PDF
+ inclusion: multiple pdfs with page group included in a single page
+> <./MinRep/media/complete_decision.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./MinRep/media/complete_decision.pdf): 
+PDF inclusion: multiple pdfs with page group included in a single page
+> <./MinRep/media/complete-2.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./MinRep/media/complete-2.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+>]
+Overfull \hbox (24.27084pt too wide) in paragraph at lines 163--164
+[]\OT1/cmr/bx/n/12 Example 5.2.3 \OT1/cmr/m/n/12 (In-com-plete-ly-De-ter-mined 
+Poli-cies)\OT1/cmr/bx/n/12 . []\OT1/cmr/m/n/12 Let $\OMS/cmsy/m/n/12 C \OT1/cmr
+/m/n/12 = \OMS/cmsy/m/n/12 f;\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (1)\OML/cmm/m/i
+t/12 ; \OT1/cmr/m/n/12 (2)\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (1\OML/cmm/m/it/12
+ ; \OT1/cmr/m/n/12 2)\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (2\OML/cmm/m/it/12 ; \O
+T1/cmr/m/n/12 1)\OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 ,
+ []
+
+<MinRep/media/simple_decision.pdf, id=5019, 101.52675pt x 111.616pt>
+File: MinRep/media/simple_decision.pdf Graphic file (type pdf)
+
+<use MinRep/media/simple_decision.pdf>
+Package pdftex.def Info: MinRep/media/simple_decision.pdf used on input line 18
+8.
+(pdftex.def)             Requested size: 71.0682pt x 78.13066pt.
+File: MinRep/media/simple_decision.pdf Graphic file (type pdf)
+ <use MinRep/media/simple_decision.pdf>
+Package pdftex.def Info: MinRep/media/simple_decision.pdf used on input line 18
+8.
+(pdftex.def)             Requested size: 71.0682pt x 78.13066pt.
+File: MinRep/media/simple_decision.pdf Graphic file (type pdf)
+
+<use MinRep/media/simple_decision.pdf>
+Package pdftex.def Info: MinRep/media/simple_decision.pdf used on input line 18
+8.
+(pdftex.def)             Requested size: 71.0682pt x 78.13066pt.
+File: MinRep/media/complete-2.pdf Graphic file (type pdf)
+ <use MinRep/media/complete-2.pdf>
+Package pdftex.def Info: MinRep/media/complete-2.pdf used on input line 204.
+(pdftex.def)             Requested size: 55.89095pt x 63.86815pt.
+File: MinRep/media/complete-2.pdf Graphic file (type pdf)
+
+<use MinRep/media/complete-2.pdf>
+Package pdftex.def Info: MinRep/media/complete-2.pdf used on input line 204.
+(pdftex.def)             Requested size: 55.89095pt x 63.86815pt.
+File: MinRep/media/complete-2.pdf Graphic file (type pdf)
+ <use MinRep/media/complete-2.pdf>
+Package pdftex.def Info: MinRep/media/complete-2.pdf used on input line 204.
+(pdftex.def)             Requested size: 55.89095pt x 63.86815pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--204
+[]\OT1/cmr/m/n/10 (d) Min-i-mal
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[89] <MinRep/media/random_alg-1.pdf, id=5024, 480.79625pt x 474.77374pt>
+File: MinRep/media/random_alg-1.pdf Graphic file (type pdf)
+
+<use MinRep/media/random_alg-1.pdf>
+Package pdftex.def Info: MinRep/media/random_alg-1.pdf used on input line 225.
+(pdftex.def)             Requested size: 146.37486pt x 144.54pt.
+
+<MinRep/media/random_adj.pdf, id=5025, 291.0875pt x 288.07625pt>
+File: MinRep/media/random_adj.pdf Graphic file (type pdf)
+
+<use MinRep/media/random_adj.pdf>
+Package pdftex.def Info: MinRep/media/random_adj.pdf used on input line 227.
+(pdftex.def)             Requested size: 146.05417pt x 144.54pt.
+
+<MinRep/media/random_cliques.pdf, id=5026, 834.04187pt x 722.7pt>
+File: MinRep/media/random_cliques.pdf Graphic file (type pdf)
+
+<use MinRep/media/random_cliques.pdf>
+Package pdftex.def Info: MinRep/media/random_cliques.pdf used on input line 232
+.
+(pdftex.def)             Requested size: 166.8054pt x 144.54pt.
+
+<MinRep/media/random_alg-2.pdf, id=5027, 240.06836pt x 394.09232pt>
+File: MinRep/media/random_alg-2.pdf Graphic file (type pdf)
+
+<use MinRep/media/random_alg-2.pdf>
+Package pdftex.def Info: MinRep/media/random_alg-2.pdf used on input line 235.
+(pdftex.def)             Requested size: 88.05096pt x 144.54pt.
+ [90 <./MinRep/media/simple_decision.pdf> <./MinRep/media/random_alg-1.pdf> <./
+MinRep/media/random_adj.pdf>]
+Overfull \hbox (90.87148pt too wide) in paragraph at lines 257--258
+[]\OT1/cmr/bx/n/12 Example 5.3.1 \OT1/cmr/m/n/12 (Non--Tran-si-tive Re-ducibil-
+ity)\OT1/cmr/bx/n/12 . []\OT1/cmr/m/n/12 Sup-pose $\OMS/cmsy/m/n/12 Y \OT1/cmr/
+m/n/12 = \OMS/cmsy/m/n/12 f\OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 
+2\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 3\OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 , $\OMS
+/cmsy/m/n/12 C \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 f;\OML/cmm/m/it/12 ; \OT1/cmr
+/m/n/12 (1)\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 (2)\OML/cmm/m/it/12 ; \OT1/cmr/m/
+n/12 (1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 3)\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 
+(2\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 3)\OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 ,
+ []
+
+[91 <./MinRep/media/random_cliques.pdf> <./MinRep/media/random_alg-2.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./MinRep/media/random_alg-2.pdf): PDF i
+nclusion: multiple pdfs with page group included in a single page
+>] <MinRep/cdiag1.pdf, id=5135, 218.8175pt x 244.915pt>
+File: MinRep/cdiag1.pdf Graphic file (type pdf)
+
+<use MinRep/cdiag1.pdf>
+Package pdftex.def Info: MinRep/cdiag1.pdf used on input line 310.
+(pdftex.def)             Requested size: 129.14127pt x 144.54pt.
+ <MinRep/cdiag2.pdf, id=5136, 218.8175pt x 248.93pt>
+File: MinRep/cdiag2.pdf Graphic file (type pdf)
+
+<use MinRep/cdiag2.pdf>
+Package pdftex.def Info: MinRep/cdiag2.pdf used on input line 311.
+(pdftex.def)             Requested size: 127.0578pt x 144.54pt.
+
+<MinRep/cdiag3.pdf, id=5137, 179.61552pt x 210.68073pt>
+File: MinRep/cdiag3.pdf Graphic file (type pdf)
+
+<use MinRep/cdiag3.pdf>
+Package pdftex.def Info: MinRep/cdiag3.pdf used on input line 312.
+(pdftex.def)             Requested size: 72.26999pt x 84.76907pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
+[]\OT1/cmr/m/n/10 (c) Re-duced
+ []
+
+[92 <./MinRep/cdiag1.pdf> <./MinRep/cdiag2.pdf> <./MinRep/cdiag3.pdf>] [93]
+<MinRep/bad_greedy.pdf, id=5161, 401.61472pt x 250.53596pt>
+File: MinRep/bad_greedy.pdf Graphic file (type pdf)
+
+<use MinRep/bad_greedy.pdf>
+Package pdftex.def Info: MinRep/bad_greedy.pdf used on input line 372.
+(pdftex.def)             Requested size: 401.61372pt x 250.53534pt.
+
+<MinRep/good_greedy.pdf, id=5162, 401.61472pt x 250.53596pt>
+File: MinRep/good_greedy.pdf Graphic file (type pdf)
+
+<use MinRep/good_greedy.pdf>
+Package pdftex.def Info: MinRep/good_greedy.pdf used on input line 374.
+(pdftex.def)             Requested size: 401.61372pt x 250.53534pt.
+ [94] [95] [96 <./MinRep/bad_greedy.pdf> <./MinRep/good_greedy.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./MinRep/good_greedy.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+>] <MinRep/poiss_size.jpg, id=5176, 481.8pt x 385.44pt>
+File: MinRep/poiss_size.jpg Graphic file (type jpg)
+
+<use MinRep/poiss_size.jpg>
+Package pdftex.def Info: MinRep/poiss_size.jpg used on input line 404.
+(pdftex.def)             Requested size: 162.60416pt x 130.08621pt.
+
+<MinRep/big_tree_left.pdf, id=5177, 376.40625pt x 718.685pt>
+File: MinRep/big_tree_left.pdf Graphic file (type pdf)
+
+<use MinRep/big_tree_left.pdf>
+Package pdftex.def Info: MinRep/big_tree_left.pdf used on input line 406.
+(pdftex.def)             Requested size: 68.12926pt x 130.08621pt.
+
+Underfull \hbox (badness 7047) in paragraph at lines 414--414
+[]\OT1/cmr/m/n/12 Figure 5.6: \OT1/cmr/m/it/12 Pois-son Ran-dom Tree \OT1/cmr/m
+/n/12 Gen-er-ated by re-cur-sively adding
+ []
+
+<MinRep/big_patho_tree.pdf, id=5178, 592.2125pt x 233.87375pt>
+File: MinRep/big_patho_tree.pdf Graphic file (type pdf)
+
+<use MinRep/big_patho_tree.pdf>
+Package pdftex.def Info: MinRep/big_patho_tree.pdf used on input line 423.
+(pdftex.def)             Requested size: 289.07999pt x 114.16376pt.
+
+<MinRep/orig.pdf, id=5179, 274.02374pt x 314.17375pt>
+File: MinRep/orig.pdf Graphic file (type pdf)
+ <use MinRep/orig.pdf>
+Package pdftex.def Info: MinRep/orig.pdf used on input line 437.
+(pdftex.def)             Requested size: 68.50577pt x 78.54324pt.
+
+<MinRep/censi.pdf, id=5180, 73.27374pt x 220.825pt>
+File: MinRep/censi.pdf Graphic file (type pdf)
+ <use MinRep/censi.pdf>
+Package pdftex.def Info: MinRep/censi.pdf used on input line 440.
+(pdftex.def)             Requested size: 21.98228pt x 66.248pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--440
+[]\OT1/cmr/m/n/10 (b) \OT1/cmr/m/n/8 Bit-at-a-
+ []
+
+<MinRep/josh.pdf, id=5181, 97.36375pt x 238.8925pt>
+File: MinRep/josh.pdf Graphic file (type pdf)
+ <use MinRep/josh.pdf>
+Package pdftex.def Info: MinRep/josh.pdf used on input line 443.
+(pdftex.def)             Requested size: 29.20934pt x 71.66829pt.
+
+<MinRep/alberto.pdf, id=5182, 97.36375pt x 238.8925pt>
+File: MinRep/alberto.pdf Graphic file (type pdf)
+
+<use MinRep/alberto.pdf>
+Package pdftex.def Info: MinRep/alberto.pdf used on input line 446.
+(pdftex.def)             Requested size: 29.20934pt x 71.66829pt.
+ <MinRep/exact.pdf, id=5183, 73.27374pt x 142.5325pt>
+File: MinRep/exact.pdf Graphic file (type pdf)
+
+<use MinRep/exact.pdf>
+Package pdftex.def Info: MinRep/exact.pdf used on input line 449.
+(pdftex.def)             Requested size: 21.98228pt x 42.76007pt.
+ <MinRep/poiss_orig.jpg, id=5184, 473.77pt x 385.44pt>
+File: MinRep/poiss_orig.jpg Graphic file (type jpg)
+
+<use MinRep/poiss_orig.jpg>
+Package pdftex.def Info: MinRep/poiss_orig.jpg used on input line 462.
+(pdftex.def)             Requested size: 151.00948pt x 122.85876pt.
+
+<MinRep/patho_orig.jpg, id=5185, 473.77pt x 385.44pt>
+File: MinRep/patho_orig.jpg Graphic file (type jpg)
+
+<use MinRep/patho_orig.jpg>
+Package pdftex.def Info: MinRep/patho_orig.jpg used on input line 464.
+(pdftex.def)             Requested size: 151.00948pt x 122.85876pt.
+
+<MinRep/poiss_exact.jpg, id=5186, 473.77pt x 385.44pt>
+File: MinRep/poiss_exact.jpg Graphic file (type jpg)
+
+<use MinRep/poiss_exact.jpg>
+Package pdftex.def Info: MinRep/poiss_exact.jpg used on input line 466.
+(pdftex.def)             Requested size: 151.00948pt x 122.85876pt.
+
+<MinRep/patho_exact.jpg, id=5187, 473.77pt x 385.44pt>
+File: MinRep/patho_exact.jpg Graphic file (type jpg)
+
+<use MinRep/patho_exact.jpg>
+Package pdftex.def Info: MinRep/patho_exact.jpg used on input line 468.
+(pdftex.def)             Requested size: 151.00948pt x 122.85876pt.
+
+<MinRep/poiss_time.jpg, id=5188, 481.8pt x 385.44pt>
+File: MinRep/poiss_time.jpg Graphic file (type jpg)
+
+<use MinRep/poiss_time.jpg>
+Package pdftex.def Info: MinRep/poiss_time.jpg used on input line 470.
+(pdftex.def)             Requested size: 153.56895pt x 122.85876pt.
+
+<MinRep/patho_time.jpg, id=5189, 481.8pt x 385.44pt>
+File: MinRep/patho_time.jpg Graphic file (type jpg)
+
+<use MinRep/patho_time.jpg>
+Package pdftex.def Info: MinRep/patho_time.jpg used on input line 472.
+(pdftex.def)             Requested size: 153.56895pt x 122.85876pt.
+) (./HernandezThesis.bbl [97] [98 <./MinRep/poiss_size.jpg> <./MinRep/big_tree_
+left.pdf> <./MinRep/big_patho_tree.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./MinRep/big_patho_tree.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>] [99 <./MinRep/orig.pdf> <./MinRep/censi.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./MinRep/censi.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+> <./MinRep/josh.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./MinRep/josh.pdf): PDF inclusion: mult
+iple pdfs with page group included in a single page
+> <./MinRep/alberto.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./MinRep/alberto.pdf): PDF inclusion: m
+ultiple pdfs with page group included in a single page
+> <./MinRep/exact.pdf
+
+pdfTeX warning: /usr/bin/pdflatex (file ./MinRep/exact.pdf): PDF inclusion: mul
+tiple pdfs with page group included in a single page
+>] [100 <./MinRep/poiss_orig.jpg> <./MinRep/patho_orig.jpg> <./MinRep/poiss_exa
+ct.jpg> <./MinRep/patho_exact.jpg> <./MinRep/poiss_time.jpg> <./MinRep/patho_ti
+me.jpg>]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+ [101
+
+]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+ [102] [103] [104]
+Missing character: There is no ‚ in font cmti12!
+Missing character: There is no Ä in font cmti12!
+Missing character: There is no ì in font cmti12!
+ [105]
+Missing character: There is no ¬ in font cmr12!
+Missing character: There is no ¥ in font cmr12!
+ [106]
+Missing character: There is no ƒ in font cmr12!
+Missing character: There is no ± in font cmr12!
+Missing character: There is no Ã in font cmr12!
+Missing character: There is no Å in font cmr12!
+ [107]
+Missing character: There is no ‚ in font cmr12!
+Missing character: There is no Ä in font cmr12!
+Missing character: There is no ì in font cmr12!
+ [108] [109] [110] [111])
+
+Package natbib Warning: There were undefined citations.
+
+[112] (./HernandezThesis.aux)
+
+LaTeX Warning: There were undefined references.
+
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 91 ({)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 17123 strings out of 493105
+ 339103 string characters out of 6137073
+ 381040 words of memory out of 5000000
+ 19936 multiletter control sequences out of 15000+600000
+ 19201 words of font info for 76 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 64i,23n,92p,1198b,1018s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/josh/.texmf-var/fonts/pk/ljfour/public/bbm/bbm12.600pk>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmtt8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/s
+ymbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qbkr.pfb></usr/
+share/texmf/fonts/type1/public/tex-gyre/qbkri.pfb></usr/share/texmf/fonts/type1
+/public/tex-gyre/qhvr.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qhvri.p
+fb></usr/share/texmf/fonts/type1/public/tex-gyre/qzcmi.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/ur
+w/helvetic/uhvro8a.pfb>
+Output written on HernandezThesis.pdf (120 pages, 33486739 bytes).
+PDF statistics:
+ 5450 PDF objects out of 6186 (max. 8388607)
+ 3554 compressed objects within 36 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 1030 words of extra memory for PDF output out of 10000 (max. 10000000)
+

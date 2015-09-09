@@ -1,0 +1,72 @@
+\begin{thebibliography}{10}
+
+\bibitem{basile1969observability}
+G.~Basile and G.~Marro.
+\newblock On the observability of linear, time-invariant systems with unknown
+  inputs.
+\newblock {\em Journal of Optimization theory and applications}, 3(6):410--415,
+  1969.
+
+\bibitem{bezzaoucha2011unknown}
+S.~Bezzaoucha, B.~Marx, D.~Maquin, J.~Ragot, et~al.
+\newblock On the unknown input observer design: a decoupling class approach
+  with application to sensor fault diagnosis.
+\newblock In {\em 1st International Conference on Automation and Mechatronics,
+  CIAM'2011}, 2011.
+
+\bibitem{dimassi2010robust}
+H.~Dimassi, A.~Lor{\'\i}a, and S.~Belghith.
+\newblock A robust adaptive observer for nonlinear systems with unknown inputs
+  and disturbances.
+\newblock In {\em Decision and Control (CDC), 2010 49th IEEE Conference on},
+  pages 2602--2607. IEEE, 2010.
+
+\bibitem{hamano1983unknown}
+F~Hamano and G~Basile.
+\newblock Unknown-input present-state observability of discrete-time linear
+  systems.
+\newblock {\em Journal of Optimization Theory and Applications},
+  40(2):293--307, 1983.
+
+\bibitem{hammouri2010unknown}
+H.~Hammouri and Z.~Tmar.
+\newblock Unknown input observer for state affine systems: A necessary and
+  sufficient condition.
+\newblock {\em Automatica}, 46(2):271--278, 2010.
+
+\bibitem{jonesS09}
+E.~Jones and S.~Soatto.
+\newblock Visual-inertial navigation, localization and mapping: A scalable
+  real-time large-scale approach.
+\newblock {\em Intl. J. of Robotics Res.}, april 2011.
+
+\bibitem{jonesS07}
+E.~S. Jones, A.~Vedaldi, and S.~Soatto.
+\newblock Inertial structure from motion and autocalibration.
+\newblock In {\em Workshop on Dynamical Vision}, October 2007.
+
+\bibitem{kellyS09}
+J.~Kelly and G.~Sukhatme.
+\newblock {Fast Relative Pose Calibration for Visual and Inertial Sensors}.
+\newblock In {\em Experimental Robotics}, pages 515--524, 2009.
+
+\bibitem{liberzon2012invertibility}
+D.~Liberzon, P.~R. Kumar, A.~Dominguez-Garcia, and S.~Mitra.
+\newblock Invertibility and observability of switched systems with inputs and
+  outputs.
+\newblock 2012.
+
+\bibitem{mourikisR07}
+A.~Mourikis and S.~Roumeliotis.
+\newblock A multi-state constraint kalman filter for vision-aided inertial
+  navigation.
+\newblock In {\em Robotics and Automation, 2007 IEEE International Conference
+  on}, pages 3565--3572. IEEE, 2007.
+
+\bibitem{soatto97}
+S.~Soatto.
+\newblock 3-d structure from visual motion: modeling, representation and
+  observability.
+\newblock {\em Automatica}, 33:1287--1312, 1997.
+
+\end{thebibliography}

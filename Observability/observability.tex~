@@ -1,0 +1,133 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fullpage}
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% END Article customizations
+\def\gw{\widetilde{g}}
+\def\Xw{\widetilde{X}}
+\def\Rw{\widetilde{R}}
+\def\Tw{\widetilde{T}}
+\def\1{^{\prime}}
+
+\def\g{g}
+\def\inv{^{-1}}
+\def\RR{\mathbb{R}}
+\def\s{\sigma}
+\def\sit{\s_{it}}
+%\def\dt#1{\tfrac{d#1}{dt}}
+\def\dt#1{#1\1}
+\def\dX{\delta X}
+\newcommand*{\QED}{\hfill\ensuremath{\blacksquare}}
+
+
+\newtheorem{lemma}{Lemma}
+
+%%% The "real" document content comes below...
+
+\title{Indistinguishable Trajectories}
+%\author{Josh Hernandez}
+
+\begin{document}
+\maketitle
+
+\begin{lemma}
+Given $S\in SO(3)$ and $S\1\in T_{SO(3)}(S)$, 
+and $a\in\RR$, the matrix $(aS + S\1)$ is nonsingular unless $a=0$, in which case it has rank $2$ or $0$.
+\end{lemma}
+\emph{Proof:} The tangent $S\1$ has the form $S M$, where $M$ is some skew-symmetric matrix.
+As such, $Mx\perp x$ for any $x\in\RR^3$,  so
+$$\|(aS+S\1)x\|_2^2 = \|S(aI+M)x\|^2_2 = \|ax\|^2_2 +\|Mx\|^2_2.$$
+The above is zero only if $ax=0$, so $(aS+S\1)$ is nonsingular.
+For the remaining cases, observe that a $3\times3$ skew-symmetric matrix has rank 2 or 0.
+
+\QED \bigskip
+
+Suppose we have two sets of static points $X^i$ and $\Xw^i$ 
+%at general position 
+in $\RR^3$, and time-indexed euclidean transformations 
+$g_t = (R_t, T_ t)$ and $\gw_t = (\Rw_t, \Tw_t)$ in $SE(3)$, 
+such that for all $i$ and $t$,
+\begin{equation}
+\pi\bigl(R_t\inv (X^i-T_t)\bigr) = \pi\bigl(\Rw_t\inv(\Xw^i-\Tw_t)\bigr).\label{prob}
+\end{equation}
+Then there exists a scalar function $\sit$ such that
+\begin{equation*}
+\sit\bigl(R_t\inv (X^i-T_t)\bigr) = \Rw_t\inv\bigl(\Xw^i-\Tw_t\bigr).
+\end{equation*}
+Writing $S_t = \Rw_tR\inv_t$,
+\begin{equation}\sit S_t\bigl(X^i-T_t)  = \Xw^i-\Tw_t. \label{finalform}\end{equation}
+We wish to show that $\sit$  and $S_t$ are constant.  
+Taking time derivatives, we get
+\begin{gather}
+\bigl({\dt{\sit}}S_t + \sit\dt{S_t}\bigr)(X^i-T_t) - \sit S_t\dt{ T_t}
+= - \dt{\Tw_t}
+\quad\text{or, dividing by $\sit$,} \notag\\
+\bigl(\tfrac{\dt{\sit}}{\sit}S_t + \dt{S_t}\bigr)(X^i-T_t) - S_t\dt{ T_t}
+= - \tfrac{1}{\sit}\dt{\Tw_t}.
+\label{compare}
+\end{gather}
+Fixing $t$ and differentiating both sides with respect to $X^i$,
+\begin{equation}
+\bigl(\tfrac{\dt{\sit}}{\sit}S_t + S\1_t\bigr)\dX^i +
+ \bigl(\tfrac{d}{dX^i}\bigl(\tfrac{\sit\1}{\sit}\bigr)\dX^i\bigr) S_t(X^i-T_t) =
+-\bigl(\tfrac{d}{dX^i}\bigl(\tfrac{1}{\sit}\bigr)\dX^i\bigr)\Tw\1_t. \label{moneyshot}
+\end{equation}
+Observe that
+$\tfrac{d}{dX^i}\bigl(\tfrac{\sit\1}{\sit}\bigr)\dX^i$ and
+$\tfrac{d}{dX^i}\bigl(\tfrac{1}{\sit}\bigr)\dX^i$
+are scalars. 
+By Lemma 1, the LHS 
+%of (\ref{moneyshot}) we
+has rank 2 or greater (as a linear map on $\delta X^i$), unless $\sit\1=0$.  
+The RHS, however, has rank at most 1.  Thus, if $\sit\1\neq0$ then (\ref{compare})
+is invalid for almost all $X^i$ 
+(two maps of different ranks can only agree on a submanifold).
+Plugging $\sit\1=0$ into (\ref{moneyshot}), we are left with
+\begin{equation}
+S\1_t\dX^i =
+-\bigl(\tfrac{d}{dX^i}\bigl(\tfrac{1}{\sigma_i}\bigr)\dX^i\bigr)\Tw\1_t. \label{Double-moneyshot}
+\end{equation}
+Now we kill two birds with one stone. Observe that the LHS 
+%of (\ref{Double-moneyshot}) 
+has rank 2 or 0, while the RHS has rank 1 or 0.
+Again, (\ref{compare}) is invalid for almost all $X^i$ unless both are zero, so $S\1_t=0$ and $\sigma_i$ does not vary with $X^i$.  And so, we can finally write (\ref{finalform}) as
+$$\sigma S (X^i - T_t) = \Xw^i-\Tw_t.$$
+\end{document}

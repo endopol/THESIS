@@ -1,0 +1,222 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: self.bib.bib
+I was expecting a `,' or a `}'---line 263 of file self.bib.bib
+ :  
+ :  MONTH = {May},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 715 of file self.bib.bib
+ : 
+ : NOTES = {CENS}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 735 of file self.bib.bib
+ : 
+ : NOTES = {ONR MURI, AFOSR}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 885 of file self.bib.bib
+ :  
+ :  PAGES = {1958-1972},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1435 of file self.bib.bib
+ : JOURNAL = {Intl. Conf. on Comp. Vision (ICCV)}
+ :                                               .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1887 of file self.bib.bib
+ : 
+ : @INPROCEEDINGS{FETCH,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1905 of file self.bib.bib
+ : 
+ : @INPROCEEDINGS{georgiadisAS12SPIE,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 2355 of file self.bib.bib
+ : 
+ : %NOTE = {ONR,ARO,AFOSR}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 2373 of file self.bib.bib
+ : 
+ : %NOTE = {CENS,ONR,MURI,ARO,AFOSR}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 2391 of file self.bib.bib
+ : 
+ : %NOTE = {UCLA-CSD-090013,ARO,AFOSR,ONR}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 2895 of file self.bib.bib
+ : 
+ : MONTH = {June},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4927 of file self.bib.bib
+ : JOURNAL = {NIPS}
+ :                 .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4943 of file self.bib.bib
+ : JOURNAL = {NIPS}
+ :                 .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4957 of file self.bib.bib
+ : JOURNAL = {NIPS}
+ :                 .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4973 of file self.bib.bib
+ : JOURNAL = {}
+ :             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 4989 of file self.bib.bib
+ : JOURNAL = {}
+ :             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 5003 of file self.bib.bib
+ : JOURNAL = {}
+ :             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 5017 of file self.bib.bib
+ : JOURNAL = {}
+ :             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 5031 of file self.bib.bib
+ : JOURNAL = {}
+ :             .
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 5509 of file self.bib.bib
+ :  
+ :  MONTH = {}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Database file #2: filter.bib.bib
+Database file #3: total2.bib.bib
+Repeated entry---line 412 of file total2.bib.bib
+ : @article{soatto97
+ :                  ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 9586 of file total2.bib.bib
+ : 
+ : @TECHREPORT{tuM,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Unbalanced braces---line 10301 of file total2.bib.bib
+ : 
+ : }
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 10324 of file total2.bib.bib
+ : 
+ : pages = {316-327 },
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field part---line 10374 of file total2.bib.bib
+ :    year = 
+ :           ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `)'---line 11746 of file total2.bib.bib
+ :         YEAR = "2000"
+ :                      }
+I'm skipping whatever remains of this entry
+Repeated entry---line 11905 of file total2.bib.bib
+ : @inproceedings{soatto97
+ :                        ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `)'---line 12340 of file total2.bib.bib
+ :         PAGES = "18A9"
+ :                       }
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 14383 of file total2.bib.bib
+ :         
+ :         AUTHOR = {V. Pavlovic and B. J. Frey and T. S. Huang},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 14425 of file total2.bib.bib
+ : PAGES = {1216--}
+ :                 1227,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 15526 of file total2.bib.bib
+ : 
+ : pages = {316-327 },
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field part---line 18625 of file total2.bib.bib
+ :   OPTvolume =  
+ :                ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 19625 of file total2.bib.bib
+ : 
+ : %   author =  "P Saisan and  G Doretto and  Y N Wu and S Soatto",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 34913 of file total2.bib.bib
+ : @article{soatto97
+ :                  ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 48805 of file total2.bib.bib
+ : pages = 7
+ :          --18
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 50407 of file total2.bib.bib
+ : notes = "pac-learning analysis of object localization; active localization is efficiently learnable, passive localization is not"
+ :                                                                                                                                  .
+I'm skipping whatever remains of this entry
+You're missing a field name---line 51600 of file total2.bib.bib
+ : 
+ : %month={mar},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 53011 of file total2.bib.bib
+ :  
+ :  notes = {http://www.di.ens.fr/willow/pdfs/icml2010b.pdf}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "roumeliotisM"
+Warning--empty journal in liberzon2012invertibility
+You've used 11 entries,
+            2118 wiz_defined-function locations,
+            880 strings with 13090 characters,
+and the built_in function-call counts, 4023 in all, are:
+= -- 402
+> -- 172
+< -- 3
++ -- 69
+- -- 56
+* -- 263
+:= -- 642
+add.period$ -- 35
+call.type$ -- 11
+change.case$ -- 60
+chr.to.int$ -- 0
+cite$ -- 12
+duplicate$ -- 165
+empty$ -- 329
+format.name$ -- 56
+if$ -- 865
+int.to.chr$ -- 0
+int.to.str$ -- 11
+missing$ -- 11
+newline$ -- 58
+num.names$ -- 22
+pop$ -- 71
+preamble$ -- 1
+purify$ -- 49
+quote$ -- 0
+skip$ -- 124
+stack$ -- 0
+substring$ -- 271
+swap$ -- 46
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 44
+warning$ -- 1
+while$ -- 38
+width$ -- 13
+write$ -- 120
+(There were 38 error messages)

@@ -1,0 +1,141 @@
+\begin{thebibliography}{10}
+
+\bibitem{algoet94}
+P.\ Algoet.
+\newblock The strong law of large numbers for sequential decisions under
+  uncertainty.
+\newblock pages 609--633, 1994.
+\newblock \emph{IEEE Transactions on Information Theory} 40, pp.1994.
+
+\bibitem{cassandraKL94}
+L.P.\~Kaelbling A.R.\~Cassandra and M.L.\ Littman.
+\newblock Acting optimally in partially observable stochastic domains.
+\newblock 1994.
+
+\bibitem{arbelF01}
+T.\ Arbel and F.P.\ Ferrie.
+\newblock Entropy-based gaze planning.
+\newblock 2001.
+\newblock Image and Vision Computing, vol. 19, no. 11, pp. 779–786, 2001.
+
+\bibitem{burnsB03}
+B.\ Burns and O.\ Brock.
+\newblock Information-theoretic construction of probabilistic roadmaps.
+\newblock pages 650--655, 2003.
+\newblock \emph{Proceedings of the International Conference on Intelligent
+  Robot and Systems}, pp.Las Vegas, 2003.
+
+\bibitem{connolly85}
+C.I.\ Connolly.
+\newblock The determination of next best views.
+\newblock pages 432--435, 1985.
+\newblock \emph{Proceedings of the IEEE International Conference on Robotics
+  and Automation} , pp.1985.
+
+\bibitem{denzlerB02}
+J.\ Denzler and C.\ Brown.
+\newblock Information theoretic sensor data selection for active object
+  recognition and state estimation.
+\newblock 2002.
+\newblock \emph{IEEE Trans. Pattern Analysis and Machine Intelligence}, vol.
+  24, no. 2, pp. 145–157, 2002.
+
+\bibitem{hollinger12}
+F.\ Hover U.\~Mitra G.A.\~Hollinger, B.\~Englot and G.S.\ Sukhatme.
+\newblock Uncertainty-driven view planning for underwater surface inspection.
+\newblock 2012.
+\newblock \emph{Accepted, International Conference on Robotics and Automation},
+  May 2012.
+
+\bibitem{geyer91}
+C.J.\ Geyer.
+\newblock Markov chain monte carlo maximum likelihood.
+\newblock pages 156--163, 1991.
+\newblock \emph{Proc. 23rd Symp. Interface. Computing Science and Statistics}.
+
+\bibitem{hauskrecht00}
+M.\ Hauskrecht.
+\newblock Value-function approximations for partially observable markov
+  decision processes.
+\newblock pages 33--94, 2000.
+\newblock \emph{Journal of Artificial Intelligence Research}, vol. 13, pp.2000.
+
+\bibitem{valenteTS12}
+Y.-H.\ R.\~Tsai L.\~Valente and S.\ Soatto.
+\newblock Information gathering control via exploratory path planning.
+\newblock 2012.
+\newblock \emph{Proceedings of the Conference on Information Sciences and
+  Systems}, Mar 2012.
+
+\bibitem{kearnsMN99}
+Y.\~Mansour M.\~Kearns and A.Y.\ Ng.
+\newblock Approximate planning in large pomdps via reusable trajectories.
+\newblock 1999.
+
+\bibitem{krauseG07}
+Near optimal Observation Selection~using Submodular~Functions.
+\newblock A.\ krause and c.\ guestrin.
+\newblock 2007.
+\newblock \emph{American Association for Artificial Intelligence (AAAI)}, 2007.
+
+\bibitem{dearden99}
+N.\~Friedman R.\~Dearden and D.\ Andre.
+\newblock Model based bayesian exploration.
+\newblock pages 150--159, 1999.
+\newblock \emph{In Proceedings of the Fifteenth Conference on Uncertainty in
+  Artificial Intelligence}, pp.1999.
+
+\bibitem{royCB04}
+Active recognition through next view~planning: A~survey.
+\newblock S.d.\ roy, s.\ chaudhury and s.\ banarjee.
+\newblock 2004.
+\newblock \emph{J. Pattern Recognition}, vol. 37, no. 3, pp. 429–446, 2004.
+
+\bibitem{grabowskiKC03}
+Pradeep~Khosla Robert~Grabowski and Howie Choset.
+\newblock Autonomous exploration via regions of interest.
+\newblock 2003.
+
+\bibitem{SimD04}
+R.\ Sim and G.\ Dudek.
+\newblock Online control policy optimization for minimizing map uncertainty
+  during exploration.
+\newblock pages 1758--1763, 2004.
+\newblock \emph{Proc. of the IEEE Int. Conf. on Robotics \& Automation (ICRA)},
+  pp.2004.
+
+\bibitem{valenteTS13}
+L.~Valente, R.~Tsai, and S.~Soatto.
+\newblock Information-seeking control under visibility-based uncertainty.
+\newblock {\em J. Math. Imaging and Vision}, 2013.
+
+\bibitem{whaiteF97}
+P.\ Whaite and F.P.\ Ferrie.
+\newblock Autonomous exploration: driven by uncertainty.
+\newblock pages 193--205, 1997.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, vol.19, no.3, pp.Mar 1997.
+
+\bibitem{yamauchi97}
+B.\ Yamauchi.
+\newblock A frontier-based approach for autonomous exploration.
+\newblock pages 146--151, 1997.
+\newblock \emph{Proceedings of the IEEE International Symposium on
+  Computational Intelligence in Robotics and Automation}, pp.10-11 Jul 1997.
+
+\bibitem{yuG00}
+Y.\ Yu and K.\ Gupta.
+\newblock An information theoretic approach to viewpoint planning for motion
+  planning of eye-in-hand systems.
+\newblock 2000.
+\newblock \emph{Proceedings of the International Symposium on Industrial
+  Robotics}, 2000.
+
+\bibitem{yuWY96}
+K.\~Wang Z.\~Yu and R.-G.\ Yang.
+\newblock Next best view of range sensor.
+\newblock pages 185--188, 1996.
+\newblock \emph{Proceedings of the IEEE International Conference on Industrial
+  Electronics, Control, and Instrumentation} , vol.1, pp.vol.1, 5-10 Aug 1996.
+
+\end{thebibliography}

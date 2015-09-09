@@ -523,8 +523,8 @@
   \@makesignaturepage
   \@makededication
   \tableofcontents
-  \listoffigures
-  \listoftables
+  %\listoffigures
+  %\listoftables
   \@makeacknowledgments
   \@makevitapage
   \newpage \pagenumbering{arabic}

@@ -1,0 +1,2209 @@
+\documentclass[]{article}
+\usepackage{amsfonts,amssymb,amsmath,amsthm,epsfig}
+%\usepackage{psfig,fullpage}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{array}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ba}{\left[ \begin{array}}
+\newcommand{\ea}{\end{array} \right]}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+\newcommand{\bc}{\begin{cases}}
+\newcommand{\ec}{\end{cases}}
+\newcommand{\psfigure}[3]
+        {
+        \begin{tabular}{c}
+        { \psfig{figure=#1,height=#2in,width=#3in}}
+        \end{tabular}   }
+
+\def\real{\mathbb{R}}
+\def\X{{\bf{X}}}
+\def\x{{\bf{x}}}
+\def\w{{\widehat\omega}}
+\newtheorem{defn}{Definition}
+\newtheorem{rem}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{claim}{Claim}
+\newtheorem{corollary}{Corollary}
+
+\def\gw{\widetilde{g}}
+\def\Xw{\widetilde{X}}
+\def\Rw{\widetilde{R}}
+\def\Tw{\widetilde{T}}
+\def\1#1{\dot{#1}}
+
+\def\g{g}
+\def\inv{^{-1}}
+\def\RR{\mathbb{R}}
+\def\s{\sigma}
+\def\sit{\s_{it}}
+%\def\dt#1{\tfrac{d#1}{dt}}
+\def\dt#1{\1{#1}}
+\def\dX{\delta X}
+\def\subs{\subset}
+\def\andn{\smallsetminus}
+\def\Mm{\mathcal{M}}
+\def\SO{\operatorname{SO}}
+\def\SE{\operatorname{SE}}
+\def\so{\mathfrak{so}}
+\def\se{\mathfrak{se}}
+\def\Aa{\mathcal{A}}
+\def\ignore#1{}
+\def\imu{_\mathrm{imu}}
+
+%\def\cut#1{{ #1}}
+\def\cut#1{{}}
+
+\begin{document}
+
+\title{\bf Observability, Identifiability, Sensitivity and Model Reduction For Range and Bearing Assisted Navigation} 
+\author{Stefano Soatto}
+\date{August 20, 2013; Revised November 12, 2013}
+
+\maketitle
+
+\begin{abstract}
+\end{abstract}
+
+\tableofcontents
+
+
+\section{Introduction}
+\begin{itemize}
+\item Visually-aided navigation (bearing), and range-aided navigation (radar) can be framed as a filtering problem. The model is non-linear, has unknown parameters, and unknown inputs ({\em e.g.,} accelerometer and gyrometer bias derivative), typically treated as driving noise in a random walk model.
+\item Observability is a necessary condition for {\em any} filter/observer to operate, hence a literature on observability analysis of visually-aided navigation \cite{kellyS09,mourikisR07,jonesS07}. Relatively little on range-aided. 
+\item Unknown parameters are typically included in the state, thus transforming an identification problem into a filtering one, and their identifiability analysis lumped in the observability analysis of the resulting (augmented) model.
+\item Noise does not affect the observability of a model, so for the purpose of observability analysis, they are set to zero. This is because, by assumption, noise is ``uninformative:'' It is typically modeled as a realization of a white zero-mean, homoscedastic process, independent of the state of the model.
+\item However, the driving input to the random walk model of accelerometer and gyro bias is typically small but {\em not} independent of the state. In fact, far from being uninformative, it is strongly correlated with it, as it is its temporal derivative. Thus, it should be treated as an {\em unknown input}, rather than a ``noise.'' As such, it should be included in the observability/identifiability analysis. 
+\item Our first contribution is to show that while (a prototypical model of) assisted navigation and auto-calibration is {\em observable} in the absence of unknown input, it is {\em not} observable when unknown inputs are taken into account. This exposes a methodological flaw with the observability analysis of assisted navigation in the existing literature.
+\item Our second contribution is to reframe observability as a {\em sensitivity} analysis, and to show that while the set of indistinguishable trajectories is {\em not} a singleton (as it would be if the model was observable), but it is nevertheless bounded to a set. We explicitly characterize this set and show that, interestingly, it may not contain the ``true'' state trajectory. Finally, we provide bounds on the volume of this subset as a function of the characteristics of the unknown inputs.
+\item We do so for bearing-only augmentation, range-only augmentation, and combined augmentation.
+\item Rather than study observability of linearized system, or algebraically checking the rank conditions, that offers no insight on the structure of the indistinguishable states, we characterize observability directly in terms of indistinguishable sets.
+\end{itemize}
+
+\subsection{Notation}
+
+A reference frame is represented by an orthogonal $3\times 3$ positive-determinant (rotation) matrix $R \in \SO(3) \doteq \{ R \in \real^{3\times 3} \ | \ R^T R = R R^T = I, \ {\rm det}(R) = +1\}$ and a translation vector $T \in \real^3$. They are collectively indicated by $g = (R, T) \in \SE(3)$. When $g$ represents the change of coordinates from a reference frame ``a'' to another (``b''), it is indicated by $g_{ba}$. Then the columns of $R_{ba}$ are the coordinate axes of $a$ relative to the reference frame $b$, and $T_{ba}$ is the origin of $a$ in the reference frame $b$. If $p_a$ is a point relative to the reference frame $a$, then its representation relative to $b$ is $p_b = g_{ba} p_a$. In coordinates, if $X_a$ are the coordinates of $p_a$, then $X_b = R_{ba}X_a + T_{ba}$ are the coordinates of $p_b$. 
+
+A time-varying pose is indicated with $g(t) = (R(t), T(t))$ or $g_t = (R_t, T_t)$, and the entire trajectory from an initial time $t_i$ and a final time $t_f$ $\{g(t) \}_{t = t_i}^{t_f}$ is indicated in short-hand notation with $g_{t_i}^{t_f}$; when the initial time is $t_0 = 0$, we omit the subscript and call $g^{t}$ the trajectory ``up to time $t$''. The time-index is sometimes omitted for simplicity of notation when it is clear from the context.
+
+We indicate with $\widehat V = (\widehat \omega, v) \in \se(3)$ the (generalized) velocity or ``twist'', where $\widehat \omega$ is a skew-symmetric matrix $\widehat \omega \in \so(3) \doteq \{S \in \real^{3\times 3} \ | \ S^T = -S\}$ corresponding to the cross product with the vector $\omega \in \real^3$, so that $\widehat \omega v = \omega \times v$ for any vector $v\in \real^3$. We indicate the generalized velocity with $V = (\omega, v)$. We indicate the group composition $g_1 \circ g_2$ simply as $g_1 g_2$. 
+In homogeneous coordinates, $\bar X_b = G_{ba} \bar X_a$ where $\bar X^T = [X^T \ 1]$ and 
+\begin{equation}
+G \doteq \ba{cc} R & T \\ 0 & 1 \ea \in \real^{4\times 4}
+~~~~
+\hat V \doteq \ba{cc} \widehat \omega & v \\ 0 & 0 \ea.
+\end{equation}
+Composition of rigid motions is then represented by matrix product.
+
+
+\subsection{Mechanization Equations}
+
+The motion of a sensor platform is represented as the time-varying pose $g_{sb}$ of the body relative to the spatial frame. To relate this to measurements of an inertial measurement unit (IMU) we compute the temporal derivatives of $g_{sb}$, which yield the (generalized) body velocity $V_{sb}^b$, defined by $\dot g_{sb}(t) = g_{sb}(t) {\widehat V}^b_{sb}(t)$, which can be broken down into the rotational and translational components $\dot R_{sb}(t) = R_{sb}(t) \widehat{\omega}_{sb}^b(t)$ and $\dot T_{sb}(t) = R_{sb}(t) v_{sb}^b(t)$. An ideal gyrometer (gyro) would measure $\omega\imu  = \omega_{sb}^b$. The translational component of body velocity, $v_{sb}^b$, can be obtained from the last column of the matrix $\frac{d}{dt} {\widehat V}^b_{sb}(t)$. That is, $ \dot{v}_{sb}^b = \dot{R_{sb}^T}\dot T_{sb} + R_{sb}^T \ddot T_{sb} = - \widehat{\omega}_{sb}^b v_{sb}^b + R_{sb}^T \ddot T_{sb} \doteq - \widehat{\omega}_{sb}^b v_{sb}^b + \alpha_{sb}^b $, which serves to define $\alpha_{sb}^b \doteq R_{sb}^T \ddot T_{sb}
+$. These equations can be simplified by defining a new linear velocity, $v_{sb}$, which is neither the body velocity $v_{sb}^b$ nor the spatial velocity $v_{sb}^s$, but instead $v_{sb} \doteq R_{sb}v_{sb}^b$. Consequently, we have that $ \dot T_{sb}(t) = v_{sb}(t) $ and $ \dot v_{sb}(t) = \dot R_{sb} v_{sb}^b + R_{sb} \dot{v}_{sb}^b = \ddot T_{sb} \doteq \alpha_{sb}(t) $ where the last equation serves to define the new linear acceleration $\alpha_{sb}$; as one can easily verify we have that $ \alpha_{sb} = R_{sb} \alpha_{sb}^b.$ An ideal accelerometer (accel) would then measure  $ \alpha\imu  = R_{sb}^T(t) (\alpha_{sb}(t) - \gamma)$.
+
+There are several reference frames to be considered in an aided navigation scenario. The {\em spatial frame} $s$, typically attached to Earth and oriented so that gravity $\gamma$ takes the form $\gamma^T = [0 \ 0 \ 1]^T \| \gamma \|$ where $\| \gamma \|$ can be read from tabulates based on location and is typically around $9.8m/s^2$. The {\em body frame} $b$ is attached to the IMU.\footnote{In practice, the IMU has several different frames due to the fact that the gyro and accel are not co-located and aligned, and even each sensor (gyro or accel) is composed of multiple sensors, each of which can have its own reference frame. Here we will assume that the IMU has bend{equation}n pre-calibrated so that accel and gyro yield measurements relative to a common reference frame, the {\em body frame}. In reality, it may be necessary to calibrate the alignment between the multiple-axes sensors (non-orthogonality), as well as the gains (scale factors) of each axis.} The {\em camera frame} $c$, relative to 
+which image 
+measurements are captured, is also unknown, although we will assume that {\em intrinsic calibration} has bend{equation}n performed, so that measurements on the image plane are provided in metric units. Finally, the {\em radar frame}, or range frame $r$, is that of the antenna relative to which range measurements are provided.
+
+The equations of motion (known as mechanization equations) are usually described in terms of the body frame at time $t$ relative to the spatial frame $g_{sb}(t)$. Since the spatial frame is arbitrary (other than for being aligned to gravity), it is often chosen to be co-located with the body frame at time $t = 0$. To simplify the notation, we indicate this time-varying frame $g_{sb}(t)$ simply as $g$, and so for $R_{sb}, T_{sb}, \omega_{sb}, v_{sb}$, thus effectively omitting the subscript $sb$ everywhere it appears. This yields
+\begin{equation}
+\begin{cases}
+\begin{tabular}{>{$}r<{$}>{$}l<{$}}
+\dot T &= V \\%~~~~ ~~ T(0) = 0 \\
+\dot R &= R \widehat \omega \\%~~~~~ R(0) = R_0\\
+\dot V &= \alpha  \\% ~~~~ ~~~ V(0) = V_0 \\
+\dot \omega &= w \\
+\dot \alpha &= \xi
+\end{tabu}
+\end{cases}
+\end{equation}
+where $w \in \real^3$ is the rotational acceleration, and $\xi \in \real^3$ the translational jerk (derivative of acceleration). Although $\alpha$ corresponds to neither body nor spatial acceleration, it can be easily related to accel measurements: 
+\begin{equation}
+\boxed{\alpha\imu (t) = R^T(t) (\alpha(t)- \gamma) + \underbrace{\alpha_b(t) + n_{\alpha}(t)}}
+\label{eq-accel}
+\end{equation}
+where the measurement error in bracket includes a slowly-varying mean (``bias'') $\alpha_b(t)$ and a residual term $n_\alpha$ that is commonly modeled as a zero-mean (its mean is captured by the bias), white, homoscedastic and Gaussian noise process. In other words, it is assumed that $n_\alpha$ is independent of $\alpha$, hence uninformative. Here $\gamma$ is the gravity vector expressed in the spatial frame.\footnote{The orientation of the body frame relative to gravity, $R_0$, is unknown, but can be approximated by kend{equation}ping the IMU still (so $R^T(t) = R_0$) and averaging the accel measurements, so that $\frac{1}{T}\sum_{t=0}^T \alpha\imu (t)  \simeq  - R_0^T \gamma + \alpha_b$. Assuming the bias to be small (zero), this equation defines $R_0$ up to a rotation around gravity, which is arbitrary. Note that if $\alpha_b \neq 0$, the initial bias will affect the initial orientation estimate.} Measurements from a gyro can be similarly modeled as 
+\begin{equation}
+\boxed{\omega\imu (t) = \omega(t) + \underbrace{\omega_b(t) + n_{\omega}(t)}}
+\label{eq-gyro}
+\end{equation}
+where the measurement error in bracket includes a slowly-varying bias $\omega_b(t)$ and a residual ``noise'' $n_\omega$ also assumed zero-mean, white, homoscedastic and Gaussian, independent of $\omega$.
+
+Other than the fact that the biases $\alpha_b, \omega_b$ change {\em slowly}, they can change arbitrarily. One can therefore consider them an {\em unknown input} to the model, or a {\em state} in the model, in which case one has to hypothesize a dynamical model for them. For instance instance
+\begin{equation}
+\dot \omega_b(t) = v_b(t), ~~~ \dot \alpha_b(t) = v_\alpha(t)
+\end{equation}
+for some unknown input $v_b, v_\alpha$. While it is safe to assume that $v_b, v_\alpha$ are {\em small}, they certainly are not (white, zero-mean and, most importantly) uninformative. Nevertheless, it is common to consider $v_b, v_\alpha$, to be realizations of a Brownian motion that is  {\em independent} of $\omega_b, \alpha_b$. This is done for convenience as one can then consider all unknown inputs as ``noise.'' Unfortunately, however, this has repercussion on the analysis of the observability and identifiability of the resulting model (Sect. \ref{sect-bearing-analysis}).
+
+%The resulting model has a {\em state} $x = \{T, R, V\}$ of unknown functions that satisfy a known ordinary differential equation (ODE); unknown but otherwise constant {\em parameters} $p = \{X^i, \gamma\}$, {\em output} measurements $y = \{y^i(t), \alpha(t), \omega(t)\}$, {\em noise} terms that are uninformative $n = \{n^i(t), \tilde n_\alpha(t), \tilde n_\omega(t)\}$. It then has {\em unknown inputs} $u = \{\alpha_b(t), \omega_b(t)\}$. Alternatively, we can consider the biases to be part of the {\em state}, $x = \{T, R, V, \alpha_b, \omega_b\}$ and consider the bias derivatives as the unknown inputs $u = \{\dot \alpha_b, \dot \omega_b\}$. 
+
+\subsection{Standard and reduced models}
+
+The mechanization equations above define a dynamical model having as output the IMU measurements. Including the initial conditions and biases, we have
+\begin{equation}
+\begin{cases}
+\dot T = V ~~~~ T(0) = 0 \\
+\dot R = R \widehat \omega ~~~~~ R(0) = R_0\\
+\dot V = \alpha \\ %~~~~~~ V(0) = V_0 \\
+\dot \omega = w\\ % ~~~~~~~ \omega(0) = \omega_0 \\
+\dot \alpha = \xi \\% ~~~~~~ \alpha(0) = \alpha_0 \\
+\dot \omega_b = n_{\omega_b}  \\
+\dot \alpha_b = n_{\alpha_b}  \\ 
+\dot \gamma = 0 \\
+\omega\imu (t) = \omega(t) + \omega_b(t) + n_{\omega}(t) \\ 
+\alpha\imu (t) = R^T(t) (\alpha(t)- \gamma) + \alpha_b(t) + n_{\alpha}(t) 
+\end{cases}
+\end{equation}
+\cut{which is  of  the form\footnote{In fact, if we collect the states into thrend{equation} groups: Attitude and translational velocity $x_1 \doteq \{T, R, V\} = \{x_{11}, x_{12}, x_{13}\}$; rotational velocity and translational acceleration $x_2 \doteq \{\omega, \alpha\} = \{x_{21}, x_{22}\}$ and biases $x_3 \doteq \{\omega_b, \alpha_b\} = \{x_{31}, x_{32}\}$, and the IMU measurements $u =\{\omega\imu , \alpha\imu \}  = \{u_1, u_2\}$, and gravity as a parameter $p_0 = \gamma$, we have the expression above
+%% \begin{equation}
+%% \begin{cases}
+%% \dot x_1  = f(x_1, x_2)  \\
+%% \dot x_2 = n_x \\
+%% \dot x_3 = 0 \\
+%% y\imu  = h(x_1,x_2, x_3,p_0) + n_y
+%% \end{cases}
+%% \end{equation}
+%% 
+where:
+\begin{equation}
+f(x_1, x_2) = \ba{c} x_{13} \\ x_{12} x_{21} \\ x_{22} \ea ~~
+h(x_1, x_2, x_3, p_0) = \ba{c} x_{21} + x_{31} \\ x_{12}^Tx_{22} + x_{32} - x_{12}^T p_0 \ea
+\end{equation}
+and $n_x = \{w, \xi\}$, $n_y$ are assumed to be realizations of a white, zero-mean, Gaussian random vector. 
+Note that the initial conditions are not known, and neither are $w$ and $\xi$. These are conveniently assumed to be white zero-mean Gaussian processes. The biases can be assumed constant in the short term, or an additional noise with small covariance can be added to account for their fluctuation. 
+}
+\begin{equation}
+\begin{cases}
+\dot x_1  = f(x_1, x_2)  \\
+\dot x_2 = n_x \\
+\dot x_3 = n_3 \\
+u = h(x_1,x_2, x_3,p_0) + n_y
+\end{cases}
+\label{eq-standard}
+\end{equation}
+}
+In this standard model, data from the IMU are considered as (output) {\em measurements}. However, it is customary to treat them as (known) {\em input} to the system, by writing $\omega$ in terms of $\omega\imu $ and $\alpha$ in terms of $\alpha\imu $:
+\begin{equation}
+\boxed{\omega = \omega\imu  - \omega_b + \underbrace{n_R}_{-n_{\omega}}} ~~~~~~ \boxed{\alpha = R(\alpha\imu  - \alpha_b) + \gamma + \underbrace{ n_V}_{- Rn_\alpha}}
+\end{equation}
+This equality is valid for {\em samples} (realizations) of the stochastic processes involved, but it can be misleading as, if considered as stochastic processes, the noises above are {\em not} independent of the states. Such a dependency, is nevertheless typically neglected. The resulting mechanization model is
+\begin{equation}
+\boxed{
+\begin{cases}
+\dot T = V ~~~~ T(0) = 0 \\
+\dot R = R (\widehat \omega\imu  - \widehat \omega_b) + n_{R} ~~~~~ R(0) = R_0\\
+\dot V = R(\alpha\imu  - \alpha_b) + \gamma + n_V \\ %~~~~~~ V(0) = V_0 \\
+\dot \omega_b = n_{\omega_b} \\
+\dot \alpha_b = n_{\alpha_b}. 
+\end{cases}
+}
+\label{eq-mech}
+\end{equation}
+\cut{
+\begin{equation}
+{\rm %which \ is \ 
+of \ the \ form} ~~ 
+\begin{cases}
+\dot x_1  = f(x_1, x_3) + g_1(x_1,p_0) \bar u +  g_2(x_1) n_y\\
+\dot x_3 = n_3
+\end{cases}
+\label{eq-reduced}
+\end{equation}
+where
+\begin{equation}
+f(x_1,x_3) = \ba{c} x_{13} \\ -x_{12}\widehat x_{31} \\ -x_{12} x_{32} \ea
+~~~ g_1(x_1,p_0) \bar u = \ba{ccc} 0 & 0 & 0 \\ x_{12} & 0 & 0\\ 0 & x_{12} & p_0 \ea\ba{c} \widehat u_1 \\ u_2 \\ 1\ea ~~~ g_2(x_1) = \ba{c} 0 \\ x_{12} \\ x_{12} \ea
+\end{equation}
+This is obtained by solving for $x_2$ as a function of $u$ from the measurement equation of (\ref{eq-standard}) and substituting into the state equation. With an abuse of notation we write this as the ``inverse map'' $x_2 = h^{-1}(u,x_1,x_3,p_0)$. Since $x_{12}^T x_{12} = I$, we can replace $g_2(x_1)$ with $[0 \ I \ I]^T$. %Note that in this case there is no nend{equation}d to include in the state $\omega$ and $\alpha$, since they are measured directly. Also note that there are no outputs (measurements) in this model. If the values of the biases and the noise terms $n_R, n_V$ were known, one could simply integrate the above equations to obtain the trajectory of the state.
+%
+To simplify the notation, we simply call $u = \{\widehat u_1, u_2, 1\}$ and $n_y = \{0, n_y, n_y\}$, and neglect the dependency on $p_0$, so as to arrive at the expression
+\begin{equation}
+\begin{cases}
+\dot x_1  = f(x_1, x_3) + g_1(x_1)  u +  n_y\\
+\dot x_3 = n_3
+\end{cases}
+\end{equation}
+}
+
+\cut{
+\subsection{Nominal model}
+%
+Except for the values of the bias, the above model is just a deterministic integrator with known initial conditions. In the absence of noise and biases, one could simply integrate a {\em nominal model} based on the following equation:
+\begin{equation}
+{\rm NC:}
+\begin{cases}
+\dot T = V ~~~~ T(0) = 0 \\
+\dot R = R \widehat \omega\imu   ~~~~~ R(0) = I\\
+\dot V = R\alpha\imu + \gamma  ~~~~~~ V(0) = 0
+\end{cases}
+{\rm which \ is \ of \ the \ form} ~~ 
+\dot x_1  = f(x_1,0) + g_1(x_1)u 
+\label{eq-nominal}
+\end{equation}
+where $f$ and $g_1$ have the same expression as in (\ref{eq-reduced}). 
+We have assumed that $V(0) = 0$, that is, the experiment starts at rest. We call the solution (integration) of the above differential equation the {\em nominal state trajectory} $\hat x = \{ \hat T, \hat R, \hat V\}$.
+%
+\section{Error-state model (skip)} 
+%
+If we assume that the nominal state trajectory ${\hat x}^t$ has bend{equation}n computed we may benefit from writing the actual trajectory $x^t$ as a {\em perturbation} ${\tilde x}^t$ around the nominal trajectory. 
+%
+If we assume a local coordinate parametrization of $R\in \SO(3)$, for instance the exponential coordinate $\Omega \in \real^3$ defined by $R = \exp(\widehat \Omega)$, then $x \doteq \{T(t), \Omega (t), V(t)\}$ can be written in terms of a {\em nominal state} $\hat x$ obtained by deterministically integrating the nominal model, and the {\em error state} $\tilde x$. Alternatively, the nominal trajectory can be the conditional mean estimated by a filter. In either case, it is possible to write the linearized error state as follows.
+%
+\subsection{Linearized error-state}
+%
+If $x = \hat x + \tilde x$, then we have that $f(x,u)$ can be approximated using Taylor Series expansion as:
+\begin{equation}
+f(x, u)  = f(\hat x, u) + \underbrace{\frac{\partial f}{\partial x}(\hat x)}_{J_f(\hat x,u)}\tilde x + n_f
+\end{equation}
+with $n_f \in {\cal O}(\| \tilde x\|^2)$, where the bracketed matrix is the Jacobian of $f$ computed at the nominal trajectory $\hat x$. It is therefore easy to decouple the evolution $\dot x = f(x, u)$ into the nominal trajectory
+\begin{equation}
+\dot {\hat x} = f(\hat x, u)
+\end{equation}
+and the error-state
+\begin{equation}
+\dot{\tilde x} = J_f(\hat x,u) \tilde x + n_f.
+\end{equation}
+The advantage of this model is that the latter is a linear time-varying model, for which a standard (linear) Kalman filter can be written. Once the nominal state is integrated and the error state is estimate with a Kalman filter, the actual state trajectory can be approximated by $x = \hat x + \tilde x$.
+%
+The case of discrete-time is similar: If $x(t+1) = f(x(t), u(t))$ is the evolution of the state, where $u(t)$ is a known input, then it is customary to approximate $x(t+1) \doteq \hat x(t+1) + \tilde x(t+1) = f(\hat x(t), u(t)) + \frac{\partial f}{\partial x}(\hat x,u) \tilde x + {\cal O}(\| \tilde x \|^2)$, so that the model can be split into a deterministic integrator $\hat x(t+1) = f(\hat x(t), u(t))$ and a stochastic but linear and time-varying model $\tilde x(t+1) = J(\hat x,u)\tilde x(t) + n_f$ where $J$ denotes the Jacobian of $f$. This, however, introduces approximation in that it only captures the linear deviation from the nominal trajectory. 
+%
+These models apply directly to the mechanization models described above, where $u = y\imu $ and $\tilde f$ is the nominal dynamical model. 
+%
+\subsection{Non-linear error-state}
+%
+For the specific case of the mechanization equations, it is possible to decompose the state trajectory $x$ into a nominal component $\hat x$ and an error-state component $\tilde x$ {\em without} linearizing the model. This is because the equations of motion $\tilde f$ can be written naturally in the form $\tilde f(x, u) = \tilde f(\hat x, u)\circ \tilde f(\hat x\circ \tilde x, u)$. In particular, we start with the reduced model (\ref{eq-reduced}), and notice that $\dot T = \dot {\hat T} + \dot {\tilde T} = V \doteq \hat V + \tilde V$, from which we can simply define $\dot {\tilde T} \doteq \tilde V$. 
+%
+Similarly, from $\dot R = \dot {\hat R} {\tilde R} + \hat R \dot{\tilde R} = \hat R \tilde R(\widehat \omega\imu -\widehat\omega_b)$ imposing that $\dot{\tilde R} = \tilde R \widehat{\tilde \omega}$ for some $\tilde \omega$, we obtain\footnote{Using the fact that $\hat R \widehat \omega\imu  \tilde R + \hat R \tilde R \widehat{\tilde \omega} = \hat R \tilde R \widehat\omega\imu  - \hat R \tilde R \widehat \omega_b$, from which we get $\widehat \omega\imu  \tilde R + \tilde R \widehat{\tilde \omega} = \tilde R \widehat\omega\imu  - R \tilde R \widehat \omega_b$ and hence ${\tilde R}^T \widehat \omega\imu  \tilde R + \widehat{\tilde \omega} =  \widehat\omega\imu  - \widehat \omega_b$, from which the result follows after using the identity $R^T\widehat \omega R = \widehat{R\omega}$.} $\tilde \omega = (I- \tilde R) \omega\imu  - \omega_b$. If one wishes to make an approximation, it is easy to send{equation} that $\tilde \omega \simeq -\omega_b$.\footnote{The following identity holds for any two vectors $u, v \in 
+\
+real^3$: $\widehat u \widehat v = v u^T - u^T v I$.} Similarly it can be shown that, from $\dot V = R(\alpha\imu  - \alpha_b) + \gamma$, if we choose $\hat V$ from the nominal model so that $\dot{\hat V} = \hat R\alpha\imu  + \gamma$, then we have that $\dot{\tilde V} = \hat R(\tilde R(\alpha\imu  - \alpha_b) - \alpha\imu )$. Therefore, from (\ref{eq-reduced}), we have the nominal and the error-state model as follows
+\begin{equation}
+{\rm NC:}~~
+%{\color{red}
+\begin{cases}
+\dot{\hat T} = \hat V \\ 
+\dot{\hat R} = \hat R \widehat \omega\imu  \\
+\dot{\hat V} = \hat R\alpha\imu  + \gamma
+\end{cases}
+%}
+~~ {\rm ERC:}~~
+%{\color{red}
+\begin{cases}
+\dot{\tilde T} = \tilde V \\
+\dot{\tilde R} = \tilde R  \widehat{[(I- \tilde R) \omega\imu  - \omega_b]} \\
+\dot{\tilde V} = \hat R[ \tilde R(\alpha\imu  - \alpha_b) - \alpha\imu ] \\
+\dot \alpha_b = 0 \\
+\dot \omega_b = 0
+\end{cases}
+%}
+\end{equation}
+%Although this method of decomposing the mechanization equation into nominal- and error-state are exact, and not subject to linearization error, {\em we are not aware of this approach having bend{equation}n used in the literature.} The pro is that there is no linearization error injected into the error state. The con is that the model is non-linear, but this is rather harmless as an Extended Kalman Filter can be written readily for the particular form of the non-linear error-state model.
+%
+\subsection{Standard  model}
+%
+A similar procedure can be employed to derive the error-state model for the non-reduced system where the IMU measurements are considered as an output. The nominal model is the same, and therefore will not be repeated. The error-state model is obtained by replacing the inputs of the model above with the corresponding IMU states:
+\begin{equation}
+{\rm ESC:}
+%{\color{red}
+\begin{cases}
+\dot{\tilde T} = \tilde V \\
+\dot{\tilde R} = \tilde R \widehat{[(I - \tilde R)\omega - \tilde R \omega_b]}  \\
+\dot{\tilde V} =[I - \hat R \tilde R {\hat R}^T] (\alpha - \gamma) - \hat R \alpha_b \\
+\dot \omega = w \\ 
+\dot \alpha = \xi \\
+\dot \alpha_b = 0 \\
+\dot \omega_b = 0 \\
+\omega\imu (t) = \omega(t) + \omega_b(t) + n_{\omega}(t) \\ 
+\alpha\imu (t) = {\tilde R}^T {\hat R}^T(t) (\alpha(t)- \gamma) + \alpha_b(t) + n_{\alpha}(t) 
+\end{cases}
+%}
+\end{equation}
+%
+\subsection{Discrete time}
+%
+The standard model in discrete time is given by:
+\begin{equation}
+{\rm SD:}
+\begin{cases}
+T(t+dt) = T(t) + V(t)dt \\
+R(t+dt) = R(t)\exp(\widehat \omega(t)dt) \\
+V(t+dt) = V(t) + \alpha(t)dt \\
+\omega(t+dt) = \omega(t) + w(t) dt \\
+\alpha(t+dt) = \alpha(t) + d\xi(t)\\
+\omega_b(t+dt) = \omega(t) \\
+\alpha_b(t+dt) = \alpha_b(t) \\
+\omega\imu (t) = \omega(t) + \omega_b(t) + n_\omega(t) \\
+\alpha\imu (t) = R^T(t) (\alpha(t) - \gamma) + \alpha_b(t) + n_\alpha(t) 
+\end{cases}
+\end{equation}
+which is in the form
+\begin{equation}
+\begin{cases}
+x_1(t+dt) = f(x_1,x_2)dt \\
+x_2(t+dt) = x_2 + dn_x \\
+x_3(t+dt)= x_3(t) \\
+u = h(x_1, x_2, x_3, p_0) + n_y
+\end{cases}
+\end{equation}
+with 
+\begin{equation}
+f(x_1, x_2) = \ba{c}x_{11}+x_{13} \\ x_{12}x_{21} \\ x_{13}+x_{22} \ea, 
+\ h(x_1, x_2, x_3, p_0) = \ba{c} x_{21} + x_{31} \\
+x_{12}^T x_{22} - x_{12}^Tp_0 + x_{32} \ea
+\end{equation}
+and the reduced model
+\begin{equation}
+{\rm RD:}
+\begin{cases}
+T(t+dt) = T(t) + V(t)dt \\
+R(t+dt) = R(t)\exp(\widehat \omega\imu (t)dt - \widehat \omega_b dt)\exp(dn_R(t)) \\
+V(t+dt) = V(t) + R(t)(\alpha\imu (t) - \alpha_b)dt + \gamma dt + dn_V(t)) \\
+\omega_b(t+dt) = \omega(t) \\
+\alpha_b(t+dt) = \alpha_b(t)
+\end{cases}
+\end{equation}
+of the form
+\begin{equation}
+\begin{cases}
+x_1(t+dt) = f(x_1, x_3)dt + g(x_1,dt)u + dn_y \\
+x_3(t+dt) = x_3(t)
+\end{cases}
+\end{equation}
+with 
+\begin{equation}
+f(x_1, x_3)  =\ba{c}
+x_{11}+x_{13} \\ 
+-x_{12}x_{31} \\
+x_{13} + -x_{12 } x_{32} \ea
+~~ g(x_1) = \ba{ccc}
+0 & 0 & 0 \\
+x_{12} & 0 & 0 \\
+0 & x_{12} & p_0 \ea
+\end{equation}
+and the nominal model
+\begin{equation}
+{\rm ND:}
+%{\color{red}
+\begin{cases}
+T(t+dt) = T(t) + V(t)dt ~~~ T(0) = 0\\
+R(t+dt) = R(t)\exp(\widehat \omega\imu (t)dt )~~~ R(0) = I \\
+V(t+dt) = V(t) + R(t)\alpha\imu (t)dt + \gamma dt ~~~~~ V(0) = 0 \\
+\end{cases}
+%}
+\end{equation}
+of the form
+\begin{equation}
+x_1(t+dt) = f(x_1, 0)dt + g(x_1,dt) u.
+\end{equation}
+Just as we did in continuous time, it is possible  to divide the state into nominal and error states without an approximation, albeit at the cost of having a non-linear error-state model. Specifically:
+\begin{equation}
+T(t+1) \doteq \hat T(t+1) + \tilde T(t+1) \doteq \hat T(t) + \tilde T(t) + \hat V(t) + \tilde V(t) = T(t) + V(t)
+\end{equation}
+which can be split into two decoupled equations: $\hat T(t+1) = \hat T(t) + \hat V(t)$ and $\tilde T(t+1) = \tilde T(t) + \tilde V(t)$. For the attitude $R(t)$, we have that
+\begin{equation}
+R(t+1) \doteq \hat R(t+1)\tilde R(t+1) \doteq \hat R(t)\exp(\widehat \omega\imu ) \tilde R(t+1) = 
+\hat R(t) \tilde R(t) \exp(\widehat \omega\imu  - \widehat \omega_{bias})
+\end{equation}
+and therefore we have, again, two decoupled equations: $\hat R(t+1) = \hat R(t)\exp(\widehat \omega\imu )$ and $\tilde R(t+1) = \exp(-\widehat \omega\imu )\tilde R(t) \exp(\widehat \omega\imu  - \widehat \omega_{bias})$. The coupling occurs at the first derivative (linear velocity):
+\begin{equation}
+V(t+1) \doteq \hat V(t+1) + \tilde V(t+1) \doteq \hat V(t) + \tilde V(t) + R(t)(\alpha\imu  - \alpha_{bias}) + \gamma %- R(t) \alpha_{bias} + \hat R(t)((\tilde R(t) - I)\alpha\imu )
+\end{equation}
+that can be decomposed into the nominal evolution $\hat V(t+1) = \hat V(t) + \hat R(t)\alpha\imu $ and a coupled evolution of the error velocity $\tilde V(t+1) = \tilde V(t) +\hat R(t)(\tilde R(t) -I)\alpha\imu (t) + \hat R(t)\tilde R(t) \alpha_{bias}$. Thus, we have the error state model as follows:
+\begin{equation}
+{\rm ERD:} 
+%{\color{red}
+\begin{cases}
+\tilde T(t+dt) = \tilde T(t) + \tilde V(t)dt\\
+\tilde R(t+dt) = \exp(-\widehat \omega\imu dt)\tilde R(t) \exp(\widehat \omega\imu  - \widehat \omega_{bias})\exp(dn_R(t))\\
+\tilde V(t+dt) = \tilde V(t) +\hat R(t)\tilde R(t)(\alpha\imu (t) - \alpha_{bias})dt - \hat R(t)\alpha\imu (t)dt + dn_V(t)\\
+\alpha_{bias}(t+dt)  = \alpha_{bias}(t) \\
+\omega_{bias}(t+dt) = \omega_{bias}(t) \\
+\end{cases}
+%}
+\end{equation}
+Finally, for the standard model, the error-state is given, after replacing $\omega\imu $ with $\omega + \omega_b$, and similarly for $\alpha\imu $
+\begin{equation}
+{\rm ESD:}
+%{\color{red}
+\begin{cases}
+\tilde T(t+dt) = \tilde T(t) + \tilde V(t)dt\\
+\tilde R(t+dt) = \exp(-\widehat \omega dt -\widehat \omega_b dt)\tilde R(t) \exp(\widehat \omega dt)\exp(dn_R(t))\\
+\tilde V(t+dt) = \tilde V(t) + (I - \hat R(t){\tilde R}^T(t) {\hat R}^T(t)) (\alpha(t) - \gamma)dt - \hat R(t)\alpha_{b}(t)dt + dn_V(t)\\
+\omega(t+dt) =  \omega(t) + w(t)dt \\
+\alpha(t+dt) = \alpha(t) + \xi(t)dt \\
+\alpha_{bias}(t+dt)  = \alpha_{bias}(t) \\
+\omega_{bias}(t+dt) = \omega_{bias}(t) \\
+\omega\imu (t) = \omega(t) + \omega_b(t) + n_{\omega}(t) \\ 
+\alpha\imu (t) = {\tilde R}^T {\hat R}^T(t) (\alpha(t)- \gamma) + \alpha_b(t) + n_{\alpha}(t) 
+\end{cases}
+%}
+\end{equation}
+After which one can obtain the actual state via $T(t) = \hat T(t) + \tilde T(t)$, $R(t) = \hat R(t) \tilde R(t)$, and $V(t) = \hat V(t) + \tilde V(t)$. 
+%
+It should be noted that the nominal state will have to be integrated between sample points, which typically occurs assuming piecewise constant input, which yields an integration error that may be comparable to the linearization error. While it could be debatable whether the linearization error implicit in the use of the linearized error state is larger or smaller than the integration error, it nevertheless compounds it, and therefore it is desirable to avoid it regardless of how large the integration error is.
+%
+\subsection{Short-hand notation}
+%
+So far we have considered 10 models: Standard (S), Reduced (R), Nominal (N), Error-Standard (ES), Error-Reduced (ER), in both continuous (C) and discrete time (D). To abstract the details of these models, we use the formal notation where $x$ denotes the state, that depends on each model. As done above, we denote with $x = \{x_1, x_2, x_3\}$ with $x_1 = \{T, R, V\} = \{x_{11}, x_{12}, x_{13}\}, \ 
+x_2 = \{\omega, \alpha\} = \{x_{21}, x_{22}\}$ and $x_3 = \{\omega_b, \alpha_b\} =  \{x_{31}, x_{32}\}$.  With an abuse of notation, the mechanization function (a.k.a. ``dynamics'', or ``vector field'') is indicated with the same symbol $f$. The IMU measurements are indicated with $y\imu $ when they are considered as measurements. When they are considered as inputs by replacing the corresponding velocity and acceleration states, we indicate them with $u = h^{-1}(y\imu ,x)$. It is assumed that $R$ is represented in local coordinates either with exponential coordinates $\Omega$ or with quaternions $q$, so either $R = R(q)$ or $R = \exp(\widehat \Omega)$. To kend{equation}p the notation general, we indicate the rotation states with $R$ even though it is understood that, depending on the parametrization, the state will either include $q \in {\mathbb S}^3$ or $\Omega \in \real^3$. The (possibly known, possibly unknown but) otherwise constant parameters, such as $\gamma$, are indicated by $p$. 
+With this notation, we can write the above models succinctly as follows:
+\begin{eqnarray}
+{\rm SC:} && 
+\begin{cases}
+\dot x_1  = f(x_1, x_2)  \\
+\dot x_2 = n_x \\
+\dot x_3 = 0 \\
+u = h(x_1,x_2, x_3,p_0) + n_y
+\end{cases}
+\nonumber\\
+{\rm RC:} && 
+\begin{cases}
+\dot x_1  = f(x_1, x_3) + g_1(x_1) u +   n_y\\
+\dot x_3 = 0
+\end{cases}\nonumber\\
+{\rm NC:} && %\begin{cases} 
+\dot{\hat x}_1 = f(\hat x_1,0) + g(\hat x_1) u   %\\ u = y\imu  \end{cases}
+\nonumber\\
+{\rm ESC:} && \begin{cases} \dot{\tilde x}_1 = f_1(\tilde x_1, \tilde x_2, x_3, \hat x_1) \\
+\dot{\tilde x}_2 = n_x \\
+\dot x_3 = 0 \\
+y\imu  = h(\tilde x_1, \tilde x_2, x_3, \hat x_1) + n_y \end{cases}
+\nonumber\\
+{\rm ERC:} && \begin{cases} \dot{\tilde x}_1 = f_1(\tilde x_1, x_3, \hat x_1) + g(\tilde x_1, \hat x_1) u + \tilde n_y \\
+\dot x_3 = 0
+ \end{cases}
+\nonumber
+\end{eqnarray}
+In the discrete-time case
+\begin{eqnarray}
+{\rm SD:} && 
+\begin{cases}
+x_1(t+dt) = f(x_1,x_2)dt \\
+x_2(t+dt) = x_2 + dn_x \\
+x_3(t+dt)= x_3(t) \\
+u = h(x_1, x_2, x_3, p_0) + n_y
+\end{cases}\nonumber\\
+{\rm RD:} && 
+\begin{cases}
+x_1(t+dt) = f(x_1, x_3)dt + g(x_1,dt)u + dn_y \\
+x_3(t+dt) = x_3(t)
+\end{cases}\nonumber\\
+{\rm ND:} && %\begin{cases} 
+x_1(t+dt) = f(x_1, 0)dt + g(x_1,dt) u.
+%\end{cases}
+\nonumber\\
+{\rm ESD:} && \begin{cases} \tilde x_1(t+dt) = f(\tilde x_1(t), x_2(t), \hat x_1(t)) dt + dn_1 \\
+x_2(t+dt) = x_2(t) + dn_2 \\
+x_3(t+dt) = x_3(t) \\
+ y\imu  = h(\tilde x_1, x_2, x_3, \hat x_1) + n_y \end{cases}\nonumber\\
+{\rm ERD:} && \begin{cases} \tilde x_1(t+dt) = f(\tilde x_1(t), x_3,\hat x_1)dt + g(\tilde x_1, \hat x_1(t),dt)u + d \tilde n_y \\
+x_3(t+dt) =  x_3(t)
+%\\ u = y\imu  
+\end{cases}\nonumber
+\end{eqnarray}
+}
+\noindent Next we will consider augmenting the models above with measurement equations coming either from {\em range} or {\em bearing} measurements for a finite set $N$ of isolated points with coordinates $X^i\in \real^3, \ i = 1, \dots, N$. 
+\cut{
+While in practice the number of points changes over time, so $N = N(t)$, we will at first consider the collection of all points as a set of parameters $p$ assumed constant (rigid scene). In general, both bearing and range measurements represent a projection $\pi$ from $\real^3$ to $\real^2$ (bearing) or $\real$ (range), and therefore we collectively represent the measurement equation with the function $\pi: \real^{3N} \rightarrow \real^{KN}$ with $K = 2$ or $1$. We therefore represent the measurement equation for the additional sensors as
+\begin{equation}
+y = \pi(x, p) + n
+\end{equation}
+where $p$ is constant but unknown. In the next two sections we write explicitly the form of these functions. The models above will have to be augmented with the corresponding measurement equations, as well as with the corresponding state equations $\dot p = 0$.
+%
+The overall system has to be {\em observable} for {\em any} filtering scheme to operate correctly. The observability properties of the models above have bend{equation}n studied extensively for the case of bearing measurements \cite{jonesS09}, and were reported in Phase I for the case of range measurements.
+}
+
+
+\subsection{Bearing augmentation (vision)} 
+
+Initially we assume there is a collection of points $X^i, \ i = 1, \dots, N$, visible from time $t=0$ to the current time $t$. If $\pi:\real^3 \rightarrow \real^2; X \mapsto [X_1/X_3, \ X_2/X_3]$ is a canonical central (perspective) projection, assuming that the camera is {\em calibrated},\footnote{Intrinsic calibration parameters are known and compensated for.} {\em aligned},\footnote{The pose of the camera relative to the IMU is known and compensated for.} and that the spatial frame coincides with the body frame at time $0$, we have
+\begin{equation}
+\boxed{y^i(t) = {\color{black} \frac{R^T_{1:2}(t) (X^i - T_{1:2}(t))}{R^T_{3}(t)( X^i - T_3(t))}} \doteq  \pi(g^{-1}(t)X^i) + n^i(t), ~~~ {\color{black} t \ge 0.}}
+\label{eq-y}
+\end{equation}
+If the feature first appears at time $t = 0$ {\em and if the camera reference frame is chosen to be the origin the world reference frame} so that $T(0) = 0; R(0) = I$, then we have that $y^i(0) = \pi(X^i) +n^i(0)$, and therefore
+\begin{equation}
+\boxed{X^i = \bar y^i(0)Z^i + \tilde n^i}
+\label{eq-trian}
+\end{equation}
+where $\bar y$ is the homogeneous coordinate of $y$, $\bar y = [y^T \ 1]^T$, and $\tilde n^i = [{n^i}^T(0)Z^i \ \  0]^T$. Here $Z^i$ is the (unknown, scalar) depth of the point at time $t = 0$. With an abuse of notation, we write the map that collectively projects all points to their corresponding locations on the image plane as:
+\begin{equation}
+y(t) \doteq \ba{c}
+y^1 \\ y^2 \\ \vdots \\ y^N \ea (t)
+ = \ba{c}
+\pi(R^T(X^1 - T)) \\
+\pi(R^T(X^2- T)) \\
+\vdots\\
+\pi(R^T( X^N- T))
+\ea
++ \ba{c}
+n^1(t) \\ n^2(t) \\ \vdots \\ n^N(t) \ea 
+\label{eq-vis}
+\end{equation}
+
+
+\subsection{Range augmentation (radar)}
+
+If measurements of range of sparse reflectors in position $X^i \in \real^3$ are given, we consider the projection function (with an abuse of notation) $\pi: \real^3 \rightarrow {\mathbb S}^2; \ X \mapsto \| X \|$, and assume that, for each point $i$ -- through pre-processing of the radar phase histories, we can measure
+\begin{equation}
+\boxed{Z^i(t) = \| X^i - T(t) \| + n^i(t) ~  \doteq \pi(g^{-1}(t)X^i) + n^i(t) ~~~ t \ge 0.}
+\end{equation}
+This equation is formally similar to (\ref{eq-y}), so the general form (\ref{eq-fg}) does not change if we consider range only measurements, and even a mixture of {\em both} range and bearing. 
+
+In the case of bearing measurements, the inverse projection depends on two parameters (the unknown bearing). If we call 
+\begin{equation}
+\hat y \doteq \frac{X}{\| X \|} \in {\mathbb S}^2
+\end{equation}
+then we have that, noting that $Z^i(0) = \| X^i \| + n^i(0)$, 
+\begin{equation}
+X^i = {\hat y}^i Z^i + {\hat n}^i
+\label{eq-ran-tri}
+\end{equation}
+where ${\hat n}^i \doteq - {\hat y}^i n^i(0)$. Although the measurement equations for the bearing-only and range-only filters are formally identical, the observability properties and Gauge ambiguities are different. 
+
+\subsection{Alignment (calibration)} 
+
+Consider the model (\ref{eq-mech}) with measurements $y^i(t)$ can representing either the range of a number of sparse reflectors or the position on the image plane of a sparse collection of point features. In the former case, the range is measured in the reference frame of the radar, and therefore we have 
+\begin{equation}
+y^i(t) = \pi\left( g_{rb} g^{-1}(t) X_s^i \right) + n^i(t) \in \real
+\end{equation}
+where $\pi(X) = \| X \|$ and $g_{rb}$ is the transformation from the body frame to the radar. In the latter we have 
+\begin{equation}
+\boxed{y^i(t) = \pi\left( g_{cb} g^{-1}(t) X_s^i \right) + n^i(t) \in \real^2}
+\end{equation}
+where $\pi(X) = [X_1/X_3, \ X_2/X_3]^T$, and $g_{cb}$ is the transformation from the body frame to the camera. The {\em ``alignment''} transformations $g_{cb}, g_{rb}$ are typically not known and should be inferred. We can then, as done for the points $X^i$, add them to the state with trivial dynamics $\dot g_{cb} = \dot g_{rb} = 0$.
+
+\subsection{Groups (occlusions)}
+
+It may convenient in some cases to represent the points $X_s^i$ in the reference frame where they first appear, say at time $t_i$, rather than in the spatial frame. This is because the uncertainty is highly structured in the frame where they first appear. 
+Consider $X^i(t_i) = \bar y^i(t_i) Z^i(t_i)$, then $y^i(t_i)$ has the same uncertainty of the feature detector (small and isotropic on the image plane) and $Z^i$ has a large uncertainty, but it is constrained to be positive. 
+
+However, to relate $X^i(t_i)$ to the state, we must bring it to the spatial frame, via $g(t_i)$, which is unknown. Although we may have a good approximation of it, the current estimate of the state $\hat g(t_i)$, the pose when the point first appears should be estimated along with the coordinates of the points. Therefore, we can represent $X^i$ using $y^i(t_i)$, $Z^i(t_i)$ {\em and} $g(t_i)$: 
+\begin{equation}
+X_s^i = X_s^i(g_{t_i}, y_{t_i}, Z_{t_i}) = g_{t_i} \bar y_{t_i} Z_{t_i}
+\end{equation}
+Clearly this is an over-parametrization, since each point is now represented by $3+6$ parameters instead of $3$. However, the pose $g_{t_i}$ can be pooled among all points that appear at time $t_i$, considered therefore as a {\em group}. At each time, there may be a number $j = 1, \dots, K(t)$ groups, each of which has a number $i = 1, \dots, N_j(t)$ points. We indicate the group index with $j$ and the point index with $i = i(j)$, omitting the dependency on $j$ for simplicity. The representation of $X_s^i$ then evolves according to
+\begin{equation}
+\begin{cases}
+\dot y^i_{t_i} = 0, ~~~ i = 1, \dots, N(j) \\
+\dot Z^i_{t_i} = 0 \\
+\dot g_{j} = 0, ~~~~ j = 1, \dots, K(t).
+\end{cases}
+\end{equation}
+For the case of range, this is not relevant as there is no reference frame that offers a preferential treatment of uncertainty.
+
+
+
+\subsection{Compact notation}
+If we call the ``state'' $x = \{T, R, V, \alpha_b, \omega_b, X\} = \{x_1, x_2, x_3, x_4, x_5, x_6\}$ the ``known input'' $u = \{\w\imu , \alpha\imu \} = \{u_1, u_2\}$, the {\em unknown input} $v = \{ n_{\omega_b}, n_{\alpha_b} \} = \{v_1, v_2\}$, we can write the mechanization equations (\ref{eq-mech}) as
+\begin{equation}
+\dot x = f(x) + c(x) u + D v
+\label{eq-mod0}
+\end{equation}
+where 
+\begin{equation}
+f(x) \doteq \ba{c} x_3 \\ -x_2 x_4 \\ -x_2 x_5 + \gamma \\ 0 \\0 \\ 0 \ea, ~~~~~ c(x) \doteq \ba{c} 0 \\ R \\ R \\ 0 \\ 0 \\ 0\ea, ~~~~ D \doteq \ba{cc} 0 & 0\\ 0 & 0  \\ 0 & 0 \\ I & 0 \\ 0 & I \\ 0 & 0\ea
+\end{equation}
+and the measurement equation (\ref{eq-vis}) as
+\begin{equation}
+y = h(x)+n
+\end{equation}
+where
+\begin{equation}
+h(x) \doteq \ba{c} \vdots \\ \pi(x_2'(x_6^i - x_1)) \\ \vdots \ea
+\end{equation}
+Putting together (\ref{eq-mech})-(\ref{eq-vis}) we have a model of the form
+\begin{equation}
+\boxed{\begin{cases}
+\dot x = f(x) + c(x) u + D v \\
+y = h(x) + n.
+\end{cases}}
+\label{eq-fg}
+\end{equation}
+
+\subsection{Definitions}
+
+We call $y^t = \{y(\tau)\}_{\tau = 0}^t$, a collection of output measurements, and $x^t = \{x(\tau)\}_{\tau = 0}^t$ a state {\em trajectory}. Given output measurements $y^t$ and known inputs $u^t$, we call 
+\begin{equation}
+{\cal I}(y^t | u^t; \tilde x_0) \doteq \{ {\tilde x}^t \ | \ y^t = h({\tilde x}^t) \ {\rm s. \ t. } \ \dot {\tilde x}(t) = f({\tilde x}) + c({\tilde x}) u(t), \ \tilde x(0) = \tilde x_0  \ \forall \ t\}
+\end{equation}
+the {\em indistinguishable set}, or set of {\em indistinguishable trajectories}, for a given input $u^t$. If the initial condition $\tilde x_0 = x_0$ equals the ``true'' one, the indistinguishable set contains at least one element, the ``true'' trajectory $x^t$. However, if $\tilde x_0 \neq x_0$, the true trajectory may not even be part of this set.
+
+If the indistinguishable set is a singleton (it contains only one element, $\tilde x^t$, which is a function of the initial condition $\tilde x_0$), we say that the model is {\em observable up to the initial condition}, or simply {\em observable}.\footnote{We will assume that the solution of the differential equation $\dot x = f(x) + c(x) u$ is unique and continuously dependent on the initial condition, so if we impose $\tilde x_0 = x_0$, then $\tilde x^t = x^t$.} If $\{\tilde x^t\}$ is further independent of the initial condition, we say that the model is {\em strongly observable}:
+$
+{\cal I}(y^t | u^t; \tilde x_0) = \{ x^t\} \ \forall \ \tilde x_0, \ u^t. 
+$
+
+\iffalse
+If the indistinguishable set is not a singleton, but the collection of trajectories form an equivalence class under different initial conditions, we say that the model is {\em observable up to the initial condition}. For instance, we may have that $x^t$ is in the form $x(t) = \phi(t)x_0$ and indistinguishable trajectories are of the form $\tilde x(t) = \phi(t) \tilde x_0$, for the same $\phi(t)$, for all $t$. In this case, if we consider equivalent trajectories that differ solely by their initial condition, we have that the indistinguishable set is made of equivalence classes (under the Gauge transformation defined by the initial conditions), and we say that the model is observable up to the initial condition if the indistinguishable set is a single equivalence class. Note that, in this case, we can fix the initial condition arbitrarily (canonization), say to $\tilde x_0$, and obtain a singleton indistinguishable set that does {\em not} the true trajectory, but one that is related to it by {\em gauge 
+transformation}. We will defer the treatment to the initial condition to Sect. \ref{sect-gauge}, and neglect $x_0$ in the meantime. 
+\fi
+
+If the state includes unknown parameters with a trivial dynamic, and there is no unknown input, $v = 0$, then observability of the resulting model implies that the parameters are {\em identifiable.} That usually requires the input $u^t$ to be {\em sufficiently exciting} (SE), in order to enable disambiguating the indistinguishable states,
+\footnote{Sufficient excitation means that the input is {\em generic}, and does not lie on a thin set. That is, even if we could find a particular input $u^t$ that yields indistinguishable states, there will be another input that is infinitesimally close to it that will disambiguate them.} as the definition does not require that every input disambiguates states.
+
+In the presence of {\em unknown inputs} $v \neq 0$, consider the following definition
+\begin{equation}
+{\cal I}_v(y^t | u^t; \tilde x_0) \doteq \{ {\tilde x}^t \ | \ \exists \ v^t \ {\rm s. \ t. } \ y^t = h(\tilde x^t), \ \dot {\tilde x}(t) = f({\tilde x}) + c({\tilde x}) u(t) + D v(t) \ \forall \ t; \ \tilde x(0) = \tilde x_0\}
+\end{equation}
+which is the set of {\em unknown-input indistinguishable states}. The model $\{f, c, D\}$ is said to be {\em unknown-input observable} (up to initial conditions) if the unknown-input indistinguishable set is a singleton. If such a singleton is further independent of the initial conditions, the model is strongly observable. The two definitions coincide once the only admissible unknown input is $v^t = 0$ for all $t$.
+
+It is possible for a model to be observable (the indistinguishable set is a singleton), but not unknown-input observable (the unknown-input indistinguishable set is dense). In that case, the notion of {\em sensitivity} arises naturally, as one would want to measure the ``size'' of the unknown-input indistinguishable set as a function of the ``size'' of the unknown input. For instance, it is possible that if the set of unknown inputs is small in some sense, the resulting set of indistinguishable states is also small. If $v \in V$ and for any $\epsilon>0$ there exists a $\delta >0$ such that ${\rm vol}(V) \le \epsilon$ for some measure of volume implies ${\rm vol}({\cal I}_v(y^t | u^t; \tilde x_0)) < \delta$ for any $u^t, \tilde x_0$, then we say that the model is {\em bounded-unknown-input/bounded-output observable} (up to the initial condition). If the latter volume is independent of $\tilde x_0$ we say that model is strongly bounded-unknown-input/bounded-output observable.
+
+
+\marginpar{repetition} The set of indistinguishable trajectories $\cal I$ is an equivalence class, and when the model is observable {\em up to the initial condition}, it is parametrized by $\tilde x_0$. Choosing the ``true'' initial condition $\tilde x_0 = x_0$ produces an indistinguishable set consisting of the sole ``true'' trajectory, otherwise it is a singleton other than the true trajectory. In some cases, the initial condition corresponds to an arbitrary choice of reference frame, and therefore the equivalence class of indistinguishable trajectory are related by a {\em gauge transformation} (a change of coordinates). As the equivalence class can be represented by any element, enforcing a particular reference for the gauge transformation yields strong observability (although the singleton may not correspond to the true trajectory). 
+
+
+\subsection*{Related work}
+
+Unknown-input observability of linear time-invariant systems has bend{equation}n addressed in \cite{basile1969observability,hamano1983unknown}, for affine systems \cite{hammouri2010unknown}, and non-linear systems in \cite{dimassi2010robust,liberzon2012invertibility,bezzaoucha2011unknown}. The literature on robust filtering and robust identification is relevant, if the unknown input is treated as a disturbance. However, the form of the models involved in aided navigation do not fit in the classes treated in the literature above, which motivates our analysis.
+
+
+\section{Analysis of Bearing-Augmented Navigation} 
+\label{sect-bearing-analysis}
+
+\subsection{Preliminary claims}
+
+\begin{lemma}\label{lemma-one}
+Given $S\in \SO(3)$ and $\1S\in T_{\SO(3)}(S)$, 
+and $a\in\RR$, the matrix $(aS + \1S)$ is nonsingular unless $a=0$, in which case it has rank $2$ or $0$.
+\end{lemma}
+\begin{proof} The tangent $\1S$ has the form $S M$, where $M$ is some skew-symmetric matrix.
+As such, $Mx\perp x$ for any $x\in\RR^3$,  so
+$$\|(aS+\1S)x\|_2^2 = \|S(aI+M)x\|^2_2 = \|ax\|^2_2 +\|Mx\|^2_2.$$
+The above is zero only if $ax=0$, so $(aS+\1S)$ is nonsingular.
+For the remaining cases, observe that a $3\times3$ skew-symmetric matrix has rank 2 or 0.
+\end{proof}
+
+\begin{claim}\label{claim-one}
+Let $(R_t, T_ t)$ and $(\Rw_t, \Tw_t)$ be differentiable trajectories in $\SE(3)$.
+For each time $t\in[0,T]$, there exists an open, full-measure subset $\Aa_t\subs\RR^3$
+such that:
+\begin{quote}
+Given two static point-clouds $\{X^i\}_{i=1}^N\subs\Aa_t$ and $\{\Xw^i\}_{i=1}^N\subs\RR^3$ that satisfy
+\begin{equation}
+\pi\bigl(R_t\inv (X^i-T_t)\bigr) = \pi\bigl(\Rw_t\inv(\Xw^i-\Tw_t)\bigr) 
+\quad\text{for all $i$},
+\label{prob}
+\end{equation}
+there exists a stationary scaling $\sigma>0$ and a unique, stationary rotation $S=\Rw_t R_t\inv \in\SO(3)$ such that
+$$ \sigma S (X^i - T_t) = \Xw^i-\Tw_t
+\quad\text{for all $i$}.$$
+\end{quote}
+Furthermore, if $\1{T_t}\neq0$, then $\sigma$ is unique.
+\end{claim}
+\begin{proof}
+Write $S_t = \Rw_tR\inv_t$.
+Equality under the projection implies a scaling $\sit$
+(possibly varying with $X^i$ and $t$) 
+such that
+\begin{equation}\sit S_t\bigl(X^i-T_t)  = \Xw^i-\Tw_t. \label{finalform}\end{equation}
+We wish to show that $\sit$  and $S_t$ are stationary and independent of $X^i$.  
+Taking time derivatives,
+$$
+\bigl({\dt{\sit}}S_t + \sit\dt{S_t}\bigr)(X^i-T_t) - \sit S_t\dt{ T_t}
+= - \dt{\Tw_t}
+$$
+or, dividing by $\sit$,
+\begin{align}
+\bigl(\tfrac{\dt{\sit}}{\sit}S_t + \dt{S_t}\bigr)(X^i-T_t) - S_t\dt{ T_t}
+= - \tfrac{1}{\sit}\dt{\Tw_t}.
+\label{compare}
+\end{align}
+Differentiating both sides with respect to $X^i$,
+\begin{equation}
+\bigl(\tfrac{\dt{\sit}}{\sit}S_t + \1{S_t}\bigr)\dX^i +
+ \bigl(\tfrac{d}{dX^i}\bigl(\tfrac{\1{\sit}}{\sit}\bigr)\dX^i\bigr) S_t(X^i-T_t) =
+-\bigl(\tfrac{d}{dX^i}\bigl(\tfrac{1}{\sit}\bigr)\dX^i\bigr)\1{\Tw_t}. \label{moneyshot}
+\end{equation}
+Observe that
+$\tfrac{d}{dX^i}\bigl(\tfrac{\1{\sit}}{\sit}\bigr)\dX^i$ and
+$\tfrac{d}{dX^i}\bigl(\tfrac{1}{\sit}\bigr)\dX^i$
+are scalars. 
+By Lemma \ref{lemma-one}, the LHS 
+%of (\ref{moneyshot}) we
+has rank 2 or greater (as a linear map on $\delta X^i$), unless $\1{\sit}=0$.  
+The RHS, however, has rank at most 1.  
+Thus, (\ref{compare})
+is invalid for almost all $X^i$, unless $\1{\sit}=0$
+(two maps of different ranks can only agrend{equation} on a submanifold).
+Plugging $\1{\sit}=0$ into (\ref{moneyshot}), we are left with
+\begin{equation}
+\1{S_t}\dX^i =
+-\bigl(\tfrac{d}{dX^i}\bigl(\tfrac{1}{\sigma_i}\bigr)\dX^i\bigr)\1{\Tw_t}. \label{Double-moneyshot}
+\end{equation}
+Now, the LHS 
+%of (\ref{Double-moneyshot}) 
+has rank 2 or 0, while the RHS has rank 1 or 0.
+Again, (\ref{compare}) is invalid for almost all $X^i$, unless 
+$\1{S_t}=0$.
+Let $\Aa_t\subs\RR^3$ be the open, full-measure subset \ignore{of full measure} (being the complement of two submanifolds) on which the latter must hold.
+If, in addition, $\1{T_t}\neq 0$, then $\1{\Tw_t}\neq 0$ and
+$\frac{d\sigma_i}{dX^i}=0$
+and we can finally write %(\ref{finalform}) as
+$$
+\sigma S (X^i - T_t) = \Xw^i-\Tw_t.
+$$
+Otherwise, if $\1{T_t} = 0$, then $\1{\Tw_t} = 0$ and (\ref{Double-moneyshot}) is trivially satisfied by $\sigma_i = \sigma$
+for \emph{any} $\sigma>0$.
+\end{proof}
+
+
+\iffalse
+\begin{claim}\label{claim-one}
+Let $X^i(t) \in \real^3, i = 1, \dots, N(t); t\in {\mathbb Z}$ and $\Xw^i(t) \neq X^i(t)$. Then $\pi(X^i(t)) = \pi(\Xw^i(t))$ if and only if $\Xw^i(t) = \sigma(t) X^i(t) \ \forall \ i, t$, where $\sigma(t) > 0$ is an arbitrary positive scalar-valued function of $t$ (and $i$).
+\end{claim}
+This follows directly from the definition of the projection map $\pi$.
+\fi
+
+\begin{claim}[Indistinguishable Trajectories from Bearing Data Sequences]\label{claim-two}
+Let $g(t)$ and $\gw(t)$ be differentiable trajectories in $\SO(3)$.
+There exists an open, full-measure subset $\Aa\subs\RR^3$ such that
+\begin{quote}
+Given two static, generic (non-coplanar) point clouds $\{X^i\}_{i=1}^N\subs\Aa$ 
+and $\{\Xw^i\}_{i=1}^N\subs\RR^3$, satisfying
+$$\pi(g^{-1}(t)X^i) = \pi(\gw^{-1}(t) \Xw^i) \quad \text{for all $i$ and $t$},$$
+there exists a constant scaling $\sigma>0$ and unique, constant transformation $\bar g\in \SE(3)$ such that
+\begin{equation}
+\begin{cases}
+\Xw^i = \sigma(\bar g X^i) \\
+\gw(t) = \sigma(\bar g g(t))
+\end{cases}
+\;\text{for all $i$ and $t$.}
+\label{eq-gauge}
+\end{equation} 
+\end{quote}
+Furthermore, if $g(t)$ has a non-constant translational component, then $\sigma$ is unique.
+\end{claim}
+\begin{proof}
+Write $g(t) = (R_t, T_t)$ and $\gw(t) = (\Rw_t, \Tw_t)$.
+Let $\Aa = \{X\in\RR^3:\, X\in\Aa_t\text{ for almost all } t\}$, with $\Aa_t$ defined as in Claim \ref{claim-one}.  
+By Fubini's theorem, this has full measure in $\RR^3$.
+If $\{X^i\}\subs\Aa$, then the conditions for
+Claim \ref{claim-one} are satisfied for almost all $t$, and 
+there exist unique \emph{constant} (being stationary for almost all $t$) scaling and rotation $S=\Rw_tR_T\inv\in \SO(3)$ such that
+$\Xw^i = \sigma S(X^i - T_t) + \Tw_t$.
+
+Define $\bar g(t) = (\sigma\inv \gw(t))\, g(t)\inv$, and observe that
+\begin{align*}
+\Xw^i = \sigma S(X^i - T_t) + \Tw_t
+= \sigma(\Rw_t(g\inv X^i) + \sigma\inv \Tw_t)
+=\sigma\bigl((\sigma\inv \gw(t))\, g(t)\inv X^i\bigr)
+=\sigma(\bar g(t) X^i).
+\end{align*}
+If this affine relation holds for the generic set $\{X^i\}$, then $\bar g(t)$ must be constant.  Finally,
+\begin{align*}
+\sigma(\bar g g(t)) = \sigma((\sigma\inv\gw(t))\, g(t)\inv g(t)) = \sigma(\sigma\inv\gw(t)) = \gw(t).
+\end{align*}
+\end{proof}
+
+In what follows, we will avoid the cumbersome discussion of sets such as $\Aa\subs\RR^3$,
+suitable for tracking from a given trajectory,
+and will instead speak of \emph{sufficiently exciting} trajectories, 
+those for which a given point cloud is suitable for tracking.
+\begin{defn}[Sufficiently Exciting Motion]
+A trajectory $g(t)$ is {\bf{sufficiently exciting}} relative to a point-\break cloud $\{X^i\}_{i=1}^N\subs\RR^3$ if,
+for $\{\Xw^i\}_{i=1}^N\subs\RR^3$ and $\gw(t)$ in $\SE(3)$,
+\begin{align}
+\pi(g(t)\inv(t)X^i) &= \pi(\gw(t)\inv \Xw^i) 
+\quad\text{for all $i$ and $t$}
+\iff\\
+&
+\left(\begin{cases}
+\Xw^i = \sigma(\bar g X^i) \\
+\gw(t) = \sigma(\bar g g(t))
+\end{cases}
+\;\text{for all $i$ and $t$}
+\label{def_suffex}
+\right)\quad\text{for unique, constant $\sigma>0$ and $\bar g\in\SE(3)$}.
+\end{align}
+That is, if the projection map $\pi(g(t)X^i)$ defines $g(t)$ and $\{X^i\}$ up to a constant rotation and mapping.
+\end{defn}
+Observe that the right-to-left implication is true in all circumstances.  If the RHS holds, then
+$$\pi(\gw(t)\inv\Xw^i) = \pi((\sigma \bar g g(t))\inv \sigma(\bar g X^i)) 
+\pi(g(t)\inv \bar g\inv \sigma\inv \sigma \bar g X^i )
+= \pi(g(t)\inv X^i).$$
+We will send{equation} that the sufficient excitation condition is very easily satisfied.
+\begin{claim}
+Given trajectories $g(t)$ and $\gw(t)$ in $\SE(3)$ with non-constant translation, 
+and a set $\{X^i\}_{i=1}^N$ of $N\geq 4$ points sampled i.i.d. from a non-singular distribution over $\RR^3$,
+the trajectory $g(t)$ is a.s. sufficiently exciting relative to $\{X^i\}$.
+\end{claim}
+\begin{proof}
+Fix $g(t)$. By Claim \ref{claim-two}, for any trajectory $\gw(t)$,
+there exists a full-measure $\Aa\subs\RR^3$ such that (\ref{def_suffex}) holds for any 
+static, generic point clouds
+$\{X^i\}_{i=1}^N\subs\Aa$ and 
+$\{\Xw^i\}_{i=1}^N\subs\RR^3$.
+If $\{X^i\}$ is sampled i.i.d. from a non-singular distribution over $\RR^3$, 
+then $\{X^i\}\subs\Aa$ almost surely.
+\end{proof}
+
+Equation (\ref{eq-gauge}) establishes the fact that the indistinguishable trajectories are an equivalence class parameterized by a group $\sigma(\bar g)$, called a {\em gauge transformation}. We now include a constant reference frame $g_{a}$. We then have the following claim.
+\begin{claim}[Indistinguishable Alignments]\label{claim-thrend{equation}}
+For a number $i = 1, \dots, N(t) > 3$ points in general position (non-coplanar), and sufficiently exciting motion, 
+\begin{equation}
+\pi(g_{a} g^{-1} (t) X^i) = \pi(\gw_{a} \gw^{-1} (t) \Xw^i)
+\end{equation}
+if and only if there exist constants $\sigma >0$, $g_A$ and $g_B\in \SE(3)$ such that
+\begin{equation}
+{\begin{cases}
+\Xw^i = \sigma(g_B X^i)\\
+\gw(t) = \sigma(g_B g(t) g_A)\\
+\gw_{a} = \sigma(g_{a} g_A). 
+\end{cases}}
+\end{equation}
+\end{claim}
+\begin{proof}
+From Claim \ref{claim-two} we get constant $g_B\in\SE(3)$ and $\sigma>0$ such that $\Xw^i = \sigma(g_B X^i)$
+and 
+\begin{eqnarray}
+\gw(t)\gw\inv_a = \sigma(g_Bg(t)g_a\inv)
+\end{eqnarray}
+Let $g_A = g_a\inv\sigma\inv(\gw_a)$.  Then $\gw_a = \sigma(g_ag_A)$ and
+$$\gw(t) = \sigma(g_Bg(t)g_A).$$
+\end{proof}
+We now include groups of points, each with its own reference frame.
+\begin{claim}[Indistinguishable Groups] \label{claim-four}
+For a number $i = 1, \dots, K$ of groups each with a number $j = 1, \dots, N_i \ge 3$ of points in general position (non-coplanar), and sufficiently exciting motion, 
+\begin{equation}
+\pi(g_{a} g^{-1} (t) g_i g_a^{-1} X^j) = \pi(\gw_{a} \gw^{-1} (t) \gw_i \gw_a^{-1} \Xw^j)
+\end{equation}
+if and only if there exist constants $\sigma >0, g_A, g_B,\bar  g_i \in \SE(3)$  such that
+\begin{equation}
+{\begin{cases}
+\Xw^j = \sigma(g_a \bar g_i^{-1} g_i g_a^{-1} X^j)\\
+\gw(t) = \sigma(g_B g(t) g_A) \\
+\gw_i =  \sigma(g_B \bar g_i g_A) \\
+\gw_{a} = \sigma(g_a g_A)
+\end{cases}}
+\label{eq-vis-only}
+\end{equation}
+\end{claim}
+\begin{proof}
+From Claim \ref{claim-two}, we get constant $g_C\in SE(3)$ and $\sigma>0$ such that 
+\begin{gather}
+\Xw^i=\sigma(g_CX^i), \label{rel x}\\
+\gw_a \gw_i\inv \gw(t)\gw_a\inv = \sigma(g_Cg_ag\inv_ig(t)g_a\inv). \label{rel g}
+\end{gather}
+Define
+$$
+g_A := g_a\inv\sigma\inv(\gw_a),
+\qquad\qquad
+g_B :=\sigma\inv(\gw_i\g_a\inv)g_Cg_ag_i\inv,
+\qquad\qquad
+\bar g_i := g_ig_a\inv g_C\inv g_a. 
+$$
+Then, applying the definition of $\bar g_i$ to (\ref{rel x}),
+\begin{align*}
+\Xw^j &= \sigma(g_C X^j)
+= \sigma((g_a\bar g_i\inv g_i g_a\inv) X^j).
+\end{align*}
+Applying the definitions of $g_A$ and $g_B$ to (\ref{rel g}),
+\begin{align*}
+\gw(t) &= \gw_i\gw_a\inv\sigma(g_Cg_ag_i\inv g(t)g_a\inv)\gw_a
+= \sigma\bigl(
+\underset{g_B}{\underbrace{\sigma\inv(g_i \gw_a\inv) g_C g_a g_i\inv}}\,
+g(t)\,
+\underset{g_A}{\underbrace{g_a\inv \sigma\inv(\gw_a)}}
+\bigr)
+= \sigma(g_B g(t) g_A).
+\end{align*}
+Rearranging the definitions of $g_A$, $g_B$ and $\bar g_i$,
+\begin{align*}
+\gw_i &= \sigma(g_B g_i g_a\inv g_C\inv)\gw_a
+=\sigma\left(g_B g_i g_a\inv g_C\inv \sigma(\gw_a)\right)
+=\sigma\bigl(g_B 
+\underset{\bar g_i}{\underbrace{g_i g_a\inv g_C\inv g_a}}\,
+\underset{g_A}{\underbrace{g_a\inv \sigma(\gw_a)}}
+\bigr)
+=\sigma(g_B\bar g_i g_A).
+\end{align*}
+Finally, rearrange the definition of $g_A$ to get
+$$\gw_a = \sigma(g_ag_A).$$
+
+\end{proof}
+Eq. (\ref{eq-vis-only}) describes the ambiguous state trajectories if only bearing measurement time series are given. In that case, there is no alignment to other sensor, so we can assume without loss of generality that $g_a = Id$ and so for $\gw_a$, which in turn implies $g_A = Id$. The resulting ambiguity is well-known \cite{soatto97} and shows that scale $\sigma$ is constant but arbitrary, that the global reference frame is arbitrary (since $g_B$ is), and that the reference frame of each group is also arbitrary (since $\bar g_i$ is). To lock these ambiguities, we can fix thrend{equation} directions for each group (thus fixing $\bar g_i$) and, in addition, for one of the groups fix the pose (thus fixing $g_B$); finally, we can impose that the centroid of the points in that one group (the ``reference group'') be one, which fixes $\sigma$. Thus, an observer designed based on the standard model, where $3$ directions within each group are saturated, and where the pose of one group is fixed, and the centroid of 
+the 
+group is at distance one, is observable, and under the usual assumptions it should converge to a state trajectory that is related to the true one by an arbitrary unknown scaling, and global reference frame.
+
+Now, when inertial measurements are present, of all the possible trajectories that are indistinguishable from the measurements, we are interested {\em only} in those that are compatible with the dynamical model driven by IMU measurements. Since the fact that $X^j$ and $g_a$ are constant has already bend{equation}n enforced, the model will impose no constraints on $\Xw^j, \gw_i$ and $\gw_a$. However, it will offer constraints on $\gw(t)$, that depends on the arbitrary constants $\sigma, g_A, g_B$. 
+
+\subsection{Indistinguishable trajectories in bearing augmentation}
+
+%%%%%%
+\begin{defn}
+For a $\RR^3$-valued differentiable function $f(t)$, define
+$$
+\mathrm{m}(f)
+:= \min_{|x|=1}\Bigl(\max_t\,\dot{f}(t)\cdot x\Bigr)
+= \min_{|x|=1}\Bigl(\max_t\,\dot{f}(t)\times x\Bigr),
+\quad\text{and}\quad
+\mathrm{M}(f)
+:= \max_{|x|=1}\Bigl(\max_t\,\dot{f}(t)\cdot x\Bigr)
+= \max_t\bigl|\dot{f}(t)\bigr|.
+$$
+\end{defn}
+
+
+\begin{claim}[Indistinguishable Trajectories from IMU Data]\label{claim-five}
+Let $g(t)= (R(t), T(t)) \in \SE(3)$ be such that
+\begin{equation}
+\begin{cases}
+\dot R = R(\w\imu  - \w_b) \\
+\dot T = V \\
+\dot V = R(\alpha\imu  - \alpha_b) + \gamma
+\end{cases}
+\label{eq-model-dyn}
+\end{equation}
+for some known constant $\gamma$ and functions $\alpha\imu (t), \omega\imu (t)$ and for some unknown functions $\alpha_b(t), \omega_b(t)$ that are constrained to have $\| \dot \alpha_b(t) \| \le \epsilon$ and $\| \dot \omega_b(t) \| \le \epsilon$ at all $t$.
+If $\gw(t) \doteq \sigma(g_B g(t) g_A)$ for some  constant $g_A = (R_A, T_A), g_B = (R_B, T_B), \sigma > 0$, then $\gw(t)$ satisfies  (\ref{eq-model-dyn}) if and only if 
+\begin{eqnarray}
+\|  T_A \| &  \le& \frac{2 k \min_t \| \dot \omega_b \| }{\max_t \| \ddot \omega\imu  \|}  \\
+\| R_A - I\|  & \le &  \frac{2 \max_t \| \dot \omega_b \| + O(\|}{\max_t \| \dot \omega\imu  \|}  \\
+R_B = \exp(\w_B)\exp(\widehat \gamma \theta)  & {\rm with} & \| \omega_B \| \le \left(\frac{3k\max(\min_t \|\dot \omega_b\|, \min_t \|\dot \alpha_b\| )}{\min(\max_t \| \dot \omega\imu  \|, \max_t \| \dot \alpha\imu  \|, \| \gamma \|)}\right) \\
+|\sigma - 1|  & \le  & \left(\frac{2k\min_t \| \dot \alpha_b \|}{\min(\max_t \| \dot \omega\imu  \|, \max_t \| \dot \alpha\imu  \|)}\right)
+\end{eqnarray}
+for a small integer constant $k$, with $\theta, T_B, \bar g_i$ arbitrary.
+\end{claim}
+\begin{proof}
+The ambiguous rotation  $\tilde R$ must satisfy $\dot{\tilde R} = \tilde R(\w\imu  + \tilde\w_b)$ for some $\tilde \omega_b$:
+\begin{equation}
+\dot{\tilde R} = R_B R (\w\imu  - \w_b) R_A = \tilde R R_A^T(\w\imu  - \w_b) R_A = \tilde R (\widehat{R_A^T \omega}\imu  - 
+\widehat{R_A^T \omega}_{b}) = \tilde R (\w\imu  - \underbrace{\w\imu  + \widehat{R_A^T \omega}\imu  - 
+\widehat{R_A^T \omega}_{b}}) \nonumber
+\end{equation}
+where the quantity in bracket is $-\tilde \w_b$, which defines
+\begin{equation}
+\tilde \omega_{b} \doteq R_A^T\omega_b + (I - R_A^T)\omega\imu . 
+\label{eq-omtilde}
+\end{equation}
+If $\dot \omega_b = \dot{\tilde \omega}_b = 0$, under general orientations $\omega\imu $, we obtain that $R_A = I$. If, however, $\dot \omega_b$ is not zero, but small, for instance $\| \dot \omega_b \| \le \epsilon$, we obtain, using the triangular inequality, that
+\begin{equation}
+{ \| R_A - I \| \le \frac{2\epsilon}{ \max_t \| \dot \omega\imu (t) \| } \doteq k(\dot \omega) \epsilon }
+\end{equation}
+where $k(\dot \omega)$ is a constant that is small when $\max_t \| \dot \omega\|$ is large. 
+Since $R_A$ is close to the identity, it can be written as $R_A \simeq I + \w_A$ up to higher-order terms, so the above can be written as
+\begin{equation}
+\| \omega_A \| \le k(\dot \omega) \epsilon
+\end{equation}
+up to higher-order terms.
+
+The ambiguous translation $\tilde T$ must satisfy $\dot{\tilde T} = \tilde V$, which defines $\tilde V$, and thence $\tilde V$ must satisfy $\dot{\tilde V} = \tilde R(\alpha\imu  - \tilde \alpha_b) + \gamma$, which defines $\tilde \alpha_b$:
+\begin{equation}
+\tilde \alpha_b = \alpha\imu  - \tilde R^T (\ddot{\tilde T} - \gamma)
+\end{equation}
+substituting $\tilde T% = \sigma(\tilde R R_A^T T_A +  R_B T + T_B)
+$, we obtain constraints on $R_A, T_A, R_B$. Note that we do not obtain any constraints on $T_B$ %. However, from $\tilde R_{t_i} = R_B R_{t_i} R^T_C$ we obtain that, since $R_C$ and $R_{t_i}$ are constant, so is $R_B$, and from $\tilde T_{t_i} = \sigma(-\tilde R_{t_i} T_C + R_B T_{t_i} + T_B)$ and the fact that $\sigma, T_C, R_B$ and $\tilde R_{t_i}$ are constant, we obtain $T_B$ 
+that is {\em constant} but otherwise {\em arbitrary}. %All we have left, then, is the constraint that $\dot{\tilde \alpha}_b$ is {\em small}, which has to be satisfied for all $t$, and in particular for all independent functions $\alpha\imu , \omega\imu $. 
+\begin{eqnarray}
+\tilde T & = & \sigma(R_B R T_A + R_B T + T_B) \\
+\dot{\tilde T} & = & %\sigma(\dot{\tilde R} R_A^T T_A + R_B \dot T)  = 
+%\sigma({\tilde R}(\w\imu  - \tilde \w_b) R_A^T T_A + R_B V) \\
+%& = & \sigma(R_B R (\w\imu  - \w_b) T_A + R_B V)  = 
+\sigma R_B(R (\w\imu  - \w_b) T_A + V )\\
+\ddot{\tilde T}% & = & \sigma(\ddot{\tilde R} R_A^T T_A + R_B \dot V) = \sigma(\ddot{\tilde R} R_A^T T_A + R_B (R(\alpha\imu  -\alpha_b) + \gamma )) \\
+%& = & \sigma({\tilde R}[(\w\imu  - \tilde \w_b)^2 + \dot{\w}\imu  - \dot{\tilde \w}_b ] R_A^T T_A + \tilde R(\alpha\imu  -\alpha_b) + R_B \gamma ) = \\
+%& = & \sigma\tilde R([(\w\imu  - \tilde \w_b)^2 + \dot{\w}\imu  - \dot{\tilde \w}_b ] R_A^T T_A + (\alpha\imu  -\alpha_b) + {\tilde R}^T R_B \gamma ) \\
+& = & \sigma R_B R([(\w\imu  - \w_b)^2 + \dot{\w}\imu  - \dot{\w}_b ] T_A + (\alpha\imu  -\alpha_b) + R^T \gamma )
+\end{eqnarray}
+and therefore
+\begin{eqnarray}
+\tilde \alpha_b &=& \alpha\imu  - \sigma R_A^T ([(\w\imu  - \w_b)^2 + \dot{\w}\imu  - \dot{\w}_b ] T_A + (\alpha\imu  -\alpha_b) + R^T \gamma ) + R_A^T R^T R_B^T \gamma \\
+\tilde \alpha_b &=& \sigma R_A^T \alpha_b + (I - \sigma R_A^T) \alpha\imu  - R_A^T R^T(\sigma I - R_B^T)\gamma - \sigma R_A^T [(\w\imu  - \w_b)^2 + \dot{\w}\imu  - \dot{\w}_b ] T_A 
+\end{eqnarray}
+The derivative is given by
+\begin{equation}
+\dot{\tilde \alpha}_b = \sigma R_A^T \dot \alpha_b + (I - \sigma R_A^T)\dot \alpha\imu  - R_A^T(\w_b - \w\imu )R^T(\sigma I - R^T_B)\gamma
+-\sigma R_A^T[2(\w\imu  - \w_b)(\dot\w\imu  - \dot \w_b) + \ddot\w\imu  - \ddot \w_b] T_A \label{eq-alphatilde}
+\end{equation}
+or
+\begin{eqnarray}
+R_A \dot{\tilde \alpha}_b - \sigma \dot \alpha_b &=& -2\sigma [\w_b\dot \w_b  - \ddot \w_b] T_A + \\
+&& + (R_A - \sigma I)\dot \alpha\imu  + \\
+&& - \w_b R^T(\sigma I - R^T_B)\gamma + \\
+&& +\w\imu [R^T(\sigma I - R^T_B)\gamma +2\sigma \dot \w_b T_A]\\
+&& +2\sigma (\w\imu  - \w_b)\widehat T_A \dot \omega\imu  \\ %\dot\w\imu  T_A\\
+&& +\sigma \widehat T_A \ddot \omega\imu  %\ddot\w\imu  T_A
+\end{eqnarray}
+\marginpar{\tt CHECK THE ARGUMENT BELOW}
+The norm of the left-hand side is bounded above by $(1 + \sigma)\epsilon$ and below by $(1 - \sigma)\epsilon$. Because of the general-position conditions, $\alpha\imu $ can be arbitrary and so can $R, \omega\imu , {\dot \omega}\imu $ and ${\ddot \omega}\imu $. But if $\dot \w\imu $ is arbitrary and independent of $\w\imu $ (at any given instant of time, due to the general-position conditions, for any $\omega\imu (t)$, it is possible to choose $\dot \omega\imu (t)$ arbitrarily), then $(\w\imu -\w_b)\dot\w\imu $ is also arbitrary (as time goes by, regardless of $\omega\imu (t)$ and $\omega_b(t)$, one can choose $\dot \omega\imu (t)$ in such a way that $(\w\imu -\w_b)\dot\w\imu $ spans $\real^3$). Therefore, the norm of each row above has to be bounded by $k\epsilon$ for a suitable constant $k$. In other words, there are no free parameters on the right-hand side (there are no ``tilde'' terms), and therefore each term must be bounded independently in order to yield a left-hand side that is bounded 
+between $(1 - \sigma)\epsilon$ and $(1 + \sigma)\epsilon$. 
+
+From the second line
+\begin{equation}
+\| R_A - \sigma I \| \le \frac{k\epsilon}{\|\dot \alpha\imu  \|}
+\end{equation}
+Since $R_A %$ is close to the identity we can approximate it with $R_A = 
+\simeq I + \w_A$, up to higher-order terms, we have 
+\begin{equation}
+\| (1-\sigma) I + \w_A  \| \le \frac{k\epsilon}{\|\dot \alpha\imu  \|}
+\end{equation}
+Using the fact that $\| \omega_A \| \le \frac{2\epsilon}{\| \dot \omega\imu \|}$ and the reverse triangular inequality, we obtain
+\begin{equation}
+| 1 - \sigma| - \| \omega_A\| \le | 1 - \sigma | - \frac{2\epsilon}{\| \dot \omega\imu  \|} \le \frac{k \epsilon}{\| \dot \alpha\imu \|}
+\end{equation}
+and therefore
+\begin{equation}
+ |1 - \sigma| \le \frac{2\epsilon}{\| \dot \omega\imu  \|} + \frac{k \epsilon}{\| \dot \alpha\imu \|} %\doteq k(\dot \omega\imu , \dot \alpha\imu ) \epsilon
+\end{equation}
+where the constant $k(\dot \omega\imu , \dot\alpha\imu )$ is small when {\em both} $\dot \omega\imu $ and $\dot \alpha\imu $ are small.
+%In other words, $\sigma = 1 + \tilde \sigma$ where $\| \tilde \sigma \| \le \frac{(k+2)}{\min (\max_t \| \dot \alpha\imu \|,\max_t \| \dot \omega\imu  \| )} \epsilon \doteq k(\sigma) \epsilon$.
+The last row yields
+\begin{equation}
+\| T_A \| \le \frac{k \epsilon}{\sigma \| \ddot\w\imu \|} \le \frac{2 k \epsilon}{ \| \ddot\w\imu \|} %\doteq k(\ddot \omega\imu )\epsilon
+\end{equation}
+%% the previous one also yields
+%% \begin{equation}
+%% \| T_A \| \le \frac{k \epsilon}{2\sigma \| (\w\imu  - \w_h)\dot \w\imu  \|}
+%% \end{equation}
+The third row yields
+\begin{equation}
+\| \w_b R^T(\sigma I - R_B^T)\gamma \| \le k \epsilon
+\end{equation}
+and since $R$ can be arbitrary, we obtain
+\begin{equation}
+\| (\sigma I - R_B^T)\gamma \| \le \frac{\epsilon }{\| \omega_b \|}
+\end{equation}
+However, the right-hand side can be arbitrarily large, as $\omega_b$ may be small. If we decompose $R_B$ into a rotation about gravity and one orthogonal to it, we have that 
+\begin{equation}
+R_B = \exp(\w_B) \exp(\widehat \gamma \theta)
+\end{equation}
+where $\omega_B$ is a vector that is orthogonal to $\gamma$, 
+then $(\sigma I - R_B)\gamma \simeq (\sigma I - (I + \w_B)\exp(\widehat \gamma \theta))\gamma = (\sigma - 1)\gamma + \w_B \gamma$. 
+From the fourth equation, using the reverse triangular inequality, we obtain 
+\begin{equation}
+\| (\sigma I - R_B^T)\gamma \| - \| 2\sigma \dot \w_b T_A \| \le \| R^T(\sigma I - R_B^T)\gamma + 2 \sigma \dot\w_b T_A \| \le k\epsilon
+\end{equation}
+and therefore
+\begin{equation}
+\| (\sigma I - R_B^T)\gamma \|   \le k\epsilon + \| 2\sigma \dot \w_b T_A \| \le k\epsilon + 2 |\sigma| \|\dot \omega_b\| \| T_A \| \le 
+k\epsilon + 2 |\sigma| k(\ddot \omega\imu ) \epsilon^2 
+\end{equation}
+where the latter term only comprises higher-order terms, that we neglect. Finally, we have that
+\begin{equation}
+\| (\sigma I - R_B^T)\gamma \| \simeq \| (\sigma I - (I -\w_B)\exp(\widehat \gamma \theta))\gamma \| \le k\epsilon + {\rm H. O. T.}
+\end{equation}
+and since $\exp(\widehat \gamma \theta)\gamma = \gamma$ for any $\theta$, we have
+\begin{equation}
+\| (\sigma -1)\gamma + \w_B \gamma \| \le k\epsilon
+\end{equation}
+and, again using the reverse triangular inequality, 
+\begin{equation}
+\| \widehat \gamma \omega_B \| \le |\sigma -1| \| \gamma \| +   k \epsilon
+\end{equation}
+from which 
+\begin{equation}
+\| \omega_B \| \le |\sigma -1|  +  \frac{k}{\| \gamma \|} \epsilon% \le k(\dot \omega\imu , \dot\alpha\imu )\epsilon + \frac{k}{\| \gamma \|} \epsilon %\doteq k(\dot \omega\imu , \dot\alpha\imu , \gamma) \epsilon
+\end{equation}
+Note, however, that $\theta$ can be arbitrary, and therefore $R_B$ is unconstrained in its rotation about gravity, but has to have a small off-gravity component. To summarize, compliance with the dynamical model imposed by a rigid motion driven by IMU measurements, we have that the set of $g_A = (R_A, T_A), g_B = (R_B, T_B), \sigma$ has to satisfy: 
+\begin{eqnarray}
+T_A  =  0 + \tilde T_A &{\rm with}& \| \tilde T_A \| \le \frac{2 k \min_t \| \dot \omega_b \| }{\max_t \| \ddot \omega\imu  \|}  \\
+R_A = I + \w_A  & {\rm with} & \| \omega_A \| \le \frac{2 \min_t \| \dot \omega_b \|}{\max_t \| \dot \omega\imu  \|}  \\
+T_B = {\rm const.} & & {\rm arbitrary}  \\
+R_B = \exp(\w_B)\exp(\widehat \gamma \theta)  & {\rm with} & \| \omega_B \| \le \left(\frac{3k\max(\min_t \|\dot \omega_b\|, \min_t \|\dot \alpha_b\| )}{\min(\max_t \| \dot \omega\imu  \|, \max_t \| \dot \alpha\imu  \|, \| \gamma \|)}\right) \\
+& &  \theta \ {\rm arbitrary} \\
+\sigma = 1 + \tilde \sigma  & {\rm with} & | \tilde \sigma | \le \left(\frac{2k\min_t \| \dot \alpha_b \|}{\min(\max_t \| \dot \omega\imu  \|, \max_t \| \dot \alpha\imu  \|)}\right)
+\end{eqnarray}
+where $\| \dot \omega_b \| \le \epsilon$ and $k$ is a small constant. 
+\end{proof}
+%% To summarize, we have
+%% \begin{eqnarray}
+%% \tilde T &=&  \exp(\widehat \gamma \theta)  T + {\cal O} \left( \frac{\min_t \| \dot \omega_b \| }{\max_t \| \ddot \omega\imu  \|} \right) \\
+%% \tilde R &=& \exp(\widehat \gamma \theta) R + {\cal O}\left(\frac{\min_t \| \dot \omega_b \|}{\max_t \| \dot \omega\imu  \|}\right) {\rm with} \\
+%% \tilde V & =& \exp(\widehat \gamma \theta)  V  \\
+%% \tilde \alpha_b &=& \alpha_b + {\cal O}(\epsilon) \\
+%% \tilde \omega_b &=& \omega_b + {\cal O}\left(\frac{\omega\imu  \min_t \| \dot \omega_b \|}{\max_t \| \dot \omega\imu  \|}\right) \\
+%% \tilde T_{cb}  &=& T_{cb}\\
+%% \tilde R_{cb} &=& R_{cb}\\
+%% \tilde T_i &=&\\
+%% \tilde R_i &=& \\
+%% \Xw_i &=& 
+%% \end{eqnarray}
+
+
+\subsection{Gauge transformations}
+
+\marginpar{repetition}
+The set of indistinguishable trajectories $\cal I$ is an equivalence class, and when the model is observable {\em up to the initial condition}, it is parametrized by $\tilde x_0$. Choosing the ``true'' initial condition $\tilde x_0 = x_0$ produces an indistinguishable set consisting of the sole ``true'' trajectory, otherwise it is a singleton other than the true trajectory. In some cases, the initial condition corresponds to an arbitrary choice of reference frame, and therefore the equivalence class of indistinguishable trajectory are related by a {\em gauge transformation} (a change of coordinates). As the equivalence class can be represented by any element, enforcing a particular reference for the gauge transformation yields strong observability (although the singleton may not correspond to the true trajectory). 
+
+
+Formally, an arbitrary choice of initial condition is sufficient to fix the gauge reference. For instance, the set of indistinguishable trajectories in the limit where $\epsilon \rightarrow 0$ is parametrized by an arbitrary $T_B\in \real^3$ and $\theta \in \real$, 
+\begin{equation}
+\begin{cases}
+%\Xw^i = X^i \\
+\tilde T =  \exp(\widehat \gamma \theta) T + T_B   \\
+\tilde R = \exp(\widehat \gamma \theta) R   \\ 
+\tilde T_{t_i} = \exp(\widehat \gamma \theta) \bar T_{t_i} + T_B \\
+\tilde R_{t_i} = \exp(\widehat \gamma \theta) \bar R_{t_i}  ~~~~~~~~~~~~~~~ {\rm up \ to \ } {\cal O}\left( \frac{\| \dot \omega_b \|}{\|\dot \omega\imu  \|}, \frac{\| \dot \alpha_b \|}{\|\dot \alpha\imu \|},  \frac{1}{\| \gamma \|} \right)  \\
+\tilde T_{cb} = T_{cb}  \\
+\tilde R_{cb} = R_{cb}   
+\end{cases}
+\label{eq-obs-zeroinput}
+\end{equation}
+If we impose that $T(0) = \tilde T(0) = 0$, then $T_B = 0$ is determined; similarly, if we impose the initial pose to be aligned with gravity (so gravity is in the form $[0 \ 0 \ \| \gamma \| ]^T$, then $\theta = 0$. But while we can impose this condition, we cannot {\em enforce} it, since the initial condition is not a part of the state of the filter, so we cannot relate the measurements at each time $t$ directly to it.
+
+However, if the gauge reference can be associated to {\em constant parameters} that are part of the state of the model, the gauge ambiguity can be enforced in a consistent manner. For instance, the ambiguous set of points is
+\begin{equation}
+\Xw^j = g_a \bar g_i^{-1} g_i g_a^{-1} X^j.
+\end{equation}
+If each group $i$ contains at least $3$ non-coplanar points, it is possible to fix $\bar g_i$ by parametrizing $X^j \doteq \bar y^j_{t_i} Z^j$ and imposing thrend{equation} directions $y^j_{t_i} = {\tilde y}^j_{t_i} = y^j(t_i), j = 1, \dots, 3$, the measurement of these directions at time $t_i$ when they first appear. This yields $\bar g_i = g_i$ and $\Xw^j = X^j$ for that group. Note that it is necessary to impose this constraint in {\em each group}.
+
+The residual set of indistinguishable trajectories is parameterized by {\em constants} $\theta, T_B$, that determine a Gauge transformation for the groups, that can be fixed by always fixing the pose of {\em one} of the groups. This can be done in a number of ways. For instance, if for a certain group $i$ we impose
+\begin{equation}
+R_{t_i}  = \tilde R_{t_i} = \hat R(t_i) \ {\rm and} \ T_{t_i}  = \tilde T_{t_i} = \hat T(t_i)
+\end{equation}
+by assigning their value to the current best estimate of pose and not including the corresponding variables in the state of the model, then we have that
+\begin{equation}
+\hat R(t_i) = \exp(\widehat \gamma \theta) \hat R(t_i) 
+\end{equation}
+and therefore $\theta = 0$; similarly, 
+\begin{equation}
+T_B = (I - \exp(\widehat \gamma \theta))T(t_i) = 0
+\end{equation}
+ Therefore, the gauge transformation is enforced explicitly at each instant of time, as each measurement provides a constraint on the states. This suggests the following modeling procedure in the design of a filter/observer for bearing-assisted navigation:
+\begin{enumerate}
+\item Set $T(0) = 0$ with zero model error covariance, and zero initial covariance.
+\item Set $R(0) = R_0$ such that $[I_{2\times 2} 0]R_0 \alpha\imu  = 0$, with zero model error and non-zero initial covariance.
+\item Fix gravity to $[0, \ 0, \ \| \gamma \|]^T$ from tabulates
+\item Initialize at rest, then perform some fast motions before groups of features are added.
+\item Add $K$ groups, each with $2N + N$ states, plus their pose for each group but one. 
+\item Fix 2 directions per group (\cite{jonesS09} fixes all directions; this results in a non-zero mean component of the innovation, that in turn results in a small bias in all other states, that have to account for/absorb the mean)
+\item Fix the pose of one group (remove its pose from the state)
+\item Triage groups before adding them to the state. 
+%\item Optionally, add pseudo-measurement equation from epipolar constraints from features that do not survive long enough.
+\end{enumerate}
+After the Gauge Transformation has bend{equation}n fixed, the model is observable, and therefore a properly designed observer will converge to a solution $\tilde x$ that is related to the true one $x$ as follows: 
+\begin{eqnarray}
+{\Xw}^{\rm ref} &=&   (1+\tilde  \sigma)\tilde R_{cb} e^{\w_B} e^{\widehat \gamma \theta}e^{\w_A} \tilde R_{cb}^T (X^{\rm ref}-T_A) +(1+\tilde \sigma)( \tilde R_{cb} e^{\w_A}T_B + \tilde R_{cb} T_A + \tilde T_{cb})  \\
+{\Xw}^j &=&   (1+\tilde  \sigma)\tilde R_{cb} \bar R_i \tilde R_{t_i}  \tilde R_{cb}^T (X^{j}-T_A) +(1+\tilde \sigma)( \tilde R_{cb} \bar R_i \tilde T_{t_i} + \tilde R_{cb} \bar T_{i} + \tilde T_{cb}) \\
+\tilde T %&=&  (R_B T + T_B + R_B R T_A)(1+\tilde \sigma) \\ 
+&=& e^{\widehat \gamma \theta} T + T_B (1+\tilde\sigma) + \w_Be^{\widehat \gamma \theta} T + e^{\w_B} e^{\widehat \gamma \theta}R T_A(1+\tilde \sigma) \\
+\tilde R &=&  e^{\w_B}e^{\widehat \gamma \theta} R e^{\w_A}\\
+\tilde T_{t_i} &=&  e^{\widehat \gamma \theta} \bar T_{i} + T_B (1+\tilde\sigma) + \w_Be^{\widehat \gamma \theta} \bar T_{i} + e^{\w_B} e^{\widehat \gamma \theta}\bar R_{i} T_A(1+\tilde \sigma)\\
+\tilde R_{t_i} &=&  e^{\w_B}e^{\widehat \gamma \theta} \bar R_{i} e^{\w_A}\\
+\tilde T_{cb} &=&  T_{cb} + \tilde \sigma T_{cb} + R_{cb}T_A(1+ \tilde \sigma) \\
+\tilde R_{cb} &=&  R_{cb}\exp(\w_A)\\
+\tilde \alpha_b &=&  (\ref{eq-alphatilde}) \nonumber  \\
+\tilde \omega_b &=& (\ref{eq-omtilde}) \nonumber \\
+{\rm where} & &  \nonumber \\
+\| T_A \| &\le& \frac{2 k \min_t \| \dot \omega_b \| }{\max_t \| \ddot \omega\imu  \|}  \nonumber \\
+\| \omega_A \| &\le& \frac{2 \min_t \| \dot \omega_b \|}{\max_t \| \dot \omega\imu  \|} \nonumber  \\
+ \| \omega_B \| &\le& \left(\frac{3k\max(\min_t \|\dot \omega_b\|, \min_t \|\dot \alpha_b\| )}{\min(\max_t \| \dot \omega\imu  \|, \max_t \| \dot \alpha\imu  \|, \| \gamma \|)}\right) \nonumber \\
+| \tilde \sigma | &\le& \left(\frac{2k\min_t \| \dot \alpha_b \|}{\min(\max_t \| \dot \omega\imu  \|, \max_t \| \dot \alpha\imu  \|)}\right) \nonumber
+%}
+\end{eqnarray}
+and arbitrary $\theta$, $T_B$ and suitable constant $\kappa$. The groups will be defined up to an arbitrary reference frame $(\bar R_i, \bar T_i)$, except for the reference group where that transformation is fixed. Note that, as the reference group ``switches'' (when points in the reference group become occluded or otherwise disappear due to failure in the data association mechanism), a small error in pose is accumulated. This error affects the gauge transformation, not the {\em state} of the system, and therefore is not reflected in the innovation, nor in the covariance of the state estimate, that remains bounded. This is unlike \cite{roumeliotisM}, where the covariance of the translation state $T_B$ and the rotation about gravity $\theta$ grows unbounded over time, possibly affecting the numerical aspects of the implementation. Notice that in the limit where $\dot \omega_b = \dot \alpha_b =0$, we obtain back Eq. (\ref{eq-obs-zeroinput}).
+
+\section{Analysis of Range-Augmented Navigation}
+
+
+\subsection{Preliminary claims}
+
+%The problem of inferring the distribution of the state $x$ at time $t$ (or a point estimate of it) given measurements up to time $t$ is known as {\em filtering}, and a {\em necessary} condition for a filter to operate correctly is that the underlying model be {\em observable}. Since in the above model we also do not know the parameter, inferring those (considered to be deterministic but unknown) along with the state from the measurements is known as a {\em system identification} problem, and a necessary condition for it to be solvable is that the parameters be {\em identifiable}. Finally, since we do not know the input, the problem of inferring the input from a time-series of the output is known as {\em dynamic inversion}, which is possible provided that the model is {\em invertible}. We will give formal definitions for these terms, but first we discuss some unorthodox but common modeling practices.
+ 
+We consider the reduced model with known gravity and range-only measurements, including alignment $\| y^i(t) \| = \| g_{rb}g^{-1}(t)X^i\|$
+\begin{equation}
+\bc
+\dot T = V, ~~~~ T(0) = T_0 \\
+\dot R = R(\w - \w_b) +n_R ~~~~ R(0) = R_0\\
+\dot V = R(\alpha - \alpha_b) + \gamma + n_V\\ 
+\dot \alpha_b = v_\alpha(t) \\
+\dot \omega_b = v_\omega(t) \\
+\dot T_{rb} = 0 \\
+\dot R_{rb} = 0\\
+\dot{X^i} = 0 \\
+y^i(t) = \| R_{rb} R^T(X^i - T) + T_{rb}\|^2 + n^i(t)
+\ec 
+\label{eq-range-imu}
+\end{equation} 
+In this model, which is of the form (\ref{eq-fg}), $\omega, \alpha$ are {\em known inputs}, and $v_\alpha, v_\omega$ are {\em unknown inputs}. 
+
+
+%\begin{theorem}[Observability of range-aided navigation with constant biases]
+%The model (\ref{eq-range-imu}) with constant biases ($v = 0$) and known alignme%nt $g_{rb}$, is observable.
+%\end{theorem}
+
+%\begin{theorem}[Non-Observability of range-aided navigation with non-constant biases]
+%The model (\ref{eq-range-imu}) is not unknown-input observable.
+%\end{theorem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% BEGINNING NEW PROOFS, 8/26/13
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{claim}[Indistinguishability from range measurements]\label{claim-range}
+Let $X^i \in \real^3, \ i = 1, \dots, N$, then $\| \Xw^i \|^2 = \| X^i \|^2  \ \forall \ i \ \Leftrightarrow \Xw^i = R X^i$ for some $R\in {\mathbb O}(3)$.
+\end{claim}
+This follows in a straightforward manner from the definitions. 
+\begin{claim}[Indistinguishability of time-varying pose]\label{claim-range-pose}
+Let $g(t)^{-1}\in \SE(3)$ for $t\in {\mathbb Z}$, and $X^i \in \real^3$ for $i \in {\mathbb N}$, then $\gw(t) = (\tilde R(t), \tilde T(t)) \in \SE(3)$ and $\Xw^i\in \real^3$ yields  $\| \gw^{-1}(t) \Xw^i \| = \| g^{-1}(t) X^i\|$ for all $t$ and $i$ if and only if 
+\begin{equation}
+\bc
+\Xw^i = \bar R X^i + \bar T, ~~~ {\rm for \ constant \ } (\bar R, \bar T) \in \SE(3)\\
+\tilde R(t) = \bar R R(t) H(t), ~~~~~ {\rm for \ any \ } H(t) \in \SO(3) \\
+\tilde T(t) = \bar R(t) T(t) + \bar T
+\ec
+\end{equation}
+\end{claim}
+\begin{proof}
+Applying Claim \ref{claim-range} to $g^{-1}(t) X^i$, we have that $\gw^{-1}(t)\Xw^i = H(t) g^{-1}(t) X^i$ for some $H(t)\in {\mathbb O}(3)$. Furthermore, $g^{-1}(t)X^i = g^{-1}(t)\bar g^{-1}\bar g X^i$ for any constant $\bar g = (\bar R, \bar T) \in \SE(3)$. Isolating the time-varying component $\gw$ and the constant component $\Xw$, under general-position conditions, we have that $\tilde R = \bar R R H$, where for $\tilde R$ to be in $\SO(3)$ we must impose that $H(t) \in \SO(3)$, $\tilde T = \bar R T + \bar T$,  and $\Xw = \bar g X$, from which the result follows.
+\end{proof}
+\begin{claim}[Indistinguishability of alignment]\label{claim-range-alignment}
+Let $g(t), X^i$ be as in Claim \ref{claim-range-pose}, and $g_{rb} = (R_{rb}, T_{rb}) \in \SE(3)$. Then
+ $\gw(t), \gw_{rb}, \Xw^i$ are such that $\| \gw_{rb} \gw^{-1}(t) \Xw^i \| = \| g_{rb} g^{-1}(t) X^i\|$ for all $t$ and $i$ if and only if 
+\begin{equation}
+\bc
+\Xw^i = \bar R X^i + \bar T, ~~~ {\rm for \ constant \ } (\bar R, \bar T) \in \SE(3)\\
+\tilde R(t) = \bar R R(t) R_{rb}^T H(t) \tilde R_{rb}, ~~~~~ {\rm for \ any \ } H(t) \in \SO(3) \\
+\tilde T(t) = \bar R(t) T(t) + \bar T + \tilde R \tilde R_{rb}^T(H^TT_{rb} - \tilde T_{rb})\\
+\tilde R_{rb} ~~~~ {\rm arbitrary} \\
+\tilde T_{rb} ~~~~ {\rm arbitrary}
+\ec
+\end{equation}
+\end{claim}
+\begin{proof}
+Applying Claim \ref{claim-range-pose} to $g_{rb}g^{-1} X$, we obtain, for the rotational component
+\begin{equation}\tilde R \tilde R_{rb}^T = \bar R R  R_{rb}^TH = 
+\underbrace{\bar R R R_{rb}^T H \tilde R_{rb}}_{\tilde R}\tilde R_{rb}^T
+\end{equation}
+and similarly for the translational component $T - R R_{rb}^T T_{rb}$, we obtain
+\begin{eqnarray}
+-\tilde R \tilde R_{rb}^T \tilde T_{rb} + \tilde T &=& \bar R(-R R_{rb}^T T_{rb} + T) + \bar T \\
+&=& - \bar R R R_{rb}^T T_{rb} + \bar R T + \bar T \\
+&=& - \bar R R R_{rb}^T H \tilde R_{rb}\tilde R_{rb}^T H^T T_{rb}+ \bar R T + \bar T \\
+&=& - \tilde R \tilde R_{rb}^T H^T T_{rb} + \bar R T + \bar T \\
+0 &=& \tilde R \tilde R_{rb}^T(H^T T_{rb} - \tilde T_{rb}) + \tilde T - \bar R T - \bar T \\
+-\tilde T_{rb} + \tilde R_{rb}\tilde R^T \tilde T &=& -H^T T_{rb} + \tilde R_{rb} \tilde R^T(\bar R T + \bar T) + T_0 - T_0
+\end{eqnarray}
+from which we can choose $\tilde T_{rb} = T_0$ arbitrarily, and then $\tilde T = \bar R T + \bar T - \tilde R \tilde R^T_{rb}(H^T T_{rb} - \tilde T_{rb})$, from which the result follows.
+\end{proof}
+Of all the different trajectories $\gw(t)$, points $\Xw^i$ and alignments $\gw_{rb}$ that yield the same range measurements, we are now interested {\em only} in those that satisfy the constraints imposed by the model (\ref{eq-range-imu}).
+\begin{claim}[Sensitivity of range augmented navigation]
+Let $g(t), g_{rb}, X^i$ as in Claim \ref{claim-range-alignment}. The indistinguishable trajectories $\gw(t), \gw_{rb}$ and structure $\Xw^i$ is compatible with (\ref{eq-range-imu}), with $\| \dot \alpha_b \| \le \epsilon$ and $\| \dot \omega_b \| \le \epsilon$, if and only if
+\begin{equation}
+\bc
+\| H(t) - I \| \le \frac{k \epsilon}{\max_t \| \dot \alpha \|} \\
+\| \dot H \| \le \frac{k\epsilon}{\max_t \| \alpha \|} \\
+\| T_{rb} - H \tilde T_{rb} \| \le \frac{k \epsilon}{\max_t \| \ddot \omega \|} \\
+\bar R = \exp(\widehat \gamma \theta)
+\ec
+\end{equation}
+for a constant $k$ and arbitrary $\theta$ and $\tilde R_{rb}$. In particular, if biases are constant $\epsilon = 0$, then $H = I, \tilde T_{rb} = T_{rb}$,  $\tilde \alpha_b = \alpha_b$, $\tilde \omega_b  = \omega_b$.
+\end{claim}
+\begin{proof}
+Since $H(t) \in \SO(3)$ in Claim \ref{claim-range-alignment} is arbitrary, so is $R_{rb}^T H(t) \tilde R_{rb}$. With an abuse of notation, we will refer to the latter as $H(t)$. We then have that $\tilde R(t) = \bar R R H$ is compatible with the dynamical model only if $\dot{\tilde R} = \bar R \dot R H + \bar R R \dot H = \bar R R H (\w - \widehat{\tilde  \omega}_b)$, which {\em defines} $\tilde \omega_b$ as
+\begin{equation}
+\tilde \omega_b = H^T \omega_b + \underbrace{(I-H^T)\omega - \omega_h}
+\end{equation}
+where $\omega_h$ is defined by $\dot H = H\w_h$. If the norm of the derivative of the left-hand side is bounded by $\epsilon$, $\| \dot{\tilde \omega}_b \| \le \epsilon$ and so is the first term on the right-hand side, $\| \dot{\omega}_b \| \le \epsilon$, then by the inverse triangular inequality, the bracketed term must have a derivative that is bounded in norm by $2\epsilon$. Such a derivative is the driving input to the ordinary differential equation involving $H, \dot H = H\w_h$ and $\omega_b$. Since the driving input is small but otherwise arbitrary, this leaves $H(t)$ unconstrained. Note, however, that if $\epsilon = 0$ (no bias drift), then under general position conditions ($\omega(t)$ can be arbitrary), we have that $H(t) = I$ is constant, and therefore $\tilde \omega_b = \omega_b$. Similarly, for the translational component, we have
+\begin{eqnarray}
+\tilde T &=& \bar R T + \bar T = \bar R R R_{rb}^T(T_{rb} - H \tilde T_{rb}) \\ 
+\dot{\tilde T} = \tilde V &=& \bar R V - \bar R R(\w - \w_b)R_{rb}^T(T_{rb}-H\tilde T_{rb})+\bar R R R_{rb}^TH \w_h\tilde T_{rb} \\ 
+\dot{\tilde V} = \tilde R(\alpha - \tilde \alpha_b) + \gamma &=& \bar R R(\alpha - \alpha_b) + \bar R \gamma - \bar R R[(\w - \w_b)^2 + \dot \w + \dot \w_b]R_{rb}^T(T_{rb}-H\tilde T_{rb}) +\\
+&& +\bar R R(\w-\w_b)R_{rb}^TH\w_h\tilde T_{rb} + \bar R R R_{rb}^TH[\w_h^2+\dot \w_h]\tilde T_{rb}\\
+R H(\alpha-\tilde \alpha_b) + \bar R^T\gamma &=& R(\alpha - \alpha_b) +  \gamma - R[(\w - \w_b)^2 + \dot \w + \dot \w_b]R_{rb}^T(T_{rb}-H\tilde T_{rb}) +\\
+&& + R(\w-\w_b)R_{rb}^TH\w_h\tilde T_{rb} +  R R_{rb}^TH[\w_h^2+\dot \w_h]\tilde T_{rb}.
+\end{eqnarray}
+Under general position conditions, the constant terms above must equal, which yields $\bar R \gamma = \gamma$ and therefore $\bar R = \exp(\widehat \gamma \theta)$ is an arbitrary rotation about the gravity vector. Removing these terms from the equation above, we obtain
+\begin{eqnarray}
+H(\alpha-\tilde \alpha_b) &=& (\alpha - \alpha_b) - [(\w - \w_b)^2 + \dot \w + \dot \w_b]R_{rb}^T(T_{rb}-H\tilde T_{rb}) +\\
+&& + (\w-\w_b)R_{rb}^TH\w_h\tilde T_{rb} +  R_{rb}^TH[\w_h^2+\dot \w_h]\tilde T_{rb}
+\end{eqnarray}
+which defines $\tilde \alpha_b$, whose derivative must be bounded in norm to $\| \tilde \alpha_b \| \le \epsilon$. Again, we note that if there are no bias drifts and therefore $\epsilon = 0$, from $H = I$ and the general-position conditions, from the above we obtain $\tilde T_{rb} = T_{rb}$ and $\tilde \alpha_b = \alpha_b$. More in general, however, we have that
+\begin{eqnarray}
+-\dot \alpha_b &=& -H^T\alpha_b - \w_h H^T\alpha + (H^T-I)\dot \alpha + \w_h H^T[(\w-\w_b)^2 + \dot \w + \dot \w_b]R_{rb}^T(T_{rb}-H\tilde T_{rb}) + \\
+&& - H^T[2(\w-\w_b)(\dot \w - \dot \w_b) + \ddot \w - \ddot \w_b]R_{rb}^T(T_{rb}-H\tilde T_{rb}) + \\
+&& + H^T[(\w - \w_b) + \dot \w - \dot \w_b] R_{rb}^TH\w_h\tilde T_{rb} + \\
+&& -2\w_hH^T(\w-\w_b)R_{rb}^TH\w_h \tilde T_{rb} + \\
+&& + 2H^T(\dot \w - \dot \w_b)R_{rb}^TH \w_h \tilde T_{rb} + 2H^T(\w-\w_b)R_{rb}^TH \dot \w_h \tilde T_{rb} + \\
+&& - \w_h H^TR_{rb}H[{\w_h}^2+\dot \w_h]\tilde T_{rb} + H^T R_{rb}^TH\w_h[{\w_h}^2 - \dot \w_h]\tilde T_{rb} + \\
+&& + H^T R_{rb}^T H[2\w_h \dot \w_h + \ddot \w_h]\tilde T_{rb}
+\end{eqnarray}
+The norm of the left-hand side is bounded by $\epsilon$, and so is the norm of the first term on the right-hand side. Because of the sufficient excitation conditions, the terms on the right-hand side that multiply the independent variables $\alpha, \dot \alpha, \omega, \dot \omega, \ddot \omega$ must be bounded by $k \epsilon$ where $k$ is a constant arising from applying repeatedly the reverse triangular inequality. Isolating the term that multiples $\alpha$, we have $\|\w_h H^T \alpha \| \le k \epsilon$, and therefore
+\begin{equation}
+\| \omega_h \| \le \frac{k \epsilon}{\max_t \| \alpha \|}
+\end{equation}
+Isolating the terms multiplying $\dot \alpha$, $\| (H^T - I )\dot \alpha \|$ we obtain
+\begin{equation}
+\| H - I \| \le \frac{k \epsilon}{\max_t \| \dot \alpha \|}
+\end{equation}
+Isolating the terms multiplying $\ddot \omega$, $\| \ddot \w R_{rb}^T(T_{rb} - H \tilde T_{rb}) \|$ we obtain, after noticing that it equals $\| R_{rb}^T(\widehat T_{rb} - \widehat{H\tilde T_{rb}})R_{rb}\ddot \omega \|$, 
+\begin{equation}
+\| T_{rb} - H \tilde T_{rb} \| \le \frac{k \epsilon}{\max_t \| \ddot \omega\|}
+ \end{equation}
+which concludes the claim.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% END NEW PROOFS, 8/26/13
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% The following will prove both statements, and give an explicit expression for the indistinguishable states. This will later be used to compute sensitivity.
+
+%% \begin{proof}
+%% Assume that $\Xw^i, \tilde T(t), \tilde R(t)$ are arbitrary (and so for $\tilde V(t), \tilde \alpha_b, \tilde \omega_b$), thus representing {\em all possible states}. We will write all possible states in a slightly different form, for convenience:
+%% \begin{eqnarray}
+%% \Xw^i = \bar R^T(X^i + T^i) \\ 
+%% \tilde T(t) = \bar R^T(T(t) - \bar T(t)) \\
+%% \tilde R(t) = H(t) R(t).
+%% \end{eqnarray}
+%% for arbitrary constants $\bar R \in SO(3), \ T^i \in \real^3$ for all $i$, and for arbitrary functions $H(t) \in SO(3), \bar T(t) \in \real^3$. It should be clear that this can always be done and does not impose any restriction on $\Xw^i, \tilde T, \tilde R$, as we can easily write them in terms of $T^i, \bar T, H$ respectively. Now, of all possible states (written as a function of the true states and the arbitrary $T^i, \bar R, \bar T(t), H(t)$) we wish to characterize {\em all and only} those that are compatible with the same measurements generated by the true states. That is, for any $X^i, T(t), R(t)$, we are looking for $T^i, \bar R, \bar T(t), H(t)$ such that
+%% \begin{equation}
+%% y^i(t) \doteq \| X^i - T(t) \|^2 = \| \Xw^i - \tilde T(t) \|^2
+%% \end{equation}
+%% Once we substitute the expressions of $\Xw^i$ and $\tilde T(t)$ above, we obtain
+%% \begin{equation}
+%% \| X^i - T (t) \|^2 = \|\bar R^T(X^i-T^i - T(t) + \bar T(t)) \|^2 = \| (X^i - T(t)) + (\bar T(t) - T^i)\|^2
+%% \end{equation}
+%% and after simplifications
+%% \begin{equation}
+%% \| \bar T(t) - T^i \| = - 2(X^i - T(t))^T(\bar T(t) - T^i) ~~~ \forall \ i, \ \forall \ t
+%% \end{equation}
+%% Since $T(t)$ and $X^i$ can be chosen in such a way that the right-hand side is negative, whereas the left-hand side is always non-negative, both have to be zero, which occurs if and only if $\bar T(t) = T^i$ for all $t$ and for all $i$. Therefore, $T^i = \bar T(t) = \bar T = {\rm const}$. Notice that, even if $\bar R(t)$ was allowed to change over time, the constraint $\dot{\Xw} = \dot X = 0$ yields $\dot{\bar R} = 0$.
+
+%% Thus, 
+%% \begin{eqnarray}
+%% \Xw^i = \bar R^T(X^i + \bar T) \\ 
+%% \tilde T(t) = \bar R^T(T(t) - \bar T) \\
+%% \tilde R(t) = H(t) R(t).
+%% \end{eqnarray}
+%% for arbitrary constant $\bar T \in \real^3$, $\bar R \in SO(3)$ and arbitrary $H(t) \in SO(3)$ are {\em all and only} the states that are indistinguishable from $X^i, T(t), R(t)$ given the measurements $y^i(t)$. We now look for the subset of those that is compatible with the model, in the sense of evolving according to 
+%% \begin{equation}
+%% \bc
+%% \dot {\Xw} = 0 \\
+%% \dot {\tilde T} = \tilde V \\
+%% \dot {\tilde R} = \tilde R(\w - \tilde \w_b (t))
+%% \ec
+%% \end{equation}
+%% for some $\tilde V$ that has to satisfy
+%% \begin{equation}
+%% \dot {\tilde V} = {\tilde R}(\alpha - \tilde \alpha_b(t)) + \gamma
+%% \end{equation}
+%% Thus we have 
+%% \begin{eqnarray}
+%% \dot{\tilde R} &=&  \tilde R(\w - \tilde \w_b)  \\
+%% \dot H R + H \dot R &=& \dot H R + H R(\w - \tilde \w_b) =  H R(\w - \tilde \w_b)
+%% \end{eqnarray}
+%% which {\em defines} $\tilde \omega_b$
+%% \begin{eqnarray}
+%% \tilde \w_b &=& \w_b - R^T \w_h R = \w_b - \widehat{R^T \omega_h} \\
+%% \tilde \omega_b(t) &=& \omega_b(t) - R^T(t) \omega_h(t)
+%% \end{eqnarray}
+%% where we have emphasized the time-dependency  of the various quantities, and we have used the fact that $H(t) \in SO(3)$ and therefore $H^T \dot H = \w_h$ for some $\omega_h(t)$.  We now move to the equation $\dot{\tilde T} \doteq \tilde V$ that {\em defines} $\tilde V$, and thence to
+%% \begin{eqnarray}
+%% \dot{\tilde V} &=& {\tilde R}(\alpha - \tilde \alpha_b(t)) + \tilde \gamma \\
+%% \bar R^T \dot V = \bar R^TR(\alpha - \alpha_b) + \bar R^T \gamma & = & HR(\alpha - \tilde \alpha_b(t)) + \tilde \gamma
+%% \end{eqnarray}
+%% which {\em defines} $\tilde \gamma$
+%% \begin{equation}
+%% \tilde \gamma = \bar R^T \gamma + \underbrace{H R \tilde \alpha_b - \bar R^T R \alpha_b + \bar R^T R\alpha - HR\alpha }_{\bar \gamma}
+%% \end{equation}
+%% as a function of the unknown $\bar \gamma \in \real^3$. But because $\gamma$ and $\tilde \gamma$ must be {\em constant}, so must be $\bar \gamma$. In addition to being a constant, if the norm of gravity is known, it must be {\em zero}, for
+%% \begin{eqnarray}
+%% \| \tilde \gamma \| &=& \| \gamma \| \\
+%% \| \bar R^T \gamma + \bar \gamma \| & = & \|\gamma \|
+%% \end{eqnarray}
+%% and therefore $\bar \gamma = 0$ or $\bar \gamma = -2\bar R^T \gamma$, which just changes the sign of $\tilde \gamma  = -\bar R^T \gamma$. This equation can be used to {\em define} $\tilde \alpha_b(t)$:
+%% \begin{equation}
+%% \boxed{\tilde \alpha_b(t) = R^TH^T\bar R^T R\alpha_b(t) + R^T(I - H^T \bar R^T)R\alpha(t)}
+%% \end{equation}
+%% possibly up to the constant $-2\bar R ^T \gamma$, and 
+%% \begin{equation}
+%% \boxed{
+%% \tilde \omega_b(t) = \omega_b(t) - R^T(t) \omega_h(t)
+%% }
+%% \end{equation}
+%% Other than having to satisfy this definition, the bias $\tilde \alpha_b$ can be arbitrary, which imposes {\em no constraints on} the arbitrary $\bar R, H(t)$. Therefore, the set of indistinguishable states is not a singleton, and therefore the navigation states are {\em not observable}.
+%% \end{proof}
+
+%% Now, if we assume that $\tilde \alpha_b$ is (unknown but) {\em constant}, and so is $\alpha_b$, then the sufficient excitation conditions on $\alpha$ imply that $I - H^T\bar R^T = 0$ and therefore $H = \bar R$ is constant, and $\tilde \alpha_b = \alpha_b$ the accelerometer bias is {\em identifiable}. But if $H = {\rm const.}$, then $\omega_h = 0$ and therefore $\tilde \omega_b = \omega_b$ and the gyro bias is also {\em identifiable}. This proves the fact that, with constant (accelerometer bias rate) input $v = 0$, the model is {\em observable} up to the initial condition. 
+
+%% However, biases are {\em not constant} and therefore their {\em identifiability} -- derived assuming they are unknown constants -- is irrelevant. So is their {\em observability} -- derived assuming they are {\em states} of the model, and their derivative is considered as {\em ``noise''} and therefore, by definition, {\em uninformative} (white and statistically independent of the biases). This is obviously not the case, as the derivative of biases is {\em not} white, but {\em small}.
+
+%% Thus the relevant analysis is {\em not} one of identifiability, {\em not} one of observability, but one of {\em sensitivity}: We wish therefore to quantify the {\em variation} of the biases (the volume of the indistinguishable set) as a function of the variation of their constitutive elements. 
+
+
+A corollary of the last claim is that range-augmented navigation is observable up to the initial conditions in the absence of unknown inputs. In the presence of unknown inputs, the above claim quantifies the sensitivity of the set of indistinguishable states as a function of the drift rate. 
+
+%The navigation model is observable in the absence of unknown inputs, $v = 0$, so the indistinguishable set is a singleton (up to initial condition). However, it is unobservable with unknown inputs, so the indistinguishable set can grow unbounded. Sensitivity analysis can inform the growth rate of the volume of the indistinguishable set as a function of the bias rate. In some cases, it may be possible to show that a bound in the input (bias rate), despite resulting in an unbounded discrepancy between true and estimate biases, may result in a bounded indistinguishable set for the navigation states (bounded distance from the true state trajectory).
+
+%Thus the goal of sensitivity analysis is the following: {\em Given} knowledge that the bias rate is bounded, {\em find} the rate of growth of the indistinguishable states relative to the true states. For the case of rotational biases, this means: {\em Assuming} that $\| \dot {\omega}_b \| \le \epsilon$ for some $\epsilon > 0$, and  $\| \dot {\tilde \omega}_b \| \le \epsilon$, determine a bound on $\| \tilde \omega_b - \omega_b \|$ as a function of time, and so for the other states, for instance $\| \tilde R R^T - I \|$. If the ``original states'' (not the unknown inputs that were rebranded as states) generate indistinguishable trajectories that are uniformly bounded in time relative to the true trajectory, despite the inputs growing unbounded, we say that the original model is {\em bounded-input bounded-state} unknown-input observable. It implies that, if the input is arbitrary but bounded, the state will remain bounded around the true trajectory, even though the indistinguishable set is not a singleton.
+
+%Consider the indistinguishable (component of the state) trajectory $\tilde \omega_b$, which is a function of time only through $\alpha_b(t), \omega_h(t)$ and $R(t)$. The sensitivity is based on the variation of these quantities, which we will reduce to the temporal derivative by assuming that the input is sufficiently exciting: 
+%% \begin{eqnarray}
+%% \delta \tilde \omega_b &=& \dot \omega_b(t) dt - \dot R^T(t) \omega_h(t)dt - R^T(t)  d\omega_h(t) \\
+%% \dot {\tilde \omega}_b  &=& \dot \omega_b(t)  + {\widehat{(\omega(t) + \omega_b(t))} R^T(t) \omega_h(t) - R^T(t) \dot \omega_h(t)}  \\
+%% \| \dot {\tilde \omega}_b \| &=& \| \dot \omega_b(t)  +  (\w -\w_b) R^T(t) \omega_h(t) - R^T(t) \dot \omega_h(t) \| \\ 
+%% &\le &  \epsilon  +  \| (\w - \w_b) R^T(t) \omega_h(t) - R^T(t) \dot \omega_h(t) \| \le \epsilon \\
+%% %&=& \epsilon ~ dt - R(t) \widehat{R^T(t)\omega(t)} \omega_h(t)dt - R^T(t) d\omega_h(t) \\
+%% \end{eqnarray}
+%% after enforcing that $\| \dot {\tilde \omega}_b  \| \le \epsilon$. In fact, last norm can be made arbitrarily small by choosing $\omega_h(t)$ so as to satisfy the following ordinary differential equation: 
+%% \begin{equation}
+%% \dot \omega_h = \widehat{R(\omega -\omega_b)} \omega_h + \underbrace{r_h(t)}_{{\cal O}(\epsilon^2)}
+%% \end{equation}
+%% starting from an arbitrary initial condition, where the residual $r_h$ is infinitesimal compared to the gyro rate. This leaves $\omega_h$ determined as a function of the input $\omega$ and $\omega_b$, up to higher-order infinitesimals. Therefore, bounding the gyro rate does not bound $\omega_h$, and therefore $H(t)$, so $\tilde R(t)$ can in principle differ arbitrarily\footnote{Although $SO(3)$ is a compact group, if we compute the geodesic norm using exponential coordinates where we are counting multiples of $2\pi$, the  norm $\| R^T(t) \tilde R(t) - I\|$ can grow unbounded as $\tilde R$ ``spins around'' $R$).} from $R(t)$. 
+
+%% However, when an accelerometer is also present, we have that for
+%% \begin{equation}
+%% \tilde \alpha_b(t) = \underbrace{R^TH^T\bar R^T R}_{A}\alpha_b(t) + \underbrace{R^T(I - H^T \bar R^T)R}_{I-A}\alpha(t)
+%% \end{equation}
+%% to be slow, the first bracketed term $A \in SO(3)$ has to be {\em slow} and the second has to be {\em small}. To send{equation} that, note that, taking the norm of the derivative we get, 
+%% \begin{equation}
+%% \| \dot{\tilde \alpha}_b \|  = \| A \dot{\alpha}_b + \dot A(\alpha_b - \alpha) + (I - A)\dot \alpha\| \le \epsilon
+%% \end{equation}
+%% where  $\dot A = A(\w - \w_b) - (\w -\w_b) A -\widehat{R^Tw_h}A$. Using the reverse triangular inequality\footnote{$| \| a \| - \| b \| | \le \| a - b \|$.} and the fact that the inputs have to be sufficiently exciting, we obtain that
+%% \begin{equation}
+%% \epsilon \le  \| A \dot{\alpha}_b \| + \| \dot A(\alpha_b - \alpha) + (I - A)\dot \alpha\| \le 3 \epsilon
+%% \end{equation}
+%% since the first term is $\| A \dot{\alpha}_b \| = \| \dot{\alpha}_b \| \le \epsilon$ and, by the reverse triangular inequality, $\| \dot A(\alpha_b - \alpha) + (I - A)\dot \alpha\| \le 2 \epsilon$. 
+%% Here $\dot \alpha$ and $\alpha$ are arbitrary, although bounded. Call $M_\alpha \max_t \| \alpha \|$ and $M_{\dot \alpha} = \max_t \| \dot \alpha \|$. From the sufficient excitation conditions, we get that $\alpha$ is, in general, independent of the rotational input $\omega$ and rotational biases $\omega_b$. On the other hand, $A$ and $\dot A$ dependent solely on rotational inputs and biases: $A$ depends on an initial condition $H(0)$ and $\omega_h$, that in turn depends on $\omega_b$, $\omega$ and an initial condition $\omega_h(0)$, as does $R$. There are therefore no degrend{equation}s of frend{equation}dom available to ensure that the terms that multiply the arbitrary $\alpha, \dot \alpha, \alpha_b, \dot \alpha_b$ cancel each other, so each term inside the norm must be sufficiently small. This yields that 
+%% \begin{equation}
+%% \| \dot A (\alpha_b - \alpha) + (I-A)\dot \alpha\| \le 2 \epsilon \ \forall \ \alpha, \dot \alpha, \alpha_b
+%% \end{equation}
+%% Since this has to be true for all inputs, the individual terms must be bounded, so we have
+%% \begin{equation}
+%% \| (I - A )\dot \alpha \| = \|(H - \bar R^T) \dot \alpha \|  \le 2 \epsilon %\in {\cal O}\left( \frac{\epsilon^2}{\|  \dot \alpha \|}\right)
+%% \end{equation}
+%% and since $\dot \alpha$ is sufficiently exciting it can span a full-rank subspace, so we must have
+%% \begin{equation}
+%%  \|(H - \bar R^T) \|  \sim {\cal O}\left( \frac{2 \epsilon}{  M_{\dot \alpha} }\right)
+%% \end{equation}
+%% This means that $H(t)$ has to remain close to $\bar R^T$ for all $t$. If this is the case, then the first term, assuming sufficiently exciting input $\alpha$, yields
+%% \begin{equation}
+%% \| \dot A \alpha \| \le \epsilon.
+%% \end{equation}
+%% which implies a bound on $\widehat{R^T w_h} A$, and therefore on $w_h$, which means that $H(t)$ has to change slowly
+%% \begin{equation}
+%% || w_h(t) || \in {\cal O}\left(\frac{2 \epsilon}{ M_\alpha }\right).
+%% \end{equation}
+%% However, if $\alpha(t) = 0 = \dot \alpha(t)$, the above leaves both $H(t)$ and $\omega_h(t)$ unconstrained. In this case, however, the drift rate reduces to 
+%% \begin{equation}
+%% \| \dot{\tilde \alpha}_b(t) \|  = \| A \dot \alpha_b + \dot A \alpha_b \|
+%% \end{equation}
+%% and, again, $\alpha_b$ can be arbitrary, and we have exhausted the degrend{equation}s of frend{equation}dom to ensure the two terms cancel each other; so the two terms must be bounded individually
+%% \begin{equation}
+%% \| \dot{\tilde \alpha}_b(t) \|  \le \epsilon + \| \dot A \alpha_b \|
+%% \end{equation}
+%% Since $\alpha_b(t)$ can take any arbitrary value, we must have
+%% \begin{equation}
+%% \| \dot A \|
+%% \in {\cal O}\left( \frac{2 \epsilon}{M_{\alpha_b} }\right)
+%% \end{equation}
+%% which implies that $A$ is bounded to be close to the identity (and hence $H(t)$ close to $\bar R^T$) and $\omega_h$ is bounded to be small, which implies that $H(t)$ changes slowly.
+
+%% So, whether linear acceleration is present or not\footnote{Note that linear acceleration is always present because of gravity, and non-zero rotation will in general cause a time-varying linear acceleration.}, we have that $H(t)$ is bounded in a neighborhood of $\bar R^T$.
+
+\subsection{Initial conditions and Gauge ambiguities}
+\label{sect-gauge}
+
+So far we have not enforced consistency of the initial conditions. These are subject to a gauge transformation, since we can choose arbitrarily {\em either} the reference frame with respect to which the points $X^i$ are expressed (for instance, having the origin at their centroid, and the orientation aligned with the principal axes of the point distribution), in which case $T(0), R(0)$ will be unknown; or, we can choose to impose that, say, $T(0) = 0$ and $R(0) = I$, in which case the points will be inferred relative to this reference frame up to an arbitrary rotation $\bar R$. Another alternative is to choose the reference frame where $\gamma = [0, \ 0, \ 9.8]^T$, in which case the initial conditions for the body frame are not known.
+
+While a choice of initial reference associate to $X$ can be enforced at each instant of time ({\em e.g.,} with a pseudo-measurement) since $X$ is constant and part of the state, the initial condition attributed to $T(0), R(0)$ cannot, as the latter are not part of the state. Either way, however, this choice will force a particular value of $\bar T, \bar R$ -- of course different than the true one -- and reduce the indistinguishable set to a singleton, albeit possibly one other than the true trajectory, unless the initial conditions happen to coincide. 
+
+A typical way to choose a canonical reference frame for a collection of sparse reflector is to choose the origin of the reference frame to be the centroid, which can be accomplished by imposing
+\begin{equation}
+\sum_i X^i = {\bf X 1} = 0
+\end{equation}
+where $\bf 1$ is a column vector of ones and $\bf X$ the $3\times N$ matrix of the point coordinates,  so that
+\begin{equation}
+{\bf \Xw 1} = \bar R^T( {\bf X 1} - \bar T) = -\bar R^T \bar T = 0
+\end{equation}
+and choosing the coordinate axes to be aligned with the principal components
+\begin{equation}
+{\bf X}{\bf X}^T = \Lambda
+\end{equation}
+for some diagonal matrix $\Lambda$, so that 
+\begin{equation}
+{\bf \Xw}{\bf \Xw}^T = \bar R^T \Lambda \bar R = \Lambda
+\end{equation}
+forces $\bar R = I$ and $\bar T = 0$. Note that $\bar R$ is not an arbitrary rotation, but a rotation about gravity, based on the choice of reference frames we have adopted. Also, if the point cloud is symmetric, the principal directions are undefined. 
+
+This suggests a modeling procedure for designing a filter/observer as follows:
+\begin{itemize}
+\item Fix translation with pseudomeasurement $X 1 = 0$.
+\item Fix rotational gauge by enforcing $X X^T = \Lambda$ (that is, elements (1,2), (1,3), (2,3) are zero), alternatively also (2,1), (3,1), (3,2) - but redundant). Or, write $X = \Lambda V$ and impose $V V^T = I$. This should also be equivalent.
+\item Let the biases float
+\item The estimated rotation should differ from the global one by an arbitrary constant rotational offset
+\item The resulting translation should differ from the global one by an arbitrary constant Euclidean offset
+\item Velocity should differ from true by a constant rotation
+\item (8/17/13): Define Gauge ambiguity when model is observable up to a constant, and that constant is in one-to-one correspondence to the initial condition. So although the IC cannot be uniquely determined, the state can be determined up to an equivalence class of trajectories each defined by a different initial condition
+\item Check $v$ vs $V$ for translational velocity (confusion with twists) from section 1 to 2 and seg.
+\end{itemize}
+
+
+\section{Measurement model reduction}
+
+The measurement model $y = \pi(gX)+n$ involves navigation states $g\in \SE(3)$ as well as constant unknown parameters $X\in \real^{3\times N}$, that are also modeled as states. To distinguish them, we indicate the former with $x$ and the latter with $p$. In that case, the measurement equation is of the form $y = h(x,p) +n$. In some cases,\footnote{After having augmented the model by {\em adding} the same states $p$.} one may be interested in reducing the model by {\em eliminating} the unknown states $p$. This can be done in an approximate manner via linearization, or in an exact manner using the geometry of the space of unknowns. For the case of bearing measurements, this has bend{equation}n first done in \cite{soattoP97IJCV} for the continuous-case, and \cite{soattoFP96,soattoP98PAMI1,soattoP98PAMI2} for the discrete-time case. The linearization version has bend{equation}n done in \cite{mourikisR07} and successfully demonstrated on a cellphone for the case of vision measurements. The range case has bend{
+equation}n pionend{equation}red by \cite{
+ferraraA09} for batch processing, and has so far never bend{equation}n integrated into a filtering framework.
+
+\subsection{Approximate model reduction via linearization (bearing)}
+
+We consider the linear approximation of the measurement equation: 
+\begin{equation}
+y = h(x,p) = h(\hat x, \hat p) + \underbrace{\frac{\partial h}{\partial p}(\hat x, \hat p)}_{H_p}\tilde p + \underbrace{\frac{\partial h}{\partial x}(\hat x, \hat p)}_{H_x} \tilde x + \underbrace{{\cal O}(\| \tilde x\|^2, \| \tilde p\|^2) + n}_{\tilde n}
+\end{equation} 
+where the matrices $H_p$ and $H_x$ are the Jacobians of the measurements with respect to the state and the unknown parameters $p$, and the new residual $\tilde n$ includes measurement noise as well as linearization error.
+
+If the Jacobian $H_p$ has full column rank, it is possible to eliminate the dependency of the measurement model from $\tilde p$ by multiplying both sides of the equation above by its orthogonal complement $H_p^\perp$, obtaining
+\begin{equation}
+r \doteq H^\perp_p(y - h(\hat x, \hat p)) = \underbrace{H^\perp_p(\hat x, \hat p) H_p \tilde p}_{= 0} + H^\perp_p(\hat x, \hat p) H_x(\hat x, \hat p)\tilde x + \bar n
+\end{equation}
+where $\bar n = H_p^\perp \tilde n$. Unfortunately, in neither the bearing-only nor the range-only case is the matrix $H_p$ full column rank. In order to enable eliminating states $\tilde p$, \cite{mourikisR07} stack a number of temporal samples $y(t)$ on top of each other, so the stacked matrix $H_p$ becomes full column rank, and reduction is made possible. Writing the contribution from individual points, we have 
+\begin{equation}
+\ba{c} r^i(t_1) \\ r^i(t_2) \\ \vdots \\ r^i(t_i) \ea = 
+ \underbrace{\ba{c}
+H_p(\hat x(t_1), {\hat p}^i) \\ H_p(\hat x(t_2), {\hat p}^i)\\
+\vdots \\ H_p(\hat x(t_i), {\hat p}^i)\ea^\perp}_{{\bf H}_p(\hat x, {\hat p}^i)}
+\ba{ccc}
+\ddots & & \\
+ & H_x(\hat x(t), {\hat p}^i) &\\
+ & & \ddots 
+\ea\ba{c}
+\tilde x(t_1) \\ \tilde x(t_2) \\ \vdots \\ \tilde x(t_i) \ea
++ \ba{c} \bar  n(t_1) \\ \bar n(t_1) \\ \vdots \\ \bar n(t_i) \ea
+\end{equation}
+or in compact form as
+\begin{equation}
+{\color{red}
+{\bf r}(t,t_i) = {\bf H}(\hat x, \hat p) \ba{c}
+\tilde x(t_1) \\ \tilde x(t_2) \\ \vdots \\ \tilde x(t_i) \ea + 
+{\bf {\bar n}}(t,t_i)
+}
+\label{eq-approx-red}
+\end{equation}
+Note that the noise term $\bar n$ depends on the unknown structure $\hat p$ and the nominal motion states $\hat x$, in addition to the linearization error. So even if the measurement noise was reasonably uncorrelated, certainly $\bar n$ is heavily correlated, and even more so once the delay-line (sequence of temporally adjacent measurements) are considered as a batch. One could introduce additional states to model the correlation terms, but this would defeat the purpose of model reduction, which is to eliminate states.
+
+In addition, even if we have eliminated the dependency on the error-state $\tilde p$ (the ``structure correction'' term), the Jacobians still depend on the (unknown) nominal structure $\hat p$. In \cite{mourikisR07}, the current estimates of the motion states $\hat x+\tilde x$ are used to triangulate points in $\real^3$, which is possible for the case of bearing measurements, to obtain a coarse approximation of the position of each point which is taken to be ${\hat p}^i$, and used to compute the Jacobians above. Specifically, given at least two time instants, for instance $\tau_i = 0$ and $t_i = t$, from (\ref{eq-trian}) we get 
+\begin{equation}
+ \widehat{{\bar y}^i(t)} \bar y^i(0) Z^i = \tilde n^i(t)
+\end{equation}
+that can be solved in a least-squares fashion to estimate $\hat Z^i$ and therefore $p^i = X^i$.
+
+In the next section, we show how model reduction is possible in an {\em exact} fashion, in a manner that does not require linearization, and does not require an estimate of the structure states $\hat p$.
+
+%Nevertheless, despite the many shortcomings of the approach just described, the recent results of \cite{mourikisR07} suggest that this approach is worth considering.
+
+\subsection{Model reduction via epipolar geometry (bearing): The Essential filter}
+
+Reducing the model for the case of bearing measurements can be done by eliminating the structure states via Epipolar geometry. Assuming the feature appears at $t = 0$, for any time $t > 0$ we have 
+\begin{equation}
+{y^i}^T(t) \underbrace{R^T(t) \widehat T(t)}_{Q} y^i(0) = n^i(t)
+\end{equation}
+Here, there is no linearization, the independence of structure is exact, there is no nend{equation}d to triangulate the structure, and no nend{equation}d to assemble multiple data in a batch. Since the equation above is linear in $Q$, we write it as 
+\begin{equation}
+{\color{red} \chi(t)Q(x) = n(t)}
+\end{equation}
+where $\chi(t) = (\bar y(t) \otimes \bar y(0))^T$ is the Kronecker product of $y(t)$ and $y(0)$. More details on the implementation of these equations are in the Appendix. 
+
+
+\subsection{Approximate reduction via linearization (range)}
+
+The same procedure for eliminating structure states from the linearized model can be applied to range measurements, with the caveat that the matrix $H_p$ is now a $1\times 3$ row vector, and therefore at least 3 measurements are necessary for $H_p$ to be full column rank (rather than 2 for the case of bearing measurements), and that the estimate of the nominal structure states $\hat p$ has to be performed by ranging triangulation, via (\ref{eq-ran-tri}): From $Z = \| R X + T \|$ we get that 
+\begin{eqnarray}
+Z(0)^2 & = &  X^T X \nonumber \\
+Z(t)^2 &=& X^T R^T R X + T^T T + 2 T^T R X ~~~{\rm from \ which} \nonumber \\
+2 T^T(t) R(t) X &=& Z(t)^2 - Z(0)^2 - T^T(t)T(t) 
+\end{eqnarray}
+Given the nominal trajectory at at least thrend{equation} instants, for instance $t = 0$ and $(\hat R(\tau), \hat T(\tau)), (\hat R(t), \hat T(t))$ we can solve the linear system
+\begin{equation}
+2\ba{c}
+{\hat T}^T(\tau)\hat R(\tau) \\
+{\hat T}^T(t) \hat R(t)
+\ea
+X = \ba{c}
+Z(\tau)^2 - Z(0)^2 - {\hat T}^T(\tau){\hat T}(\tau) \\
+Z(t)^2 - Z(0)^2 - {\hat T}^T(t){\hat T}(t)
+\ea
+\end{equation}
+subject to $X^T X = Z(0)^2$. Other than this modification, the rest procend{equation}ds as for the case of bearing measurements only, yielding a measurement equation functionally identical to (\ref{eq-approx-red}).
+
+\subsection{Model reduction via Stiefel projections (range)} 
+
+The paper \cite{ferraraA09} presents a method to eliminate the unknown structure $X$ from a batch of range measurements of sparse reflectors. This can be thought of as the geometrically-correct equivalent of the measurement model reduction described in the previous section. Assuming an initial time $\tau_i = 0$ for all points, and time $t_i = t$, we can write the measurement equations in the form 
+\begin{equation}
+{\color{red}
+A^\perp(x^t_1)Y^t = A^\perp(x_1^t) B(x_1^t) + n^t
+}
+\end{equation}
+where the superscript $t$ indicates the time history up to time $t$, and $Y^t$ gathers component-wise products of range measurements, given by
+\begin{equation}
+\ba{c}
+y_0 \\  \vdots \\ y_t \ea  \doteq  
+\ba{c} 
+Z_0 \odot Z_0  \\ 
+\vdots \\ 
+Z_t \odot Z_t \ea
+\end{equation}
+where $\odot$ denotes the component-wise product of the vector of range measurements and the matrices $A$ and $B$ are defined by the stacked measurement equation for the squared range measurements 
+\begin{equation}
+Y^t \doteq \ba{c}
+y_1 -y_0 \\  \vdots \\ y_{t-1} - y_t \ea  
+= 2
+\underbrace{\ba{c}
+T_1^T R_1 - T_0^T R_0 \\
+\vdots \\
+T_{t-1}^T R_{t-1} - T_t^T R_t
+\ea}_{A(x_1^t)} X + 
+\underbrace{\ba{c}
+\| T_1 \|^2 - \| T_0 \|^2 \\
+\vdots \\ 
+\| T_{t-1} \|^2- \| T_t \|^2 
+\ea {\bf 1}_N}_{B(x_1^t)}
+\end{equation}
+and ${\bf 1}_N$ is a (column) vector of $N$ ones. Note that, unlike the case of epipolar geometry, this procedure requires the accrual of multiple measurements in the time series, but it still has the benefit of not having any dependence on the position of the points $p$, and not involving any linearization.
+
+ \begin{figure}[htb]
+\begin{center}
+~%\includegraphics[height=1in]{}
+\end{center}
+\caption{\sl }
+\label{fig-}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Delay Line State Augmentation} 
+
+
+
+Representing groups of points via their pose results in augmenting the state with a collection of ``key-poses,'' corresponding to time instants $t_i$ when groups of features appear. Rather than picking key poses %-- so only points that appear at that key-time $t_i$ contributes to the estimation of the corresponding states -- 
+one could augment the state with a {\em delay-line}, or sliding window, a collection of adjacent time samples of the state, as suggested in \cite{mourikisR07}. For instance, if $x(t)$ is the state, the delay-line is the augmented state $x^m(t)  = \{x(t), x(t-1), \dots , x(t-m)\}$. %That way, each point visible at $t_i$, with $t-m \le t_i \le t$, can contribute to pose estimates.
+
+To build a delay-line of length $m>0$ starting from an initial time $t_i$ and define the states $x_k(t) \doteq x(t-k dt)$ for $k = 1, \dots, m$. Assuming a constant inter-frame sampling $dt >0$, for a linear model of the form $\dot x = f(x) + c(x) u = A x + B u$, starting at $t \ge t_i+m$ we have:
+\begin{equation}
+\bc
+\begin{array}{ll}
+x_m(t+dt) = x_{m-1}(t) & x_m(t) = x(t_i) \\
+x_{m-1}(t+dt) = x_{m-2}(t) &  x_{m-1}(t) = A x(t_i) + B u(t_i) \\
+\vdots & \\
+x_{m-k}(t+dt) = x_{m-k-1}(t) & x_{m-k}(t) = A^kx(t_i) + \sum_{j = 1}^{k-1} A^{k-j} B  u(t_i+ j dt) \\
+\vdots & \\
+x_2(t+dt) = x_1(t) & x_{2}(t) = A^{m-2}x(t_i) + \sum_{j = 1}^{m-3} A^{m-1-j} B  u(t_i+ j dt)\\
+x_1(t+dt) = x(t) &  x_{1}(t) = A^{m-1}x(t_i) + \sum_{j = 1}^{m-2} A^{m-1-j} B  u(t_i+ j dt) \\
+\dot x = f(x) + c(x) u & x(t) = A^{m}x(t_i) + \sum_{j = 1}^{m-1} A^{m-1-j} B  u(t_i+ j dt) 
+\end{array}
+\ec
+\label{eq-delay-line}
+\end{equation} 
+The initial conditions on the right can be computed recursively. In the non-linear case, this is implemented as $m$ repeated steps of the integral $x(t+dt) = x(t) + \int_{t}^{t+dt} f(x)d\tau + \int_{t}^{t+dt} c(x)du(\tau) \doteq F(x,t) + B(x,u,t)$, each step defining the initialization of one delay block:
+Assuming an initial time $t_i$, then at time $t = t_i + m$, we have
+\begin{eqnarray}
+x_m(t) &=& x(t_i) \\
+x_{m-1}(t) &=& F(x_m, t) + B(x_m, u, t)  \\ 
+x_{m-2}(t) &=& F(x_{m-1}, t) + B(x_{m-1}, u, t) \\
+& \vdots & \\
+x_{1}(t) &=& F(x,t) + B(x,u,t) 
+% \\ x(t)  &=&   x(t_i+m) % A^m x(t_i) + \sum_{j = 1}^{m-1} A^{m-j} B  u(t_i+ j dt) 
+\end{eqnarray}
+Once initialized, the model evolves according to (\ref{eq-delay-line}) for an augmented state and linearization
+\begin{equation}
+x^m(t) = \ba{c}
+x_m(t) \\
+x_{m-1}(t) \\
+\vdots \\
+x_1(t)\\
+x(t)
+\ea, ~~~
+F = \ba{ccccc}
+0 & I & & & \\
+  & 0 & I & &  \\
+  &   &   \ddots  & &   \\
+  &   &           & 0 & I \\
+0 &   \dots &           & 0  & \frac{\partial f}{\partial x}(x(t))
+\ea, ~~~
+C = \ba{c}
+0 \\ \vdots \\ 0 \\ \frac{\partial c}{\partial x}(x(t))
+\ea
+\end{equation}
+Starting from $t > t_i + m$, we have measurements available, of the form
+\begin{eqnarray}
+y(t-m) &=& y(t_i) = h(x_m(t)) + n(t_i) \\
+y(t-m+1) &=& y(t_i+1) = h(x_{m-1}(t)) + n(t_i + 1) \\
+&\vdots& \\
+y(t-1) &=& y(t_i+m-1) = h(x_{1}(t)) + n(t_i + m -1)\\
+y(t) &=& y(t_i+m) = h(x(t)) + n(t_i + m)
+\end{eqnarray}
+which we could collate into an augmented measurement equation $y^m(t)$. However, this measurement cannot be used at every time instant $t$, as the sliding window would result in highly (temporally) correlated noise $n^m$. Instead, it must be used at block intervals of $km$ time instants, at which point it provides constraints on each of the states $x^m(t)$. Alternatively, a batch of measurements $y^m(t)$ can be used only once, at time $t = t_i + m$, to provide measurement constraints on the augmented states, as done in \cite{mourikisR07}.
+
+
+%The approach of \cite{mourikisR07} consists in first performing model reduction both to eliminate motion states (by considering output measurements as known model inputs), then structure states approximately via linearization, and then augmenting the measurement equation by including an extended delay line.
+
+%This choice send{equation}ms peculiar, and is dictated by the manner in which the reduction is performed, via the orthogonal projector on the linearization of the model. For the orthogonal projector to be non-trivial, multiple measurements must be aggregated. This creates the nend{equation}d to estimate the nominal structure, which is done approximately via triangulation:
+
+%It would send{equation}m that the augmentation following the reduction defeats the purpose of the latter, and that the numerous approximations (triangulation, linearization, noise correlation) are not well justified and could be avoided by proper reduction, and proper error-state derivation. 
+
+%Nevertheless, it is possible that the augmentation of the measurement model is beneficial in handling scale variability, being akin to short-baseline bundle adjustment, and that the reduction is rendered necessary by computational complexity constraints. 
+
+\cut{\subsection{Multi-State Constraints with Epipolar Geometry}
+%
+The challenge with the reduced-augmented model is to represent the dynamics of the delay line. In discrete time, if we call $x^t =\{x_0, \dots, x_t\}$, we have that the aggregated measurement equation can be written in the form ${\cal H}(y^t, x^t) = n^t$, for instance for the case of BrA ${\cal H}(y^t, x^t) = \chi(y^t,y_0)Q(x_1^t) $. Using a simplified model of the form $x(t+dt) = f(x(t), u(t)) + n_x(t)$, where the (pseudo)-input inferred from the measurements $y\imu $ is indicated by $u = h^{-1}(y\imu ,x)$, we can write the augmented dynamics as
+\begin{equation}
+\begin{cases}
+x^t(t+dt) = {\cal F}(x^t, u^t,dt) \\
+{\cal H}(y^t, x^t) = n^t
+\end{cases}
+\end{equation}
+ But while writing the batch measurement equation is straightforward, the dynamics is more involved and somewhat problematic. Assuming for now a linear homogeneous system, $x(t+1) = Ax(t)$, if we call
+\begin{equation}
+x_k(t) \doteq x(t+k-1)
+\end{equation}
+then we can write
+\begin{eqnarray}
+x(t+1) \doteq x_1(t+1) &=& Ax_1(t) \doteq x_2(t) \\
+x(t+2) = x_2(t+1) &=& Ax_2(t) \doteq x_3(t) =  A^2x_1(t)\\
+&\vdots& \\
+x(t+k-1) = x_{k-1}(t+1) &=& A x_{k-1}(t) \doteq x_k(t) = A^{k-1}x_1(t)\\ 
+x(t+k) = x_k(t+1) &=& A x_k(t) = A^kx_1(t)
+\end{eqnarray}
+Accordingly, the (linear) dynamics of the augmented state can be written in (at least) thrend{equation} different forms:
+$x^k(t+1) = {\cal A}x^k(t)$ with
+\begin{equation}
+{\cal A} = \ba{ccccc} 
+A &       &   &   &  \\
+  & \ddots &   &   & \\
+  &        &   & A &  \\
+ &  &  &   & A
+\ea, ~~
+{\cal A} = \ba{ccccc} 
+0 & I      &   &   &  \\
+  & \ddots &   &   & \\
+  &        &   & 0 & I \\
+0 & \dots &  &   & A
+\ea, ~~
+{\cal A} = \ba{ccccc} 
+0 & I      &   &   &  \\
+  & \ddots &   &   & \\
+  &        &   & 0 & I \\
+A^k & \dots &  &   & 0
+\ea
+\end{equation}
+In the non-linear case, $Ax_i$ is to be replaced by $f(x_i)$ and $A^k x_i$ with $\int_{t}^{t+k}f(x(\tau))d\tau$. The first two forms do not couple the states. A hypothetical measurement of the current state (state at time $t+k$) would not make the first two models observable, but would make the third one so. Therefore, we focus on the third. In the presence of inputs, $x(t+1) = A x(t) + B u(t)$, using the relationship
+\begin{equation}
+x(t) = A^tx(0) + \sum_{\tau = 1}^{t-1} A^{t-\tau} B(\tau) u(\tau)
+\end{equation}
+we can write the coupled system in the form $x^k(t+1) = {\cal A}x^k(t) + {\cal B}u^k(t)$ where ${\cal A}$ is one of the above, and $\cal B$ is given by
+\begin{equation}
+{\cal B} = \ba{ccccc} 
+0 &       &   &   &  \\
+  & \ddots &   &   & \\
+  &        &   & 0 & \\
+A^{k-1} B(t) & A^{k-2} B(t+1) & \dots & AB(t+k-1)  & B(t+k)
+\ea
+\end{equation}
+Note that {\em for the linearized error-state model}, this can be easily done even if the matrices $A$ and $B$ are time-varying.  The resulting model $\sim$rA is of the form
+\begin{equation}
+{\color{red}
+\begin{cases}
+ {\tilde x}^k(t+dt) = {\cal A}({\hat x}^k(t)){\tilde x}^k(t)dt + {\cal B}({\hat x}^k(t),{\tilde x}^k(t))u^{k}(t)dt + dn^t\\
+{\cal H}(y^k(t),{\hat x}^k(t), {\tilde x}^k(t)) = n^k(t) 
+\end{cases}}
+\end{equation}
+In the standard model, or in the non-linear error-state model, this is more complex as it requires integration. In particular, note that the reduced models are affine in the input; that is, the model is of the form $x(t+1) = f_1(x(t)) + f_2(x(t))u(t)$. Again, the upper part of the matrix $\cal A$ remains unchanged, but the last row $A^k x_1(t)$ is replaced with $\int_{t}^{t+k} f_1(x(\tau))d\tau$. Similarly, the terms $A^{t-\tau}B(\tau)u(\tau)$ should be replaced with $\int_{t}^{t+k} g(x(\tau)) u(\tau) d\tau$. The resulting model is similar to the above, obtained by replacing the last row of the matrices with the corresponding integrals.
+}
+
+%\subsection{Augmented Essential Filter} 
+
+\subsection{Multi-State Constraints with Epipolar Geometry}
+
+The epipolar constraint can be interpreted as an implicit measurement equation involving inter-frame pose, regardless of the position of points. If $X(t) = R^T(t) (X_0 - T(t))$, the Essential matrix at time $t$ is of the form $Q(t) = R^T(t)\widehat T(t)$.\footnote{Note that if the motion model was instead $X(t) = R(t)X_0 + T(t)$, then the Essential matrix would have the form $Q(t) = \widehat T(t) R(t)$. The equivalence between the two can be arrived at by noticing that $\widehat{R^T T} = R^T \widehat T  R$.} The inter-frame Essential matrix, $Q(t_2, t_1)$ is then the Essential matrix determined by the motion between $t_1$ and $t_2$,\footnote{From $X(t_1) = R^T(t_1)(X_0 - T(t_1))$ and $X(t_2) = R^T(t_2)(X_0 - T(t_2))$.} that has a rotational component $R(t_2, t_1) \doteq R(t_2)^TR(t_1)$ and a translational component $T(t_2, t_1) = R^T(t_2)(T(t_1) - T(t_2))$. Therefore, $Q(t_2, t_1) = R^T(t_1)R(t_2)\widehat{[R^T(t_2)(T(t_1)-T(t_2)]}$, or equivalently
+\begin{equation}
+Q(t_2, t_1) = R^T(t_1)[\widehat T(t_1)- \widehat T(t_2)]R(t_2)
+\end{equation}
+independent of the choice of spatial frame, since the transformation from the the camera frame at $t_1$ to the spatial frame is annihilated by the transformation from the spatial frame to the camera frame at $t_2$. In the presence of an unknown alignment transformation $g_{cb} = (R_{cb}, T_{cb})$ one can easily verify that
+\begin{equation}
+Q(t_2, t_1; R_{cb}, T_{cb}) = R^T(t_1)[\widehat T(t_1)- \widehat T(t_2) + \widehat{R(t_2) R_{cb}^T T_{cb}}]R(t_2)R_{cb}^T
+\end{equation}
+or, equivalently, 
+\begin{equation}
+Q(t_2, t_1; R_{cb}, T_{cb}) = Q(t_2, t_1) R_{cb}^T + R^T(t_1)R(t_2) R_{cb}^T \widehat T_{cb}
+\end{equation}
+Now, if we grow a batch of $m$ measurements starting from an initial $t_i$ up to time $t = t_i + m$, we have, calling $\chi(t_1, t_2) \doteq \chi(y(t_1), y(t_2))$ and $x \doteq x(t); x_k \doteq x_k(t)$, 
+\begin{eqnarray}
+\chi(t, t-m) Q(x, x_m) &=& \chi(t_i+m,t_i) Q(x(t_i+m), x(t_i)) = 0 \\
+\chi(t, t-m+1) Q(x, x_{m-1}) &=& \chi(t_i+m,t_i+1) Q(x(t_i+m), x(t_i+1)) = 0 \\
+&\vdots&\\
+\chi(t, t-m+k) Q(x, x_{m-k}) &=& \chi(t_i+m,t_i+k) Q(x(t_i+m), x(t_i+k)) = 0 \\
+&\vdots&\\
+\chi(t, t-1) Q(x, x_1) &=& \chi(t_i+m,t_i+m-1) Q(x(t_i+m), x(t_i+m-1)) = 0 
+\end{eqnarray}
+\cut{with, for $t \ge t_i+m$
+\begin{eqnarray}
+x_m(t+1) = x_{m-1}(t) &~~~~& x_m(t_i+m) = x(t_i) \\ 
+x_{m-1}(t+1) = x_{m-2}(t) &~~~~& x_{m-2}(t_i+m) = x(t_i+1) \\ 
+& \vdots & \\
+x_2(t+1) = x_1(t)  &~~~~& x_{2}(t_i+m) = x(t_i+m-2) \\ 
+x_1(t+1) = x(t)  &~~~~& x_{1}(t_i+m) = x(t_i+m-1) \\
+\dot x = f(x) + c(x) u & ~~~~& x(t_i+m) = x(t_i+m)
+\end{eqnarray}
+\begin{equation}
+x_0(t+1) = f(x_0) + g(x_0) u_0
+\end{equation}
+Then at time $t+1$ the measurement $y_1 = y(t+1)$ becomes available, as well as the input $u(t+1)$, so 
+\begin{equation}
+\bc
+x_0(t+1) = x_1(t) \\
+x_1(t+1) = f(x_1) + g(x_1) u(t+1) \\
+\chi(y_1,y_0)Q(x_1,x_0) = n_1
+\ec
+\end{equation}
+where we indicate with $Q(x_1,x_0) = Q(t+1,t)$. Then at time $t+2$ we have
+\begin{equation}
+\bc
+x_0(t+1) = x_1(t) \\
+x_1(t+1) = x_2(t) \\
+x_2(t+1) = f(x_2) + g(x_2) u(t+2) \\
+\chi(y_1,y_0)Q(x_1,x_0) = n_1 \\
+\chi(y_2,y_0)Q(x_2,x_0) = n_2 
+\ec
+\end{equation}
+and at time $t+k$
+\begin{equation}
+\bc
+x_0(t+1) = x_1(t) \\
+x_1(t+1) = x_2(t) \\
+~~~ \vdots \\
+x_{k-1}(t+1) = x_k(t) \\
+x_k(t+1) = f(x_k) + g(x_k) u(t+k) \\
+\chi(y_1,y_0)Q(x_1,x_0) = n_1 \\
+\chi(y_2,y_0)Q(x_2,x_0) = n_2  \\
+~~~ \vdots \\
+\chi(y_k,y_0)Q(x_k,x_0) = n_k 
+\ec
+\end{equation}
+Alternatively, the measurement equation can be referred to the previous instant, instead of the beginning of the batch:
+\begin{equation}
+\bc
+x_0(t+1) = x_1(t) \\
+x_1(t+1) = x_2(t) \\
+~~~ \vdots \\
+x_{k-1}(t+1) = x_k(t) \\
+x_k(t+1) = f(x_k) + g(x_k) u(t+k) \\
+\chi(y_1,y_0)Q(x_1,x_0) = n_1 \\
+\chi(y_2,y_1)Q(x_2,x_1) = n_2  \\
+~~~ \vdots \\
+\chi(y_k,y_{k-1})Q(x_k,x_{k-1}) = n_k 
+\ec
+\end{equation}
+The initial condition (at time $t$) is given by
+\begin{equation}
+\bc
+x_0 = \hat x(t) \\
+x_1 = f(x_0) + g(x_0)u_0 \\
+~~~\vdots \\
+x_k = f(x_{k-1}) + g({x_{k-1}}) u_{k-1}
+\ec
+\end{equation}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{plain}
+\bibliography{/Users/soatto/lib/tex/self.bib,/Users/soatto/lib/tex/total2.bib}
+
+
+\appendix
+
+
+\section{Description of Functions}
+
+The delay line of length $m>0$ is defined by the following dynamical model:
+\begin{equation}
+\bc
+x_m(t+dt) = x_{m-1}(t) \\
+x_{m-1}(t+dt) = x_{m-2}(t) \\
+\vdots \\
+x_2(t+dt) = x_1(t) \\
+x_1(t+dt) = x(t) \\
+\dot x = f(x) + c(x) u \\
+\ec
+\end{equation} 
+To initialize it, let $x(t+dt) = x(t) + \int_{t}^{t+dt} f(x)d\tau + \int_{t}^{t+dt} c(x)du(\tau) \doteq F(x, t) + B(x,u, t)$. Assuming an initial time $t_i$, then at time $t = t_i + m$, we have
+\begin{eqnarray}
+x_m(t) &=& x(t_i) \\
+x_{m-1}(t) &=& F(x_m, t) + B(x_m, u, t)  \\ 
+x_{m-2}(t) &=& F(x_{m-1}, t) + B(x_{m-1}, u, t) \\
+& \vdots & \\
+x_{1}(t) &=& F(x,t) + B(x,u,t) 
+% \\ x(t)  &=&   x(t_i+m) % A^m x(t_i) + \sum_{j = 1}^{m-1} A^{m-j} B  u(t_i+ j dt) 
+\end{eqnarray}
+The Jacobian matrices are given by 
+\begin{equation}
+F = \ba{ccccc}
+0 & I & & & \\
+  & 0 & I & &  \\
+  &   &   \ddots  & &   \\
+  &   &           & 0 & I \\
+0 &   \dots &           & 0  & \frac{\partial f}{\partial x}(x(t))
+\ea, ~~~
+B = \ba{c}
+0 \\ \vdots \\ 0 \\ \frac{\partial c}{\partial x}(x(t))
+\ea
+\end{equation}
+The function ${\tt predict navistate.m}$ computes $\frac{\partial f}{\partial x}(x(t))$, and the function {\tt predict augmented.m} computes the prediction and covariance propagation for the extended state above.
+\begin{tiny}
+\begin{verbatim}
+function [xip,Pp,F] = predict_augmented(xi,u,gm,P,Rv);
+Tb = (length(xi)-15)/6;
+F = sparse(zeros(size(P)));
+for k = 1 : Tb, 
+      xip(6*(k-1)+1:6*k,1) = xi(6*k+1:6*(k+1));
+      F(6*(k-1)+1:6*(k-1)+6,6*(k)+1:6*(k)+6) = eye(6);
+end;
+[xip(6*Tb+1:6*Tb+15,1),ptmp,F(6*Tb+1:6*Tb+15,6*Tb+1:6*Tb+15)] = predict_navistate(xi(6*Tb+1:6*Tb+15,1),u,gm,P(6*Tb+1:6*Tb+15,6*Tb+1:6*Tb+15),Rv); 
+% prediction
+Rbv = sparse(zeros(size(P)));
+Rbv(6*Tb+1:6*Tb+15,6*Tb+1:6*Tb+15) = Rv;
+Pp = F * P * F' + Rbv;
+
+function [xip,Pp,F] = predict_navistate(xi,u,gm,P,Rv);
+T = xi(1:3,1);
+Om = xi(4:6,1);
+[R, dRdOm] = rodrigues(Om);
+V = xi(7:9,1);
+alphabias = xi(10:12,1);
+ombias= xi(13:15,1);
+omimu = u(1:3,1);
+Rimu = rodrigues(omimu);
+alphaimu = u(4:6,1);
+om = omimu - ombias;
+[Rt,dRtdomt] = rodrigues(om);
+dRtdombias = -dRtdomt; 
+% prediction
+Tp = T + V; 
+Rp = R * Rt;
+[Omp,dOmpdRp] = rodrigues(Rp);
+[Rp,dRpdOmp] = rodrigues(Omp);
+Vp = V + R * (alphaimu - alphabias) + gm;
+xip(1:3,1) = Tp;
+xip(4:6,1) = Omp;
+xip(7:9,1) = Vp; 
+xip(10:15,1) = xi(10:15,1);
+F = eye(15); 			% linearization of state-transition function
+F(1:3,7:9) = eye(3);		% dTpdV
+F(4:6,4:6) = dOmpdRp*dABdA(R,Rt)*dRdOm;	% dOmpdOm
+F(4:6,13:15) = dOmpdRp*dABdB(R,Rt)*dRtdombias; %dOmdombias
+F(7:9,4:6) = dABdA(R,alphaimu-alphabias)*dRdOm;
+F(7:9,10:12) = -R; %dVdalphabias 
+Pp = F * P * F' + Rv;
+\end{verbatim}
+\end{tiny}
+The measurement equation is given, for $t > m$, by
+\begin{equation}
+\bc
+\chi(y(t),y(t-m))Q(x(t), x_m(t)) = n(t-m) \\
+\chi(y(t),y(t-m+1))Q(x(t), x_{m-1}(t)) = n(t-m+1) \\
+~~~\vdots \\
+\chi(y(t),y(t-1))Q(x(t), x_{1}(t)) = n_1(t) 
+% \\ \chi(y(t),y(0))Q(x(t), x(0)) = n(t) 
+\ec
+\end{equation}
+which is in the form $0 = \chi Q + n$, so the innovation is ${\rm inn}(t) = -\chi Q.$ The linearization has the structure
+\begin{equation}
+C = \ba{cccc}
+\chi((y(t),y(t-k)) \frac{\partial Q}{\partial x_{t-k}} &  & & \chi((y(t),y(t-k)) \frac{\partial Q}{\partial x_t} \\
+ & \ddots & & \\
+ & & \chi(y(t),y(t-1)) \frac{\partial Q}{\partial x_{t-1}} & \chi(y(t),y(t-1)) \frac{\partial Q}{\partial x_t} %\\  & & 0 & \chi(y(t), y_0) \frac{\partial Q}{\partial x}
+\ea
+\end{equation}
+which is computed in the function {\tt inessential filter augmented.m}, with the individual blocks $\chi(y(t),y(t-1)) \frac{\partial Q}{\partial x_t}$ computed in the function {\tt epipolar innovation linearization.m}. Let $y_1 = y(t-k)$ the first instant, and $y_2 = y(t)$ the second (most recent); similarly for $x_1, x_2$. Then
+\begin{equation}
+\chi(y_2,y_1)Q(x_2,x_1) = (y_2 \otimes y_1)^T Q(x_2,x_1)
+\end{equation}
+where $\otimes$ is the kronecker product. In Matlab, each row of $\chi$ is given by {\tt kron(y2,y1)'}. Note, however, that the function {\tt makeChi} takes the arguments in reverse order, that is {\tt makeChi(y1,y2) = kron(y2,y1)'}. The inter-frame Essential matrix is computed as follows: if $x_2$ has pose components $(R_2, T_2)$ and $x_1$ has pose states $(R_1, T_1)$, they are related by:
+\begin{eqnarray}
+X_2 & = & R_2^T(X_0 - T_2) \Rightarrow X_2 = R_2^T(R_1 X_1 + T1 - T_2) = R_2^T R_1(X_1 + R_1^T(T_1 - T_2)) \\
+X_1 & = & R_1^T(X_0 - T_1) \Rightarrow X_0 = R_1 X_1 + T_1
+\end{eqnarray}
+which can be written as
+\begin{equation}
+X_2 = (\underbrace{R_1^T R_2}_R)^T\left( X_1 - \underbrace{R_1^T(T_2 - T_1)}_T\right)
+\end{equation}
+from which the Essential matrix
+\begin{equation}
+Q = R^T\widehat T = (R_1^T R_2)^T\widehat{[R_1^T(T_2 - T_1)]} = R_2^T R_1 R_1^T\widehat{[T_2-T_1]} R_1 =  R_2^T \widehat{[T_2-T_1]} R_1 
+\end{equation}
+from which the innovation
+\begin{equation}
+inn = - \chi Q = - (y_2 \otimes y_1)^T R_2^T \widehat{[T_2-T_1]} R_1 
+\end{equation}
+and the linearization is computed in {\tt epipolar innovation linearization.m}.
+
+\begin{tiny}
+\begin{verbatim}
+function [inn,C2,Chi,Q,C1] = epipolar_innovation_linearization(y2,y1,xi2,xi1,xihat2,xihat1);
+Chi = makeChi(y1,y2,1); 
+[T1tildehat,dT1hatdT1] = skew3(xi1(1:3,1)); hatT1hat = skew3(xihat1(1:3,1)); T1hat = hatT1hat + T1tildehat; 
+[T2tildehat,dT2hatdT2] = skew3(xi2(1:3,1)); hatT2hat = skew3(xihat2(1:3,1)); T2hat = hatT2hat + T2tildehat; 
+[R1tilde,dR1dOm1] = rodrigues(xi1(4:6,1)); R1hat = rodrigues(xihat1(4:6,1)); R1 = R1hat*R1tilde;
+[R2tilde,dR2dOm2] = rodrigues(xi2(4:6,1)); R2hat = rodrigues(xihat2(4:6,1)); R2 = R2hat*R2tilde;
+T2hat_T1hat = T2hat - T1hat;
+R2pT2hat_T1hat = R2'*T2hat_T1hat;
+Q = R2pT2hat_T1hat*R1;
+T2hat_T1hatR1 = T2hat_T1hat*R1;
+dqdOm1 = dABdB(R2pT2hat_T1hat,R1)*dABdB(R1hat,R1tilde)*dR1dOm1;
+dqdT1 = -dABdB(R2',T2hat_T1hatR1)*dABdA(T2hat_T1hat,R1)*dT1hatdT1;
+dqdOm2 = dABdA(R2',T2hat_T1hatR1)*dAtdA(R2)*dABdB(R2hat,R2tilde)*dR2dOm2;
+dqdT2 = dABdB(R2',T2hat_T1hatR1)*dABdA(T2hat_T1hat,R1)*dT2hatdT2;
+dqdxi1 = [dqdT1 dqdOm1];
+dqdxi2 = [dqdT2 dqdOm2];
+C1 = Chi*dqdxi1;
+C2 = Chi*dqdxi2;
+inn = -Chi*reshape(Q',9,1);
+
+function [xip,Pp,inn,xbp,Pbp,innb] = inessential_filter_augmented(y,y0,u,xi,P,Rn,Rv,gm,Ttrue,xb,Pb,yb);
+N = size(y0,2);
+Tb = (length(xb)-15)/6; % number of frames in the batch
+[xbpp,Pbpp] = predict_augmented(xb,u,gm,Pb,Rv);
+[xbp,Pbp,innb,Cb] = update_augmented(xbpp,Pbpp,y,yb,y0,Rn,Ttrue);
+xip = xbp(6*Tb+1:6*Tb+15,1);
+Pp = Pbp(6*Tb+1:6*Tb+15,6*Tb+1:6*Tb+15);
+inn(1:N,1) = innb(Tb*N+1:Tb*N+N,1);
+
+function [xbp,Pbp,innb,Cb] = update_augmented(xb,Pb,yt,yb,y0,Rn,Ttrue);
+Tb = (length(xb)-15)/6; % number of frames in the batch
+N = size(yt,2);
+xi2 = xb(6*Tb+1:6*Tb+6,1); % current time = end of sliding window
+Cb = zeros((N+1)*Tb,6*Tb+15);
+for k = 1 : Tb, % compute epipolar geometry from t to t-k
+    y1 = reshape(yb(2*N*(k-1)+1:2*N*k,1),2,N); % y(t-(Tb+k))
+    xi1 = xb(6*(k-1)+1:6*k,1);
+    [innt,C2, Chib,Qb,C1] = epipolar_innovation_linearization(yt,y1,xi2,xi1);
+    innb(N*(k-1)+1:N*k,1) = innt;
+    Cb(N*(k-1)+1:N*k,6*(k-1)+1:6*k) = C1; 
+    Cb(N*(k-1)+1:N*k,6*Tb+1:6*Tb+6) = C2; 
+end;
+% additional measurement to time zero
+[innt,C2] = epipolar_innovation_linearization(yt,y0,xb(6*Tb+1:6*Tb+15),zeros(6,1)); 
+innb(N*Tb+1:N*Tb+N,1) = innt;
+Cb(N*Tb+1:N*Tb+N,6*Tb+1:6*Tb+6) = C2;
+sigma = mean(diag(Rn));
+Rnn = sigma*eye(N*(Tb+1));
+[xbp, Pbp,Lb] = update(xb, -innb, Pb, Rnn, Cb);
+\end{verbatim}
+\end{tiny}
+
+\section{Effects of Measurement Model Reduction on Process Noise} 
+
+The ``signal-plus-noise'' measurement model 
+\begin{equation}
+y = h(x) + n 
+\label{eq-meas}
+\end{equation}
+can be interpreted as a relation between {\em random variables} $y, x, n$, or between their {\em realizations} (samples). To make the distinction clear, we indicate random variables in capitals, $Y, X, N$, their realizations in lower case, and the samples with a superscript $y^{(i)}, x^{(i)}, n^{(i)}$. Then (\ref{eq-meas}) can be written as $Y = h(X) + N$.
+
+When we view (\ref{eq-meas}) as a relation between realizations, given samples $n^{(i)} \sim p_N$ and $x^{(i)} \sim p_X$, assumed independent, the model tells us that a sample $y^{(i)}$ is obtained via $y^{(i)} = h(x^{(i)}) + n^{(i)}$. When we view (\ref{eq-meas}) as a relation between random variables, the model tells us that the densities $p_X, p_N$ (assuming $X, N$ are independent) and $p_Y$ satisfy the functional relation $p_Y(y) = \int p(y | x) dP(x) = \int p_N(y-h(x))p_X(x)dx$. 
+
+Model reduction is often performed by using the model above (\ref{eq-meas}) to ``solve'' for some states (components of $x$, say $x_i$) as a function of $y$, substituting the result in the dynamical model, thus eliminating $x_i$ and writing the remaining states $x_j, \ j \neq i$ as a function of $y$. Such {\em ``pivoting''} is problematic from a statistical point of view. It consists of ``fixing'' a random variable to be equal to its sample value, and therefore alters the joint distribution of the other variables involved. 
+
+For instance, consider the simple case $h(x) = x$: The model (\ref{eq-meas}) can be written equivalently as
+\begin{equation}
+y = x + n ~~~{\rm and} ~~~~ Y = X + N
+\end{equation}
+if we ``pivot'' on $x$ by writing it in terms of a {\em sample} of $y$, $y^{(i)}$, we obtain
+\begin{equation}
+x \doteq y^{(i)} - n ~~~~~{\rm but \ not} ~~~~ X = y - N.
+\end{equation}
+To send{equation} that, 
+\begin{equation}
+p_X(x) = \int p(x | y) dP(y) = \int p_N(y - x) \delta(y - y^{(i)}) dy = p_N(y^{(i)} - x) \neq p_X(x)
+\end{equation}
+in general, since we have made no assumptions on $p_X$ or $p_N$, that can be arbitrary probability density functions. While it is possible to write $X = Y - N$, the two random variables on the right-hand side are not independent (unlike in $Y = X +N$), and therefore $Y - X | X \sim p_N$, but $ Y - X|Y \neq p_N$. For $p_X$ to be properly computed, one would have to average over all possible instances of $y^{(i)}$; that is, one would have to {\em marginalize} the random variable $Y$. In essence, pivoting consists of replacing marginalization of $Y$ with a single sample from it.
+
+The process is even more problematic if $h$ is non-linear, for in that case the pivoting not only alters the distribution of $X$, but also that of $N$. For instance, assuming $h$ to be invertible and $n$ to be white, zero-mean, IID, homoscedastic and independent of $x$, it may be tempting to write
+\begin{equation}
+y = h(x) + n \Longrightarrow x = h^{-1}(y-n) \simeq h^{-1}(y) + \tilde n
+\end{equation}
+and to consider $\tilde n$  to also be white, zero-mean, IID and homoscedastic. This is clearly not the case, as 
+\begin{equation}
+x \doteq h^{-1}(y-n) \simeq h^{-1}(y) - \underbrace{J^{-1}_h(h(x))n}_{\tilde n}
+\end{equation}
+where $J_h \doteq\frac{\partial h}{\partial x}$ is the Jacobian matrix of $h$, computed at $y = h(x)$. Therefore, not only is $\tilde n$ not white, but it also introduces depencies with $x$, thus breaking the signal-plus (independent) noise model.
+
+In model reduction, one is often interested in reducing a mixed filtering (inferring $x$) and identification (inferring $p$):
+\begin{equation}
+\bc
+\dot x = f(x,p) +n_x \\
+y = h(x,p) + n_y
+\ec
+\end{equation}
+into a filtering problem, by inserting $p$ into the state
+\begin{equation}
+\bc
+\dot x = f(x,p) +n_x \\
+\dot p = 0 \\
+y = h(x,p) + n_y
+\ec
+\end{equation}
+and then eliminating $p$ from the measurement equation. Assume the measurements are broken into two components, in such a way that one enables pivoting to eliminate $p$ (that is, $h_2$ is invertible). This can be assumed without loss of generality, assuming the model above is observable, by augmenting the state with the output delay line):
+\begin{equation}
+\bc
+\dot x = f(x,p) +n_x \\
+\dot p = 0 \\
+y_1 = h_1(x,p) + n_1\\
+y_2 = h_2(x,p) + n_2
+\ec
+\end{equation}
+Now pivot on $y_2$ to eliminate $p = h_2^{-1}(x, y_2-n_2)$, thus obtaining the following reduced model, where part of the output is now interpreted as an input, with a known component $y_2$ and an unknown component $n_2$
+\begin{equation}
+\bc
+\dot x = f(x, h_2^{-1}(x, y_2-n_2)) +n_x \\
+y_1 = h_1(x, h_2^{-1}(x, y_2-n_2)) + n_1
+\ec
+\end{equation}
+This can now written as a model with input, with a Taylor series expansion about $\tilde p = h_2^{-1}(x, y_2) \doteq h_2^{-1}(x, u)$
+\begin{equation}
+\bc
+\dot x = \tilde f(x, u) +\tilde n_x \\
+y_1 = \tilde h(x, u) + \tilde n_y
+\ec
+\end{equation}
+where $\tilde f(x,u) \doteq f(x, h_2^{-1}(x,u)), \tilde h(x,u) \doteq h_1(x,h_2^{-1}(x, u))$ and the (now state-dependent) noises neglect higher-order terms in the linearization:
+\begin{equation}
+\tilde n_x = \frac{\partial f}{\partial p}(x,h_2^{-1}(x,u)) n_2 + n_x
+\end{equation}
+and 
+\begin{equation}
+\tilde n_y = \frac{\partial h_1}{\partial p}(x,h_2^{-1}(x,u)) n_2 + n_1
+\end{equation}
+If the parameter only enters in the measurement equation, 
+\begin{equation}
+\bc
+\dot x = f(x) +n_x \\
+y = h(x,p) + n_y
+\ec
+\end{equation}
+it is possible to eliminate it without explicit pivoting by considering an invariant statistic $\phi$ such that $\phi\circ h(x,p) = \phi \circ h(x,\tilde p)$ for any $p, \tilde p$ and for any $x$. Clearly a trivial example is $\phi\circ h = 0 \ \forall \ x, p$, but this is not viable, as $\phi$ (as a function of $x, p$) must satisfy the conditions of the implicit function theorem in order to uniquely constrain $p$ as a function of $x$, so the Jacobian of $\phi\circ h$ with respect to $x$ has to be non-singular (transversality conditions). In general, however, we cannot compute $\phi\circ h$, because of the noise $n_y$: 
+\begin{equation}
+\bc
+\dot x = f(x) +n_x \\
+\phi(y) = \phi(h(x,p) + n_y)
+\ec
+\end{equation}
+In general, $\phi$ is non-linear, and therefore we do not have $\phi(y) = \phi\circ h(x,p) + \phi(n_y)$. But even if this was the case, note that $\phi$ does, in general, depend on $x$ (because of the transversality conditions). Therefore, we would again have a state-dependent residual $\tilde n_y \doteq \phi(n_y)$.
+
+A particularly simple case can be had when $h(x,p)$ is linear in $p$, $h(x,p) = H(x)p$, in which case, assuming $H$ has full column rank (which again can always be assumed without loss of generality at the cost of augmenting the state with the output delay line), we have that 
+\begin{equation}
+\phi(y) = H^\perp(x) y = H^\perp(x) n_y
+\end{equation}
+and we have eliminated the dependency on $p$, at the expense of having a state-dependent noise $\tilde n_y = H^{\perp}(x) n_y$.
+
+As an approximation of the above approach, one can consider a linearization of the measurement equation, assuming {\em some} estimate of the parameter $p$ being available, based on the state $x$, $\hat p = \hat p(x)$, 
+\begin{equation}
+y = h(x,p) + n \simeq h(x, \hat p(x)) + \underbrace{\frac{\partial h}{\partial p}(x,\hat p(x))}_{J_h} \delta p + \tilde n(x)
+\end{equation}
+where $\tilde n(x)$ includes the linearization error, and from this, assuming that the Jacobian $J_h$ is full column rank, 
+\begin{equation}
+J_h^\perp(x,\hat p(x)) y  \simeq h(x, \hat p(x)) +  \underbrace{J_h^\perp(x,\hat p(x)) \tilde n(x)}_{\tilde n_y(x)}.
+\end{equation}
+Note that in this case the dependency on $x$ is not only through the Jacobian, but also on the function $\hat p(x)$.
+
+ 
+\end{document}
+

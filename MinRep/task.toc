@@ -1,0 +1,3 @@
+\beamer@endinputifotherversion {3.33pt}
+\beamer@sectionintoc {1}{Formalization}{1}{0}{1}
+\beamer@subsectionintoc {1}{1}{Definitions}{1}{0}{1}

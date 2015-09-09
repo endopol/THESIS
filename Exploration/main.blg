@@ -1,0 +1,73 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: exploration.bib.bib
+Database file #2: text.bib.bib
+Warning--I didn't find a database entry for "ising_curv"
+Too many commas in name 1 of "G.A.\ Hollinger, B.\ Englot, F.\ Hover, U.\ Mitra and G.S.\ Sukhatme" for entry hollinger12
+while executing---line 1049 of file plain.bst
+Warning--empty journal in algoet94
+Warning--empty journal in cassandraKL94
+Warning--empty journal in arbelF01
+Warning--empty booktitle in burnsB03
+Warning--empty booktitle in connolly85
+Warning--empty journal in denzlerB02
+Too many commas in name 1 of "G.A.\ Hollinger, B.\ Englot, F.\ Hover, U.\ Mitra and G.S.\ Sukhatme" for entry hollinger12
+while executing---line 1090 of file plain.bst
+Warning--empty journal in hollinger12
+Warning--empty journal in geyer91
+Warning--empty journal in hauskrecht00
+Warning--empty booktitle in valenteTS12
+Warning--empty journal in kearnsMN99
+Warning--empty journal in krauseG07
+Warning--empty booktitle in dearden99
+Warning--empty journal in royCB04
+Warning--empty journal in grabowskiKC03
+Warning--empty journal in SimD04
+Warning--empty journal in whaiteF97
+Warning--empty booktitle in yamauchi97
+Warning--empty booktitle in yuG00
+Warning--empty booktitle in yuWY96
+You've used 21 entries,
+            2118 wiz_defined-function locations,
+            618 strings with 7835 characters,
+and the built_in function-call counts, 6972 in all, are:
+= -- 718
+> -- 236
+< -- 10
++ -- 97
+- -- 72
+* -- 341
+:= -- 1094
+add.period$ -- 80
+call.type$ -- 21
+change.case$ -- 99
+chr.to.int$ -- 0
+cite$ -- 41
+duplicate$ -- 326
+empty$ -- 561
+format.name$ -- 72
+if$ -- 1522
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 21
+newline$ -- 125
+num.names$ -- 42
+pop$ -- 138
+preamble$ -- 1
+purify$ -- 78
+quote$ -- 0
+skip$ -- 284
+stack$ -- 0
+substring$ -- 429
+swap$ -- 98
+text.length$ -- 10
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 84
+warning$ -- 20
+while$ -- 72
+width$ -- 23
+write$ -- 236
+(There were 2 error messages)

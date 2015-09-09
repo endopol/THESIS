@@ -1,0 +1,149 @@
+\appendtographicspath{{IDE/}{Model/}{Implementation/}{Horizon/}{Suff_Explor/}{Eval/}{Speedup/}}
+%\subimport{Exploration/}{IDE/IDE}
+
+\section{Introduction}
+We describe an information-gathering approach for exploring an unknown scene using a range sensor. 
+Our explorer maintains a map of known and likely obstacles, under an Ising-like prior distribution, and
+follows a greedy best-next-view policy, whereby uncertainty at the next timestep is minimized by maximizing the uncertainty of the next range measurement.
+Uncertainty is efficiently approximated by a novel Poisson disk sampling technique.
+Our algorithm improves the performance of recent visibility-based planning approaches that come with guaranteed performance bounds on the expected path length to complete exploration, and extends them to 
+allow exploration of an unbounded region.
+\section{Prior Work}
+Information-driven visual exploration has a long history, both for the case of eye movement and for the more general case of full mobility. The former is relevant to visual attention and oculomotor control, 
+where saccadic motions are hypothesized to be related to the uncertainty on the irradiance in different locations of the visual field. Information gain (uncertainty reduction) occurs due to the uneven distribution
+of sensing elements in the retina (foveal vision). Since we are interested in uniformly-sampled omnidirectional sensors, customary in robotics applications, no information gain can occur as a result of gaze control. 
+Therefore, we focus on the case of parallax motion (translation of the optical center), where uncertainty is due to {\em occlusions} as well as {\em scaling} phenomena that can be reduced by control of the vantage point.
+The use of information-theoretic criteria for visual exploration dates back to the literature on Active Vision (\cite{whaiteF97}, \cite{arbelF01}, \cite{yuG00}, \cite{burnsB03}). For range sensors, 
+where most of the uncertainty is due to occlusions, entropy can be related to visibility, and therefore several have adopted geometric criteria (\cite{connolly85}, \cite{yuWY96}, \cite{yamauchi97}, \cite{grabowskiKC03}, 
+\cite{valenteTS12}). Much of this work is concerned with a greedy approach to information maximization by seeking the ``best next view'' for a particular task, which could be recognition or manipulation (\cite{grabowskiKC03}, 
+\cite{denzlerB02}, \cite{royCB04}).
+The problem is also addressed in the context of optimal control (\cite{cassandraKL94}, \cite{SimD04}), sequential decision \cite{algoet94}, ``Value of Information'' \cite{dearden99}, 
+partially-observable path planning (\cite{hauskrecht00}, \cite{kearnsMN99}), among others. In some cases, the problem exhibits submodular characteristics that make it amenable to be solved with
+efficient algorithms with provable guarantees \cite{krauseG07}. For instance \cite{hollinger12} perform underwater inspection, assuming a known map, exploiting submodular optimization. Unfortunately, 
+our setting is not submodular, and therefore proper formalization in terms of optimal control or sequential decision processes would yield an intractable inference problem. As customary, therefore, we seek for 
+surrogate criteria that yield algorithms with provable guarantees.
+% 
+\subimport{Exploration/}{Model/model}
+%\subimport{Exploration/}{Implementation/implementation}
+%\subimport{Exploration/}{Horizon/horizon}
+%\subimport{Exploration/}{Suff_Explor/sufficient}
+\subimport{Exploration/}{Speedup/speedup}
+%\subimport{Exploration/}{Eval/evaluation}
+%\subimport{Exploration/}{Statistics/statistics}
+
+\biographystyle{plain}
+\begin{thebibliography}{99}
+
+\bibitem{whaiteF97}
+P. Whaite and F.P. Ferrie. ``Autonomous exploration: driven by uncertainty," \emph{IEEE Transactions on Pattern Analysis and Machine Intelligence}, vol.19, no.3, pp.193-205, Mar 1997.
+
+\bibitem{arbelF01}
+T. Arbel and F. P. Ferrie, ``Entropy-based gaze planning," Image and Vision Computing, vol. 19, no. 11, pp. 779–786, 2001.
+
+\bibitem{yuG00}
+Y. Yu and K. Gupta. ``An information theoretic approach to viewpoint planning for motion planning of eye-in-hand systems," in \emph{Proceedings of the International Symposium on Industrial Robotics}, 2000.
+
+\bibitem{burnsB03}
+B. Burns and O. Brock. ``Information-theoretic construction of probabilistic roadmaps," in \emph{Proceedings of the International Conference on Intelligent Robot and Systems}, pp. 650-655, Las Vegas, 2003.
+
+\bibitem{connolly85}
+C. I. Connolly. ``The determination of next best views," 
+\emph{Proceedings of the IEEE International Conference on Robotics and Automation} , pp.432-435, 1985.
+
+\bibitem{yuWY96}
+Z. Yu, K. Wang and R.-G. Yang. ``Next best view of range sensor," 
+\emph{Proceedings of the IEEE International Conference on Industrial Electronics, Control, and Instrumentation} , vol.1, pp.185-188 vol.1, 5-10 Aug 1996.
+
+\bibitem{yamauchi97}
+ B. Yamauchi. ``A frontier-based approach for autonomous exploration," \emph{Proceedings of the IEEE International Symposium on Computational Intelligence in Robotics and Automation},  pp.146-151, 10-11 Jul 1997.
+
+\bibitem{grabowskiKC03}
+Robert Grabowski, Pradeep Khosla and Howie Choset. ``Autonomous Exploration via Regions of Interest", 2003.
+
+\bibitem{valenteTS12}
+ L. Valente, Y.-H. R. Tsai and S. Soatto. ``Information Gathering Control via Exploratory Path Planning,"
+\emph{Proceedings of the Conference on Information Sciences and Systems}, Mar 2012.
+
+\bibitem{denzlerB02}
+J. Denzler and C. Brown, ``Information theoretic sensor data selection
+for active object recognition and state estimation," \emph{IEEE Trans. Pattern
+Analysis and Machine Intelligence}, vol. 24, no. 2, pp. 145–157, 2002.
+
+\bibitem{royCB04}
+S. D. Roy, S. Chaudhury and S. Banarjee, ``Active recognition through
+next view planning: A survey," \emph{J. Pattern Recognition}, vol. 37, no. 3,
+pp. 429–446, 2004.
+
+\bibitem{cassandraKL94}
+A. R. Cassandra, L. P. Kaelbling and M. L. Littman.
+``Acting Optimally in Partially Observable Stochastic Domains," 1994.
+
+\bibitem{SimD04}
+R. Sim and G. Dudek. ``Online control policy optimization for minimizing map uncertainty during exploration,"
+in \emph{Proc. of the IEEE Int. Conf. on Robotics \& Automation (ICRA)}, pp. 1758-1763, 2004.
+
+\bibitem{algoet94}
+P. Algoet.
+``The Strong Law of Large Numbers for Sequential Decisions Under Uncertainty," 
+\emph{IEEE Transactions on Information Theory} 40, pp. 609-633, 1994.
+
+\bibitem{dearden99}
+R. Dearden, N. Friedman and D. Andre.
+``Model based Bayesian Exploration",
+\emph{In Proceedings of the Fifteenth Conference on Uncertainty in Artificial Intelligence}, pp. 150-159, 1999.
+
+\bibitem{hauskrecht00}
+M. Hauskrecht. ``Value-function approximations for partially observable Markov decision processes",
+\emph{Journal of Artificial Intelligence Research}, vol. 13, pp. 33-94, 2000.
+
+\bibitem{kearnsMN99}
+M. Kearns, Y. Mansour and A. Y. Ng. 
+``Approximate Planning in Large POMDPs via Reusable Trajectories," 1999.
+
+\bibitem{krauseG07}
+A. Krause and C. Guestrin. ``Near-optimal Observation Selection using Submodular Functions," \emph{American Association for Artificial Intelligence (AAAI)}, 2007.
+
+\bibitem{hollinger12}
+G.A. Hollinger, B. Englot, F. Hover, U. Mitra and G.S. Sukhatme, ``Uncertainty-Driven View Planning for Underwater Surface Inspection," \emph{Accepted, International Conference on Robotics and Automation}, May 2012.
+
+\bibitem{gamitoM09}
+M. N. Gamito and S. C. Maddock.
+``Accurate multidimensional Poisson-disk sampling,"
+\emph{ACM Trans. Graph.},
+vol. 29, 2009.
+
+\bibitem{schurmann04}
+T. Schurmann.
+``Bias analysis in entropy estimation,"
+\emph{Journal of Physics A Mathematical and General},
+Vol. 37, No. L295-L301, 2004.
+
+\bibitem{geyer91}
+C. J. Geyer.
+``Markov chain Monte Carlo maximum likelihood",
+in \emph{Proc. 23rd Symp. Interface. Computing Science and Statistics}, pp. 156-163, 1991.
+
+\bibitem{evendarMM06}
+E. Even-Dar, S. Mansour and Y. Mansour, ``Action Elimination and Stopping Conditions for the Multi-Armed Bandit and Reinforcement Learning Problems," \emph{Journal of Machine Learning Research}, 7, pp. 1079--1105, 2006.
+
+\bibitem{chengT09}
+L. T. Cheng and Y. H. Tsai. ``Redistancing by Flow of Time Dependent Eikonal Equation," 2007.
+
+\bibitem{landaT08}
+Y. Landa and R. Tsai.
+``Visibility of point clouds and exploratory path planning in unknown environments", 
+CAM Report 08-28, 2008.
+
+\bibitem{razlighiK09}
+Q. R. Razlighi, and N. Kehtarnavaz. ``A comparison study of image spatial entropy,"
+\emph{Visual Communications and Image Processing}, 2009.
+
+\bibitem{coverT91}
+T. M. Cover and J. A. Thomas.
+\emph{Elements of Information Theory}. Wiley \& Sons, 1991.
+
+\bibitem{lavalle06}
+S. M. LaValle.
+\emph{Planning Algorithms}. Cambridge University Press, 2006.
+
+\end{thebibliography}

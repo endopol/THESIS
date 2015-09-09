@@ -1,0 +1,76 @@
+\contentsline {chapter}{\numberline {1}Representations of the Environment for Robotics Applications}{1}
+\contentsline {section}{\numberline {1.1}Summary of core results}{1}
+\contentsline {section}{\numberline {1.2}Overview of the thesis}{2}
+\contentsline {chapter}{\numberline {2}Observability of Visual-Inertial Navigation}{4}
+\contentsline {section}{\numberline {2.1}Introduction}{4}
+\contentsline {subsection}{\numberline {2.1.1}Notation}{5}
+\contentsline {subsection}{\numberline {2.1.2}Mechanization Equations}{6}
+\contentsline {subsection}{\numberline {2.1.3}Standard and reduced models}{9}
+\contentsline {subsection}{\numberline {2.1.4}Bearing augmentation (vision)}{10}
+\contentsline {subsection}{\numberline {2.1.5}Range augmentation (radar)}{11}
+\contentsline {subsection}{\numberline {2.1.6}Alignment (calibration)}{12}
+\contentsline {subsection}{\numberline {2.1.7}Groups (occlusions)}{12}
+\contentsline {subsection}{\numberline {2.1.8}Compact notation}{13}
+\contentsline {subsection}{\numberline {2.1.9}Definitions}{14}
+\contentsline {section}{\numberline {2.2}Analysis of Bearing-Augmented Navigation}{17}
+\contentsline {subsection}{\numberline {2.2.1}Preliminary claims}{17}
+\contentsline {subsection}{\numberline {2.2.2}Indistinguishable trajectories in bearing augmentation}{23}
+\contentsline {subsection}{\numberline {2.2.3}Gauge transformations}{28}
+\contentsline {chapter}{\numberline {3}Scene Segmentation by Aggregation of Global Ordering Constraints}{33}
+\contentsline {section}{\numberline {3.1}Introduction}{33}
+\contentsline {subsection}{\numberline {3.1.1}Contributions and Related Work}{34}
+\contentsline {section}{\numberline {3.2}Methodology}{37}
+\contentsline {subsection}{\numberline {3.2.1}Scene Model}{37}
+\contentsline {subsection}{\numberline {3.2.2}Curvature Augmented Geometry and Geometric Affinity}{38}
+\contentsline {subsubsection}{\numberline {3.2.2.1}Dense Monocular Reconstruction}{38}
+\contentsline {subsubsection}{\numberline {3.2.2.2}Computing Geometric Affinity}{39}
+\contentsline {subsection}{\numberline {3.2.3}Constructing an Occlusion-Informed Geometry}{41}
+\contentsline {subsubsection}{\numberline {3.2.3.1}Single Image Occlusion-Based Segmentation}{42}
+\contentsline {subsubsection}{\numberline {3.2.3.2}Occlusion-Constrained Geometric Affinity}{43}
+\contentsline {subsection}{\numberline {3.2.4}Scene Segmentation}{45}
+\contentsline {section}{\numberline {3.3}Evaluation}{47}
+\contentsline {subsection}{\numberline {3.3.1}Comparison Methodology}{47}
+\contentsline {subsection}{\numberline {3.3.2}Geometric and Occlusion-Constrained Segmentation Results}{49}
+\contentsline {section}{\numberline {3.4}Conclusions}{50}
+\contentsline {chapter}{\numberline {4}Information-Driven Autonomous Exploration}{58}
+\contentsline {section}{\numberline {4.1}Introduction}{58}
+\contentsline {section}{\numberline {4.2}Prior Work}{58}
+\contentsline {section}{\numberline {4.3}Information-Driven Exploration}{59}
+\contentsline {section}{\numberline {4.4}Next-View Entropy}{62}
+\contentsline {subsection}{\numberline {4.4.1}Measurement Uncertainty}{62}
+\contentsline {subsubsection}{\numberline {4.4.1.1}Extinction Probability}{63}
+\contentsline {subsubsection}{\numberline {4.4.1.2}View Value}{64}
+\contentsline {section}{\numberline {4.5}Obstacle Models }{64}
+\contentsline {subsection}{\numberline {4.5.1}Uniform Obstacle Density}{64}
+\contentsline {subsubsection}{\numberline {4.5.1.1}Instant Extinction}{64}
+\contentsline {subsubsection}{\numberline {4.5.1.2}Independent Cells}{65}
+\contentsline {subsection}{\numberline {4.5.2}Ising-Type Obstacles}{67}
+\contentsline {subsubsection}{\numberline {4.5.2.1}The Ising Model}{67}
+\contentsline {subsubsection}{\numberline {4.5.2.2}Sampling from the Ising Model}{67}
+\contentsline {subsubsection}{\numberline {4.5.2.3}Poisson-Disk Approximation}{68}
+\contentsline {subsubsection}{\numberline {4.5.2.4}Computing the Weights $w_g$ }{69}
+\contentsline {section}{\numberline {4.6}Exploration}{70}
+\contentsline {subsection}{\numberline {4.6.1}Performance Bounds}{70}
+\contentsline {subsection}{\numberline {4.6.2}Exploration Results}{73}
+\contentsline {section}{\numberline {4.7}Numerical Optimizations}{73}
+\contentsline {subsection}{\numberline {4.7.1}Bit-Parallel Monte Carlo}{73}
+\contentsline {subsubsection}{\numberline {4.7.1.1}Overview}{73}
+\contentsline {subsubsection}{\numberline {4.7.1.2}Computing the counts $C_k$}{74}
+\contentsline {subsubsection}{\numberline {4.7.1.3}Generating I.I.D. Bits}{74}
+\contentsline {chapter}{\numberline {5}Desiging Agents with Task-Specific Minimal Representation}{86}
+\contentsline {section}{\numberline {5.1}Introduction}{86}
+\contentsline {subsection}{\numberline {5.1.1}Previous Work}{86}
+\contentsline {section}{\numberline {5.2}Formalization}{86}
+\contentsline {subsection}{\numberline {5.2.1}FSM Reduction}{90}
+\contentsline {section}{\numberline {5.3}Representation Reduction Strategies}{90}
+\contentsline {subsection}{\numberline {5.3.1}Reducibility Relations}{91}
+\contentsline {subsection}{\numberline {5.3.2}Bit-at-a-Time}{92}
+\contentsline {subsection}{\numberline {5.3.3}Greedy Covering}{94}
+\contentsline {subsection}{\numberline {5.3.4}Assembling Cliques}{94}
+\contentsline {subsection}{\numberline {5.3.5}Alberto and Sim\~ao}{97}
+\contentsline {subsubsection}{\numberline {5.3.5.1}Maximal Anticlique}{97}
+\contentsline {subsubsection}{\numberline {5.3.5.2}Limitations}{97}
+\contentsline {subsection}{\numberline {5.3.6}Exhaustive Search}{97}
+\contentsline {subsection}{\numberline {5.3.7}Comparisons}{97}
+\contentsline {subsubsection}{\numberline {5.3.7.1}Poisson Random Tree}{97}
+\contentsline {subsubsection}{\numberline {5.3.7.2}Pathological Tree}{97}

@@ -1,0 +1,18 @@
+\section{Implementation}
+\subsection{Computing Marginal Probabilities $p_t$}
+The marginal posterior probability $p_t$ is computed directly from the 
+
+\begin{figure}
+\begin{tabular}{ccc}
+\includegraphics[width=1.5in]{view_01}&
+\includegraphics[width=1.5in]{view_02}\\
+\includegraphics[width=1.5in]{marginal_01}&
+\includegraphics[width=1.5in]{marginal}\\
+\includegraphics[width=1.5in]{energy_01}&
+\end{tabular}
+\end{figure}
+
+
+\subsection{Computing Weights $w_g$}
+\subsubsection{Poisson-Disk Sampling}
+\subsection{Automatic Parameter selection}

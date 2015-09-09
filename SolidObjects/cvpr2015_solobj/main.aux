@@ -1,0 +1,155 @@
+\relax 
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Our monocular dense reconstruction and segmentation pipeline}}{1}}
+\newlabel{fig:pipeline}{{1}{1}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
+\citation{VittorioFerrari:2006uf,AlexanderVezhnevets:2012tw,Martnez:2004dz,WeiFeng:cw,GuofengZhang:jma,ulen-strandmark-etal-itmi-12,Russell06,ics_nips11,Lempitsky11,Kumar10,nieuwenhuis-et-al-ijcv12}
+\citation{vezhneva:2012tb,GuofengZhang:jmb,Cremers-et-al-11,Schoenemann-Cremers-pami10,lezama11,carreira_eccv12}
+\citation{wangA94,Reid:2010ca,GuofengZhang:jm,Cremers-12,Kumar08,Kumar05a}
+\citation{Cremers-et-al-11}
+\citation{davison,cremers,pock}
+\citation{RobFergus:2012vh}
+\citation{Newcombe2011a}
+\citation{Kalogerakis:2010:labelMeshes}
+\citation{fei-fei,baoS12}
+\citation{khler2013efficient}
+\citation{ren2012rgbd}
+\citation{bleyerRR12}
+\citation{zhangJB11,stucklerBB12,atanasovSLKPD13}
+\citation{zheng2013beyond}
+\citation{haene2013,slampp2013,sengupta2013,kundu2014}
+\citation{Chen:2009:ABF,AZCXT11,lafarge2010}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}Contributions and Related Work}{2}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Methodology}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Scene Model}{3}}
+\newlabel{sec:sceneModel}{{2.1}{3}}
+\citation{Klein2007}
+\citation{Zach2007,Zach2008,Graber2011}
+\citation{Collins1996}
+\citation{Newcombe2011a}
+\citation{Chen:2009:ABF,AZCXT11,lafarge2010}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Curvature Augmented Geometry and Geometric Affinity}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.1}Dense Monocular Reconstruction}{4}}
+\newlabel{sec:densemonoc}{{2.2.1}{4}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.2.2}Computing Geometric Affinity}{4}}
+\newlabel{sec:curvGeod}{{2.2.2}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Dense reconstructions of indoor and outdoor scenes from monocular video: depth (left column) and normal (right column) maps. From top: \emph  {City of Sights}, \emph  {Tree}, \emph  {Industrial1}, \emph  {Industrial2} (described in section 3.2\hbox {}).}}{5}}
+\newlabel{fig:normal_depth}{{2}{5}}
+\citation{haene2013,kundu2014}
+\citation{ayvaciS12PAMI}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Illustration of curvature penalty. Paths are penalized which pass over regions with high concavity, especially in the direction of greatest concavity. At left, we show the scalar field $K(q)=\qopname  \relax m{max}\{0,k_1(q)^2/(k_1(q)+|k_2(q)|)\}$, on a sample curved surface, where $k_1(q)$ is the greatest positive principal curvature component, with associated vector field $v_1(q)$. At right, we show the weighted field $K(q)v_1(q)$ at each point. }}{6}}
+\newlabel{fig:concavity}{{3}{6}}
+\newlabel{eq:dg}{{2}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Constructing an Occlusion-Informed Geometry}{6}}
+\newlabel{sec:geomOfObjs}{{2.3}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}Single Image Occlusion-Based Segmentation}{7}}
+\newlabel{sec:signatures}{{2.3.1}{7}}
+\newlabel{eq:dl}{{3}{7}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2}Occlusion-Constrained Geometric Affinity}{7}}
+\newlabel{sec:adaptiveGeo}{{2.3.2}{7}}
+\citation{Kulis12_ICML}
+\citation{Teh10_EML}
+\citation{Zha01_NIPS,Yu03_ICCV}
+\citation{Dhillon07_TPAMI}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip At left, example back-projected image segmentation labels $c_t$ from three frames, over a sequence of nodes traversed from `A' to `B'. At right, the traversal penalty $d_L$ accumulated over the traversal due to passing through nodes with conflicting image segmentation histories. The fact that some nodes are not visible in some frames means that penalties are not incurred along the same boundaries, depending on the direction of travel.}}{8}}
+\newlabel{fig:layerPenalty}{{4}{8}}
+\newlabel{eq:geman_mcclure}{{4}{8}}
+\newlabel{eq:shaping}{{5}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Scene Segmentation}{8}}
+\newlabel{sec:segmentation}{{2.4}{8}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Example behavior of the combined traversal cost in Eq. 4\hbox {} using artificial data. Note that as $d_L$ increases, the rate of increase of $d$ as a function of $d_G$ accelerates up until saturation of the robust penalty.}}{9}}
+\newlabel{fig:shapingFn}{{5}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Sample geometric traversal costs $d_G$ from a single point to all others across the scene overlaid on images. Colored lines indicate the path of the geodesic on the scene originating at the magenta square in each image, with distance increasing with changing colors, starting from zero (black).}}{9}}
+\newlabel{fig:geoTravs}{{6}{9}}
+\citation{Campbell13_NIPS}
+\citation{Lin10_NIPS}
+\citation{xiao2013sun3d,Silberman:ECCV12,sturm12iros,anand2012contextually}
+\citation{Graber2011}
+\citation{OB14b}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Evaluation}{10}}
+\newlabel{sec:evaluation}{{3}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Comparison Methodology}{10}}
+\newlabel{sec:comparison}{{3.1}{10}}
+\citation{Graber2011}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Geometric and Occlusion-Constrained Segmentation Results}{11}}
+\newlabel{sec:results}{{3.2}{11}}
+\bibdata{bib/solidObjDet,bib/solidObjDet2,bib/total2,bib/taylorARS12,bib/ayvaciS13,bib/ayvaciS11mdl,bib/trevor}
+\bibcite{anand2012contextually}{{1}{}{{}}{{}}}
+\bibcite{atanasovSLKPD13}{{2}{}{{}}{{}}}
+\bibcite{AZCXT11}{{3}{}{{}}{{}}}
+\bibcite{ayvaciS12PAMI}{{4}{}{{}}{{}}}
+\bibcite{bleyerRR12}{{5}{}{{}}{{}}}
+\bibcite{Campbell13_NIPS}{{6}{}{{}}{{}}}
+\bibcite{carreira_eccv12}{{7}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Conclusions}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Sample frames (left) and re-projected groundtruth segmentations (right) for CoS (top), Park, Industrial1, Industrial2 (bottom). Different colors indicate different segments.}}{13}}
+\newlabel{fig:gtSegs}{{7}{13}}
+\bibcite{Chen:2009:ABF}{{8}{}{{}}{{}}}
+\bibcite{Collins1996}{{9}{}{{}}{{}}}
+\bibcite{Dhillon07_TPAMI}{{10}{}{{}}{{}}}
+\bibcite{WeiFeng:cw}{{11}{}{{}}{{}}}
+\bibcite{VittorioFerrari:2006uf}{{12}{}{{}}{{}}}
+\bibcite{Graber2011}{{13}{}{{}}{{}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Sample single-image segmentation on frames from CoS (top left), Park (top right), Industrial1 (bottom left), Industrial2 (bottom right) inferred as described in Sec. 2.3.1\hbox {}. Different colors indicate different segments from occlusion-guided segmentation.}}{14}}
+\newlabel{fig:detObjs}{{8}{14}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Sample occlusion-constrained geodesics on CoS (top left), Park (top right), Industrial1 (bottom left), Industrial2 (bottom right) built as described in Sec. 2.3.2\hbox {}. Colored lines indicate the path of the geodesic on the scene originating at the magenta square in each image, with distance coded between zero (black) and one (white) through intervening colors.}}{15}}
+\newlabel{fig:adaptTravs}{{9}{15}}
+\bibcite{haene2013}{{14}{}{{}}{{}}}
+\bibcite{baoS12}{{15}{}{{}}{{}}}
+\bibcite{Kalogerakis:2010:labelMeshes}{{16}{}{{}}{{}}}
+\bibcite{khler2013efficient}{{17}{}{{}}{{}}}
+\bibcite{Klein2007}{{18}{}{{}}{{}}}
+\bibcite{Cremers-et-al-11}{{19}{}{{}}{{}}}
+\bibcite{Kulis12_ICML}{{20}{}{{}}{{}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Sample re-projections of our baseline geometric segmentation on CoS (top left), Park (top right), Industrial1 (bottom left), Industrial2 (bottom right). Different colors indicate different segments.}}{16}}
+\newlabel{fig:geoSegs}{{10}{16}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Sample re-projected segmentation results using our occlusion-constrained geodesics for CoS (top), Park, Industrial1, Industrial2 (bottom). Different colors indicate different segments.}}{17}}
+\newlabel{fig:ourSegs}{{11}{17}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Quantitative evaluation of our segmentations vs. groundtruth. The curves at left show precision and recall scores induced by thresholding the affinity matrix at levels running from 0 to 1. Highlighted points indicate the best threshold for clustering, vis-\`a-vis the ground truth. At right, precision and recall are computed from final segmentations, as well as from re-projected image segmentations.}}{18}}
+\newlabel{fig:numericalEval}{{12}{18}}
+\bibcite{Kumar10}{{21}{}{{}}{{}}}
+\bibcite{Kumar08}{{22}{}{{}}{{}}}
+\bibcite{Kumar05a}{{23}{}{{}}{{}}}
+\bibcite{kundu2014}{{24}{}{{}}{{}}}
+\bibcite{lafarge2010}{{25}{}{{}}{{}}}
+\bibcite{vezhneva:2012tb}{{26}{}{{}}{{}}}
+\bibcite{Lempitsky11}{{27}{}{{}}{{}}}
+\bibcite{lezama11}{{28}{}{{}}{{}}}
+\bibcite{fei-fei}{{29}{}{{}}{{}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces \relax \fontsize  {9}{11}\selectfont  \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \topsep 3\p@ plus\p@ minus\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip Approximate timings on the CoS sequence with a final mesh size of roughly 57000 points. GPU is an Nvidia GTX 780. Note that traversing the mesh to compute geodesics for the sampled subgraph is parallelized. Typically a subgraph of several hundred nodes is used.}}{19}}
+\newlabel{fig:timing}{{13}{19}}
+\bibcite{Lin10_NIPS}{{30}{}{{}}{{}}}
+\bibcite{Martnez:2004dz}{{31}{}{{}}{{}}}
+\bibcite{Silberman:ECCV12}{{32}{}{{}}{{}}}
+\bibcite{davison}{{33}{}{{}}{{}}}
+\bibcite{Newcombe2011a}{{34}{}{{}}{{}}}
+\bibcite{nieuwenhuis-et-al-ijcv12}{{35}{}{{}}{{}}}
+\bibcite{OB14b}{{36}{}{{}}{{}}}
+\bibcite{Reid:2010ca}{{37}{}{{}}{{}}}
+\bibcite{ren2012rgbd}{{38}{}{{}}{{}}}
+\bibcite{Russell06}{{39}{}{{}}{{}}}
+\bibcite{slampp2013}{{40}{}{{}}{{}}}
+\bibcite{Schoenemann-Cremers-pami10}{{41}{}{{}}{{}}}
+\bibcite{Cremers-12}{{42}{}{{}}{{}}}
+\bibcite{sengupta2013}{{43}{}{{}}{{}}}
+\bibcite{RobFergus:2012vh}{{44}{}{{}}{{}}}
+\bibcite{stucklerBB12}{{45}{}{{}}{{}}}
+\bibcite{sturm12iros}{{46}{}{{}}{{}}}
+\bibcite{Teh10_EML}{{47}{}{{}}{{}}}
+\bibcite{ulen-strandmark-etal-itmi-12}{{48}{}{{}}{{}}}
+\bibcite{AlexanderVezhnevets:2012tw}{{49}{}{{}}{{}}}
+\bibcite{wangA94}{{50}{}{{}}{{}}}
+\bibcite{cremers}{{51}{}{{}}{{}}}
+\bibcite{pock}{{52}{}{{}}{{}}}
+\bibcite{xiao2013sun3d}{{53}{}{{}}{{}}}
+\bibcite{ics_nips11}{{54}{}{{}}{{}}}
+\bibcite{Yu03_ICCV}{{55}{}{{}}{{}}}
+\bibcite{Zach2008}{{56}{}{{}}{{}}}
+\bibcite{Zach2007}{{57}{}{{}}{{}}}
+\bibcite{Zha01_NIPS}{{58}{}{{}}{{}}}
+\bibcite{GuofengZhang:jma}{{59}{}{{}}{{}}}
+\bibcite{GuofengZhang:jmb}{{60}{}{{}}{{}}}
+\bibcite{zhangJB11}{{61}{}{{}}{{}}}
+\bibcite{GuofengZhang:jm}{{62}{}{{}}{{}}}
+\bibcite{zheng2013beyond}{{63}{}{{}}{{}}}
+\bibstyle{plain}
+\providecommand\NAT@force@numbers{}\NAT@force@numbers

@@ -1,0 +1,59 @@
+\def\p{\ensuremath{\mathbf{p}}}
+\def\v{\ensuremath{\mathbf{v}}}
+\def\x{\ensuremath{\mathbf{x}}}
+\def\one{\mathbbm{1}}
+\def\eps{\varepsilon}
+
+\def\RR{\mathbb{R}}
+\def\HH{\mathbb{H}}
+\def\PP{\mathbb{P}}
+\def\NN{\mathbb{N}}
+\def\EE{\mathbb{E}}
+\def\II{\mathbb{I}}
+
+\def\A{\mathcal{A}}
+\def\Y{\mathcal{Y}}
+\def\O{\mathcal{O}}
+\def\U{\mathcal{U}}
+\def\P{\mathcal{P}}
+\def\I{\mathcal{I}}
+\def\L{\mathcal{L}}
+\def\D{\mathcal{D}}
+\def\V{\mathcal{V}}
+\def\C{\mathcal{C}}
+\def\R{\mathcal{R}}
+\def\S{\mathcal{S}}
+\def\T{\mathcal{T}}
+
+\appendtographicspath{{IDE/}{Model/}{Implementation/}{Horizon/}{Suff_Explor/}{Eval/}{Speedup/}}
+%\subimport{Exploration/}{IDE/IDE}
+
+\section{Introduction}
+We describe an information-gathering approach for exploring an unknown scene using a range sensor. 
+Our explorer maintains a map of known and likely obstacles, under an Ising-like prior distribution, and
+follows a greedy best-next-view policy, whereby uncertainty at the next timestep is minimized by maximizing the uncertainty of the next range measurement.
+Uncertainty is efficiently approximated by a novel Poisson disk sampling technique.
+Our algorithm improves the performance of recent visibility-based planning approaches that come with guaranteed performance bounds on the expected path length to complete exploration, and extends them to 
+allow exploration of an unbounded region.
+\section{Prior Work}
+Information-driven visual exploration has a long history, both for the case of eye movement and for the more general case of full mobility. The former is relevant to visual attention and oculomotor control, 
+where saccadic motions are hypothesized to be related to the uncertainty on the irradiance in different locations of the visual field. Information gain (uncertainty reduction) occurs due to the uneven distribution
+of sensing elements in the retina (foveal vision). Since we are interested in uniformly-sampled omnidirectional sensors, customary in robotics applications, no information gain can occur as a result of gaze control. 
+Therefore, we focus on the case of parallax motion (translation of the optical center), where uncertainty is due to {\em occlusions} as well as {\em scaling} phenomena that can be reduced by control of the vantage point.
+The use of information-theoretic criteria for visual exploration dates back to the literature on Active Vision (\cite{whaiteF97}, \cite{arbelF01}, \cite{yuG00}, \cite{burnsB03}). For range sensors, 
+where most of the uncertainty is due to occlusions, entropy can be related to visibility, and therefore several have adopted geometric criteria (\cite{connolly85}, \cite{yuWY96}, \cite{yamauchi97}, \cite{grabowskiKC03}, 
+\cite{valenteTS12}). Much of this work is concerned with a greedy approach to information maximization by seeking the ``best next view'' for a particular task, which could be recognition or manipulation (\cite{grabowskiKC03}, 
+\cite{denzlerB02}, \cite{royCB04}).
+The problem is also addressed in the context of optimal control (\cite{cassandraKL94}, \cite{SimD04}), sequential decision \cite{algoet94}, ``Value of Information'' \cite{dearden99}, 
+partially-observable path planning (\cite{hauskrecht00}, \cite{kearnsMN99}), among others. In some cases, the problem exhibits submodular characteristics that make it amenable to be solved with
+efficient algorithms with provable guarantees \cite{krauseG07}. For instance \cite{hollinger12} perform underwater inspection, assuming a known map, exploiting submodular optimization. Unfortunately, 
+our setting is not submodular, and therefore proper formalization in terms of optimal control or sequential decision processes would yield an intractable inference problem. As customary, therefore, we seek for 
+surrogate criteria that yield algorithms with provable guarantees.
+% 
+\subimport{Exploration/}{Model/model}
+%\subimport{Exploration/}{Implementation/implementation}
+%\subimport{Exploration/}{Horizon/horizon}
+%\subimport{Exploration/}{Suff_Explor/sufficient}
+\subimport{Exploration/}{Speedup/speedup}
+%\subimport{Exploration/}{Eval/evaluation}
+%\subimport{Exploration/}{Statistics/statistics}

@@ -1,0 +1,2857 @@
+% NACHMAN: MV-DPM, Robust filtering, textures, representations (with ONR)
+% BEHZAD: Representations
+
+@STRING{pami = "IEEE Trans. Pattern Anal. Mach. Intell."}
+@STRING{ijcv = "Intl. J. of Comp. Vis."}
+@STRING{iccv95 = "Proc. 5$^{th}$ Int. Conf. on Computer Vision"}
+@STRING{eccv94 = "Proc. 3$^{rd}$ Europ. Conf. Comput. Vision, J.-O. Eklundh (Ed.), LNCS-Series Vol. 800-801, Springer-Verlag"}
+@STRING{cdc94 = "33 IEEE Conf. on Decision and Control"}
+@STRING{icip94 = "Proc. 1$^{st}$ IEEE Int. Conf. on Image Processing"}
+@STRING{cvpr = "Proc. IEEE Conf. on Comp. Vision and Pattern Recogn."}
+@STRING{eccv = "Proc. of the Europ. Conf. on Comp. Vision"}
+@STRING{iccv = "Proc. of the Intl. Conf. on Comp. Vision"}
+
+@Comment BOOKS AND BOOK CHAPTERS
+
+@inbook{dorettoRVS14,
+CHAPTER = {Dynamical Systems in Video Analysis}, 
+AUTHOR = {G. Doretto and A. Ravichandran and R. Vidal and S. Soatto}, 
+PUBLISHER = {Academic Press}, 
+TITLE = {AP Library in Signal Processing}, 
+YEAR = {2014},
+NOTES = {dorettoRVS14.pdf}
+}
+
+@inbook{soattoD12ICVSS,
+CHAPTER = {Visual Correspondence, the Lambert-Ambient Shape Space and the Systematic Design of Feature Descriptors}, 
+AUTHOR = {J. Dong and S. Soatto},
+PUBLISHER = {R. Cipolla, S. Battiato, G.-M. Farinella (Eds), Springer Verlag},
+TITLE = {Machine Learning for Computer Vision},
+YEAR = {2014},
+NOTES = {AFOSR, ARO, ONR}
+}
+
+
+@inbook{soatto11ICVSS,
+CHAPTER = {Actionable Information in Vision},
+AUTHOR = {S. Soatto},
+PUBLISHER = {R. Cipolla, S. Battiato, G.-M. Farinella (Eds), Springer Verlag},
+TITLE = {Machine Learning for Computer Vision},
+YEAR = {2011},
+NOTES = {AFOSR, ARO, MSEE}
+}
+
+
+@INBOOK{chiusoPS09,
+AUTHOR = {A. Chiuso and G. Picci and S. Soatto},
+Chapter = {Wide-sense Estimation on the Special Orthogonal Group},
+Title = {Communications in Information and Systems},
+PUBLISHER = {Springer},
+PAGES = {},
+YEAR = {2009}
+}
+
+@INBOOK{vedaldiS08ICVSS,
+	AUTHOR = {A. Vedaldi and H. Ling and S. Soatto},
+	CHAPTER = {Knowing a good feature when you see it: ground truth and methodology to evaluate local features for recognition},
+TITLE = {Computer Vision: Recognition, Registration and Reconstructions},
+	PUBLISHER = {R, Cipolla, S. Battiato, G.-M. Farinella (Eds)},
+PAGES = {},
+	YEAR = {2010},
+ISBN={},
+NOTES = {vedaldiLS08ICVSS}
+}
+
+@INBOOK{soattoB08,
+	AUTHOR = {S. Soatto and A. Bissacco},
+	CHAPTER = {Visual detection and classification of humans, their pose, and their motion},
+TITLE = {Homeland security},
+	PUBLISHER = {G. Franceschetti (Ed.), Artech House},
+PAGES = {},
+	YEAR = {2008},
+ISBN={},
+NOTES = {ECS, ONR, AFOSR; soatto07.pdf}
+}
+
+@INBOOK{soatto07,
+	AUTHOR = {S. Soatto},
+	CHAPTER = {On the distance between non-stationary time series},
+TITLE = {Modeling, Estimation and Control},
+	PUBLISHER = {A. Chiuso, A. Ferrante and S. Pinzoni (Eds.), Springer Verlag},
+	PAGES = {},
+	YEAR = {2007},
+ISBN={},
+NOTES = {ECS, ONR, AFOSR; soatto07.pdf}
+}
+
+@INBOOK{dorettoS07BOOK,
+	AUTHOR = {G. Doretto and S. Soatto},
+	CHAPTER = {From Dynamic Texture to Dynamic Shape and Appearance Models: An Overview},
+TITLE = {The Handbook of Texture Analysis},
+	PUBLISHER = {Majid Mirmehdi (Ed.), World Scientific},
+PAGES = { },
+	YEAR = {2007},
+ISBN={978-1-84816-115-3/978-1-84816-115-3},
+NOTES = {ECS, ONR, AFOSR; dorettoS06chapter.pdf}
+}
+
+@BOOK{favaroS06,
+AUTHOR = {P. Favaro and S. Soatto},
+TITLE  = {3-D Shape Estimation and Image Restoration: Exploiting Defocus and Motion Blur},
+YEAR = {December 2006},
+PUBLISHER = {Springer Verlag},
+ISBN = {1846281768},
+NOTES = {NSF, ONR, ARO, DARPA, Intel}
+}
+
+@BOOK{schmidST05,
+AUTHOR = {C. Schmid and S. Soatto and C. Tomasi (eds)},
+TITLE  = {Proceedings of the International Conference on Computer Vision and Pattern Recognition},
+YEAR = {June 2005},
+PUBLISHER = {IEEE Press},
+ISBN = {},
+NOTES = {NSF, ONR, ARO, DARPA, Intel}
+}
+
+@BOOK{linSSS11,
+AUTHOR = {S. Lin and B. Schiele and S. Soatto and P. Sturm (eds)},
+TITLE  = {Proceedings of the International Conference on Computer Vision},
+YEAR = {November 2011},
+PUBLISHER = {IEEE Press},
+ISBN = {},
+NOTES = {}
+}
+
+@INBOOK{manayCHYS06,
+	AUTHOR = {S. Manay and D. Cremers and B.-W. Hong and A. Yezzi and S. Soatto},
+	CHAPTER = {Integral Invariants and Shape Matching},
+	TITLE = {Statistical analysis of shapes (modeling and simulation in science, engineering and technology)},
+	YEAR = {2006},
+	PAGES = {137--167},
+PUBLISHER = {Birkhauser},
+	MONTH = {May},
+NOTES = {NIH,AFOSR,ONR (both muris); manayCHYS-chapter2005.pdf}	
+}
+
+@BOOK{maSKS,
+AUTHOR = {Y. Ma and S. Soatto and J. Kosecka and S. Sastry},
+TITLE  = {An invitation to 3D vision, from images to geometric models},
+YEAR = {2003},
+PUBLISHER = {Springer Verlag},
+ISBN = {0-387-00893-4},
+NOTES = {NSF, ONR, ARO, DARPA, Intel  http://www.cs.ucla.edu/~soatto/maSKS.pdf}
+}
+
+@INBOOK{dorettoS05BOOK,
+	AUTHOR = {G. Doretto and S. Soatto},
+	CHAPTER = {An Overview of Dynamic Textures},
+TITLE = {The Handbook of Mathematical Models in Computer Vision},
+	PUBLISHER = {N. Paragios, Y. Chen and O. Faugeras (Eds.), Springer Verlag},
+PAGES = {},
+	YEAR = {2005},
+ISBN={0387263713},
+NOTES = {ECS, ONR, AFOSR}
+}
+
+
+@INBOOK{soattoYD03,
+	AUTHOR = {S. Soatto and A. J. Yezzi and A. Duci},
+	CHAPTER = {Region matching and tracking under deformations and occlusions},
+	TITLE = {Geometric Level Set Methods in Imaging, Vision and Graphics, S. J. Osher and N. Paragios (Eds.)},
+	PUBLISHER = {Springer Verlag},
+PAGES = {319--340},
+	YEAR = {2003},
+NOTES = {ECS, IIS, ONR, NIH, Intel}
+}
+
+@INBOOK{yezziSJTW,
+	AUTHOR = {A. J. Yezzi and S. Soatto and H. Jin and A. Tsai and A. Willsky},
+	CHAPTER = {Mumford-Shah from segmentation to stereo},
+	TITLE = {Geometric Level Set Methods in Imaging, Vision and Graphics, S. J. Osher and N. Paragios (Eds.)},
+	PUBLISHER = {Springer Verlag},
+PAGES = {207--228},
+	YEAR = {2003},
+NOTES = {NSF, ARO, Intel}
+}
+
+@INBOOK{yezziSTW02,
+	AUTHOR = {A. Yezzi and S. Soatto and A. Tsai and A. Willsky},
+	CHAPTER = {Curve and Surface Evolution for Image Segmentation and
+Stereo Reconstruction Using the Mumford-Shah Functional},
+	TITLE = {Mathematics and Multimedia},
+	PUBLISHER = {IMA},
+PAGES = {},
+	YEAR = {2002},
+NOTES = {NSF, ARO, INTEL}
+}
+
+@INBOOK{soatto99MTNS,
+	AUTHOR = {S. Soatto},
+	CHAPTER = {The accommodation cue in vision},
+	TITLE = {Progress in systems and control theory: Dynamical systems, control, coding, computer vision},
+	PUBLISHER = {Birkhouser},
+PAGES = {432-448},
+	YEAR = {1999},
+NOTES = {NSF, ARO}
+}
+
+@INBOOK{frezzaPS98,
+	AUTHOR = {R. Frezza and G. Picci and S. Soatto},
+	CHAPTER = {A Lagrangian formulation of nonholonomic path following},
+	PAGES = {119-133},
+	TITLE = {The confluence of vision an control, D. Kriegman et al. (eds)},
+	PUBLISHER = {Springer Verlag},
+	YEAR = {1998}
+}
+@INBOOK{frezzaPPS95,
+	AUTHOR = {R. Frezza and P. Perona and G. Picci and S. Soatto},
+	CHAPTER = {System-theoretic aspects of dynamic vision},
+	PAGES = {349-384},
+	TITLE = {Trends in Control, Alberto Isidori (Ed.)},
+	PUBLISHER = {Springer Verlag},
+	YEAR = {1995}
+}
+@INBOOK{soattoP94SYROCO_book,
+	AUTHOR = {S. Soatto and P. Perona},
+	TITLE ={Structure-independent visual motion control on the essential manifold},
+	BOOKTITLE = {Robot Control 1994 (Syroco '94: a postprint volume from the IFAC Symposium), L. Sciavicco et al. (eds)},
+CHAPTER = {Sensory Systems},
+	YEAR = {1995},
+	PAGES = {869-876},
+	MONTH = {Feb.},
+Publisher = {IFAC Press},
+NOTES = {ISBN 0080422276}
+}
+
+
+@Comment JOURNALS
+
+@ARTICLE{estellersSB15,
+TITLE = {Adaptive Regularization with the Structure Tensor}, 
+AUTHOR = {V. Estellers and S. Soatto and X. Bresson}, 
+JOURNAL = {IEEE Trans. on Image Processing}, 
+YEAR = {2015},
+NOTES = {Gatech, AFOSR, ONR}
+}
+
+@ARTICLE{hongS14,
+TITLE = {Shape Matching using Multiscale Integral Invariants}, 
+AUTHOR = {B.-W. Hong and S. Soatto},
+JOURNAL = {IEEE Trans. on Patt. Anal. and Mach. Intell.}, 
+YEAR = {2014},
+NOTES = {NGA, ARO MURI, ONR}
+}
+@ARTICLE{louKSB12,
+TITLE = {Video Stabilization of Atmospheric Turbulence Distortion}, 
+AUTHOR = {Y. Lou and S.-H. Kang and S. Soatto and A. Bertozzi},
+JOURNAL = {Inverse Problems in Imaging 7(3)},
+pages = {839--861},
+YEAR = {2013},
+NOTES = {ONR}
+}
+@ARTICLE{valenteTS12JMIV,
+TITLE = {Information-seeking control under visibility-based uncertainty},
+AUTHOR = {L. Valente and Y.-H. Tsai and S. Soatto},
+JOURNAL = {J. of Math. Im. and Vis.},
+YEAR = {2013},
+NOTES = {DOI: 10.1007/s10851-013-0423-x, MSEE, AFOSR}
+}
+
+@ARTICLE{micheliLSB13,
+TITLE = {A Linear Systems Approach to Imaging through Turbulence}, 
+AUTHOR = {M. Micheli and Y. Lou and S. Soatto and A. Bertozzi},
+JOURNAL = {J. of Math. Imaging and Vision, 48(1)},
+pages = {185--201},
+YEAR = {2014},
+NOTES = {ONR, DOI 10.1007/s10851-012-0410-7}
+}
+
+@article{ayvaciS11,
+TITLE = {Detachable Object Detection: Segmentation and depth ordering from short-baseline video},
+AUTHOR = {A. Ayvaci and S. Soatto},
+JOURNAL = {IEEE Trans. on Patt. Anal. and Mach. Intell.},
+ volume={34},
+  number={10},
+  pages={1942--1951},
+YEAR = {2012},
+NOTES = {ONR}
+}
+
+@article{leeS10,
+TITLE = {Video-based descriptors for object recognition},
+AUTHOR = {T. Lee and S. Soatto},
+JOURNAL = {Image and Vision Computing},
+VOLUME = {29(10)},
+PAGES = {639--652},
+YEAR = {2011},
+NOTES = {Technical Report UCLA-CSD-100008, Feb. 10, 2010, revised Mar. 18, 2010; provisional patent application 61/362528 July 8, 2010, demo http://www.youtube.com/watch?v=cMv-McHw660, Qualcomm, ARO, ONR, AFOSR; patent issued May 6, 2014, US number 8,717,437.}
+}
+
+@article{ayvaciRS11IJCV,
+TITLE = {Sparse occlusion detection with optical flow},
+AUTHOR = {A. Ayvaci and M. Raptis and S. Soatto},
+JOURNAL = {Intl. J. of Comp. Vision},
+YEAR = {2012},
+pages = {322--338},
+volume = {97(3)},
+NOTES = {ARO,AFOSR,ONR}
+}
+
+@article{jonesS09,
+TITLE = {Visual-Inertial Navigation, Localization and Mapping: A scalable real-time large-scale approach},
+AUTHOR = {E. Jones and S. Soatto},
+JOURNAL = {Intl. J. of Robotics Res.},
+PAGES = {},
+MONTH = {april},
+YEAR = {2011},
+NOTES = {AFOSR, ARO, ONR, doi:10.1177/0278364910388963}
+}
+
+@ARTICLE{koAL10,
+	AUTHOR = {T. Ko et al.},
+	TITLE = {Embedded Imagers: Detecting, Localizing and Recognizing Objects and Events in Natural Habitats},
+	JOURNAL = {Proceedings of the IEEE, 98(11)},
+	YEAR = {2010},
+	PAGES = {1934-1946},
+	MONTH = {November},
+NOTES = {ONR MURI}	
+}
+
+@ARTICLE{sundaramoorthiMYS09,
+	AUTHOR = {G. Sundaramoorthi and A. Mennucci and A. Yezzi and S. Soatto},
+	TITLE = {A New Geometric Metric in the Space of Curves With Applications to Tracking Deforming Objects by Prediction and Filtering},
+	JOURNAL = {SIAM J. on Imaging Science},
+	YEAR = {2011},
+	PAGES = {},
+	MONTH = {},
+NOTES = {AFOSR}	
+}
+
+@ARTICLE{luBS09,
+AUTHOR = {Y. Lou and A. Bertozzi and S. Soatto},
+TITLE = {Direct Sparse Deblurring},
+JOURNAL = {J. Math. Imaging and Vision},
+MONTH = {January},
+YEAR = {2011},
+MONTH = {July},
+NOTES = {CSD TR080020, March 2008; also deposited as a CAM tech report, 2/25/09, ONR}
+}
+
+@ARTICLE{lingSRJ09,
+AUTHOR = {H. Ling and S. Soatto and N. Ramanathan and D. W. Jacobs},
+TITLE = {Face recognition across age progression using discriminative methods},
+JOURNAL = {IEEE Trans. on Information Forensics and Security},
+VOLUME = {},
+PAGES = {},
+YEAR = {2010},
+NOTES = {ONR,NSF ECS}
+}
+
+@ARTICLE{koRAHES09,
+	AUTHOR = {T. Ko and S. Ahmadian and J. Hicks and M. Rahimi and D. Estrin and S. Soatto and S. Coe and M. P. Hamilton},
+	TITLE = {Heartbeat of a Nest: Using imagers as biological sensors},
+	JOURNAL = {ACM Transactions on Sensor Networks},
+	YEAR = {2010},
+	Volume = {6(3)},
+	PAGES = {},
+month = {August},
+NOTES = {CENS}	
+}
+@ARTICLE{bissaccoS09,
+	AUTHOR = {A. Bissacco and S. Soatto},
+	TITLE = {Hybrid dynamical models of human motion for the recognition of human gaits},
+	JOURNAL = ijcv,
+	YEAR = {2009},
+	Volume = {85(1)},
+	PAGES = {101--114},
+month = {October},
+NOTES = {ONR MURI, AFOSR}	
+}
+
+
+@ARTICLE{hongNSC09,
+	AUTHOR = {B.-W. Hong and K. Ni and S. Soatto and T. F. Chan},
+	TITLE = {Unsupervised Multiphase Segmentation: a Recursive Approach},
+	JOURNAL = {Computer Vision and Image Understanding},
+	YEAR = {2009},
+	PAGES = {},
+	MONTH = {},
+NOTES = {}	
+}
+
+@ARTICLE{hongSV07,
+	AUTHOR = {B.-W. Hong and S. Soatto and L. Vese},
+	TITLE = {Enforcing Local Context Into Shape Statistics},
+	JOURNAL = {Advances in Computational Mathematics},
+	YEAR = {2009},
+	PAGES = {},
+	MONTH = {Special issue on Mathematical Imaging},
+NOTES = {UCLA,ONR MURI, HongSoattoVese.pdf}	
+}
+
+@ARTICLE{jinWCPYS06,
+	AUTHOR = {H. Jin and D. Wang and D. Cremers and E. Prados and A. Yezzi and S. Soatto},
+	TITLE = {3-D reconstruction of shaded objects from multiple images under unknown illumination},
+	JOURNAL = ijcv,
+	YEAR = {2008},
+	PAGES = {245--256},
+volume ={76(3)},
+	MONTH = {March},
+NOTES = {afosr, onr,nsf}	
+}
+
+@ARTICLE{jacksonYS06,
+	AUTHOR = {J. Jackson and A. J. Yezzi and S. Soatto},
+	TITLE = {Dynamic shape and appearance modeling via moving and deforming layers},
+	JOURNAL = ijcv,
+	YEAR = {2008},
+	PAGES = {71--84},
+	MONTH = {August},
+volume ={79(1)},
+NOTES = {AFOSR}	
+}
+
+@ARTICLE{favaroBS06,
+	AUTHOR = {P. Favaro and S. Soatto and M. Burger and S. Osher},
+	TITLE = {Shape from Defocus via Diffusion},
+	JOURNAL = pami,
+	YEAR = {2008},
+	PAGES = {518--531},
+volume = {30(3)},
+	MONTH = {March},
+NOTES = {UCLA}	
+}
+
+@ARTICLE{jinYS07,
+	AUTHOR = {H. Jin and A. Yezzi and S. Soatto},
+	TITLE = {Mumford-Shah on the Move: Region-Based Segmentation on Deforming Manifolds With Application to the Reconstruction of Shape and Appearance from Multiple Images},
+	JOURNAL = {Journal of Mathematical Imaging and Vision},
+	YEAR = {2007},
+volume = {29(2-3)},
+	PAGES = {219--234},
+	MONTH = {November},
+NOTES = {afosr, onr}	
+}
+
+
+@ARTICLE{bissaccoCS06,
+	AUTHOR = {A. Bissacco and A. Chiuso and S. Soatto},
+	TITLE = {Classification and recognition of dynamical models: the role of phase, independent components, kernels and optimal transport},
+	JOURNAL = pami,
+	YEAR = {2007},
+VOLUME = {29(11)}
+	PAGES = {1958-1972},
+	MONTH = {November},
+NOTES = {AFOSR,ONR,MURI2,MURI3,pprs/inprgrs/bissacco/KernelDynamics/bissaccoCS07-final.pdf}	
+}
+
+@ARTICLE{unalYZ06,
+	AUTHOR = {G. Unal  and A. J. Yezzi and S. Soatto and G. Slabaugh},
+	TITLE = {A variational approach to problems in calibration of multiple cameras},
+	Journal = pami,
+	YEAR = {2007},
+	PAGES = {1322-1338},
+	MONTH = {August},
+NOTES = {AFOSR; unalYS06.pdf}	
+}
+
+@ARTICLE{masonAL06,
+	AUTHOR = {R. Mason and J. Radford and D. Kumar and R. Walters and B. Fulkerson and E. Jones and D. Caldwell and J. Meltzer and Y. Alon and A. Shashua and H. Hattori and N. Takeda and E. Frazzoli and S. Soatto},
+	TITLE = {The Golem Group/UCLA Autonomous Ground Vehicle in the DARPA Grand Challenge},
+	JOURNAL = {Journal of Field Robotics},
+volume = {23(8)},
+	YEAR = {2006},
+	PAGES = {527--553},
+	MONTH = {August},
+NOTES = {UCLA}	
+}
+
+@ARTICLE{dorettoS06PAMI,
+	AUTHOR = {G. Doretto and S. Soatto},
+	TITLE = {Dynamic Shape and Appearance Models},
+	JOURNAL = pami,
+VOLUME={28(12)},
+	YEAR = {2006},
+	PAGES = {2006--2019},
+	MONTH = {December},
+NOTES = {ONR, AFOSR}	
+}
+
+@ARTICLE{manayCHYS06_pami,
+	AUTHOR = {S. Manay and D. Cremers and B.-W. Hong and A. Yezzi and S. Soatto},
+	TITLE = {Integral Invariants for Shape Matching},
+	JOURNAL = pami,
+	YEAR = {2006},
+VOLUME = {28(10)},
+	PAGES = {1602-1618},
+NOTES = {ONR, AFOSR}	
+}
+
+@article{cremersOS06,
+AUTHOR = {D. Cremers and S. J. Osher and S. Soatto},
+TITLE = {Kernel density estimation and intrinsic alignment for knowledge-driven segmentation: teaching level sets to walk},
+JOURNAL = ijcv,
+VOLUME = {69(3)},
+YEAR = {2006},
+PAGES = {335-351},
+NOTES = {AFOSR, ONR, AFOSR MURI, ONR MURI}
+}
+
+@article{duciYMS06,
+AUTHOR = {A. Duci and A. Yezzi and S. Mitter and S. Soatto},
+TITLE = {Region matching with missing parts},
+JOURNAL = {Image and Vision Computing},
+VOLUME = {24(3)},
+YEAR = {2006},
+PAGES = {271--277},
+NOTES = {ONR, AFOSR, Intel}
+}
+
+@article{duciYSR06,
+AUTHOR = {A. Duci and A. Yezzi and S. Soatto and K. Rocha},
+TITLE = {Harmonic embedding for linear shape analysis with application to Eulerian thickness estimation},
+JOURNAL = {Journal of Mathematical Imaging and Vision},
+volume = {25(3)},
+YEAR = {October 2006},
+PAGES = {341--352}
+}
+@article{vidalMSS05,
+AUTHOR = {R. Vidal and Y. Ma and S. Soatto and S. Sastry},
+TITLE = {Two-view multibody structure from motion},
+JOURNAL = {Intl. J. of Computer Vision},
+PAGES = {7--25},
+VOLUME ={68(1)},
+YEAR ={2006},
+NOTES = {NSF,ONR,vidalMSS06}
+}
+
+@article{favaroS05PAMI,
+AUTHOR = {P. Favaro and S. Soatto},
+TITLE = {A geometric approach to shape from defocus},
+JOURNAL = pami,
+YEAR = {2005},
+VOLUME = {27(3)},
+PAGES = {406--417},
+NOTES = {AFOSR, ONR (both MURIs and regular programs), NSF}
+}
+
+@article{cremersS05,
+AUTHOR = {D. Cremers and S. Soatto},
+TITLE = {Motion competition: a variational approach to piecewise parametric motion segmentation},
+JOURNAL = {Intl. J. of Comp. Vision},
+YEAR = {May, 2005},
+PAGES = {249--265},
+NOTES = {AFOSR, ONR, AFOSR MURI, ONR MURI}
+}
+
+@article{jinSY05IJCV,
+AUTHOR = {H. Jin and S. Soatto and A. Yezzi},
+TITLE = {Multi-view stereo reconstruction of dense shape and complex appearance},
+JOURNAL = ijcv,
+PAGES = {175--189},
+VOLUME = {63(3)},
+YEAR = {2005},
+NOTES = {AFOSR, ONR, AFOSR MURI, ONR MURI}
+}
+
+@article{yezziS03IJCV,
+AUTHOR  = {A. Yezzi and S. Soatto},
+TITLE = {Stereoscopic segmentation},
+JOURNAL = {Intl. J. of Computer Vision},
+VOLUME = {53(1)},
+PAGES = {31--43},
+YEAR = {2003},
+NOTES = {NSF CAREER, ARO, ONR, INTEL}
+}
+@article{yezziS03IJCV2,
+AUTHOR  = {A. Yezzi and S. Soatto},
+TITLE = {Deformotion: deforming motion, shape average and the joint segmentation and registration of images},
+journal= {Intl. J. of Comp. Vis.},
+volume = {53(2)},
+PAGES = {153--167},
+YEAR = {2003},
+NOTES = {NSF RHA, ARO, INTEL}
+}
+
+@article{jinYTCS03,
+AUTHOR  = {H. Jin and R. Tsai and L. Chen and A. Yezzi and S. Soatto},
+TITLE = {Estimation of 3D surface shape and smooth radiance from 2D images: A level set approach},
+journal= {J. of Sci. Comp.},
+volume = {19(1-3)},
+PAGES = {267--292},
+YEAR = {2003},
+NOTES = {NSF RHA/CAREER, ARO, INTEL, ONR MURI, NIH}
+}
+
+@ARTICLE{favaroJS03,
+	AUTHOR = {P. Favaro and H. Jin and S. Soatto},
+	TITLE = {A semi-direct approach to structure from motion},
+	YEAR = {2003},
+VOLUME = {19},
+	JOURNAL = {The Visual Computer},
+	PAGES = {1--18},
+NOTES = {NSF career, ARO, Intel}	
+}
+
+@ARTICLE{favaroMS03,
+AUTHOR = {P. Favaro and A. Mennucci and S. Soatto},
+TITLE = {Observing shape from defocused images},
+JOURNAL = ijcv,
+VOLUME = {52(1)},
+PAGES = {25--43},
+YEAR = {2003},
+NOTES = {NSF, ARO}
+}
+
+@article{dorettoCWS03,
+AUTHOR  = {G. Doretto and A. Chiuso and Y. Wu and S. Soatto},
+TITLE = {Dynamic textures},
+journal = ijcv,
+volume = {51(2)},
+PAGES = {91--109},
+YEAR = {2003},
+NOTES = {NSF}
+}
+
+@ARTICLE{chiusoFJS02,
+AUTHOR  = {A. Chiuso and P. Favaro and H. Jin and S. Soatto},
+TITLE = {Motion and structure causally integrated over time},
+JOURNAL = pami,
+volume = {24 (4)},
+pages = {523--535},
+YEAR = {2002},
+NOTES = {NSF, ARO, INTEL}
+}
+
+@ARTICLE{chiusoBS00,
+AUTHOR = {A. Chiuso and R. Brockett and S. Soatto},
+TITLE = {Optimal structure from motion: local ambiguities and global estimates},
+JOURNAL = {Intl. J. of Computer Vision},
+VOLUME = {39},
+NUMBER = {3},
+PAGES = {195-228},
+MONTH = {September},
+YEAR = {2000},
+NOTES = {ARO}
+}
+
+@ARTICLE{maSKS00,
+AUTHOR  = {Y. Ma and S. Soatto and J. Kosecka and S. Sastry},
+TITLE = {Euclidean reconstruction and reprojection up to subgroups},
+JOURNAL = {Intl. J. of Computer Vision},
+VOLUME = {38},
+NUMBER = {3},
+PAGES = {219-229},
+MONTH = {July},
+YEAR = {2000},
+NOTES = {NSF, ARO}
+}
+
+@ARTICLE{soattoP98PAMI1,
+        AUTHOR = {S. Soatto and P. Perona},
+        TITLE = {Reducing ``Structure from Motion'': a general framework for
+                        dynamic vision. Part 1: modeling.},
+        JOURNAL = pami,
+        YEAR = {1998},
+        VOLUME = {20},
+        NUMBER = {9},
+        PAGES = {993-942},
+        MONTH = {September}
+}
+@ARTICLE{soattoP98PAMI2,
+        AUTHOR = {S. Soatto and P. Perona},
+        TITLE = {Reducing ``Structure from Motion'': a general framework for
+                        dynamic vision. Part 2: Implementation and
+                        experimental assessment.},
+        JOURNAL = pami,
+        YEAR = {1998},
+        VOLUME = {20},
+        NUMBER = {9},
+        PAGES = {943-960},
+        MONTH = {September}
+}
+@ARTICLE{soatto97,
+  title ="3-D structure from visual motion: modeling, representation and observability",
+  author = "S. Soatto",
+  journal = "Automatica",
+  year = "1997", 
+  volume = "33", 
+  issue = "7", 
+  pages = "1287-1312"
+}
+@ARTICLE{soattoP97JRTI,
+  title ="Motion from fixation",
+  author = "S. Soatto and P. Perona",
+  journal = "Int. J. of Real Time Imaging",
+VOLUME = {3},
+NUMBER = {2},
+PAGES ={129-153},
+  year = "1997"
+}
+@ARTICLE{soattoP97IJCV,
+  title ="Recursive 3-D visual motion estimation using 
+subspace constraints",
+  author = "S. Soatto and P. Perona",
+  journal = "Int. J. of Computer Vision",
+  year = "1997",
+  volume = "22", 
+  number = "3", 
+  pages = "235-259"
+}
+@ARTICLE{soattoFP96TAC,
+  AUTHOR = {S. Soatto and R. Frezza and P. Perona},
+  TITLE ={Motion estimation via dynamic vision},
+JOURNAL = {IEEE Transactions on Automatic Control},
+volume = {41},
+number = {3},
+MONTH = {March},
+YEAR = {1996},
+PAGES={393-414}
+}
+
+
+@Comment REFEREED PROCEEDINGS OF INTERNATIONAL CONFERENCES
+
+@ARTICLE{yangSS15,
+TITLE = {Self-occlusions and disocclusions in causal video object segmentation}, 
+AUTHOR = {Y. Yang and G. Sundaramoorthi and S. Soatto},
+JOURNAL = {Intl. Conf. on Comp. Vision (ICCV)}. 
+YEAR = {December 2015}, 
+NOTES = {}
+}
+
+@ARTICLE{soattoC15ICLR,
+TITLE = {Visual Scene Representations: sufficiency, minimality, invariance and deep approximation}, 
+AUTHOR = {S. Soatto and A. Chiuso},
+JOURNAL = {Proc. of the ICLR; ArXiv: 1411.7676},
+YEAR = {June 2015}, 
+NOTES = {AFOSR Nachmann, ONR Behzad, AFRL, ARO MURI}
+}
+
+@ARTICLE{soattoDK15,
+TITLE = {Visual Scene Representations: Scaling and occlusion in convolutional architectures}, 
+AUTHOR = {S. Soatto and J. Dong and N. Karianakis},
+JOURNAL = {Proc. of the ICLR Workshop; ArXiv: 1412.6607; UCLA CSD140023},
+YEAR = {June 2015}, 
+NOTES = {ONR Tsiotras, AFRL MIT}
+}
+
+@ARTICLE{valenteS15,
+TITLE = {Perspective distortion modeling, learning and compensation}, 
+AUTHOR = {J. Valente and S. Soatto},
+JOURNAL = {Proc. of the IEEE Computer Society Workshop on Biometrics}, 
+YEAR = {2015}, 
+NOTES = {ONR MURI}
+}
+
+@INPROCEEDINGS{georgiadisS15,
+AUTHOR = {G. Georgiadis and S. Soatto}, 
+TITLE = {Exploiting temporal redundancy of visual structures for video compression}, 
+BOOKTITLE = {Data Compression Conference (DCC)}, 
+YEAR = {2015},
+MONTH = {},
+NOTES = {}
+}
+
+
+@INPROCEEDINGS{georgiadisCS15,
+TITLE = {Texture representations for image and video texture synthesis}, 
+AUTHOR = {G. Georgiadis and A. Chiuso and S. Soatto},
+BOOKTITLE = cvpr, 
+YEAR = {2015}, 
+NOTES = {ONR MURI, ARO MURI, AFOSR Nachmann}
+}
+
+@INPROCEEDINGS{taylorKS15,
+TITLE = {Causal video object segmentation from persistence of occusion},
+AUTHOR = {B. Taylor and V. Karasev and S. Soatto},
+BOOKTITLE = cvpr,
+YEAR = {2015}, 
+NOTES = {NSF Yang, AFRL, ONR MURI}
+}
+
+
+@INPROCEEDINGS{graberal15,
+TITLE = {Efficient minimal surface regularization of perspective depth maps in variational stereo},
+AUTHOR = {G. Graber and J. Balzer and S. Soatto and T. Pock},
+BOOKTITLE = cvpr, 
+YEAR = {2015}, 
+NOTES = {NGA, MIT}
+}
+
+@INPROCEEDINGS{dongS15,
+TITLE = {Domain size pooling in local descriptors: DSP-SIFT}, 
+AUTHOR = {J. Dong and S. Soatto},
+BOOKTITLE = cvpr, 
+YEAR = {2015}, 
+NOTES = {Technical Report UCLA CSD140022, Nov. 12, 2014; ArXiv: 1412.8556, ONR,  NSF, NGA, ARO MURI, also acknowledge MSEE/AFRL as theory emerged out of that.}
+}
+
+@INPROCEEDINGS{dongHBDS15,
+TITLE = {Multiview feature engineering and learning}, 
+AUTHOR = {J. Dong and J. Hernandez and J. Balzer and D. Davis and S. Soatto},
+BOOKTITLE = cvpr,
+YEAR = {2015}, 
+NOTES = {TR UCLA CSD140021, Nov. 12, 2014; ONR Behzad, NSF Yang, NGA, AFRL, ARO MURI, arxiv: 1311.6048 }
+}
+
+
+@INPROCEEDINGS{estellersSTS15,
+AUTHOR = {V. Estellers and M. Scott and K. Tew and S. Soatto}, 
+TITLE = {Robust Poisson Surface Reconstruction}, 
+BOOKTITLE = {Scale-Space Variational Methods (SSVM)}, 
+YEAR = {2015},
+MONTH = {},
+NOTES = {AFOSR, ONR, GATECH}
+}
+
+
+
+@ARTICLE{tsotsosCS15,
+TITLE = {Robust Filtering for Visual Inertial Sensor fusion},
+AUTHOR = {K. Tsotsos and A. Chiuso and S. Soatto},
+JOURNAL = {Proc. of the Intl. Conf. on Robotics and Automation (ICRA)}, 
+YEAR = {2015}, 
+NOTES = {AFOSR (Nachmann? did not have number yet),NGA, ONR MURI, https://www.youtube.com/watch?v=RS1ugn5jZU8}
+}
+
+
+@ARTICLE{hernandezTS15,
+TITLE = {Observability, Identifiability and Sensitivity of Vision-assisted Inertial Navigation}, 
+AUTHOR = {J. Hernandez and K. Tsotsos and S. Soatto},
+JOURNAL = {Proc. of the Intl. Conf. on Robotics and Automation (ICRA)}, 
+YEAR = {2015}, 
+NOTES = {AFOSR (Nachmann? did not have number yet), ONR MURI, UCLA CSD TR13022, Best Conference Paper (among 6 finalists out of 2275 submissions), 41\% acceptance rate; also selected for presentation in the Shakey Celebration session (1 of 8 papers from ICRA selected).http://icra2015.org/conference/awards#!A99Q1485}
+}
+
+@ARTICLE{censiMFS15,
+TITLE = {A Power-Performance Approach to Comparing Sensor Families}, 
+AUTHOR = {A. Censi and E. Mueller and E. Frazzoli and S. Soatto},
+JOURNAL = {Intl. Conf. on Robotics and Automation (ICRA)},
+YEAR = {2015}, 
+NOTES = {}
+}
+
+
+@ARTICLE{balzeralS14,
+TITLE = {Cavlectometry: Towards holistic reconstruction of large mirror objects}, 
+AUTHOR = {J. Balzer and D. Acevedo-Feliz and S. Soatto and S. Hofer and M. Hadwiger and J. Beyerer},
+JOURNAL = {Proc. of 3DVision},
+YEAR = {2014},
+NOTES = {ONR Tsiotras,ARO MURI}
+}
+
+
+@ARTICLE{balzerS14,
+TITLE = {Second-order shape optimization for geometric inverse problems in vision}, 
+AUTHOR = {J. Balzer and S. Soatto},
+JOURNAL = {Proc. of CVPR},
+YEAR = {Nov. 8, 2013}, 
+NOTES = {ArXiv 1311.2626v1; CSD TR130024, AFOSR, NGA}
+}
+
+@ARTICLE{davisSB13,
+TITLE = {Asymmetric Sparse Kernel Approximations for Nearest Neighbor Search}, 
+AUTHOR = {D. Davis and J. Balzer and S. Soatto},
+JOURNAL = {Proc. of CVPR},
+YEAR = {June 1, 2013}, 
+NOTES = {TSIOTRAS, AFRL, NGA}
+}
+
+@ARTICLE{karasevRS13,
+TITLE = {Active Frame, Location, and Detector Selection for Automated and Manual Video Annotation}, 
+AUTHOR = {V. Karasev and A. Ravichandran and S. Soatto},
+JOURNAL = {Proc. of CVPR},
+YEAR = {November 15, 2012, then April 15, then Nov. 8},
+NOTES = {AFRL, ARO MURI, TSIOTRAS}
+}
+
+
+@INPROCEEDINGS{georgiadisCS13DCC,
+AUTHOR = {G. Georgiadis and A. Chiuso and S. Soatto}, 
+TITLE = {Texture Compression}, 
+BOOKTITLE = {Proc. of the Data Compression Conference},
+YEAR = {2013},
+MONTH = {March},
+NOTES = {}
+}
+
+
+@INPROCEEDINGS{balzerS14WACV,
+AUTHOR = {J. Balzer and M. Peters and S. Soatto},
+TITLE = {Volumetric Reconstruction Applied to Perceptual Studies of Size and Weight}, 
+BOOKTITLE = {Proc. of WACV},
+YEAR = {2014},
+MONTH = {March 2014},
+NOTES = {ONR MURI,AFOSR}
+}
+
+@INPROCEEDINGS{taylorARS13,
+AUTHOR = {B. Taylor and A. Ayvaci and A. Ravichandran and S. Soatto},
+TITLE = {Semantic Video Segmentation From Occlusion Relations Via Convex Optimization},
+BOOKTITLE = {Proc. of EMMCVPR},
+YEAR = {2013},
+MONTH = {August 2013},
+NOTES = {ONR,ARO}
+}
+
+@INPROCEEDINGS{balzerS13,
+AUTHOR = {J. Balzer and S. Soatto}, 
+TITLE = {CLAM: Coupled Localization and Mapping with Efficient Outlier Handling}, 
+BOOKTITLE = cvpr,
+YEAR = {2013},
+MONTH = {June},
+NOTES = {MSEE,AFOSR}
+}
+
+@INPROCEEDINGS{zengWSY13,
+AUTHOR = {Y. Zeng and C. Wang and S. Soatto and S.-T. Yau}, 
+TITLE = {Nonlinearly Constrained MRFs: Exploring the Intrinsic Dimensions of Higher-Order Cliques}, 
+BOOKTITLE = cvpr,
+Year = {2013},
+MONTH = {June},
+NOTES = {MIT, ARO MURI}
+}
+
+@INPROCEEDINGS{karasevCS12,
+AUTHOR = {V. Karasev and A. Chiuso and S. Soatto},
+TITLE = {Controlled Recognition Bounds for Visual Learning and
+                  Exploration},
+BOOKTITLE = {Proc. of NIPS},
+YEAR = {2012},
+MONTH = {Dec.},
+NOTES = {MIT, ARO MURI}
+}
+
+@INPROCEEDINGS{tsotsosPS12,
+AUTHOR = {K. Tsotsos and A. Pretto and S. Soatto}, 
+TITLE = {Visual-Inertial Ego-Motion Estimation for Humanoid Platforms}, 
+BOOKTITLE = {Proc. IEEE Intl. Conf. Humanoid Robots},
+YEAR = {2012},
+MONTH = {Dec.},
+NOTES = {ARO,AFOSR, http://youtu.be/jIMSkgliQrk (FETCH is at http://youtu.be/fBxW8Y5-tOA)}
+}
+
+@INPROCEEDINGS{tsotsosPS12,
+AUTHOR = {K. Tsotsos and A. Pretto and S. Soatto}, 
+TITLE = {Visual-Inertial Ego-Motion Estimation for Humanoid Platforms}, 
+BOOKTITLE = {Proc. IEEE Intl. Conf. Humanoid Robots},
+YEAR = {2012},
+MONTH = {Dec.},
+NOTES = {ARO,AFOSR, http://youtu.be/jIMSkgliQrk (FETCH is at http://youtu.be/fBxW8Y5-tOA)}
+}
+
+
+@INPROCEEDINGS{FETCH,
+AUTHOR = {K. Tsotsos and T. Brightbill and S. Phillips and S. Soatto}, 
+TITLE = {FETCH: Autonomous exploration and search with a UAV}, 
+BOOKTITLE = {http://youtu.be/fBxW8Y5-tOA},
+YEAR = {2014},
+MONTH = {},
+NOTES = {}
+}
+
+@INPROCEEDINGS{georgiadisAS12SPIE,
+AUTHOR = {G. Georgiadis and A. Ravichandran and S. Soatto and A. Chiuso}, 
+TITLE = {Encoding scene structures for video compression}, 
+BOOKTITLE = {Proc. of the SPIE},
+YEAR = {2012},
+NOTES = {ONR, MSEE}
+}
+@INPROCEEDINGS{ayvaciJLCS12,
+AUTHOR = {A. Ayvaci and H. Jin and Z. Lin and S. Cohen and S. Soatto}, 
+TITLE = {Video upscaling via spatio-temporal self-similarity},
+BOOKTITLE = {Proc. of ICPR},
+YEAR = {2012},
+MONTH = {},
+NOTES = {Adobe,ONR}
+}
+
+@article{ravichandranS12,
+TITLE = {Modeling Stationarity at Multiple Time-Scales For Applications in Fire Detection and Traffic Monitoring},
+AUTHOR = {A. Ravichandran and S. Soatto},
+JOURNAL = {Proc. of the Eur. Conf. on Comp. Vision},
+YEAR = {2012},
+NOTES = {NSF,ONR,ARO MURI}
+}
+
+@INPROCEEDINGS{raptisKS12,
+TITLE = {Discovering discriminative action parts from mid-level video representations},
+AUTHOR = {M. Raptis and Y. Kokkinnos and S. Soatto},
+BOOKTITLE = {Proc. of the IEEE Intl. Conf. on Comp. Vis. and Patt. Recog.}, 
+YEAR = {2012},
+PAGES = {},
+NOTES = {NSF causality; (DARPA MSEE), ARO TR100037}
+}
+
+@INPROCEEDINGS{georgiadisAS11,
+AUTHOR = {G. Georgiadis and A. Ayvaci and S. Soatto},
+TITLE = {Actionable Saliency Detection},
+BOOKTITLE = {Proc. of the IEEE Intl. Conf. on Comp. Vis. and Patt. Recog.}, 
+YEAR = {2012},
+MONTH = {},
+PAGES = {},
+NOTES = {DARPA HRL, ARO MURI, NSF wildfire}
+}
+
+@ARTICLE{valenteTS12CISS,
+TITLE = {Information gathering control via Exploratory path panning}, 
+AUTHOR = {L. Valente and R. Tsai and S. Soatto},
+JOURNAL = {Proc. of the Conf. on Information Sciences and Systems (CISS)},
+YEAR = {March 2012},
+NOTES = {MSEE, ARO MURI}
+}
+
+@article{yiS12,
+AUTHOR = {Z. Yi and S. Soatto},
+TITLE = {Information Forests},
+JOURNAL = {Proc. ITA, Information Theory and Applications},
+PAGES = {},
+YEAR = {Feb. 2012},
+NOTES = {MSEE, ARO MURI, Siemens, Technical Report UCLA CSD 120002}
+}
+
+@INPROCEEDINGS{georgiadisS12DCC,
+AUTHOR = {G. Georgiadis and S. Soatto},
+TITLE = {Scene-Aware Video Modeling and Compression},
+BOOKTITLE = {Proc. of the DCC},
+YEAR = {2012},
+MONTH = {Apr. 10},
+NOTES = {DARPA HRL}
+}
+
+
+@INPROCEEDINGS{leeS11WACV,
+AUTHOR = {T. Lee and S. Soatto},
+TITLE = {Fast planar object detection and tracking via edgel templates},
+BOOKTITLE = {WACV},
+YEAR = {2012},
+MONTH = {January 9},
+NOTES = {Qualcomm}
+}
+
+@INPROCEEDINGS{wnukS10,
+AUTHOR = {K. Wnuk and S. Soatto},
+TITLE = {Analyzing diving: a dataset for judging action quality},
+BOOKTITLE = {Proc. of ACCV Workshops},
+MONTH = {November},
+YEAR = {2010}
+}
+
+@inproceedings{wnukS11,
+TITLE = {Multiple Instance Filtering},
+AUTHOR = {K. Wnuk and S. Soatto},
+BOOKTITLE = {Proc. of NIPS},
+YEAR = {2011},
+NOTES = {AFOSR,ARO,ONR}
+}
+
+@INPROCEEDINGS{leeS11ISMAR,
+AUTHOR = {T. Lee and S. Soatto},
+TITLE = {Edgel Templates for Fast Object Detection and Pose Estimation},
+BOOKTITLE = {Proc. of ISMAR},
+YEAR = {2011},
+MONTH = {May 27},
+NOTES = {Qualcomm, AFOSR}
+}
+
+@INPROCEEDINGS{ayvaciS11EMMCVPR,
+AUTHOR = {A. Ayvaci and S. Soatto},
+TITLE = {Efficient Model Selection for Detachable Object Detection}, 
+BOOKTITLE = {Proc. of EMMCVPR},
+YEAR = {2011},
+MONTH = {July},
+NOTES = {AFOSR, ARO, ONR}
+}
+
+@INPROCEEDINGS{ayvaciYXSK11,
+AUTHOR = {A. Ayvaci and P. Yan and S. Xu and S. Soatto and J. Krueker},
+TITLE = {Biopsy needle detection in transrectal ultrasound},
+BOOKTITLE = {Computerized Medical Imaging and Graphics},
+YEAR = {2011},
+MONTH = {June},
+NOTES = {}
+}
+
+
+@INPROCEEDINGS{hongS11SSVM,
+AUTHOR = {B.-W. Hong and S. Soatto},
+TITLE = {Entropy-scale Profiles for Texture Segmentation},
+BOOKTITLE = {Proc. of the Scale Space and Variational Methods Conference (SSVM)},
+YEAR = {2011},
+MONTH = {June},
+NOTES = {AFOSR,ONR}
+}
+
+@INPROCEEDINGS{yiS10,
+AUTHOR = {Z. Yi and S. Soatto},
+TITLE = {Multimodal registration via spatial-context mutual information},
+BOOKTITLE = {Information Processing in Medical Imaging (IPMI)},
+YEAR = {2011},
+MONTH = {July},
+NOTES = {TR CSD100009, submitted to ECCV, rejected with 3 "probably accept"; sent to CVPR, not uploaded correctly, PCs would not allow submission}
+}
+
+@inproceedings{leeS11,
+TITLE = {Learning and matching multiscale template descriptors for real-time detection, localization and tracking},
+AUTHOR = {T. Lee and S. Soatto},
+BOOKTITLE = cvpr,
+YEAR = {2011},
+pages = {1457--1464},
+NOTES = {ARO,AFOSR,Qualcomm}
+}
+
+@INPROCEEDINGS{soattoC11DCC,
+AUTHOR = {S. Soatto and A. Chiuso},
+TITLE = {Controlled recognition bounds for scaling and occlusion channels},
+BOOKTITLE = {Proc. of the Data Compression Conference},
+YEAR = {2011},
+MONTH = {March},
+NOTES = {ARO, AFOSR}
+}
+@INPROCEEDINGS{soattoC11DCCTR,
+AUTHOR = {S. Soatto and A. Chiuso},
+TITLE = {Controlled recognition bounds for scaling and occlusion channels},
+BOOKTITLE = {Technical Report UCLA-CSD100035},
+YEAR = {2010},
+MONTH = {November 7},
+NOTES = {Submitted to the DCC, November 7, 2010}
+}
+
+@INPROCEEDINGS{ayvaciRS10,
+AUTHOR = {A. Ayvaci and M. Raptis and S. Soatto},
+TITLE = {Optical Flow and Occlusion Detection with Convex Optimization},
+BOOKTITLE = {Proc. of Neuro Information Processing Systems (NIPS)},
+YEAR = {2010},
+MONTH = {December},
+NOTES = {AFOSR, ONR, ARO}
+}
+
+@INPROCEEDINGS{fulkersonS10,
+AUTHOR = {B. Fulkerson and S. Soatto},
+TITLE = {Really Quick Shift},
+BOOKTITLE = {Workshop on GPU For Computer Vision},
+YEAR = {2010},
+MONTH = {Crete, September},
+NOTES = {ONR,ARO,AFOSR}
+}
+
+@INPROCEEDINGS{koSEC10,
+AUTHOR = {T. Ko and S. Soatto and D. Estrin and A. Cenedese},
+TITLE = {Cataloging birds in their natural habitat},
+BOOKTITLE = {Proc. of the ICPR Workshop on Vision in Natural Environments},
+YEAR = {2010},
+MONTH = {September},
+NOTES = {CENS,ONR,ARO,AFOSR}
+}
+
+@INPROCEEDINGS{raptisS10,
+AUTHOR = {M. Raptis and S. Soatto},
+TITLE = {Tracklet Descriptors for Action Modeling and Video Analysis},
+BOOKTITLE = {Proc. of ECCV},
+YEAR = {2010},
+MONTH = {September},
+NOTES = {dynamic action dictionaries, or Time Sift, or Time HOG, technical report CSD100005, updated March 18, 2010, ARO, ONR, AFOSR}
+}
+
+@INPROCEEDINGS{boltzNS10,
+AUTHOR = {S. Boltz and F. Nielsen and S. Soatto},
+TITLE = {Earth Mover Distance on Superpixels},
+BOOKTITLE = {Proc. of the IEEE Intl. Conf. on Image Processing},
+YEAR = {September 2010}
+}
+
+@INPROCEEDINGS{boltzSN10,
+AUTHOR = {S. Boltz and S. Soatto and F. Nielsen},
+TITLE = {Entropy Regimes for Multi-scale and Stable Image Analysis},
+BOOKTITLE = {Proc. of ECCV},
+YEAR = {2010},
+MONTH = {September},
+NOTES = {Tech Report CSD100011}
+}
+
+@INPROCEEDINGS{raptisWS10,
+AUTHOR = {M. Raptis and K. Wnuk and S. Soatto},
+TITLE = {Spike Train Driven Dynamical Models for Human Motion},
+BOOKTITLE = {Proc. of the IEEE Intl. Conf. on Comp. Vis. and Patt. Recog.},
+DATE = {June},
+YEAR = {2010}
+%NOTE = {ONR,ARO,AFOSR}
+}
+
+@INPROCEEDINGS{koES10,
+AUTHOR = {T. Ko and D. Estrin and S. Soatto},
+TITLE = {Warping Background Subtraction},
+BOOKTITLE = {Proc. of the IEEE Intl. Conf. on Comp. Vis. and Patt. Recog.},
+DATE = {June},
+YEAR = {2010},
+%NOTE = {CENS,ONR,MURI,ARO,AFOSR}
+}
+
+@inproceedings{sundaramoorthiSY10,
+TITLE = {Curious Snakes: A Minimum-Latency Solution to the Cluttered Background Problem in Active Contours},
+AUTHOR = {G. Sundaramoorthi and S. Soatto and A. Yezzi},
+BOOKTITLE = {Proc. of the IEEE Intl. Conf. on Comp. Vis. and Patt. Recog.},
+DATE = {June},
+YEAR = {2010}
+%NOTE = {UCLA-CSD-090013,ARO,AFOSR,ONR}
+}
+
+@INPROCEEDINGS{ayvaciS09,
+	AUTHOR = {A. Ayvaci and S. Soatto},
+	TITLE = {Motion Segmentation with Occlusions on the Superpixel Graph},
+	BOOKTITLE = {Proc. of the Workshop on Dynamical Vision, Kyoto, Japan},
+	YEAR = {2009},
+	PAGES = {},
+	MONTH = {October},
+NOTES = {AFOSR, ONR}	
+}
+
+@ARTICLE{sundaramoorthiMYS09CDC,
+	AUTHOR = {G. Sundaramoorthi and A. Mennucci and A. Yezzi and S. Soatto},
+	TITLE = {Tracking Deforming Objects by Filtering and Prediction in the Space of Curves},
+	BOOKTITLE = {Proc. of the IEEE Intl. Conf. on Decision and Control},
+	YEAR = {2009},
+	PAGES = {},
+	MONTH = {December},
+NOTES = {AFOSR}	
+}
+@INPROCEEDINGS{lanSS09,
+AUTHOR = {M. Lan and M. Rofouei and S. Soatto and M. Sarrafzadeh},
+TITLE = {SmartLDWS: A robust and scalable lane departure warning system for smartphones},
+BOOKTITLE = {Proc. of the IEEE Conf. on Intelligent Transportation Systems},
+YEAR = {2009},
+MONTH = {},
+NOTES = {}
+}
+
+@INPROCEEDINGS{koES09,
+AUTHOR = {T. Ko and D. Estrin and S. Soatto},
+TITLE = {Categorization in Natural Time-Varying Image Sequences},
+BOOKTITLE = {Proc. of the CVPR VISU Workshop},
+YEAR = {2009},
+MONTH = {June},
+NOTES = {NSF, CENS, ONR}
+}
+
+@INPROCEEDINGS{soatto09,
+AUTHOR = {S. Soatto},
+TITLE = {Actionable Information in Vision},
+BOOKTITLE = {Proc. of the Intl. Conf. on Comp. Vision},
+YEAR = {2009},
+MONTH = {October},
+NOTES = {TR CSD-09-0007.pdf, March 10, 2009, Video Lecture: http://videolectures.net/nips2010_soatto_vbc/, AFOSR, ONR}
+}
+
+@INPROCEEDINGS{fulkersonVS09,
+AUTHOR = {B. Fulkerson and A. Vedaldi and S. Soatto},
+TITLE = {Class segmentation and object localization with superpixel neighborhoods},
+BOOKTITLE = {Proc. of the Intl. Conf. on Comp. Vision},
+YEAR = {2009},
+MONTH = {October},
+NOTES = {ONR MURI,ONR,NSF}
+}
+
+@INPROCEEDINGS{louFS09,
+	AUTHOR = {Y. Lou and P. Favaro and S. Soatto},
+	TITLE = {Nonlocal similarity image denoising},
+	BOOKTITLE = {Proc. of the Intl. Conf. on Image Analysis and Processing (ICIAP)},
+	YEAR = {2009},
+	PAGES = {},
+	MONTH = {September},
+NOTES = {NSF ECS, AFOSR, ONR}	
+}
+
+@INPROCEEDINGS{sundaramoorthiPVS09,
+	AUTHOR = {G. Sundaramoorthi and P. Petersen and V. S. Varadarajan and S. Soatto},
+	TITLE = {On the set of images modulo viewpoint and contrast changes},
+	BOOKTITLE = cvpr,
+	YEAR = {2009},
+	PAGES = {},
+	MONTH = {June},
+NOTES = {AFOSR, ONR}	
+}
+@INPROCEEDINGS{yiS09,
+	AUTHOR = {Z. Yi and S. Soatto},
+	TITLE = {Nonrigid registration combining global and local statistics},
+	BOOKTITLE = cvpr,
+	YEAR = {2009},
+	PAGES = {},
+	MONTH = {June},
+NOTES = {NIH}	
+}
+
+@INPROCEEDINGS{pradosJS08,
+AUTHOR = {E. Prados and N. Jindal and S. Soatto},
+TITLE = {A Non-Local Approach to Shape from Ambient Shading},
+BOOKTITLE = {Proc. of the Intl. Conf. on Scale-Space and Variational Methods (SSVM), Voss -- Norway},
+YEAR = {2009},
+MONTH = {June},
+NOTES = {INRIA Technical Report, July 2007, ONR}
+}
+
+@INPROCEEDINGS{raptisWS08,
+AUTHOR = {M. Raptis and K. Wnuk and S. Soatto},
+TITLE = {Flexible Dictionaries for Action Classification},
+BOOKTITLE = {Proc. of the Workshop on Machine Learning for Visual Motion Analysis (MLVMA)},
+YEAR = {Marseille, France, 2008},
+MONTH = {October},
+NOTES = {AFOSR2, ONR MURI, NSF ECS}
+}
+
+@INPROCEEDINGS{koS08,
+AUTHOR = {T. Ko and S. Soatto and D. Estrin},
+TITLE = {Background Subtraction on Distributions},
+BOOKTITLE = {Proc. of the Eur. Conf. on Comp. Vis.  (ECCV)},
+YEAR = {2008},
+MONTH = {October},
+NOTES = {CENS, ONR MURI}
+}
+
+@INPROCEEDINGS{okadaS08,
+AUTHOR = {R. Okada and S. Soatto},
+TITLE = {Relevant feature selection for human pose estimation and localization in cluttered images},
+BOOKTITLE = {Proc. of the Eur. Conf. on Comp. Vis.  (ECCV)},
+YEAR = {2008},
+MONTH = {October}
+}
+@INPROCEEDINGS{fulkersonVS08,
+AUTHOR = {B. Fulkerson and A. Vedaldi and S. Soatto},
+TITLE = {Localizing Objects with Smart Dictionaries},
+BOOKTITLE = {Proc. of the Eur. Conf. on Comp. Vis.  (ECCV)},
+YEAR = {2008},
+MONTH = {October},
+NOTES = {ONR2, ONR MURI, AFOSR}
+}
+@INPROCEEDINGS{vedaldiS08ECCV,
+AUTHOR = {A. Vedaldi and S. Soatto},
+TITLE = {Quick Shift and Kernel Methods for Mode Seeking},
+BOOKTITLE = {Proc. of the Eur. Conf. on Comp. Vis.  (ECCV)},
+YEAR = {2008},
+MONTH = {October},
+NOTES = {ONR2, AFOSR}
+}
+
+@INPROCEEDINGS{vedaldiGS08,
+AUTHOR = {A. Vedaldi and G. Guidi and S. Soatto},
+TITLE = {Joint Data Alignment Up To (Lossy) Transformations},
+BOOKTITLE = cvpr,
+YEAR = {2008},
+Month = {June},
+NOTES = {AFOSR 2, ONR MURI}
+}
+@INPROCEEDINGS{vedaldiS08,
+AUTHOR = {A. Vedaldi and S. Soatto},
+TITLE = {Relaxed Matching Kernels for Object Recognition},
+BOOKTITLE = cvpr,
+YEAR = {2008},
+MONTH = {June},
+NOTES = {ONR MURI}
+}
+@INPROCEEDINGS{wnuk08,
+AUTHOR = {K. Wnuk and S. Soatto},
+TITLE = {Filtering internet image search results towards keyword based category recognition},
+BOOKTITLE = cvpr,
+YEAR = {2008},
+MONTH = {June},
+NOTES = {ONR MURI, AFOSR 2}
+}
+@INPROCEEDINGS{meltzerS08,
+AUTHOR = {J. Meltzer and S. Soatto},
+TITLE = {Edge Descriptors for Robust Wide-Baseline Correspondence},
+BOOKTITLE = cvpr,
+YEAR = {2008},
+MONTH = {June},
+NOTES = {AFOSR 2, MURI2, NSF ECS2}
+}
+@INPROCEEDINGS{hongSNC08,
+AUTHOR = {B.-W. Hong and S. Soatto and K. Ni and T. F. Chan},
+TITLE = {The Scale of a Texture and its Application to Segmentation},
+BOOKTITLE = cvpr,
+YEAR = {2008},
+MONTH = {June},
+NOTES = {NSF ECS, ONR2, AFOSR2}
+}
+
+@INPROCEEDINGS{fontanelliRS07,
+AUTHOR = {D. Fontanelli and L. Ricciato and S. Soatto},
+TITLE = {A fast RANSAC-based registration algorithm for accurate localization in unknown environments using LIDAR measurements},
+BOOKTITLE = {CASE},
+YEAR = {2007},
+MONTH = {},
+NOTES = {AFOSR}
+}
+@INPROCEEDINGS{raptisBS07,
+AUTHOR = {M. Raptis and M. Bustreo and S. Soatto},
+TITLE = {Time warping under dynamic constraints},
+BOOKTITLE = {Workshop on Dynamical Vision},
+YEAR = {2007},
+MONTH = {October},
+NOTES = {TR 070008, AFOSR}
+}
+@INPROCEEDINGS{jonesS07,
+AUTHOR = {E. S. Jones and A. Vedaldi and S. Soatto},
+TITLE = {Inertial structure from motion and autocalibration},
+BOOKTITLE = {Workshop on Dynamical Vision},
+YEAR = {2007},
+MONTH = {October},
+NOTES = {TR 070010, AFOSR}
+}
+
+@INPROCEEDINGS{yiS07,
+AUTHOR = {Z. Yi and S. Soatto},
+TITLE = {Correspondence transfer for the registration of multimodal images},
+BOOKTITLE = {Int. Conf. on Comp. Vision},
+YEAR = {2007},
+MONTH = {October},
+NOTES = {NIH,AFOSR MURI, 23/100 acceptance}
+}
+@INPROCEEDINGS{lingS07,
+AUTHOR = {H. Ling and S. Soatto},
+TITLE = {Proximity distribution kernels for geometric context in category recognition},
+BOOKTITLE = {Int. Conf. on Comp. Vision},
+YEAR = {2007},
+MONTH = {October},
+NOTES = {ONR, ONR MURI, AFOSR, 23/100 acceptance}
+}
+@INPROCEEDINGS{lingJS07,
+AUTHOR = {H. Ling and D. Jacobs and Naranyanan and S. Soatto},
+TITLE = {A study of face recognition as people age},
+BOOKTITLE = {Int. Conf. on Comp. Vision},
+YEAR = {2007},
+MONTH = {October},
+NOTES = {ONR MURI, NSF ECS, 23/100 acceptance}
+}
+
+@INPROCEEDINGS{jacksonYS07BMG,
+AUTHOR = {J. Jackson and A. J. Yezzi and S. Soatto},
+TITLE = {Joint priors for variational shape and appearance modeling},
+BOOKTITLE = {Beyond Multiple View Geometry, CVPR Workshop},
+YEAR = {2007},
+MONTH = {June},
+NOTES = {ECS,AFOSR,ONR}
+}
+
+@INPROCEEDINGS{bissaccoS07,
+AUTHOR = {A. Bissacco and S. Soatto},
+TITLE = {On the Blind Identification of Time Series},
+BOOKTITLE = {Proc. of the IEEE Conf. on Comp. Vis. and Patt. Recog.},
+YEAR = {2007},
+MONTH = {June},
+NOTES = {ECS,AFOSR, ONR,pprs/inprgrs/gaits/DistanceCVPR07/bissaccoS07.pdf}
+}
+@inproceedings{bissaccoYS07,
+AUTHOR = {A. Bissacco and M.-H. Yang and S. Soatto},
+TITLE = {Fast pose estimation via multi-dimensional boosting regression},
+BOOKTITLE = {Proc. of the IEEE Conf. on Comp. Vis. and Patt. Recog.},
+YEAR = {2007},
+PAGES = {1--8},
+MONTH = {June},
+NOTES = {AFOSR, ONR,pprs/inprgrs/bissacco/bissaccoYScvpr.pdf}
+}
+
+@INPROCEEDINGS{luFS07,
+AUTHOR = {Y. Lou and P. Favaro and S. Soatto},
+TITLE = {Autocalibration and Uncalibrated Reconstruction of Shape From Defocus},
+BOOKTITLE = {Proc. of the IEEE Conf. on Comp. Vis. and Patt. Recog.},
+YEAR = {2007},
+MONTH = {},
+PAGES = {June},
+NOTES = {AFOSR, ONR}
+}
+
+@INPROCEEDINGS{vedaldiGS07,
+AUTHOR = {A. Vedaldi and G. Guidi and S. Soatto},
+TITLE = {Moving Forward in Structure From Motion},
+BOOKTITLE = {Proc. of the IEEE Conf. on Comp. Vis. and Patt. Recog.},
+YEAR = {2007},
+MONTH = {},
+PAGES = {},
+NOTES = {AFOSR, ONR}
+}
+
+@INPROCEEDINGS{vidalCS07,
+AUTHOR = {R. Vidal and A. Chiuso and S. Soatto},
+TITLE = {Application of hybrid system identification in computer vision},
+BOOKTITLE = {Proc. of the Eur. Control Conf.},
+YEAR = {2007},
+MONTH = {},
+PAGES = {27--34},
+NOTES = {AFOSR MURI, ONR}
+}
+
+@INPROCEEDINGS{vedaldiS06NIPS,
+AUTHOR = {A. Vedaldi and S. Soatto},
+TITLE = {A rate-distortion approach to joint pattern alignment},
+BOOKTITLE = {NIPS},
+YEAR = {2006},
+MONTH = {December},
+NOTES = {AFOSR}
+}
+
+@INPROCEEDINGS{bissaccoYS06,
+AUTHOR = {A. Bissacco and M.-H. Yang and S. Soatto},
+TITLE = {Detecting Humans with Their Pose},
+BOOKTITLE = {NIPS},
+YEAR = {2006},
+MONTH = {December},
+NOTES = {AFOSR,pprs/inprgrs/pose/bissaccoYS07NIPS.pdf}
+}
+
+@INPROCEEDINGS{wangPS06,
+AUTHOR = {D. Wang and E. Prados and S. Soatto},
+TITLE = {Towards Robust and Physically Plausible Shaded Stereoscopic Segmentation for Piecewise Constant Albedo},
+BOOKTITLE = {Proc. of the 3D Cinematography Workshop (3DCine) in conjunction with CVPR 2006},
+YEAR = {2006},
+MONTH = {June},
+PAGES = {171-178},
+NOTES = {ONR, AFOSR MURI; wangPS05.pdf}
+}
+
+@INPROCEEDINGS{bissaccoGSS06,
+AUTHOR = {A. Bissacco and S. Ghiasi},
+TITLE = {Fast visual feature selection and tracking in a hybrid reconfigurable architecture},
+BOOKTITLE = {Proc. of the Workshop on Applications of Computer Vision (ACV)},
+YEAR = {2006},
+MONTH = {June},
+NOTES = {ONR, AFOSR,NASA}
+}
+
+@INPROCEEDINGS{bissaccoS06CVPR,
+AUTHOR = {A. Bissacco and S. Soatto},
+TITLE = {Classifying gaits without contact forces},
+BOOKTITLE = cvpr,
+YEAR = {2006},
+MONTH = {June},
+NOTES = {ONR, AFOSR}
+}
+
+@INPROCEEDINGS{cuzzolinS06CVPR,
+AUTHOR = {F. Cuzzolin},
+TITLE = {Using bilinear models for view-invariant action and identity recognition},
+BOOKTITLE = cvpr,
+YEAR = {2006},
+MONTH = {June},
+NOTES = {ONR, AFOSR MURI}
+}
+@INPROCEEDINGS{vedaldiS06CVPR,
+AUTHOR = {A. Vedaldi and S. Soatto},
+TITLE = {Local features all grown up},
+BOOKTITLE = cvpr,
+YEAR = {2006},
+MONTH = {June},
+NOTES = {AFOSR,ONR}
+}
+
+@INPROCEEDINGS{hongPVS06,
+AUTHOR = {B.-W. Hong and E. Prados and L. Vese and S. Soatto},
+TITLE = {Shape representation based on integral kernels: application to image matching and segmentation},
+BOOKTITLE = cvpr,
+YEAR = {2006},
+MONTH = {June},
+NOTES = {NIH}
+}
+@INPROCEEDINGS{pradosLPFS06,
+AUTHOR = {E. Prados and C. Lenglet and J.-P. Pons and O. Faugeras and S. Soatto},
+TITLE = {Control theory and fast marching techniques for brain connectivity mapping},
+BOOKTITLE = cvpr,
+YEAR = {2006},
+MONTH = {June},
+NOTES = {NIH,AFOSR}
+}
+
+@INPROCEEDINGS{vedaldiS06ECCV,
+AUTHOR = {A. Vedaldi and S. Soatto},
+TITLE = {Viewpoint induced deformation statistics and the design of viewpoint invariant features: singularities and occlusions},
+BOOKTITLE = {Eur. Conf. on Comp. Vision (ECCV)},
+YEAR = {2006},
+MONTH = {},
+PAGES = {II-360-373},
+NOTES = {AFOSR}
+}
+
+@INPROCEEDINGS{pradosS05,
+AUTHOR = {E. Prados and S. Soatto},
+TITLE = {Fast marching method for Hamilton-Jacobi-Bellman Equations and generic shape from shading},
+BOOKTITLE = {Symposium on Variational and Level Set Methods (VLSM)},
+YEAR = {2005},
+MONTH = {October},
+NOTES = {ONR, AFOSR}
+}
+
+@INPROCEEDINGS{jacksonYS05,
+AUTHOR = {J. D. Jackson and A. J. Yezzi and S. Soatto},
+TITLE = {Dynamic shape and appearance modeling via moving and deforming layers},
+BOOKTITLE = {Proc. of the Workshop on Energy Minimization in Computer Vision and Pattern Recognition (EMMCVPR)},
+YEAR = {2005},
+PAGES = {427--448},
+NOTES = {ONR, AFOSR}
+}
+
+@INPROCEEDINGS{manayYCS05,
+AUTHOR = {S. Manay and D. Cremers and A. Yezzi and S. Soatto},
+TITLE = {One-shot integral invariant shape priors for variational segmentation},
+BOOKTITLE = {Proc. of the Workshop on Energy Minimization in Computer Vision and Pattern Recognition (EMMCVPR)},
+YEAR = {2005},
+PAGES = {414--426},
+NOTES = {ONR, AFOSR}
+}
+
+
+@INPROCEEDINGS{vedaldiJFS05,
+AUTHOR = {A. Vedaldi and H. Jin and P. Favaro and S. Soatto},
+TITLE = {Kalmansac: Causal inference of dynamical processes in the presence of outliers},
+BOOKTITLE = iccv,
+YEAR = {2005},
+MONTH = {October},
+NOTES = {ONR, AFOSR}
+}
+
+@INPROCEEDINGS{vedaldiS05,
+AUTHOR = {A. Vedaldi and S. Soatto},
+TITLE = {Features for recognition: viewpoint invariance for non-planar scenes},
+BOOKTITLE = {Proc. of the Intl. Conf. of Comp. Vision},
+YEAR = {2005},
+MONTH = {October},
+PAGES = {1474-1481},
+NOTES = {ONR, AFOSR}
+}
+
+@INPROCEEDINGS{jonesS05,
+AUTHOR = {E. Jones and S. Soatto},
+TITLE = {Layered active appearance models},
+BOOKTITLE = {Proc. of the Intl. Conf. of Comp. Vision},
+YEAR = {2005},
+MONTH = {October},
+NOTES = {ONR, AFOSR}
+}
+
+@INPROCEEDINGS{bissaccoS05CVPR,
+AUTHOR = {A. Bissacco},
+TITLE = {Modeling and learning contact dynamics in human motion},
+BOOKTITLE = cvpr,
+YEAR = {2005},
+MONTH = {June},
+NOTES = {ONR, AFOSR, also UCLA-CSD04-0048}
+}
+
+@INPROCEEDINGS{favaroJC05,
+AUTHOR = {P. Favaro and H. Jin and R. Cipolla},
+TITLE = {Tracking with motion blur},
+BOOKTITLE = cvpr,
+YEAR = {2005},
+MONTH = {June},
+NOTES = {ONR, AFOSR}
+}
+
+@INPROCEEDINGS{dorettoS05_TR,
+AUTHOR = {G. Doretto},
+TITLE = {Modeling dynamic scenes with active appearance},
+BOOKTITLE = cvpr,
+YEAR = {2005},
+MONTH = {June},
+NOTES = {ECS,AFOSR,ONR, also UCLA-CSD04-0049}
+}
+
+@INPROCEEDINGS{jacksonYS04,
+	AUTHOR = {J. Jackson and A. Yezzi and S. Soatto},
+	TITLE = {Tracking deformable moving objects under severe occlusions},
+	BOOKTITLE = {Proc. of the IEEE Conf. on Decision and Control},
+	YEAR = {2004},
+	PAGES = {},
+	MONTH = {December},
+NOTES = {AFOSR, ONR}	
+}
+
+@INPROCEEDINGS{hongMSB04,
+AUTHOR={B.-W. Hong and M. Mellor and S. Soatto and M. Brady},
+TITLE={Combining topological and geometric features of mammograms to detect masses},
+BOOKTITLE = {Proc. Medical Image Understanding and Analysis},
+MONTH = {London, September},
+PAGES = {196--199},
+YEAR = {2004}
+}
+
+@INPROCEEDINGS{bissaccoS04,
+	AUTHOR = {A. Bissacco and P. Saisan and S. Soatto},
+	TITLE = {Gait recognition using dynamic affine invariants},
+	BOOKTITLE = {Proc. of the MTNS},
+	YEAR = {2004},
+	PAGES = {TH A8, 1--7},
+	MONTH = {July},
+NOTES = {}	
+}
+
+@INPROCEEDINGS{meltzerYGS04,
+	AUTHOR = {J. Meltzer and M.-S. Yang and R. Gupta and S. Soatto},
+	TITLE = {Simultaneous localization and mapping using multiple view feature descriptors},
+	BOOKTITLE = {Proc. of the IEEE Intl. Conf. on Intelligent Robots and Systems (IROS)},
+VOLUME = {2},
+	YEAR = {2004},
+	PAGES = {1550-1555},
+	MONTH = {Sendai, Japan, October},
+NOTES = {ONR, AFOSR}	
+}
+
+@INPROCEEDINGS{cremersOS04,
+	AUTHOR = {D. Cremers and S. J. Osher and S. Soatto},
+	TITLE = {Kernel density estimation and intrinsic alignment for knowledge-driven segmentation: teaching level set to walk},
+	BOOKTITLE = {Pattern Recognition, Proc. of DAGM, Springer LNCS Vol. 3175},
+	YEAR = {2004},
+	PAGES = {36--44},
+	MONTH = {Tuebingen},
+NOTES = {ONR, AFOSR}	
+}
+@INPROCEEDINGS{favaroS04,
+	AUTHOR = {P. Favaro and S. Soatto},
+	TITLE = {A variational approach to scene reconstruction and image segmentation from motion blur cues},
+	BOOKTITLE = {Proc. of the IEEE Intl. Conf. on Comp. Vis. and Patt. Recog.},
+	YEAR = {2004},
+	PAGES = {},
+	MONTH = {July},
+NOTES = {ONR, AFOSR}	
+}
+@INPROCEEDINGS{jinCYS04,
+	AUTHOR = {H. Jin and D. Cremers and A. Yezzi and S. Soatto},
+	TITLE = {Shedding light in stereoscopic segmentation},
+	BOOKTITLE = {Proc. of the IEEE Intl. Conf. on Comp. Vis. and Patt. Recog.},
+	YEAR = {2004},
+	PAGES = {},
+	MONTH = {July},
+NOTES = {ONR, AFOSR}	
+}
+
+@INPROCEEDINGS{favaroBS04_2,
+	AUTHOR = {P. Favaro and M. Burger and S. Soatto},
+	TITLE = {Scene and motion reconstruction from defocused and motion-blurred images via anisotropic diffusion},
+	BOOKTITLE = {Proc. of the Eur. Conf. on Comp. Vision},
+	YEAR = {2004},
+	PAGES = {257--269},
+	MONTH = {May},
+NOTES = {AFOSR, ONR, NIH, NSF RHA}	
+}
+
+@INPROCEEDINGS{manayYWS04,
+	AUTHOR = {S. Manay and A. J. Yezzi and B. W. Hong and S. Soatto},
+	TITLE = {Integral Invariant Signatures},
+	BOOKTITLE = {Proc. of the Eur. Conf. on Comp. Vision},
+	YEAR = {2004},
+	PAGES = {87--94},
+	MONTH = {May},
+NOTES = {AFOSR, NSF RHA, CENS}	
+}
+
+@INPROCEEDINGS{meltzerGS04,
+	AUTHOR = {J. Meltzer and M. Yang and R. Gupta and S. Soatto},
+	TITLE = {Multiple view feature descriptors from image sequences via kernel principal component analysis},
+	BOOKTITLE = {Proc. of the Eur. Conf. on Comp. Vision},
+	YEAR = {2004},
+	PAGES = {215--227},
+	MONTH = {May},
+NOTES = {AFOSR, ONR, NSF ECS, CENS}	
+}
+
+@INPROCEEDINGS{jinYS04_2,
+	AUTHOR = {H. Jin and A. J. Yezzi and S. Soatto},
+	TITLE = {Region-based segmentation on evolving surfaces with application to 3D shape and radiance estimation},
+	BOOKTITLE = {Proc. of the Eur. Conf. on Comp. Vision},
+	YEAR = {2004},
+	PAGES = {114--125},
+	MONTH = {May},
+NOTES = {AFOSR, NSF RHA, CENS, ONR}	
+}
+
+@INPROCEEDINGS{saisanBSC04,
+	AUTHOR = {P. Saisan and A. Bissacco and A. Chiuso and S. Soatto},
+	TITLE = {Modeling and synthesis of facial motion driven by speech},
+	BOOKTITLE = {Proc. of the Eur. Conf. on Comp. Vision},
+	YEAR = {2004},
+	PAGES = {456--467},
+	MONTH = {May},
+NOTES = {AFOSR, NSF ECS, CENS}	
+}
+
+@INPROCEEDINGS{cremers04,
+	AUTHOR = {D. Cremers},
+	TITLE = {},
+	BOOKTITLE = {Proc. of the Eur. Conf. on Comp. Vision},
+	YEAR = {2004},
+	PAGES = {},
+	MONTH = {May},
+NOTES = {NO FUNDING ACK}	
+}
+@INPROCEEDINGS{dorettoJS04,
+	AUTHOR = {G. Doretto and E. Jones and S. Soatto},
+	TITLE = {Spatially homogeneous dynamic textures},
+	BOOKTITLE = {Proc. of the Eur. Conf. on Comp. Vision},
+	YEAR = {2004},
+	PAGES = {591--602},
+	MONTH = {May},
+NOTES = {AFOSR, NSF ECS, CENS}	
+}
+
+@INPROCEEDINGS{dorettoS03_plenoptic,
+	AUTHOR = {G. Doretto and S. Soatto},
+	TITLE = {Towards plenoptic dynamic textures},
+	BOOKTITLE = {Proc. of the Workshop Textures 2003},
+	YEAR = {2003},
+	PAGES = {25--30},
+	MONTH = {October},
+NOTES = {AFOSR, NSF ECS, CENS}	
+}
+@INPROCEEDINGS{saisanS02cvpr,
+	AUTHOR = {P. Saisan and S. Soatto},
+	TITLE = {Speech-driven synthesis of facial motion},
+	BOOKTITLE = {UCLA CSD-020045},
+	YEAR = {November 1, 2002},
+	PAGES = {},
+	MONTH = {},
+NOTES = {AFOSR, ONR, NSF}	
+}
+@INPROCEEDINGS{meltzerS02cvpr,
+	AUTHOR = {J. N. Meltzer and S. Soatto},
+	TITLE = {Image based robot localization in unstructured environments},
+	BOOKTITLE = {UCLA CSD-020044},
+	YEAR = {November 1, 2002},
+	PAGES = {},
+	MONTH = {},
+NOTES = {AFOSR, ONR, NSF}	
+}
+
+@INPROCEEDINGS{bissaccoS02cvpr,
+	AUTHOR = {A. Bissacco and S. Soatto},
+	TITLE = {Human deformotion},
+	BOOKTITLE = {UCLA CSD-020046},
+	YEAR = {2002},
+	PAGES = {},
+	MONTH = {November 1, 2002},
+NOTES = {AFOSR, ONR, NSF}	
+}
+@INPROCEEDINGS{bissaccoSS02cvpr,
+	AUTHOR = {A. Bissacco and P. Saisan and S. Soatto},
+	TITLE = {Dynamical Models for Human Gait Synthesis},
+	BOOKTITLE = {UCLA CSD-020047},
+	YEAR = {November 1, 2002},
+	PAGES = {},
+	MONTH = {},
+NOTES = {AFOSR, ONR, NSF}	
+}
+@INPROCEEDINGS{cremersS03VLSM,
+	AUTHOR = {D. Cremers and S. Soatto},
+	TITLE = {A pseudo distance for shape priors in level set segmentation},
+	BOOKTITLE = {Proc. of the Intl. Workshop on Variational and Level Set Methods},
+	YEAR = {2003},
+	PAGES = {169-176},
+	MONTH = {October},
+NOTES = {AFOSR, ONR, NSF}	
+}
+@INPROCEEDINGS{cremersSY03,
+	AUTHOR = {D. Cremers and A. Yuille},
+	TITLE = {A Generative Model Based Approach to Motion Segmentation},
+	BOOKTITLE = {German Conf. on Pattern Recognition (DAGM)},
+	YEAR = {2003},
+	PAGES = {313-320},
+	MONTH = {September},
+NOTES = {ONR}	
+}
+@INPROCEEDINGS{cremersS03,
+	AUTHOR = {D. Cremers},
+	TITLE = {A Variational Framework for Image Segmentation Combining Motion Estimation and Shape Regularization},
+	BOOKTITLE = {IEEE Intl. Conf. on Computer Vision and Pattern Recognition (CVPR)},
+	YEAR = {2003},
+	PAGES = {(1) 53-58},
+	MONTH = {October},
+NOTES = {ONR}	
+}
+@INPROCEEDINGS{cremersSS03,
+	AUTHOR = {D. Cremers and N. Sochen and C. Schnoerr},
+	TITLE = {Towards Recognition-based Variational Segmentation Using Shape Priors and Dynamic Labeling},
+	BOOKTITLE = {Intl. Conf. on Scale-Space Theories in Computer Vision},
+	YEAR = {2003},
+	PAGES = {388-400},
+	MONTH = {June},
+NOTES = {ONR}	
+}
+@INPROCEEDINGS{cremers03SCALESPACE,
+	AUTHOR = {D. Cremers},
+	TITLE = {Multiphase Levelset Framework for Variational Motion Segmentation},
+	BOOKTITLE = {Intl. Conf. on Scale-Space Theories in Computer Vision},
+	YEAR = {2003},
+	PAGES = {599-614},
+	MONTH = {June},
+NOTES = {ONR}	
+}
+@INPROCEEDINGS{soatto03,
+	AUTHOR = {S. Soatto and A. Chiuso},
+	TITLE = {Snippets of Identification Theory in Computer Vision},
+	BOOKTITLE = {Proc. of the IFAC Symp. on System Identification (SYSID)},
+	YEAR = {2003},
+	PAGES = {},
+	MONTH = {August},
+NOTES = {AFOSR, ONR, NSF}	
+}
+@INPROCEEDINGS{bissaccoSS03,
+	AUTHOR = {A. Bissacco and P. Saisan and S. Soatto},
+	TITLE = {Image-based modeling and synthesis of human gaits with subtleties},
+	BOOKTITLE = {Proc. of the IFAC Symp. on System Identification (SYSID)},
+	YEAR = {2003},
+	PAGES = {},
+	MONTH = {August},
+NOTES = {AFOSR, ONR, NSF}	
+}
+
+@INPROCEEDINGS{vidalSS03,
+	AUTHOR = {R. Vidal and S. Soatto and S. Sastry},
+	TITLE = {An Algebraic Geometric Approach to the Identification of Linear
+  Hybrid Systems},
+	BOOKTITLE = {IEEE Conf. on Decision and Control},
+	YEAR = {2003},
+	PAGES = {},
+	MONTH = {December},
+NOTES = {AFOSR, ONR, Intel}	
+}
+
+@INPROCEEDINGS{duciYMS03,
+	AUTHOR = {A. Duci and A. J. Yezzi and S. K. Mitter and S. Soatto},
+	TITLE = {Shape representation via harmonic embedding},
+	BOOKTITLE = {Intl. Conf. on Comp. Vision},
+	YEAR = {2003},
+	PAGES = {656--662},
+	MONTH = {October},
+NOTES = {AFOSR, ONR, NSF RHA, NIH, Intel}	
+}
+
+@INPROCEEDINGS{cremersDFS03,
+	AUTHOR = {G. Doretto and D. Cremers and P. Favaro and S. Soatto},
+	TITLE = {Dynamic texture segmentation},
+	BOOKTITLE = {Intl. Conf. on Comp. Vision},
+	YEAR = {2003},
+
+	PAGES = {(2) 1236--1242},
+	MONTH = {October},
+NOTES = {AFOSR, ONR, NSF,NIH}	
+}
+
+@INPROCEEDINGS{cremersS03ICCV,
+	AUTHOR = {D. Cremers and S. Soatto},
+	TITLE = {Variational space-time motion segmentation},
+	BOOKTITLE = {Intl. Conf. on Comp. Vision},
+	YEAR = {2003},
+	PAGES = {(2) 886--892},
+	MONTH = {October},
+NOTES = {AFOSR, ONR, NSF,NIH}	
+}
+
+@INPROCEEDINGS{favaroDMS03,
+	AUTHOR = {P. Favaro and A. Duci and Y. Ma and S. Soatto},
+	TITLE = {On Exploiting occlusions in multiple view geometry},
+	BOOKTITLE = {Intl. Conf. on Comp. Vision},
+	YEAR = {2003},
+	PAGES = {479--486},
+	MONTH = {October},
+NOTES = {AFOSR, ONR, NSF}	
+}
+
+@INPROCEEDINGS{soattoY02cvpr,
+	AUTHOR = {S. Soatto and A. J. Yezzi and H. Jin},
+	TITLE = {Tales of shape and radiance in multiview stereo},
+	BOOKTITLE = {Intl. Conf. on Comp. Vision},
+	YEAR = {2003},
+	PAGES = {974--981},
+	MONTH = {October},
+NOTES = {AFOSR, ONR, NSF}	
+}
+
+@INPROCEEDINGS{yezziS02cvpr,
+	AUTHOR = {A. J. Yezzi and S. Soatto},
+	TITLE = {Structure from motion for scenes without features},
+	BOOKTITLE = cvpr,
+	YEAR = {2003},
+	PAGES = {I-525--532},
+	MONTH = {June},
+NOTES = {AFOSR, ONR, NSF}	
+}
+@INPROCEEDINGS{jinSY02cvpr,
+	AUTHOR = {H. Jin and S. Soatto and A. J. Yezzi},
+	TITLE = {Multi-view stereo beyond Lambert},
+	BOOKTITLE = cvpr,
+	YEAR = {2003},
+	PAGES = {I-171--178},
+	MONTH = {June},
+NOTES = {AFOSR, ONR, NSF RHA, Intel}	
+}
+@INPROCEEDINGS{favaroS02cvpr_diff,
+	AUTHOR = {P. Favaro and S. Soatto and L. Vese and S. J. Osher},
+	TITLE = {Shape from anisotropic diffusion},
+	BOOKTITLE = cvpr,
+	YEAR = {2003},
+	PAGES = {I-179--186},
+	MONTH = {June},
+NOTES = {AFOSR, ONR, NSF RHA, Intel, NIH}	
+}
+@INPROCEEDINGS{favaroS02cvpr_occlusion,
+	AUTHOR = {P. Favaro and S. Soatto},
+	TITLE = {Seeing beyond occlusions (and other marvels of a finite lens aperture)},
+	BOOKTITLE = cvpr,
+	YEAR = {2003},
+	PAGES = {II-579--586},
+	MONTH = {June},
+NOTES = {AFOSR, ONR, NSF ECS, NSF RHA, Intel}	
+}
+@INPROCEEDINGS{dorettoS02cvpr_editex,
+	AUTHOR = {G. Doretto and S. Soatto},
+	TITLE = {Editable dynamic textures},
+	BOOKTITLE = cvpr,
+	YEAR = {2003},
+	PAGES = {II-137--142},
+	MONTH = {June},
+NOTES = {AFOSR, ONR, NSF ECS, Intel}	
+}
+@INPROCEEDINGS{vidalCSS02,
+	AUTHOR = {R. Vidal and A. Chiuso and S. Soatto and S. Sastry},
+	TITLE = {Observability of linear hybrid systems},
+	BOOKTITLE = {Proc. of the Hybrid Systems Computation and Control},
+	YEAR = {2003},
+	PAGES = {526--539},
+	MONTH = {October},
+NOTES = {AFOSR, ONR, NSF}	
+}
+@INPROCEEDINGS{vidalCS02,
+	AUTHOR = {R. Vidal and A. Chiuso and S. Soatto},
+	TITLE = {Observability and identifiability of jump-linear systems},
+	BOOKTITLE = {Proc. of the Intl. Conf. on Decision and Control},
+	YEAR = {2002},
+	PAGES = {3614--3619},
+	MONTH = {December},
+NOTES = {ONR, ECS, CENS},
+NOTES = {AFOSR, ONR, NSF}	
+}
+
+@INPROCEEDINGS{cuzzolinBFS02,
+AUTHOR  = {F. Cuzzolin and A. Bissacco and R. Frezza and S. Soatto},
+TITLE = {Towards unsupervised detection of actions in clutter},
+booktitle = {Proc. of the Asilomar Conference on Signals, Systems and Computers},
+YEAR = {2002},
+PAGES = {463--467},
+MONTH = {November}
+}
+
+@INPROCEEDINGS{vidalSS02_2,
+	AUTHOR = {R. Vidal and S. Soatto and S. Sastry},
+	TITLE = {A factorization method for 3D multi-body motion
+estimation and segmentation},
+	BOOKTITLE = {Proc. of the Allerton Conference on Signals and Systems},
+	YEAR = {2002},
+	PAGES = {1637--1646},
+	MONTH = {October},
+NOTES = {ONR, ARO, NSF}	
+}
+
+@INPROCEEDINGS{mazzaroSCBS02,
+	AUTHOR = {C. Mazzaro and M. Sznaier and O. Camps and S. Soatto and A. Bissacco},
+	TITLE = {A model (in)validation approach to gait recognition},
+	BOOKTITLE = {Proc. of the Intl. Conf. 3DPVT},
+	YEAR = {2002},
+	PAGES = {700--703},
+	MONTH = {June}	
+}
+
+@INPROCEEDINGS{kangCS02,
+	AUTHOR = {S. H. Kang and T. F. Chan and S. Soatto},
+	TITLE = {Inpainting from multiple views},
+	BOOKTITLE = {Proc. of the Intl. Conf. 3DPVT},
+	YEAR = {2002},
+	PAGES = {622--625},
+	MONTH = {June}	
+}
+
+@INPROCEEDINGS{jinYS02,
+	AUTHOR = {H. Jin and A. Yezzi and S. Soatto},
+	TITLE = {Variational multiframe stereo in the presence of specular reflections},
+	BOOKTITLE = {Proc. of the Intl. Conf. on 3DPVT},
+	YEAR = {2002},
+	PAGES = {626--630},
+	MONTH = {June},
+NOTES = {ARO, INTEL}	
+}
+
+@inproceedings{soattoY02,
+AUTHOR  = {S. Soatto and A. Yezzi},
+TITLE = {Deformotion: deforming motion, shape average and the joint segmentation and registration of images},
+booktitle= {Proc. of the Eur. Conf. on Computer Vision (ECCV)},
+PAGES = {32--47},
+volume = {3},
+YEAR = {2002}, 
+NOTES = {NSF, ARO, Intel. Also UCLA CAM Technical Report, November 21, 2001}
+}
+
+@inproceedings{duciYS02,
+AUTHOR  = {A. Duci and A. Yezzi and S. Mitter and S. Soatto},
+TITLE = {Region matching with missing parts},
+booktitle= {Proc. of the Eur. Conf. on Computer Vision (ECCV)},
+volume = {3},
+PAGES = {28--64},
+YEAR = {2002},
+NOTES = {ARO, Intel}
+}
+
+@inproceedings{favaroS02,
+AUTHOR  = {P. Favaro and S. Soatto},
+TITLE = {Learning shape from defocus},
+booktitle= {Proc. of the Eur. Conf. on Computer Vision (ECCV)},
+volume = {2},
+PAGES = {735--745},
+YEAR = {2002},
+NOTES = {ARO, Intel}
+}
+
+@inproceedings{jinF02,
+AUTHOR  = {H. Jin and P. Favaro and A. Yezzi and S. Soatto},
+TITLE = {A variational approach to shape from defocus},
+booktitle= {Proc. of the Eur. Conf. on Computer Vision (ECCV)},
+PAGES = {18--30},
+volume = {2},
+YEAR = {2002},
+NOTES = {ARO, Intel}
+}
+
+@INPROCEEDINGS{vidalSS02_1,
+	AUTHOR = {R. Vidal and S. Soatto and S. Sastry},
+	TITLE = {Segmentation of dynamic scenes from the multi-body fundamental matrix},
+	BOOKTITLE = {Proc. of the Workshop on Analysis of Dynamic Scenes},
+	YEAR = {2002},
+	PAGES = {},
+	MONTH = {June},
+NOTES = {ONR, ARO}	
+}
+
+@INPROCEEDINGS{bissaccoSS02,
+	AUTHOR = {A. Bissacco and P. Saisan},
+	TITLE = {Modeling human gaits with subtleties},
+	BOOKTITLE = {Workshop on Dynamic Scene Analysis},
+	YEAR = {2002},
+	PAGES = {},
+	MONTH = {}	
+}
+
+@inproceedings{dorettoS02,
+AUTHOR  = {G. Doretto and S. Soatto},
+TITLE = {Editable dynamic textures},
+booktitle = {Siggraph sketches},
+PAGES = {},
+YEAR = {2002}
+}
+
+@INPROCEEDINGS{bissaccoCMS01,
+	AUTHOR = {A. Bissacco and A. Chiuso and Y. Ma and S. Soatto},
+	TITLE = {Recognition of human gaits},
+	BOOKTITLE = cvpr,
+	YEAR = {2001},
+	PAGES = {II 52--58},
+	MONTH = {December}	
+}
+
+@INPROCEEDINGS{saisanDWS01,
+	AUTHOR = {P. Saisan and G. Doretto and Y. Wu and S. Soatto},
+	TITLE = {Dynamic texture recognition},
+	BOOKTITLE = cvpr,
+	YEAR = {2001},
+	PAGES = {II 58--63},
+	MONTH = {December},
+NOTES = {NSF, ARO}	
+}
+
+@inproceedings{favaroJS01,
+AUTHOR  = {P. Favaro and H. Jin and S. Soatto},
+TITLE = {A semidirect approach to structure from motion},
+booktitle = {IEEE Intl. Conf. on Image Analysis and Processing},
+pages = {250--255},
+YEAR = {2001},
+NOTES = {NSF, ARO, INTEL}
+}
+
+@inproceedings{yezziS01,
+AUTHOR  = {A. Yezzi and S. Soatto},
+TITLE = {Stereoscopic segmentation},
+booktitle = {Proc. of the Intl. Conf. on Computer Vision},
+PAGES = {59--66},
+YEAR = {2001},
+NOTES = {NSF, ARO, INTEL}
+}
+
+@inproceedings{soattoDW01,
+AUTHOR  = {S. Soatto and G. Doretto and Y. Wu},
+TITLE = {Dynamic textures},
+booktitle = {Proc. of the Intl. Conf. on Computer Vision},
+PAGES = {439--446},
+YEAR = {2001},
+NOTES = {NSF, ARO}
+}
+
+@inproceedings{jinFS01,
+AUTHOR  = {H. Jin and P. Favaro and S. Soatto},
+TITLE = {Real-time feature tracking and outlier rejection with changes in illumination},
+booktitle = {Proc. of the Intl. Conf. on Computer Vision},
+PAGES = {684--689},
+YEAR = {2001},
+NOTES = {NSF, ARO, Intel}
+}
+
+@inproceedings{favaroJS01DEMO,
+AUTHOR  = {P. Favaro and H. Jin and S. Soatto},
+TITLE = {Real-time virtual object insertion},
+booktitle = {Proc. of the Intl. Conf. on Computer Vision},
+PAGES = {749},
+YEAR = {2001},
+NOTES = {NSF, ARO, Intel}
+}
+
+@inproceedings{chiusoS00CDC,
+AUTHOR  = {A. Chiuso and S. Soatto},
+TITLE = {Monte Carlo filtering on Lie groups},
+booktitle = {Intl. Conf. on Decision and Control},
+PAGES = {304--309},
+YEAR = {December 2000},
+NOTES = {NSF, ARO}
+}
+
+@inproceedings{favaroS00ECCV,
+AUTHOR  = {P. Favaro and S. Soatto},
+TITLE = {Shape and reflectance estimation from the information divergence of blurred images},
+booktitle = {European Conference on Computer Vision},
+PAGES = {755--768},
+YEAR = {June 2000},
+NOTES = {NSF, ARO}
+}
+
+@INPROCEEDINGS{chiusoFJS00ECCVpart2,
+AUTHOR  = {A. Chiuso and P. Favaro and H. Jin and S. Soatto},
+TITLE = {3-D motion and structure causally integrated over time:
+Implementation.},
+BOOKTITLE = {European Conference on Computer Vision},
+PAGES = {735--750},
+YEAR = {June 2000},
+NOTES = {NSF, ARO}
+}
+
+@inproceedings{jinYS00CVPR,
+AUTHOR  = {H. Jin and A. Yezzi and S. Soatto},
+TITLE = {Stereoscopic shading: integrating shape cues in a variational
+framework},
+booktitle = {Intl. Conf. on Computer Vision and Pattern Recognition},
+PAGES = {169--176},
+YEAR = {June 2000},
+NOTES = {NSF, ARO}
+}
+
+@inproceedings{soattoF00CVPR,
+AUTHOR  = {S. Soatto and P. Favaro},
+TITLE = {A geometric approach to blind deconvolution with application to shape from defocus},
+booktitle = {Intl. Conf. on Computer Vision and Pattern Recognition},
+PAGES = {10--17},
+YEAR = {June 2000},
+NOTES = {NSF, ARO}
+}
+
+@inproceedings{jinFS00,
+AUTHOR  = {H. Jin and P. Favaro and S. Soatto},
+TITLE = {Real-time 3-D motion and structure from point features: 
+        a front-end system for vision-based control and interaction},
+booktitle = {Computer Vision and Pattern Recognition; code available
+from {\tt http://vision.ucla.edu}},
+PAGES={778--779},
+YEAR = {June 2000},
+NOTES = {NSF, ARO}
+}
+
+@INPROCEEDINGS{chiusoS00ICRApart1,
+AUTHOR  = {A. Chiuso and S. Soatto},
+TITLE = {3-D motion and structure causally integrated over time: Theory},
+BOOKTITLE = {Tutorial lecture notes of IEEE Intl. Conf. on Robotics and Automation},
+YEAR = {April 2000},
+NOTES = {NSF, ARO}
+}
+
+@INPROCEEDINGS{mennucciS99ICIAP,
+AUTHOR = {A. Mennucci and S. Soatto},
+TITLE = {On observing shape from defocused images},
+BOOKTITLE = {Proc. of the Intl. Conf. on Image Analysis and Processing},
+PAGES = {550-555},
+YEAR = {1999},
+NOTES = {NSF, ARO}
+}
+
+@INPROCEEDINGS{maSKS99,
+AUTHOR  = {Y. Ma and S. Soatto and J. Kosecka and S. Sastry},
+TITLE = {Euclidean reconstruction and reprojection up to subgroups},
+BOOKTITLE = {Proc. of the IEEE Intl. Conf. on Computer Vision},
+PAGES = {773-780},
+YEAR = {1999},
+NOTES = {NSF, ARO}
+}
+
+@INPROCEEDINGS{frezzaPS98CDC,
+	AUTHOR = {R. Frezza and G. Picci and S. Soatto},
+	TITLE = {Non-holonomic, model-based predictive output tracking of an unknown three-dimensional trajectory},
+	BOOKTITLE = {Proc. of the IEEE Conf. on Decision and Control},
+	PUBLISHER = {IEEE Press},
+PAGES = {3731--3735},
+	YEAR = {1998}
+}
+@INPROCEEDINGS{soatto98CDC,
+	AUTHOR = {S. Soatto},
+	TITLE = {Observability of shape from focus},
+	BOOKTITLE = {Proc. of the IEEE Conf. on Decision and Control.},
+	YEAR = {1998},
+PAGES = {3251--3256},
+	MONTH = {December}
+}
+@INPROCEEDINGS{soattoB98CVPR,
+	AUTHOR = {S. Soatto and R. Brockett},
+	TITLE = {Optimal Structure from Motion: Local Ambiguities and
+	Global Estimates},
+	BOOKTITLE = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+	ADDRESS = {Santa Barbara, CA} ,
+	MONTH = {June} ,
+	YEAR = {1998} ,
+	PAGES = {282-288}
+}
+@INPROCEEDINGS{frezzaPS97CDC,
+	AUTHOR = {R. Frezza and G. Picci and S. Soatto},
+	TITLE = {Visual path following by recursive spline updating},
+	BOOKTITLE = {Proc. of the IEEE Conf. on Decision and Control},
+	PUBLISHER = {IEEE Press},
+PAGES = {1130-1136},
+	YEAR = {1997}
+}
+@INPROCEEDINGS{soattoP96CVPR_1,
+	AUTHOR = {S. Soatto and P. Perona},
+	TITLE = {Reducing structure from motion: a general framework
+		  for dynamic vision with experimental evaluation},
+	BOOKTITLE = {Proc. of the IEEE Intl. Conf. on Comp. Vision and
+		 Patt. Recogn.},
+	YEAR = {1996},
+PAGES = {825--832},
+	MONTH = {June}
+}
+@INPROCEEDINGS{soattoP96CVPR_2,
+	AUTHOR = {S. Soatto and P. Perona},
+	TITLE = {Motion From Fixation},
+	BOOKTITLE = {Proc. of the IEEE Intl. Conf. on Comp. Vision and
+		 Patt. Recogn.},
+PAGES ={817--824},
+	YEAR = {1996},
+	MONTH = {June}
+}
+@INPROCEEDINGS{frezzaS96,
+	AUTHOR = {R. Frezza and S. Soatto},
+	TITLE = {Path following by controlling apparent shape},
+	BOOKTITLE = {Mathematical Theory of Networks and Systems MTNS '96},
+	YEAR = {1996},
+PAGES={},
+	MONTH = {St. Louis - MO (no proceedings)}
+}
+@INPROCEEDINGS{soattoP95ICIP,
+	AUTHOR = {S. Soatto and P. Perona},
+	TITLE = {Motion estimation from point features: unified view},
+	BOOKTITLE = {Proc. of the IEEE Intl. Conf. on Image
+Processing},
+PAGES ={21--24},
+	YEAR = {1995}
+}
+@INPROCEEDINGS{soattoP95ICCV,
+	AUTHOR = {S. Soatto and P. Perona},
+	TITLE = {Dynamic rigid motion estimation from weak perspective},
+	BOOKTITLE = iccv95,
+	YEAR = {1995},
+	ADDRESS = {Cambridge -- MA},
+	MONTH = {June},
+	PAGES ={321-328}
+}
+@INPROCEEDINGS{ursellaSP95,
+	AUTHOR = {E. Ursella and S. Soatto and P. Perona},
+	TITLE = {Motion and pose estimation for articulated bodies},
+	BOOKTITLE = {European Control Conference},
+PAGES = {*1--*6},
+	YEAR = {1995}
+}
+@INPROCEEDINGS{soattoFP95NOLCOS,
+	AUTHOR = {S. Soatto and R. Frezza and P. Perona},
+	TITLE = {Structure from visual motion as a nonlinear observation problem},
+	BOOKTITLE = {Proceedings of the IFAC Symposium on Nonlinear Control Systems NOLCOS},
+	YEAR = {1995},
+PAGES = {79--85},
+	MONTH = {Tahoe City, June}
+}
+@INPROCEEDINGS{soattoFP94,
+	AUTHOR = {S. Soatto and R. Frezza and P. Perona},
+	TITLE = {Motion estimation on the essential manifold},
+	BOOKTITLE = eccv94,
+	YEAR = {1994},
+	MONTH = {Stockholm, May},
+	PAGES = {II:61-72}
+}
+@INPROCEEDINGS{soattoP94SYROCO,
+	AUTHOR = {S. Soatto and P. Perona},
+	TITLE ={Structure-independent visual motion control on the essential manifold},
+	BOOKTITLE = {Proc. of the IFAC Symposium on Robot Control (SYROCO), Capri, Italy},
+	YEAR = {1994},
+	PAGES = {869-876},
+	MONTH = {Sept.}
+}
+@INPROCEEDINGS{soatto94,
+	AUTHOR = {S. Soatto},
+	TITLE = {Observability/identifiability of rigid motion under perspective projection},
+	BOOKTITLE = cdc94,
+	MONTH = {Dec.},
+	YEAR = {1994},
+	PAGES = {3235-3240}
+}
+@INPROCEEDINGS{soattoP94MNAO,
+	AUTHOR = {S. Soatto and P. Perona},
+	TITLE = {Three dimensional transparent structure 
+		segmentation and multiple 3D motion estimation 
+		from monocular perspective image sequences},
+	BOOKTITLE = {IEEE Workshop on Motion of Nonrigid and
+		Articulated Objects, Austin},
+	PAGES = {228-235},
+	YEAR = {1994},
+	ORGANIZATION = {IEEE Computer Society},
+	MONTH = nov
+}
+@INPROCEEDINGS{soattoPFP94,
+	AUTHOR = {S. Soatto and P. Perona and R. Frezza and G. Picci},
+	TITLE = {Motion estimation via dynamic vision},
+	BOOKTITLE = cdc94,
+	ADDRESS = {Orlando},
+	MONTH = {Dec.},
+	YEAR = {1994},
+	PAGES = {3253-3258}
+}
+@INPROCEEDINGS{soattoP94ICIP_1,
+	AUTHOR = {S. Soatto and P. Perona},
+	TITLE = {Recursive estimation of camera motion from uncalibrated image sequences},
+	BOOKTITLE = icip94,
+	YEAR = {1994},
+	PAGES = {II: 58-62},
+	MONTH = {Austin, November}
+}
+@INPROCEEDINGS{soattoP94ICIP_2,
+	AUTHOR = {S. Soatto and P. Perona},
+	TITLE = {Dynamic visual motion estimation from subspace constraints},
+	BOOKTITLE = icip94,
+	YEAR = {1994},
+	PAGES = {I:333-337},
+	MONTH = {Austin, November}	
+}
+@INPROCEEDINGS{soattoPFP93,
+	AUTHOR = {S. Soatto and P. Perona and R. Frezza and G. Picci},
+	TITLE = {Recursive motion and structure estimation 
+		with complete error characterization},
+	BOOKTITLE = cvpr,
+	YEAR = {1993},
+	ADDRESS = {New York},
+	MONTH = {June},
+	PAGES = {428-433}
+}
+
+
+
+@Comment{UNDER REVIEW}
+
+@ARTICLE{soattoC15NIPS,
+TITLE = {Visual Scene Representations: Defining Properties and Deep Approximations},
+AUTHOR = {S. Soatto and A. Chiuso},
+JOURNAL = {NIPS}. 
+YEAR = {June 5, 2015}, 
+NOTES = {}
+}
+
+@ARTICLE{karasevAS15,
+TITLE = {Intent-Aware Long-Term Prediction of Pedestrian Motion},
+AUTHOR = {V. Karasev and A. Ayvaci and S. Soatto},
+JOURNAL = {NIPS}. 
+YEAR = {June 5, 2015}, 
+NOTES = {}
+}
+@ARTICLE{cohenWS15,
+TITLE = {Group-equivariant Convolution Networks},
+AUTHOR = {T. Cohen and M. Welling and S. Soatto},
+JOURNAL = {NIPS}. 
+YEAR = {June 5, 2015}, 
+NOTES = {}
+}
+
+@ARTICLE{tsotsosAl15,
+TITLE = {Occlusion-based model selection for scene segmentation}, 
+AUTHOR = {K. Tsotsos et al.},
+JOURNAL = {}. 
+YEAR = {April 20, 2015}, 
+NOTES = {solid objects, submitted to ICCV}
+}
+
+@ARTICLE{karianakisDS15,
+TITLE = {How well can a CNN marginalize simple nuisances it is designed for?}, 
+AUTHOR = {N. Karianakis and J. Dong and S. Soatto},
+JOURNAL = {}. 
+YEAR = {April 20, 2015}, 
+NOTES = {submitted to ICCV}
+}
+@ARTICLE{dongKS15,
+TITLE = {Sampling and pooling domains in local and mid-level descriptors}, 
+AUTHOR = {J. Dong and N. Karianakis and S. Soatto},
+JOURNAL = {}. 
+YEAR = {April 20, 2015}, 
+NOTES = {submitted to ICCV}
+}
+@ARTICLE{karianakisFS15,
+TITLE = {Boosting convolutional features for robust object proposals}, 
+AUTHOR = {N. Karianakis and T. Fuchs and S. Soatto},
+JOURNAL = {}. 
+YEAR = {April 20, 2015}, 
+NOTES = {submitted to ICCV}
+}
+@ARTICLE{feiTS15,
+TITLE = {Reducing time complexity of loop closure with a simple hierarchical averaging data structure}, 
+AUTHOR = {X. Fei and K. Tsotsos and S. Soatto},
+JOURNAL = {}. 
+YEAR = {April 20, 2015}, 
+NOTES = {submitted to ICCV}
+}
+
+
+@ARTICLE{soatto15,
+TITLE = {Towards a Theory of Visual Representations: Sufficiency, Invariance, Complexity},
+AUTHOR = {S. Soatto},
+JOURNAL = {Technical Report UCLA CSD140023},
+YEAR = {November 12, 2014}, 
+NOTES = {}
+}
+
+
+@ARTICLE{tianS14,
+TITLE = {NcBoost: Visual tracking with nonnegative coding boosting}, 
+AUTHOR = {X. Tian and L. Jiao and Z. Gan and S. Soatto and L. Li},
+JOURNAL = {Technical Report UCLA CSD140025},
+YEAR = {November 12, 2014}, 
+NOTES = {upload }
+}
+
+@ARTICLE{tsotsosAL14,
+TITLE = {Scene Segmentation with Dense Scene Reconstruction From Monocular Video}, 
+AUTHOR = {K. Tsotsos and J. Hernandez and G. Graber and T. Pock and T. Campbell and J. P. How and S. Soatto},
+JOURNAL = {Technical Report UCLA CSD140028},
+YEAR = {November 12, 2014}, 
+NOTES = {ONR,MIT}
+}
+
+@INPROCEEDINGS{yiAlS12,
+AUTHOR = {Z. Yi et al.},
+TITLE = {Information Forests (Context-dependent cascade classification using a mutual information criterion)},
+BOOKTITLE = {Submitted to ECCV, rjected - extend to multi-class and resubmit},
+YEAR = {2012},
+MONTH = {June 1},
+NOTES = {ARO MURI}
+}
+
+@INPROCEEDINGS{hernandezKS12NIPS,
+AUTHOR = {J. Hernandez and N. Karianakis and S. Soatto}, 
+TITLE = {Information driven exploration using poisson sampling over ising marginals}, 
+BOOKTITLE = {In preparation},
+YEAR = {2012},
+MONTH = {June 1},
+NOTES = {TSIOTRAS, ARO MURI, MIT}
+}
+
+
+@INPROCEEDINGS{hernandezKS15inprep,
+AUTHOR = {J. Hernandez and N. Karianakis and S. Soatto}, 
+TITLE = {Information-Gathering Control under Topological Uncertainty and Best-Next-View Approximations},
+BOOKTITLE = {in preparation},
+YEAR = {2015},
+MONTH = {March},
+NOTES = {MSEE,AFOSR Fariba, AFRL, ONR Tsiotras}
+}
+
+@INPROCEEDINGS{wnukS12,
+AUTHOR = {K. Wnuk and S. Soatto},
+TITLE = {What is wrong with tracking by detection, and how to fix it},
+BOOKTITLE = {Submitted to CVPR, rejected},
+YEAR = {2012},
+MONTH = {Nov. 20, 2011},
+NOTES = {}
+}
+
+@INPROCEEDINGS{prettoCS11,
+AUTHOR = {A. Pretto and A. Chiuso and S. Soatto},
+TITLE = {Sufficient visual exploration}, 
+BOOKTITLE = {submitted},
+YEAR = {2011},
+MONTH = {January 17},
+NOTES = {Withdrawn from RSS, resubmit}
+}
+
+@article{soattoB10PAMI,
+TITLE = {Texture, Structure and Visual Matching},
+AUTHOR = {S. Soatto and A. Chiuso},
+JOURNAL = {Technical Report UCLA-CSD-100033},
+YEAR = {October 11, 2010},
+NOTES = {Submitted to PAMI, revised 4/10/11}
+}
+
+@INPROCEEDINGS{oconnorMS10,
+AUTHOR = {A. Chiuso and A. Mennucci and S. Soatto},
+TITLE = {Controlled recognition bounds},
+BOOKTITLE = {(in preparation) },
+YEAR = {2010},
+MONTH = {September},
+NOTES = {}
+}
+
+@INPROCEEDINGS{sundaramoorthiS10CDC,
+AUTHOR = {G. Sundaramoorthi and S. Soatto},
+TITLE = {Conformal region tracking via Riemannian mapping},
+BOOKTITLE = {},
+YEAR = {2010},
+MONTH = {March},
+NOTES = {submitted to CDC, rejected; resubmit}
+}
+@INPROCEEDINGS{koCES10,
+AUTHOR = {T. Ko and A. Cenedese and D. Estrin and S. Soatto},
+TITLE = {Object Barcodes for Multiview Categorization},
+BOOKTITLE = {},
+YEAR = {2010},
+MONTH = {March},
+NOTES = {TR CSD100010?, submitted to ECCV, rejected.}
+}
+@INPROCEEDINGS{fulkersonS10,
+AUTHOR = {B. Fulkerson and S. Soatto},
+TITLE = {Building Feature Descriptors on the Superpixel Graph},
+BOOKTITLE = {in preparation},
+YEAR = {2010},
+MONTH = {},
+NOTES = {}
+}
+
+@BOOK{soatto10,
+AUTHOR = {S. Soatto},
+TITLE = {Steps Toward a Theory of Visual Information},
+YEAR = {2010},
+Publisher = {http://arxiv.org/abs/1110.2053},
+MONTH = {Technical Report UCLA-CSD100028, September 13, 2010}
+} 
+
+@ARTICLE{pradosSN09,
+AUTHOR = {E. Prados and S. Soatto and N. Jindal},
+TITLE = {Shape from Ambient Shading},
+YEAR = {2009},
+MONTH = {Sent to Prados, July 2009}
+}
+
+@ARTICLE{sundaramoorthiPS09,
+	AUTHOR = {G. Sundaramoorthi and P. Petersen and S. Soatto},
+	TITLE = {On the set of images modulo viewpoint and contrast changes},
+	JOURNAL = {TR090005},
+	YEAR = {2009},
+	PAGES = {},
+	MONTH = {Submitted, JMIV},
+NOTES = {}	
+}
+
+@ARTICLE{vedaldiFS08,
+	AUTHOR = {A. Vedaldi and P. Favaro and S. Soatto},
+	TITLE = {Generalized Boosting Algorithms for the Classification of Structured Data},
+	JOURNAL = {TR080027},
+	YEAR = {Dec. 2009},
+	PAGES = {},
+	MONTH = {submitted to PAMI, major revision never performed},
+NOTES = {}	
+}
+
+@INPROCEEDINGS{meltzerS06,
+AUTHOR = {J. Meltzer and S. Soatto},
+TITLE = {Shiny correspondence: multiple-view features for non-Lambertian scenes},
+BOOKTITLE = {Technical Report, UCLA CSD2006-004},
+YEAR = {2005},
+MONTH = {},
+NOTES = {AFOSR}
+}
+
+@article{kangCS02_PAMI,
+AUTHOR = {S. H. Kang and S. Soatto and T. F. Chan},
+TITLE = {Multiple view inpainting},
+JOURNAL = {IEEE Trans. on Patt. Anal. and Mach. Intell.},
+PAGES = {},
+YEAR = {(submitted), 2002},
+NOTES = {NSF, ONR}
+}
+
+@Comment{TECHNICAL REPORTS AND THESES}
+
+
+@techreport{soattoD09,
+AUTHOR  = {S. Soatto and D. Durbin},
+TITLE = {High-precision stereoscopic motion and range estimation},
+booktitle = {IOS Internal Report, confidential},
+YEAR = {May 10, 2009},
+NOTE = {http://www.youtube.com/watch?v=09qKu TI7b0}
+}
+
+
+@INPROCEEDINGS{soatto08,
+AUTHOR = {S. Soatto},
+TITLE = {The apology of image analysis},
+BOOKTITLE = {Technical Report CSD080022},
+YEAR = {2008},
+MONTH = {July },
+NOTES = {CSD TR080020}
+}
+
+@INPROCEEDINGS{vedaldiS05TR,
+AUTHOR = {A. Vedaldi and S. Soatto},
+TITLE = {Features for recognition: viewpoint invariance for non-planar scenes},
+YEAR = {2005},
+MONTH = {Technical Report, October},
+NOTES = {ONR, AFOSR}
+}
+
+@INPROCEEDINGS{dorettoS05,
+AUTHOR = {G. Doretto and S. Soatto},
+TITLE = {Modeling dynamic scenes with active appearance},
+BOOKTITLE = {Technical Report UCLA-CSD 04-0053},
+YEAR = {2004},
+MONTH = {December},
+NOTES = {ECS,AFOSR,ONR}
+}
+
+@INPROCEEDINGS{bissaccoS05,
+AUTHOR = {A. Bissacco and S. Soatto},
+TITLE = {Modeling and learning contact dynamics in human motion},
+BOOKTITLE = {Technical report UCLA-CSD 04-0048},
+YEAR = {2004},
+MONTH = {December},
+NOTES = {}
+}
+
+@TECHREPORT{soattoC01,
+	AUTHOR = {S. Soatto and A. Chiuso},
+	TITLE = {Dynamic data factorization},
+	YEAR = {March 2001},
+INSTITUTION = {UCLA CSD 2001/01},
+NOTE = {}
+}
+@techreport{cuzzolinBFS01,
+AUTHOR  = {F. Cuzzolin and A. Bissacco and R. Frezza and S. Soatto},
+TITLE = {Towards unsupervised detection of actions in clutter},
+booktitle = {Technical Report UCLA-CSD 2000/33},
+YEAR = {2000}
+}
+@TECHREPORT{pundirS01CVPR,
+	AUTHOR = {P. Pundir and S. Soatto},
+	TITLE = {Controlling beauty: perceptual representation and control of geometric shape spaces},
+	BOOKTITLE = {Technical Report 01-0019},
+	YEAR = {2001},
+	PAGES = {},
+INSTITUTION = {UCLA}
+	MONTH = {}	
+}
+@TECHREPORT{mennucciS99TR-2,
+AUTHOR  = {A. Mennucci and S. Soatto},
+TITLE = {More on observing shape from defocused images},
+TYPE = {ESSRL Technical Report 99-004},
+INSTITUTION = {Washington University},
+YEAR = {October 1999}
+}
+@TECHREPORT{mennucciS99TR-1,
+	AUTHOR = {A. Mennucci and S. Soatto},
+	TITLE = {The accommodation cue, part 1: modeling},
+	TYPE = {ESSRL Technical Report 99-001},
+INSTITUTION = {Washington University},
+YEAR = {October 1999}
+}
+@TECHREPORT{soatto96,
+AUTHOR ={S. Soatto},
+TITLE={A geometric framework for dynamic vision},
+TYPE={Ph.D. Thesis},
+INSTITUTION={California Institute of Technology},
+YEAR={1996}
+}
+@TECHREPORT{soattoP94obslin,
+	AUTHOR = {S. Soatto and P. Perona},
+	TITLE = {On the exact linearization of structure from motion},
+	TYPE = {CIT-CDS 94-011}, 
+INSTITUTION={California Institute of Technology},
+	YEAR = {1994}
+}
+@TECHREPORT{peronaS92,
+	AUTHOR = {P. Perona and S. Soatto},
+	TITLE = {Motion and structure from 2 perspective views of p localized features:
+	noise sensitivity analysis},
+	INSTITUTION = {California Institute of Technology},
+	TYPE = {Computation and Neural Systems Technical Report},
+	NUMBER = {23},
+	NOTE = {Revised April 1993},
+	YEAR = {1992}
+}
+@TECHREPORT{soatto92,
+	AUTHOR = {S. Soatto},
+	TITLE = {Stima della struttura di una scena e del moto
+	dell'osservatore mediante il filtro di Kalman.},
+	TYPE = {Tesi di Laurea},
+INSTITUTION = {Universit\`a di Padova},
+	YEAR = {June 1992},
+NOTE = {(in italian)}
+}
+
+@Comment{PRESS COVERAGE}
+
+@BOOK{eetimes,
+AUTHOR = {},
+TITLE  = {Conference tracks advances in computer vision},
+YEAR = {July 11, 2000},
+PUBLISHER = {EE Times, http://www.eet.com/story/technology/OEG20000626S0073}
+}
+@book{signal,
+AUTHOR={},
+TITLE = {},
+YEAR = {2002},
+PUBLISHER = {Signal Magazine}
+}
+@book{engineer,
+AUTHOR={},
+TITLE = {},
+YEAR = {2002},
+PUBLISHER = {UCLA Engineer Magazine}
+}
+@book{bruin,
+AUTHOR={},
+TITLE = {},
+YEAR = {2002},
+PUBLISHER = {Daily Bruin}
+}
+@book{seasmovie,
+AUTHOR={},
+TITLE = {},
+YEAR = {2002},
+PUBLISHER = {SEAS Promo}
+}
+
+
+@misc{perona2000apparatus,
+  title={Apparatus and method for tracking handwriting from visual input},
+  author={Perona, Pietro and Munich, Mario and Soatto, Stefano},
+  year={2000},
+  month=mar # "~28",
+  publisher={Google Patents},
+  note={US Patent 6,044,165}
+}
+
+
+
+@book{marvasti2001nonuniform,
+  title={Nonuniform sampling: theory and practice},
+  author={Marvasti, F.},
+  volume={1},
+  year={2001},
+  publisher={Springer}
+}

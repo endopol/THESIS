@@ -1,0 +1,74 @@
+\section{Information-Driven Exploration}
+
+Exploration is a Partially-Observed Markov Decision Process (POMDP).
+$$\min_{\text{Policies $\pi$}}\sum $$
+
+
+policy with the shortest expected \footnote{or shortest worst-case}
+\begin{example}
+Lost Astronaut:
+An astronaut crash-lands at an unknown location on the Earth's surface, 
+having only a prior distribution on latitude, derived from the trajectory of
+her satellite (Fig. \ref{fig: lost astronaut}.
+Needing to know her exact location, and having broken her navigation equipment, 
+she examines local landmarks.
+Her prior knowledge of the situation informs her initial reconnaisance.  
+For instance, as her longitude is more uncertain than her latitude,
+it would be a better use of her time to try to ascertain the former, by, 
+for instance, checking the passage of the sun against her watch.
+\begin{figure}
+\centering
+\begin{tabular}{cc}
+\includegraphics[height=1.5in]{world_map} &
+\includegraphics[height=1.5in]{world_map_belief}
+\\
+\tiny{\texttt{https://upload.wikimedia.org/wikipedia/commons/e/ec/World\_map\_blank\_without\_borders.svg}}
+\end{tabular}
+\caption{\emph{Lost Astronaut Prior Distribution}
+The crash site $\x(t)$ is defined by a random time $t$, chosen uniformly in $[0,T]$.
+This induces prior marginal probabilities on the latitude and longitude of the crash site.
+The limiting distribution for as $T\to\infty$ is shown at right, while the limiting distribution
+on longitude is uniform.
+}
+\label{fig: lost astronaut}
+\end{figure}
+
+
+\end{example}
+
+\begin{figure}
+\centering
+\subfigure[Freely-placed obstacles]{
+\begin{tabular}{c}
+\includegraphics[height=1in]{random_block_belief}\\
+\includegraphics[height=1in]{random_block}
+\end{tabular}\qquad
+}
+\subfigure[Gridded obstacles]{
+\begin{tabular}{c}
+\includegraphics[height=1in]{random_room_belief}\\
+\includegraphics[height=1in]{random_room}
+\end{tabular}
+}
+\caption{\emph{Exploring a Random Room}
+In the first case, the explorer knows that 
+there are four identical boxes scattered within a
+room of known dimensions, three of which he can see.
+
+}
+\end{figure}
+
+
+
+\begin{example}
+A 
+\end{example}
+
+\begin{definition}
+\end{definition}
+
+
+
+\subsection{View Value}
+
+\subsection{Information Gain Profile}

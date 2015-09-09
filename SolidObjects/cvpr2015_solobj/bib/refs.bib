@@ -1,0 +1,364 @@
+%% Created using Papers on Tue, 25 Sep 2012.
+%% http://mekentosj.com/papers/
+
+@article{GuofengZhang:ew,
+author = {Guofeng Zhang and Jiaya Jia and Tien-Tsin Wong and Hujun Bao},
+title = {{Consistent Depth Maps Recovery from a Video Sequence}},
+journal = {Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+volume = {31},
+number = {6},
+pages = {974--988}
+}
+
+@article{JiejieZhu:fv,
+author = {Jiejie Zhu and Liang Wang and Jizhou Gao and Ruigang Yang},
+title = {{Spatial-Temporal Fusion for High Accuracy Depth Maps Using Dynamic MRFs}},
+journal = {Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+volume = {32},
+number = {5},
+pages = {899--909}
+}
+
+@article{Jenkin:1986wm,
+author = {Jenkin, M and Tsotsos, J K},
+title = {{Applying temporal constraints to the dynamic stereo problem}},
+journal = {Computer Vision, Graphics, and Image Processing},
+year = {1986},
+volume = {33},
+number = {1},
+pages = {16--32}
+}
+
+@article{Crossley:1998tw,
+author = {Crossley, S. and Thacker, N.A. and Seed, NL},
+title = {{Benchmarking of bootstrap temporal stereo using statistical and physical scene modelling}},
+journal = {Proceedings of the British Machine Vision Conference},
+year = {1998},
+pages = {346--355}
+}
+
+@inproceedings{Lin:1998bv,
+author = {Lin, Chung-Yi and Shih, Sheng-Wen and Hung, Yi-Ping},
+title = {{Toward automatic reconstruction of 3D environment with an active binocular head}},
+booktitle = {Pattern Recognition, 1998. Proceedings. Fourteenth International Conference on},
+year = {1998},
+pages = {1708--1710}
+}
+
+@inproceedings{Neumann:2001hh,
+author = {Neumann, J and Aloimonos, Y},
+title = {{Spatio-temporal stereo using multi-resolution subdivision surfaces}},
+booktitle = {Stereo and Multi-Baseline Vision, 2001. (SMBV 2001). Proceedings. IEEE Workshop on},
+year = {2001},
+pages = {103--108},
+publisher = { IEEE Computer Society}
+}
+
+@article{Lin:2002hg,
+author = {Lin, Chung-Yi and Shih, Sheng-Wen and Hung, Yi-Ping and Tang, Gregory Y},
+title = {{A New Approach to Automatic Reconstruction of a 3-D World Using Active Stereo Vision}},
+journal = {Computer Vision and Image Understanding},
+year = {2002},
+volume = {85},
+number = {2},
+pages = {117--143},
+month = feb,
+annote = {-Inverse polar octree:
+-Voxel {\&}gt; mesh for fusion
+-Inverse polar transformation to avoid nonuniform voxel quantization: convert to spherical coords from euclidean, invert depth, now infinite world mapped to finite sphere. now uniform quantization since estimation error bounded. Since estimation error is constant*depth, with inverse depth this becomes bounded. 
+-In polar map, errors past max dist bounded by constant/maxdist, so have useful quant size related to depth error. Therefore quant error {\&}gt; estimation error for everything outside max distance -{\&}gt; point should be contained within one voxel, no spurious voxels!
+-Map infinite space into finite memory. Problem: Nonuniform quantization error, transformations between viewopints difficult, may map single voxel to multiple after viewpoint change.
+-Asusmptions of small quant noise change and multiple inverse polar octress used to deal with the resampling? Small motions easier to deal with and cause less error in tree. }
+}
+
+@article{Brown:2003cc,
+author = {Brown, M.Z and Burschka, D and Hager, G.D},
+title = {{Advances in computational stereo}},
+journal = {Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+year = {2003},
+volume = {25},
+number = {8},
+pages = {993--1008}
+}
+
+@inproceedings{Zhang:2003hc,
+author = {Zhang, Li and Curless, B and Seitz, S M},
+title = {{Spacetime stereo: shape recovery for dynamic scenes}},
+booktitle = {Computer Vision and Pattern Recognition, 2003. Proceedings. 2003 IEEE Computer Society Conference on},
+year = {2003}
+}
+
+@article{Leung:2004tc,
+author = {Leung, C. and Appleton, B. and Lovell, B.C. and Sun, C.},
+title = {{An energy minimisation approach to stereo-temporal dense reconstruction}},
+journal = {Pattern Recognition, 2004. ICPR 2004. Proceedings of the 17th International Conference on},
+year = {2004},
+volume = {4},
+pages = {72--75 Vol. 4}
+}
+
+@article{Williams:2005vj,
+author = {Williams, O. and Isard, M and MacCormick, J.},
+title = {{Estimating disparity and occlusions in stereo video sequences}},
+journal = {Computer Vision and Pattern Recognition, 2005. CVPR 2005. IEEE Computer Society Conference on},
+year = {2005},
+volume = {2},
+pages = {250--257 vol. 2}
+}
+
+@article{Davis:2005dr,
+author = {Davis, James and Nehab, Diego and Ramamoorthi, Ravi and Rusinkiewicz, Szymon},
+title = {{Spacetime Stereo: A Unifying Framework for Depth from Triangulation}},
+journal = {Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+year = {2005},
+volume = {27},
+number = {2},
+pages = {296--302},
+month = feb
+}
+
+@article{Gong:2006tv,
+author = {Gong, M.},
+title = {{Enforcing temporal consistency in real-time stereo estimation}},
+journal = {Computer Vision--ECCV 2006},
+year = {2006},
+pages = {564--577}
+}
+
+@article{Larsen:2007tp,
+author = {Larsen, E.S. and Mordohai, P and Pollefeys, M and Fuchs, H.},
+title = {{Temporally consistent reconstruction from multiple video streams using enhanced belief propagation}},
+journal = {Computer Vision, 2007. ICCV 2007. IEEE 11th International Conference on},
+year = {2007},
+pages = {1--8}
+}
+
+@inproceedings{Merrell:2007ix,
+author = {Merrell, P and Akbarzadeh, A and Wang, Liang and Mordohai, P and Frahm, J-M and Yang, Ruigang and Nister, D and Pollefeys, M},
+title = {{Real-Time Visibility-Based Fusion of Depth Maps}},
+booktitle = {Computer Vision, 2007. ICCV 2007. IEEE 11th International Conference on},
+year = {2007},
+pages = {1--8}
+}
+
+@article{Pollefeys:2007ih,
+author = {Pollefeys, M and Nister, D and Frahm, J-M and Akbarzadeh, A and Mordohai, P and Clipp, B and Engels, C and Gallup, D and Kim, S J and Merrell, P and Salmi, C and Sinha, S and Talton, B and Wang, L and Yang, Q and Stewenius, H and Yang, R and Welch, G and Towles, H},
+title = {{Detailed Real-Time Urban 3D Reconstruction from Video}},
+journal = {International Journal of Computer Vision},
+year = {2007},
+volume = {78},
+number = {2-3},
+pages = {143--167},
+month = oct,
+annote = {fuf}
+}
+
+@article{Bleyer:2008vn,
+author = {Bleyer, M and Gelautz, M},
+title = {{Simple but effective tree structures for dynamic programming-based stereo matching}},
+journal = {International Conference on Computer Vision Theory and Applications (VISAPP)},
+year = {2008},
+pages = {415--422}
+}
+
+@inproceedings{Howard:2008bn,
+author = {Howard, A},
+title = {{Real-time stereo visual odometry for autonomous ground vehicles}},
+booktitle = {Intelligent Robots and Systems, 2008. IROS 2008. IEEE/RSJ International Conference on},
+year = {2008},
+pages = {3946--3952}
+}
+
+@article{Sizintsev:2008vw,
+author = {Sizintsev, M},
+title = {{Hierarchical stereo with thin structures and transparency}},
+journal = {Canadian Conference on Computer and Robot Vision},
+year = {2008}
+}
+
+@article{Zach:2008tv,
+author = {Zach, C},
+title = {{Fast and high quality fusion of depth maps}},
+journal = {Proceedings of the International Symposium on 3D Data Processing, Visualization and Transmission (3DPVT)},
+year = {2008},
+volume = {1}
+}
+
+@article{Zhu:2008vz,
+author = {Zhu, J and Wang, L and Yang, R and Davis, J},
+title = {{Fusion of time-of-flight depth and stereo for high accuracy depth maps}},
+journal = {Computer Vision and Pattern Recognition, 2008. CVPR 2008. IEEE Conference on},
+year = {2008},
+pages = {1--8}
+}
+
+@article{Bajracharya:2009ci,
+author = {Bajracharya, Max and Howard, Andrew and Matthies, Larry H. and Tang, Benyang and Turmon, Michael},
+title = {{Autonomous Off-Road Navigation with End-to-End Learning for the LAGR Program}},
+journal = {Journal of Field Robotics},
+year = {2009},
+volume = {26},
+number = {1},
+pages = {3--25}
+}
+
+@inproceedings{Bleyer:2009uk,
+author = {Bleyer, M and Gelautz, M},
+title = {{Temporally consistent disparity maps from uncalibrated stereo videos}},
+booktitle = {Image and Signal Processing and Analysis, 2009. ISPA 2009. Proceedings of 6th International Symposium on},
+year = {2009},
+pages = {383--387}
+}
+
+@inproceedings{Sizintsev:2009ee,
+author = {Sizintsev, M and Wildes, R.P},
+title = {{Spatiotemporal stereo via spatiotemporal quadric element (stequel) matching}},
+booktitle = {Computer Vision and Pattern Recognition, 2009. CVPR 2009. IEEE Conference on},
+year = {2009},
+pages = {493--500}
+}
+
+@article{MinglunGong:2009ev,
+author = {{Minglun Gong}},
+title = {{Real-time joint disparity and disparity flow estimation on programmable graphics hardware}},
+journal = {Computer Vision and Image Understanding},
+year = {2009},
+volume = {113},
+number = {1},
+pages = {90--100},
+month = jan
+}
+
+@article{Bajracharya:2009kd,
+author = {Bajracharya, M and Moghaddam, B and Howard, A and Brennan, S and Matthies, L H},
+title = {{A Fast Stereo-based System for Detecting and Tracking Pedestrians from a Moving Vehicle}},
+journal = {The International Journal of Robotics Research},
+year = {2009},
+volume = {28},
+number = {11-12},
+pages = {1466--1485},
+month = oct
+}
+
+@article{Sizintsev:2009tj,
+author = {Sizintsev, Mikhail},
+title = {{A Review of Stereo and Motion Integration: Stereomotion}},
+journal = {Technical Report},
+year = {2009},
+pages = {1--97},
+month = oct
+}
+
+@article{Mei:2010wb,
+author = {Mei, C and Sibley, G and Cummins, M and Newman, P},
+title = {{RSLAM: A system for large-scale mapping in constant-time using stereo}},
+journal = {International Journal of {\ldots}},
+year = {2010}
+}
+
+@article{Min:2010vd,
+author = {Min, D and Yea, S and Vetro, A},
+title = {{Temporally consistent stereo matching using coherence function}},
+journal = {3DTV-Conference: The True Vision-Capture, Transmission and Display of 3D Video (3DTV-CON), 2010},
+year = {2010},
+pages = {1--4}
+}
+
+@article{Sizintsev:2010ty,
+author = {Sizintsev, M and Kuthirummal, S},
+title = {{GPU accelerated realtime stereo for augmented reality}},
+journal = {In Proceedings of the 5th International Symposium 3D Data Processing, Visualization and Transmission (3DPVT)},
+year = {2010}
+}
+
+@inproceedings{Unger:2010wi,
+author = {Unger, C and Wahl, E and Sturm, P and Ilic, S},
+title = {{Probabilistic disparity fusion for real-time motion-stereo}},
+booktitle = {ACCV '10: Proceedings of the Third Asian Conference on Computer Vision},
+year = {2010},
+publisher = {Citeseer}
+}
+
+@article{Wedel:2010kb,
+author = {Wedel, Andreas and Brox, Thomas and Vaudrey, Tobi and Rabe, Clemens and Franke, Uwe and Cremers, Daniel},
+title = {{Stereoscopic Scene Flow Computation for 3D Motion Understanding}},
+journal = {International Journal of Computer Vision},
+year = {2010},
+volume = {95},
+number = {1},
+pages = {29--51},
+month = nov
+}
+
+@article{Huntsberger:2010kj,
+author = {Huntsberger, Terry and Aghazarian, Hrand and Howard, Andrew and Trotz, David C},
+title = {{Stereo vision-based navigation for autonomous surface vessels}},
+journal = {Journal of Field Robotics},
+year = {2010},
+volume = {28},
+number = {1},
+pages = {3--18},
+month = dec
+}
+
+@inproceedings{Dobias:2011cm,
+author = {Dobias, M and Sara, R},
+title = {{Real-time global prediction for temporally stable stereo}},
+booktitle = {Computer Vision Workshops (ICCV Workshops), 2011 IEEE International Conference on},
+year = {2011},
+pages = {704--707},
+annote = {-spatiotemporal not good with dynamic scenes, but easy to adapt existing algs to do patching with volume blocks
+-Stereo/scene flow extends optical flow to time, joint estimate of matches and flow
+-"disparity transfer" for prediction of disparity maps
+-Homography between projections i ndisparity map for predicting new frame?
+-Compare predicted and measured disparities, align to integer values??
+-Seed growing algorithm used to fill in places without good predictions?
+-Impressive results
+-Assumption of constant disparity between viewpoints, so... very small motions?
+-Looks like they're not really doing it in disparity space... propagating disparity maps by estimating reprojection after motion, assuming disparity will remain constant, and then validating that by looking at similarity of pixel regions to update disparity by integer values.
+-Ego motion by VO
+}
+}
+
+@article{Geiger:2011wr,
+author = {Geiger, A and Roser, M and Urtasun, R},
+title = {{Efficient large-scale stereo matching}},
+journal = {Computer Vision--ACCV 2010},
+year = {2011},
+pages = {25--38}
+}
+
+@inproceedings{Goldberg:2011ks,
+author = {Goldberg, S.B and Matthies, L},
+title = {{Stereo and IMU assisted visual odometry on an OMAP3530 for small robots}},
+booktitle = {Computer Vision and Pattern Recognition Workshops (CVPRW), 2011 IEEE Computer Society Conference on},
+year = {2011},
+pages = {169--176}
+}
+
+@inproceedings{Sizintsev:2011ct,
+author = {Sizintsev, M and Wildes, R.P},
+title = {{Spatiotemporal oriented energies for spacetime stereo}},
+booktitle = {Computer Vision (ICCV), 2011 IEEE International Conference on},
+year = {2011},
+pages = {1140--1147}
+}
+
+@inproceedings{Cech:2011bf,
+author = {Cech, J and Sanchez-Riera, J and Horaud, R},
+title = {{Scene flow estimation by growing correspondence seeds}},
+booktitle = {CVPR '11: Proceedings of the 2011 IEEE Conference on Computer Vision and Pattern Recognition},
+year = {2011},
+pages = {3129--3136},
+publisher = { IEEE Computer Society},
+month = jun
+}
+
+@phdthesis{Sizintsev:2011ue,
+author = {Sizintsev, M},
+title = {{On 3D Spacetime Oriented Energy Representation for Spatiotemporal Stereo and Motion Recovery}},
+school = {York University},
+year = {2011},
+month = dec
+}
+

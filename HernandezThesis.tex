@@ -1,0 +1,152 @@
+\documentclass [PhD] {uclathes}
+
+\input {mymacros}                         % personal LaTeX macros
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Usually things live in separate flies.
+%
+% \input {prelim}                           % preliminary page info
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                      %
+%                          PRELIMINARY PAGES                           %
+%                                                                      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title          {Models and Methods for Sensor-Based Environment Exploration
+% Modeling and Optimization for Environment Exploration from Sensory Data
+% Algorithms for Scene Exploration and Representation
+% Optimization Schemes for Scene Exploration in Robotics and Vision
+% ...
+}
+\author         {Joshua Anthony Hernandez}
+\department     {Mathematics}
+\degreeyear     {2015}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chair          {Stefano Soatto}
+\member         {Joseph Teran}
+\member         {Rafail Ostrovsky}
+\member         {Luminita Vese}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\dedication     {\textsl{To my mother \ldots \\}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\acknowledgments {(Acknowledgments omitted for brevity.)}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% UCLA Policy on Vita
+% For security reasons, UCLA policy specifies that your birth year and birth place should not be included in your vita.
+%               
+\vitaitem{2012--2015}{Graduate Student Researcher, {\textsl UCLA Vision Lab}.
+ \begin{itemize}
+  \item {\textsl Information-Driven Exploration of Ising-Modeled Terrain } \\
+  Developed a method for efficiently exploring and mapping highly-occluded environments,
+  choosing informative viewpoints using a  prior on terrain shape and an efficiently-computed approximation of joint measurement entropy. 
+  \item {\textsl Visual-Inertial Navigation} \\ 
+  Implemented efficient numerical methods for the Corvis visual-inertial navigation system.
+  Analyzed the ambiguity inherent in visual-inertial sensor fusion systems, and characterised the set
+  of indistinguishable trajectories.
+  \item {\textsl Representation Reduction for Autonomous Agents} \\
+  Developed and analyzed algorithms for the lossless compresssion of an autonomous agent's belief state, 
+  modulo a given task, with the aim of reducing memory and computational requirements.
+ \end{itemize}
+}
+ 
+\vitaitem{Summer 2011}{Summer Intern, {\textsl Instruments Division, Jet Propulsion Lab}.  Contributed to the onboard image processing system of MSPI (Multiangle SpectroPolarimetric Imager) Satellite.
+Identified and eliminated an unusual striping artifact characteristic of that system.
+Advisor: Veljko Jovanovich.}
+\vitaitem{2005--2011}
+{Teaching Assistant, {\textsl UCLA Mathematics}.
+Held twice-weekly discussions for several lower-and upper-division classes, to wit: Precalculus, Calculus 1 \& 2, Differential Equations, Complex Analysis, 
+Introductory C++, Algorithms and Data Structures, Advanced A \& DS.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\publication{J. Dong, N. Karianakis, D. Davis, {\textsl J. Hernandez}, J. Balzer and S. Soatto. Multi-view Feature Engineering and Learning. {\textsl Proc.\ IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}, June 2015.}
+\publication{{\textsl J. Hernandez}, K. Tsotsos and S. Soatto. Observability, Identifiability and Sensitivity of Vision-Aided Inertial Navigation. {\textsl Proc.\ International Conference on Robotics and Automation (ICRA)}, May 2015.  {\textsl Best Paper, ICRA 2015}}
+\publication{J. Helton, D. McAllaster, {\textsl J. Hernandez}. Non-Commutative Harmonic and Subharmonic Polynomials. {\textsl Integral Equations and Operator Theory}, May 2008, Vol.\ 61, Iss.\ 1, pp 77-102.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin {document}
+\makeintropages
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Ordinarily each chapter (at least) is in a separate file.
+%
+\graphicspath{{Exploration/IDE/}{Exploration/Model/}{Exploration/Implementation/}{Exploration/Horizon/}{Exploration/Suff_Explor/}{Exploration/Eval/}{Exploration/Speedup/}{Exploration/Statistics/}{MinRep/}{SolidObjects/cvpr2014_solobj/}}
+\chapter{Representations of the Environment for Robotics Applications}
+The work in the following chapters addresses different aspects of the problem of autonomous interaction of a robot with physical environment.
+The need for such autonomous capabilities is evident - autonomous vehicles, drones,  and robots, ar safer than  humans to drive, can replace humans where tasks are dangerous, boring, etc.
+There are great difficulties in this work, however. We know how to build robots, sensors, control etc., 
+but we do not know how to endow a robot with a ``sense'' of the surrounding environment. 
+%This is called a representation. It is what is needed to interact with physical space.
+%We define a representation as a function of data that supports tasks.
+\iffalse
+\begin{enumerate}
+\item what data? Vision (bearing) and/or range (radar, lidar etc.)
+\item what tasks? Simplest ``go to point A'' more complex one could be ``find object X''
+\item what is needed for the task: 
+\fi
+This sense could be a sense of geometry (where is point A? relative to which reference frame? what is a path to A, are there ``obstacles''? what are ``obstacles''),
+localization (where are you in relation to obstacles?), topology (what paths are traversable?), photometry (what is an ``object''? How do I find it? 
+%This relates to the burgeoning literature on visual search and computer vision
+).
+Instead of tackling the problem of autonomous interaction head-on, we have focused on a few subproblems.
+
+\section{Summary of core results}
+\begin{enumerate}
+\item \label{bullet: slam} First: localization. To interact with the environment, first you need to know where you are relative to it. Fundamental problem studied for many years; Observability of the undelying dynamical model is a necessary condition for ANY algorithm to work, in the sense of yielding a unique point estimate. Our contribution is to show that all existing analysis of observability was flawed, and propose new analysis that shows that, contrary to popular belief, pose is not observable from visual and inertial sensors. However, we show that the ambiguous set is bounded, and compute it analytically.
+\item \label{bullet: SO} Second: Once I know where I am, I need to know what is around me. This is a problem called ``mapping''. Building geometric maps (point clouds) well explored problem. However, to interact intelligently need more than point cloud, need topology. How is the world around us divided into ``objects''? Chapter 4 talks about a way of organizing points into surfaces and then connected components of surfaces, that can be considered ``objects'' for the purpose of interaction, from video.
+\item \label{bullet: exploration} Once I know where I am and have a model of the (Visible) environment, with respect to which I know the location of an object of interest (point A), I need to know how to get to point A, which may not be visible. This requires exploration. Chapter 1 deals with this problem. The contribution is an efficient algorithm with provable bounds on the exploration time and amenable to be extended to non-compact domains (relevant in vision because one can see to infinity).
+\item \label{bullet: rep-redux} To explore the boundaries of this problem set, we also ask whether a representation is needed at all, at least for simple problems like going to point A. To this end, we explore the possibility of directly encoding/representing/optimizing the map from sensory data to control action, designed so as to achieve the goal (of getting to point A).
+\end{enumerate}
+
+\iffalse TODO: finish this
+\section{State of the art}
+
+Vast literature. For \ref{bullet: slam} there are books, dedicated conferences, problem known as SLAM in robotics, SFM in computer vision, activities since the early 1900 (see intro to textbook MASKS). State-of-the-art (see observability paper), was upended by our results (best paper at ICRA)
+
+For \ref{bullet: SO} considerable amount of work on obtaining sparse maps (subject of textbooks, e.g. MASKS); also consierable effort in fitting surfaces from point clouds (see Virginia's papers references). Relatively less effort in organizing such surfaces into ``layers'' or objects. See Chan-Adelson ``layers'', then detachable object detection, most recently deep learning,  but we are interested in partitioning the scene, rather than the image.
+
+For \ref{bullet: exploration} lots of work on planning, also textbook (see LaValle), relatively few work on planning under uncertainty (but still massive literature). in our case most of the uncertainty is due to visibility (or lack thereof), relatively fewer works, but see work of Landa, Osher, Tsai, etc. Take that as starting point, see references therein
+
+%for \ref{bullet: rep-redux} this relates to work in computer science theory, although in a simplified setting where the target cannot move (lest it is considerably more complex, turns into a game), related literature on pursuit-evasion games etc.
+\fi
+
+\section{Overview of the thesis}
+This work is organized as follows: Chapter 2 analyzes the problem of localization using monocular video and inertial sensors.
+Chapter 3 deals with the problem of segmenting 3D pointclouds into task-relevant ``objects''.
+Chapter 4 explores the problem of efficient autonomous mapping using range sensors.
+
+\chapter{Observability of Visual-Inertial Navigation}
+\input {Observability/soatto14imu.tex}
+
+\chapter{Scene Segmentation by Aggregation of Global Ordering Constraints}
+\input {SolidObjects/cvpr2015_solobj/tex/solobj.tex}
+
+\chapter{Information-Driven Autonomous Exploration}
+\input {Exploration/exploration} % Chapter 1 of dissertation
+
+
+\chapter{Desiging Agents with Task-Specific Minimal Representation}
+\input {MinRep/repredux}
+
+
+
+\bibliographystyle{plain}
+\bibliography{Exploration/exploration.bib,Exploration/text.bib,Observability/self.bib,Observability/filter.bib,Observability/total2.bib,SolidObjects/cvpr2015_solobj/bib/solidObjDet.bib,SolidObjects/cvpr2015_solobj/bib/solidObjDet2.bib,SolidObjects/cvpr2015_solobj/bib/total2.bib,SolidObjects/cvpr2015_solobj/bib/taylorARS12.bib,SolidObjects/cvpr2015_solobj/bib/ayvaciS13.bib,SolidObjects/cvpr2015_solobj/bib/ayvaciS11mdl.bib,SolidObjects/cvpr2015_solobj/bib/trevor.bib}
+\end {document}
+

@@ -1,0 +1,44 @@
+\section{Statistics of 3D Scenes}
+\subsection{Penetration Profiles}
+\begin{figure}
+\centering
+\begin{tabular}{cccc}
+\includegraphics[width=1.3in]{Penetration/cell_01.png} &&
+\includegraphics[width=1.3in]{Penetration/penetration_01} &
+\includegraphics[width=1.3in]{Penetration/extinction_01}
+\end{tabular}
+\caption{\emph{Poisson-Disc Voronoi Profiles}: 
+Here we show an empirical distribution for the penetration depth of a 
+ray of light in a half-filled %\footnote{each cell is independently, filled or empty, with probability 1/2.}
+Poisson-Disc Voronoi partition.
+It is easy to show that statistics 
+scale with the Poisson-Disc radius, 
+so they only need to be computed once.
+}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\begin{tabular}{cccc}
+\includegraphics[height=1.2in]{Penetration/ising_cell_001.png} &&
+\includegraphics[height=1.2in]{Penetration/ising_penetration_001} &
+\includegraphics[height=1.2in]{Penetration/ising_extinction_001}\\
+\includegraphics[height=1.2in]{Penetration/ising_cell_004.png} &&
+\includegraphics[height=1.2in]{Penetration/ising_penetration_004} &
+\includegraphics[height=1.2in]{Penetration/ising_extinction_004}\\
+\includegraphics[height=1.2in]{Penetration/ising_cell_009.png} &&
+\includegraphics[height=1.2in]{Penetration/ising_penetration_009} &
+\includegraphics[height=1.2in]{Penetration/ising_extinction_009}\\
+\includegraphics[height=1.2in]{Penetration/ising_cell_016.png} &&
+\includegraphics[height=1.2in]{Penetration/ising_penetration_016} &
+\includegraphics[height=1.2in]{Penetration/ising_extinction_016}\\
+\includegraphics[height=1.2in]{Penetration/ising_cell_025.png} &&
+\includegraphics[height=1.2in]{Penetration/ising_penetration_025} &
+\includegraphics[height=1.2in]{Penetration/ising_extinction_025}
+\end{tabular}
+\caption{}
+\end{figure}
+
+
+\subsection{Computing 3D Sample Weights}

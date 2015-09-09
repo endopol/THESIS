@@ -1,0 +1,601 @@
+\begin{thebibliography}{10}
+
+\bibitem{algoet94}
+P.\ Algoet.
+\newblock The strong law of large numbers for sequential decisions under
+  uncertainty.
+\newblock pages 609--633, 1994.
+\newblock \emph{IEEE Transactions on Information Theory} 40, pp.1994.
+
+\bibitem{anand2012contextually}
+Abhishek Anand, Hema~Swetha Koppula, Thorsten Joachims, and Ashutosh Saxena.
+\newblock Contextually guided semantic labeling and search for
+  three-dimensional point clouds.
+\newblock {\em The International Journal of Robotics Research}, page
+  0278364912461538, 2012.
+
+\bibitem{cassandraKL94}
+L.P.\~Kaelbling A.R.\~Cassandra and M.L.\ Littman.
+\newblock Acting optimally in partially observable stochastic domains.
+\newblock 1994.
+
+\bibitem{arbelF01}
+T.\ Arbel and F.P.\ Ferrie.
+\newblock Entropy-based gaze planning.
+\newblock 2001.
+\newblock Image and Vision Computing, vol. 19, no. 11, pp. 779–786, 2001.
+
+\bibitem{atanasovSLKPD13}
+Nikolay Atanasov, Bharath Sankaran, Jerome~Le Ny, George~J Pappas, and Kostas
+  Daniilidis.
+\newblock Nonmyopic view planning for active object detection.
+\newblock {\em arXiv preprint arXiv:1309.5401}, 2013.
+
+\bibitem{AZCXT11}
+Oscar Kin-Chung Au, Youyi Zheng, Menglin Chen, Pengfei Xu, , and Chiew-Lan Tai.
+\newblock Mesh segmentation with concavity-aware fields.
+\newblock In {\em IEEE Trans. Vis. Comp. Graphics}, page To appear, 2011.
+
+\bibitem{ayvaciS12PAMI}
+A.~Ayvaci and S.~Soatto.
+\newblock Detachable object detection: Segmentation and depth ordering from
+  short-baseline video.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  October 2012.
+
+\bibitem{basile1969observability}
+G.~Basile and G.~Marro.
+\newblock On the observability of linear, time-invariant systems with unknown
+  inputs.
+\newblock {\em Journal of Optimization theory and applications}, 3(6):410--415,
+  1969.
+
+\bibitem{bezzaoucha2011unknown}
+S.~Bezzaoucha, B.~Marx, D.~Maquin, J.~Ragot, et~al.
+\newblock On the unknown input observer design: a decoupling class approach
+  with application to sensor fault diagnosis.
+\newblock In {\em 1st International Conference on Automation and Mechatronics,
+  CIAM'2011}, 2011.
+
+\bibitem{bleyerRR12}
+Michael Bleyer, Christoph Rhemann, and Carsten Rother.
+\newblock Extracting 3d scene-consistent object proposals and depth from stereo
+  images.
+\newblock In {\em Computer Vision--ECCV 2012}, pages 467--481. Springer, 2012.
+
+\bibitem{burnsB03}
+B.\ Burns and O.\ Brock.
+\newblock Information-theoretic construction of probabilistic roadmaps.
+\newblock pages 650--655, 2003.
+\newblock \emph{Proceedings of the International Conference on Intelligent
+  Robot and Systems}, pp.Las Vegas, 2003.
+
+\bibitem{Campbell13_NIPS}
+Trevor Campbell, Miao Liu, Brian Kulis, Jonathan~P. How, and Lawrence Carin.
+\newblock Dynamic clustering via asymptotics of the dependent dirichlet process
+  mixture.
+\newblock In {\em Advances in Neural Information Processing Systems 26}, 2013.
+
+\bibitem{carreira_eccv12}
+Joao Carreira, Rui Caseiro, Jorge Batista, and Cristian Sminchisescu.
+\newblock Semantic segmentation with second-order pooling.
+\newblock In {\em Computer Vision--ECCV 2012}, pages 430--443. Springer, 2012.
+
+\bibitem{Chen:2009:ABF}
+Xiaobai Chen, Aleksey Golovinskiy, and Thomas Funkhouser.
+\newblock A benchmark for {3D} mesh segmentation.
+\newblock {\em ACM Transactions on Graphics (Proc. SIGGRAPH)}, 28(3), August
+  2009.
+
+\bibitem{Collins1996}
+Robert Collins.
+\newblock A space-sweep approach to true multi-image matching.
+\newblock In {\em IEEE Computer Vision and Pattern Recognition}, pages
+  358--363, June 1996.
+
+\bibitem{connolly85}
+C.I.\ Connolly.
+\newblock The determination of next best views.
+\newblock pages 432--435, 1985.
+\newblock \emph{Proceedings of the IEEE International Conference on Robotics
+  and Automation} , pp.1985.
+
+\bibitem{denzlerB02}
+J.\ Denzler and C.\ Brown.
+\newblock Information theoretic sensor data selection for active object
+  recognition and state estimation.
+\newblock 2002.
+\newblock \emph{IEEE Trans. Pattern Analysis and Machine Intelligence}, vol.
+  24, no. 2, pp. 145–157, 2002.
+
+\bibitem{Dhillon07_TPAMI}
+Inderjit Dhillon, Yuqiang Guan, and Brian Kulis.
+\newblock Weighted graph cuts without eigenvectors: A multilevel approach.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  29(11):1944--1957, 2007.
+
+\bibitem{dimassi2010robust}
+H.~Dimassi, A.~Lor{\'\i}a, and S.~Belghith.
+\newblock A robust adaptive observer for nonlinear systems with unknown inputs
+  and disturbances.
+\newblock In {\em Decision and Control (CDC), 2010 49th IEEE Conference on},
+  pages 2602--2607. IEEE, 2010.
+
+\bibitem{WeiFeng:cw}
+Wei Feng, Jiaya Jia, and Zhi-Qiang Liu.
+\newblock Self-validated labeling of markov random fields for image
+  segmentation.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 32(10):1871--1887, 2010.
+
+\bibitem{VittorioFerrari:2006uf}
+Vittorio Ferrari, Tinne Tuytelaars, and Luc Van~Gool.
+\newblock Object detection by contour segment networks.
+\newblock In {\em Computer Vision--ECCV 2006}, pages 14--28. Springer Berlin
+  Heidelberg, 2006.
+
+\bibitem{hollinger12}
+F.\ Hover U.\~Mitra G.A.\~Hollinger, B.\~Englot and G.S.\ Sukhatme.
+\newblock Uncertainty-driven view planning for underwater surface inspection.
+\newblock 2012.
+\newblock \emph{Accepted, International Conference on Robotics and Automation},
+  May 2012.
+
+\bibitem{geyer91}
+C.J.\ Geyer.
+\newblock Markov chain monte carlo maximum likelihood.
+\newblock pages 156--163, 1991.
+\newblock \emph{Proc. 23rd Symp. Interface. Computing Science and Statistics}.
+
+\bibitem{Graber2011}
+G.~Graber, T.~Pock, and H.~Bischof.
+\newblock Online 3d reconstruction using convex optimization.
+\newblock In {\em 1st Workshop on Live Dense Reconstruction From Moving
+  Cameras, ICCV 2011}, 2011.
+
+\bibitem{haene2013}
+C.~Haene, C.~Zach, A.~Cohen, R.~Angst, and M.~Pollefeys.
+\newblock Joint 3d scene reconstruction and class segmentation.
+\newblock In {\em IEEE Computer Vision and Pattern Recognition}, 2013.
+
+\bibitem{hamano1983unknown}
+F~Hamano and G~Basile.
+\newblock Unknown-input present-state observability of discrete-time linear
+  systems.
+\newblock {\em Journal of Optimization Theory and Applications},
+  40(2):293--307, 1983.
+
+\bibitem{hammouri2010unknown}
+H.~Hammouri and Z.~Tmar.
+\newblock Unknown input observer for state affine systems: A necessary and
+  sufficient condition.
+\newblock {\em Automatica}, 46(2):271--278, 2010.
+
+\bibitem{hauskrecht00}
+M.\ Hauskrecht.
+\newblock Value-function approximations for partially observable markov
+  decision processes.
+\newblock pages 33--94, 2000.
+\newblock \emph{Journal of Artificial Intelligence Research}, vol. 13, pp.2000.
+
+\bibitem{baoS12}
+Hanqing Jiang, Haomin Liu, Ping Tan, Guofeng Zhang, and Hujun Bao.
+\newblock 3d reconstruction of dynamic scenes with multiple handheld cameras.
+\newblock In {\em Computer Vision--ECCV 2012}, pages 601--615. Springer, 2012.
+
+\bibitem{jonesS09}
+E.~Jones and S.~Soatto.
+\newblock Visual-inertial navigation, localization and mapping: A scalable
+  real-time large-scale approach.
+\newblock {\em Intl. J. of Robotics Res.}, april 2011.
+
+\bibitem{jonesS07}
+E.~S. Jones, A.~Vedaldi, and S.~Soatto.
+\newblock Inertial structure from motion and autocalibration.
+\newblock In {\em Workshop on Dynamical Vision}, October 2007.
+
+\bibitem{Kalogerakis:2010:labelMeshes}
+Evangelos Kalogerakis, Aaron Hertzmann, and Karan Singh.
+\newblock Learning 3d mesh segmentation and labeling.
+\newblock {\em ACM Transactions on Graphics (TOG)}, 29(4):102, 2010.
+
+\bibitem{kellyS09}
+J.~Kelly and G.~Sukhatme.
+\newblock {Fast Relative Pose Calibration for Visual and Inertial Sensors}.
+\newblock In {\em Experimental Robotics}, pages 515--524, 2009.
+
+\bibitem{khler2013efficient}
+Olaf Khler and Ian Reid.
+\newblock Efficient 3d scene labeling using fields of trees.
+\newblock In {\em Computer Vision (ICCV), 2013 IEEE International Conference
+  on}, 2013.
+
+\bibitem{Klein2007}
+Georg Klein and David Murray.
+\newblock {Parallel Tracking and Mapping for Small AR Workspaces}.
+\newblock {\em 2007 6th IEEE and ACM International Symposium on Mixed and
+  Augmented Reality}, pages 1--10, November 2007.
+
+\bibitem{Cremers-et-al-11}
+Maria Klodt and Daniel Cremers.
+\newblock A convex framework for image segmentation with moment constraints.
+\newblock In {\em Computer Vision (ICCV), 2011 IEEE International Conference
+  on}, pages 2236--2243. IEEE, 2011.
+
+\bibitem{Kulis12_ICML}
+Brian Kulis and Michael~I. Jordan.
+\newblock Revisiting k-means: New algorithms via bayesian nonparametrics.
+\newblock In {\em Proceedings of the 29th International Conference on Machine
+  Learning (ICML)}, Edinburgh, Scotland, 2012.
+
+\bibitem{Kumar10}
+M~Pawan Kumar and Daphne Koller.
+\newblock Efficiently selecting regions for scene understanding.
+\newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2010 IEEE
+  Conference on}, pages 3217--3224. IEEE, 2010.
+
+\bibitem{Kumar08}
+M~Pawan Kumar, Philip~HS Torr, and Andrew Zisserman.
+\newblock Learning layered motion segmentations of video.
+\newblock {\em International Journal of Computer Vision}, 76(3):301--319, 2008.
+
+\bibitem{Kumar05a}
+Sanjiv Kumar and Martial Hebert.
+\newblock A hierarchical field framework for unified context-based
+  classification.
+\newblock In {\em Computer Vision, 2005. ICCV 2005. Tenth IEEE International
+  Conference on}, volume~2, pages 1284--1291. IEEE, 2005.
+
+\bibitem{kundu2014}
+A.~Kundu, Y.~Li, F.~Dellaert, F.~Li, and J.~Rehg.
+\newblock Joint semantic segmentation and 3d reconstruction from monocular
+  video.
+\newblock In David Fleet, Tomas Pajdla, Bernt Schiele, and Tinne Tuytelaars,
+  editors, {\em Computer Vision – ECCV 2014}, volume 8694 of {\em Lecture
+  Notes in Computer Science}, pages 703--718. Springer International
+  Publishing, 2014.
+
+\bibitem{valenteTS12}
+Y.-H.\ R.\~Tsai L.\~Valente and S.\ Soatto.
+\newblock Information gathering control via exploratory path planning.
+\newblock 2012.
+\newblock \emph{Proceedings of the Conference on Information Sciences and
+  Systems}, Mar 2012.
+
+\bibitem{lacoin2011zero}
+HUBERT Lacoin, FRAN{\c{C}}OIS Simenhaus, and FABIO~LUCIO Toninelli.
+\newblock Zero-temperature 2d ising model and anisotropic curve-shortening
+  flow.
+\newblock {\em arXiv preprint arXiv:1112.3160}, 2011.
+
+\bibitem{lafarge2010}
+Florent Lafarge, Renaud Keriven, and Mathieu Br´edif.
+\newblock Insertion of 3d-primitives in mesh-based representations: Towards
+  compact models preserving the details.
+\newblock {\em IEEE Transactions on Image Processing}, 19(7):1683--1694, 2010.
+
+\bibitem{vezhneva:2012tb}
+Dmitry Laptev, Alexander Vezhnevets, Sarvesh Dwivedi, and Joachim~M Buhmann.
+\newblock Anisotropic sstem image segmentation using dense correspondence
+  across sections.
+\newblock In {\em Medical Image Computing and Computer-Assisted
+  Intervention--MICCAI 2012}, pages 323--330. Springer, 2012.
+
+\bibitem{Lempitsky11}
+Victor Lempitsky, Andrea Vedaldi, and Andrew Zisserman.
+\newblock A pylon model for semantic segmentation.
+\newblock 2011.
+
+\bibitem{lezama11}
+Jos{\'e} Lezama, Karteek Alahari, Josef Sivic, and Ivan Laptev.
+\newblock Track to the future: Spatio-temporal video segmentation with
+  long-range motion cues.
+\newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2011 IEEE
+  Conference on}, pages 3369--3376. IEEE, 2011.
+
+\bibitem{fei-fei}
+Li-Jia Li, Hao Su, Li~Fei-Fei, and Eric~P Xing.
+\newblock Object bank: A high-level image representation for scene
+  classification \& semantic feature sparsification.
+\newblock In {\em Advances in neural information processing systems}, pages
+  1378--1386, 2010.
+
+\bibitem{liberzon2012invertibility}
+D.~Liberzon, P.~R. Kumar, A.~Dominguez-Garcia, and S.~Mitra.
+\newblock Invertibility and observability of switched systems with inputs and
+  outputs.
+\newblock 2012.
+
+\bibitem{Lin10_NIPS}
+Dahua Lin, Eric Grimson, and John Fisher.
+\newblock Construction of dependent dirichlet processes based on poisson
+  processes.
+\newblock In {\em Neural Information Processing Systems}, 2010.
+
+\bibitem{kearnsMN99}
+Y.\~Mansour M.\~Kearns and A.Y.\ Ng.
+\newblock Approximate planning in large pomdps via reusable trajectories.
+\newblock 1999.
+
+\bibitem{Martnez:2004dz}
+Aleix~M. Martı́nez, Pradit Mittrapiyanuruk, and Avinash~C. Kak.
+\newblock On combining graph-partitioning with non-parametric clustering for
+  image segmentation.
+\newblock {\em Computer Vision and Image Understanding}, 95(1):72 -- 85, 2004.
+
+\bibitem{mourikisR07}
+A.~Mourikis and S.~Roumeliotis.
+\newblock A multi-state constraint kalman filter for vision-aided inertial
+  navigation.
+\newblock In {\em Robotics and Automation, 2007 IEEE International Conference
+  on}, pages 3565--3572. IEEE, 2007.
+
+\bibitem{Silberman:ECCV12}
+Pushmeet~Kohli Nathan~Silberman, Derek~Hoiem and Rob Fergus.
+\newblock Indoor segmentation and support inference from rgbd images.
+\newblock In {\em ECCV}, 2012.
+
+\bibitem{davison}
+Richard~A Newcombe and Andrew~J Davison.
+\newblock Live dense reconstruction with a single moving camera.
+\newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2010 IEEE
+  Conference on}, pages 1498--1505. IEEE, 2010.
+
+\bibitem{Newcombe2011a}
+Richard~A. Newcombe, Shahram Izadi, Otmar Hilliges, David Molyneaux, David Kim,
+  Andrew~J. Davison, Pushmeet Kohli, Jamie Shotton, Steve Hodges, and Andrew~W.
+  Fitzgibbon.
+\newblock Kinectfusion: Real-time dense surface mapping and tracking.
+\newblock In {\em ISMAR}, pages 127--136, 2011.
+
+\bibitem{nieuwenhuis-et-al-ijcv12}
+Claudia Nieuwenhuis and Daniel Cremers.
+\newblock Spatially varying color distributions for interactive multilabel
+  segmentation.
+\newblock 2012.
+
+\bibitem{OB14b}
+P.~Ochs, J.~Malik, and T.~Brox.
+\newblock Segmentation of moving objects by long term video analysis.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  36(6):1187 -- 1200, Jun 2014.
+\newblock Preprint.
+
+\bibitem{krauseG07}
+Near optimal Observation Selection~using Submodular~Functions.
+\newblock A.\ krause and c.\ guestrin.
+\newblock 2007.
+\newblock \emph{American Association for Artificial Intelligence (AAAI)}, 2007.
+
+\bibitem{dearden99}
+N.\~Friedman R.\~Dearden and D.\ Andre.
+\newblock Model based bayesian exploration.
+\newblock pages 150--159, 1999.
+\newblock \emph{In Proceedings of the Fifteenth Conference on Uncertainty in
+  Artificial Intelligence}, pp.1999.
+
+\bibitem{royCB04}
+Active recognition through next view~planning: A~survey.
+\newblock S.d.\ roy, s.\ chaudhury and s.\ banarjee.
+\newblock 2004.
+\newblock \emph{J. Pattern Recognition}, vol. 37, no. 3, pp. 429–446, 2004.
+
+\bibitem{Reid:2010ca}
+Ian Reid and Keith Connor.
+\newblock Multiview segmentation and tracking of dynamic occluding layers.
+\newblock {\em Image and Vision Computing}, 28(6):1022--1030, 2010.
+
+\bibitem{ren2012rgbd}
+Xiaofeng Ren, Liefeng Bo, and D.~Fox.
+\newblock Rgb-(d) scene labeling: Features and algorithms.
+\newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2012 IEEE
+  Conference on}, pages 2759--2766, June 2012.
+
+\bibitem{grabowskiKC03}
+Pradeep~Khosla Robert~Grabowski and Howie Choset.
+\newblock Autonomous exploration via regions of interest.
+\newblock 2003.
+
+\bibitem{Russell06}
+Bryan~C Russell, William~T Freeman, Alexei~A Efros, Josef Sivic, and Andrew
+  Zisserman.
+\newblock Using multiple segmentations to discover objects and their extent in
+  image collections.
+\newblock In {\em Computer Vision and Pattern Recognition, 2006 IEEE Computer
+  Society Conference on}, volume~2, pages 1605--1614. IEEE, 2006.
+
+\bibitem{slampp2013}
+R.~F. Salas-Moreno, Richard~A. Newcombe, Hauke Strasdat, Paul H.~J. Kelly, and
+  Andrew~J. Davison.
+\newblock Slam++: Simultaneous localisation and mapping at the level of
+  objects.
+\newblock In {\em IEEE Conference on Computer Vision and pattern Recognition},
+  2013.
+
+\bibitem{Schoenemann-Cremers-pami10}
+Thomas Schoenemann and Daniel Cremers.
+\newblock A combinatorial solution for model-based image segmentation and
+  real-time tracking.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 32(7):1153--1164, 2010.
+
+\bibitem{Cremers-12}
+Thomas Schoenemann and Daniel Cremers.
+\newblock A coding-cost framework for super-resolution motion layer
+  decomposition.
+\newblock {\em Image Processing, IEEE Transactions on}, 21(3):1097--1110, 2012.
+
+\bibitem{sengupta2013}
+Sunando Sengupta, Eric Greveson, Ali Shahrokni, and Philip~H.S. Torr.
+\newblock Semantic modelling of urban scenes.
+\newblock In {\em International Conference on Robotics and Automation}, 2013.
+
+\bibitem{RobFergus:2012vh}
+Nathan Silberman, Derek Hoiem, Pushmeet Kohli, and Rob Fergus.
+\newblock Indoor segmentation and support inference from rgbd images.
+\newblock In {\em Computer Vision--ECCV 2012}, pages 746--760. Springer, 2012.
+
+\bibitem{SimD04}
+R.\ Sim and G.\ Dudek.
+\newblock Online control policy optimization for minimizing map uncertainty
+  during exploration.
+\newblock pages 1758--1763, 2004.
+\newblock \emph{Proc. of the IEEE Int. Conf. on Robotics \& Automation (ICRA)},
+  pp.2004.
+
+\bibitem{soatto97}
+S.~Soatto.
+\newblock 3-d structure from visual motion: modeling, representation and
+  observability.
+\newblock {\em Automatica}, 33:1287--1312, 1997.
+
+\bibitem{stucklerBB12}
+Jorg Stuckler, Nenad Biresev, and Sven Behnke.
+\newblock Semantic mapping using object-class segmentation of rgb-d images.
+\newblock In {\em Intelligent Robots and Systems (IROS), 2012 IEEE/RSJ
+  International Conference on}, pages 3005--3010. IEEE, 2012.
+
+\bibitem{sturm12iros}
+J.~Sturm, N.~Engelhard, F.~Endres, W.~Burgard, and D.~Cremers.
+\newblock A benchmark for the evaluation of rgb-d slam systems.
+\newblock In {\em Proc. of the International Conference on Intelligent Robot
+  Systems (IROS)}, Oct. 2012.
+
+\bibitem{Teh10_EML}
+Yee~Whye Teh.
+\newblock Dirichlet processes.
+\newblock In {\em Encyclopedia of Machine Learning}. Springer, New York, 2010.
+
+\bibitem{ulen-strandmark-etal-itmi-12}
+Johannes Ul{\'e}n, Petter Strandmark, and Fredrik Kahl.
+\newblock An efficient optimization framework for multi-region segmentation
+  based on lagrangian duality.
+
+\bibitem{valenteTS13}
+L.~Valente, R.~Tsai, and S.~Soatto.
+\newblock Information-seeking control under visibility-based uncertainty.
+\newblock {\em J. Math. Imaging and Vision}, 2013.
+
+\bibitem{AlexanderVezhnevets:2012tw}
+Alexander Vezhnevets, Vittorio Ferrari, and Joachim~M Buhmann.
+\newblock Weakly supervised structured output learning for semantic
+  segmentation.
+\newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2010 IEEE
+  Conference on}. IEEE, 2012.
+
+\bibitem{wangA94}
+J.~Wang and E.~Adelson.
+\newblock Representing moving images with layers.
+\newblock In {\em IEEE Trans. on Image Processing}, volume 3(5), pages
+  625--638, 1994.
+
+\bibitem{cremers}
+Andreas Wedel, Clemens Rabe, Tobi Vaudrey, Thomas Brox, Uwe Franke, and Daniel
+  Cremers.
+\newblock {\em Efficient dense scene flow from sparse or dense stereo data}.
+\newblock Springer, 2008.
+
+\bibitem{pock}
+Andreas Wendel, Michael Maurer, Gottfried Graber, Thomas Pock, and Horst
+  Bischof.
+\newblock Dense reconstruction on-the-fly.
+\newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2012 IEEE
+  Conference on}, pages 1450--1457. IEEE, 2012.
+
+\bibitem{whaiteF97}
+P.\ Whaite and F.P.\ Ferrie.
+\newblock Autonomous exploration: driven by uncertainty.
+\newblock pages 193--205, 1997.
+\newblock \emph{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}, vol.19, no.3, pp.Mar 1997.
+
+\bibitem{xiao2013sun3d}
+Jianxiong Xiao, Andrew Owens, and Antonio Torralba.
+\newblock Sun3d: A database of big spaces reconstructed using sfm and object
+  labels.
+\newblock In {\em Computer Vision (ICCV), 2013 IEEE International Conference
+  on}, pages 1625--1632. IEEE, 2013.
+
+\bibitem{yamauchi97}
+B.\ Yamauchi.
+\newblock A frontier-based approach for autonomous exploration.
+\newblock pages 146--151, 1997.
+\newblock \emph{Proceedings of the IEEE International Symposium on
+  Computational Intelligence in Robotics and Automation}, pp.10-11 Jul 1997.
+
+\bibitem{ics_nips11}
+Julian Yarkony, Alexander Ihler, and Charless~C Fowlkes.
+\newblock Fast planar correlation clustering for image segmentation.
+\newblock In {\em Computer Vision--ECCV 2012}, pages 568--581. Springer, 2012.
+
+\bibitem{Yu03_ICCV}
+Stella Yu and Jianbo Shi.
+\newblock Multiclass spectral clustering.
+\newblock In {\em Proceedings of the Ninth International Conference on Computer
+  Vision}, 2003.
+
+\bibitem{yuG00}
+Y.\ Yu and K.\ Gupta.
+\newblock An information theoretic approach to viewpoint planning for motion
+  planning of eye-in-hand systems.
+\newblock 2000.
+\newblock \emph{Proceedings of the International Symposium on Industrial
+  Robotics}, 2000.
+
+\bibitem{yuWY96}
+K.\~Wang Z.\~Yu and R.-G.\ Yang.
+\newblock Next best view of range sensor.
+\newblock pages 185--188, 1996.
+\newblock \emph{Proceedings of the IEEE International Conference on Industrial
+  Electronics, Control, and Instrumentation} , vol.1, pp.vol.1, 5-10 Aug 1996.
+
+\bibitem{Zach2008}
+Christopher Zach.
+\newblock {Fast and high quality fusion of depth maps}.
+\newblock {\em Proc. 3DPVT}, 2008.
+
+\bibitem{Zach2007}
+Christopher Zach, Thomas Pock, and Horst Bischof.
+\newblock A globally optimal algorithm for robust tv-l1 range image
+  integration.
+\newblock In {\em ICCV}, pages 1--8. IEEE, 2007.
+
+\bibitem{Zha01_NIPS}
+Hongyuan Zha, Xiaofeng He, Chris Ding, Horst Simon, and Ming Gu.
+\newblock Spectral relaxation for k-means clustering.
+\newblock In {\em Advances in Neural Information Processing Systems}, 2001.
+
+\bibitem{GuofengZhang:jma}
+Guofeng Zhang, Jiaya Jia, and Hujun Bao.
+\newblock Simultaneous multi-body stereo and segmentation.
+\newblock In {\em Computer Vision (ICCV), 2011 IEEE International Conference
+  on}, pages 826--833, 2011.
+
+\bibitem{GuofengZhang:jmb}
+Guofeng Zhang, Jiaya Jia, Wei Hua, and Hujun Bao.
+\newblock Robust bilayer segmentation and motion/depth estimation with a
+  handheld camera.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, (99):1--1, 2011.
+
+\bibitem{zhangJB11}
+Guofeng Zhang, Jiaya Jia, Wei Hua, and Hujun Bao.
+\newblock Robust bilayer segmentation and motion/depth estimation with a
+  handheld camera.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 33(3):603--617, 2011.
+
+\bibitem{GuofengZhang:jm}
+Guofeng Zhang, Jiaya Jia, Tien-Tsin Wong, and Hujun Bao.
+\newblock Consistent depth maps recovery from a video sequence.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 31(6):974--988, 2009.
+
+\bibitem{zheng2013beyond}
+Bo~Zheng, Yibiao Zhao, Joey~C Yu, Katsushi Ikeuchi, and Song-Chun Zhu.
+\newblock Beyond point clouds: Scene understanding by reasoning geometry and
+  physics.
+\newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2013 IEEE
+  Conference on}, pages 3127--3134. IEEE, 2013.
+
+\end{thebibliography}

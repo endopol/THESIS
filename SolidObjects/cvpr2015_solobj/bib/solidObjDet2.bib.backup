@@ -1,0 +1,734 @@
+@article{Zach2008,
+author = {Zach, Christopher},
+journal = {Proc. 3DPVT},
+title = {{Fast and high quality fusion of depth maps}},
+url = {http://www-static.cc.gatech.edu/conferences/3DPVT08/Program/Papers/paper196.pdf},
+year = {2008}
+}
+
+@article{Klein2007,
+author = {Klein, Georg and Murray, David},
+doi = {10.1109/ISMAR.2007.4538852},
+isbn = {978-1-4244-1749-0},
+journal = {2007 6th IEEE and ACM International Symposium on Mixed and Augmented Reality},
+month = nov,
+pages = {1--10},
+publisher = {Ieee},
+title = {{Parallel Tracking and Mapping for Small AR Workspaces}},
+url = {http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=4538852},
+year = {2007}
+}
+
+@INPROCEEDINGS{Newcombe2010,
+    author = {Richard A. Newcombe and Andrew J. Davison},
+    title = {Live dense reconstruction with a single moving camera},
+    booktitle = {IEEE Conference on Computer Vision and pattern Recognition},
+    year = {2010}
+}
+
+@article{Chambolle2011,
+ author = {Chambolle, Antonin and Pock, Thomas},
+ title = {A First-Order Primal-Dual Algorithm for Convex Problems with Applications to Imaging},
+ journal = {J. Math. Imaging Vis.},
+ issue_date = {May       2011},
+ volume = {40},
+ issue = {1},
+ month = {May},
+ year = {2011},
+ issn = {0924-9907},
+ pages = {120--145},
+ numpages = {26},
+ url = {http://dx.doi.org/10.1007/s10851-010-0251-1},
+ doi = {http://dx.doi.org/10.1007/s10851-010-0251-1},
+ acmid = {1969036},
+ publisher = {Kluwer Academic Publishers},
+ address = {Norwell, MA, USA},
+ keywords = {Convex optimization, Dual approaches, Image, Inverse problems, Reconstruction, Total variation},
+} 
+
+@inproceedings{Graber2011,
+author = {Graber, Gottfried and Pock, Thomas and Bischof, Horst},
+title = {Online 3D reconstruction using Convex Optimization},
+booktitle = {1st Workshop on Live Dense Reconstruction From Moving Cameras, ICCV 2011},
+year = {2011}
+}
+
+@inproceedings{Newcombe2011a,
+  author    = {Richard A. Newcombe and
+               Shahram Izadi and
+               Otmar Hilliges and
+               David Molyneaux and
+               David Kim and
+               Andrew J. Davison and
+               Pushmeet Kohli and
+               Jamie Shotton and
+               Steve Hodges and
+               Andrew W. Fitzgibbon},
+  title     = {KinectFusion: Real-time dense surface mapping and tracking},
+  booktitle = {ISMAR},
+  year      = {2011},
+  pages     = {127-136},
+  ee        = {http://dx.doi.org/10.1109/ISMAR.2011.6092378},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{Collins1996,
+   author = {Robert Collins},
+   title = {A Space-Sweep Approach to True Multi-Image Matching},
+   booktitle = {IEEE Computer Vision and Pattern Recognition},
+   pages = {358-363},
+   month = {June},
+   year = {1996},
+   Notes = {Also appeared in Arpa Image Understanding Workshop, Palm Springs, CA, February 1996, pp. 1213-1220.}
+} 
+
+@article {Osher2009,
+    author       = {Li, Yingying and Osher, Stanley},
+    title        = {A new median formula with applications to PDE based denoising.},
+    year         = {2009},
+    journal      = {Communications in Mathematical Sciences},
+    volume       = {7},
+    number       = {3},
+    issn         = {1539-6746},
+    pages        = {741-753},
+    publisher    = {International Press, Somerville, MA},
+    abstract     = {Summary: We develop a simple algorithm for finding the minimizer of the function $E(x)= \sum_{i=1}^n w_i|x-a_i|+ F(x)$, when the $w_i$ are nonnegative and $F$ is strictly convex. If $F$ is also differentiable and $F'$ is bijective, we obtain an explicit formula in terms of a median. This enables us to obtain approximate solutions to certain important variational problems arising in image denoising. We also present a generalization with $E(x)= J(x)+ F(x)$ for $J(x)$ a convex piecewise differentiable function with a finite number of nondifferentiable points.},
+    identifier   = {05657336},
+}
+
+@inproceedings{Zach2007,
+  author = {Christopher Zach and Thomas Pock and Horst Bischof},
+  booktitle = {ICCV},
+  interhash = {007c384dfdfcf03001a2c878e27db942},
+  intrahash = {7c8551eed9162cbe72db4a0ba218eac4},
+  pages = {1-8},
+  publisher = {IEEE},
+  title = {A Globally Optimal Algorithm for Robust TV-L1 Range Image Integration.},
+  url = {http://dblp.uni-trier.de/db/conf/iccv/iccv2007.html#ZachPB07},
+  year = 2007,
+  timestamp = {2008-11-04T00:00:00.000+0100},
+  keywords = {dblp},
+  ee = {http://dx.doi.org/10.1109/ICCV.2007.4408983},
+  added-at = {2008-11-04T00:00:00.000+0100},
+  description = {dblp},
+  biburl = {http://www.bibsonomy.org/bibtex/27c8551eed9162cbe72db4a0ba218eac4/dblp},
+  date = {2008-11-04}
+}
+
+% From Google Scholar
+% these are my best guesses, I can't be certain about them
+
+@inproceedings { VittorioFerrari:2006uf,
+  title={Object detection by contour segment networks},
+  author={Ferrari, Vittorio and Tuytelaars, Tinne and Van Gool, Luc},
+  booktitle={Computer Vision--ECCV 2006},
+  pages={14--28},
+  year={2006},
+  publisher={Springer Berlin Heidelberg}
+}
+
+@inproceedings{AlexanderVezhnevets:2012tw,
+  title={Weakly Supervised Structured Output Learning for Semantic Segmentation},
+  author={Vezhnevets, Alexander and Ferrari, Vittorio and Buhmann, Joachim M},
+  booktitle={Computer Vision and Pattern Recognition (CVPR), 2010 IEEE Conference on},
+  year={2012},
+  organization={IEEE}
+}
+
+@incollection{vezhneva:2012tb,
+  title={Anisotropic ssTEM image segmentation using dense correspondence across sections},
+  author={Laptev, Dmitry and Vezhnevets, Alexander and Dwivedi, Sarvesh and Buhmann, Joachim M},
+  booktitle={Medical Image Computing and Computer-Assisted Intervention--MICCAI 2012},
+  pages={323--330},
+  year={2012},
+  publisher={Springer}
+}
+
+
+@article{ Martnez:2004dz,
+  title = "On combining graph-partitioning with non-parametric clustering for image segmentation ",
+  journal = "Computer Vision and Image Understanding ",
+  volume = "95",
+  number = "1",
+  pages = "72 - 85",
+  year = "2004",
+  note = "",
+  issn = "1077-3142",
+  doi = "http://dx.doi.org/10.1016/j.cviu.2004.01.003",
+  url = "http://www.sciencedirect.com/science/article/pii/S1077314204000190",
+  author = "Aleix M. Martı́nez and Pradit Mittrapiyanuruk and Avinash C. Kak"
+}
+
+@article{ WeiFeng:cw,
+  author={Wei Feng and Jiaya Jia and Zhi-Qiang Liu},
+  journal={Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+  title={Self-Validated Labeling of Markov Random Fields for Image Segmentation},
+  year={2010},
+  volume={32},
+  number={10},
+  pages={1871-1887},
+  keywords={Markov processes;formal verification;free energy;graph theory;image classification;image segmentation;random processes;Gibbs energy minimization;Markov random fields;benchmark data set;binary s-t graph cut;cluster level operation;graduated graph cut;hierarchical graph cut;image segmentation;net structured graph cut;noise robustness;self-validated labeling;soft boundary preservation;speed robustness;split-and-merge strategy;tree structured graph cut;Clustering algorithms;Computational efficiency;Costs;Image converters;Image segmentation;Labeling;Markov random fields;Noise robustness;Spatial coherence;Tree graphs;Markov random fields (MRFs);Self-validated labeling;graduated graph cuts;image segmentation;split-and-merge.},
+  doi={10.1109/TPAMI.2010.24},
+  ISSN={0162-8828},
+}
+
+
+% What order should these next two go in??
+@inproceedings{ GuofengZhang:jma,
+  author={Guofeng Zhang and Jiaya Jia and Hujun Bao},
+  booktitle={Computer Vision (ICCV), 2011 IEEE International Conference on},
+  title={Simultaneous multi-body stereo and segmentation},
+  year={2011},
+  pages={826-833},
+  keywords={image segmentation;image sequences;optimisation;stereo image processing;dense depth maps;image segmentation;monocular image sequence;multibody stereo image;multiview stereo method;optimization;Cameras;Estimation;Geometry;Labeling;Motion segmentation;Stereo vision;Three dimensional displays},
+  doi={10.1109/ICCV.2011.6126322},
+  ISSN={1550-5499},
+}
+
+@article{ GuofengZhang:jmb,
+  title={Robust bilayer segmentation and motion/depth estimation with a handheld camera},
+  author={Zhang, Guofeng and Jia, Jiaya and Hua, Wei and Bao, Hujun},
+  journal={Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+  number={99},
+  pages={1--1},
+  year={2011},
+  publisher={IEEE}
+}
+
+@article{GuofengZhang:jm,
+  title={Consistent depth maps recovery from a video sequence},
+  author={Zhang, Guofeng and Jia, Jiaya and Wong, Tien-Tsin and Bao, Hujun},
+  journal={Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+  volume={31},
+  number={6},
+  pages={974--988},
+  year={2009},
+  publisher={IEEE}
+}
+
+@article{ ulen-strandmark-etal-itmi-12,
+  title={An Efficient Optimization Framework for Multi-Region Segmentation based on Lagrangian Duality},
+  author={Ul{\'e}n, Johannes and Strandmark, Petter and Kahl, Fredrik},
+  publisher={IEEE}
+}
+
+@inproceedings{ Russell06,
+  title={Using multiple segmentations to discover objects and their extent in image collections},
+  author={Russell, Bryan C and Freeman, William T and Efros, Alexei A and Sivic, Josef and Zisserman, Andrew},
+  booktitle={Computer Vision and Pattern Recognition, 2006 IEEE Computer Society Conference on},
+  volume={2},
+  pages={1605--1614},
+  year={2006},
+  organization={IEEE}
+}
+
+% Umm... this one is a shot in the dark, more or less -- this is what came up when I googled the keywords
+@incollection{ ics_nips11,
+  title={Fast planar correlation clustering for image segmentation},
+  author={Yarkony, Julian and Ihler, Alexander and Fowlkes, Charless C},
+  booktitle={Computer Vision--ECCV 2012},
+  pages={568--581},
+  year={2012},
+  publisher={Springer}
+}
+
+@article{ Lempitsky11,
+  title={A pylon model for semantic segmentation},
+  author={Lempitsky, Victor and Vedaldi, Andrea and Zisserman, Andrew},
+  year={2011}
+}
+
+% Another possibility for the one above
+inproceedings{Lempitsky11,
+  title={Bicos: A bi-level co-segmentation method for image classification},
+  author={Chai, Yuning and Lempitsky, Victor and Zisserman, Andrew},
+  booktitle={Computer Vision (ICCV), 2011 IEEE International Conference on},
+  pages={2579--2586},
+  year={2011},
+  organization={IEEE}
+}
+
+@inproceedings{ Kumar10,
+  title={Efficiently selecting regions for scene understanding},
+  author={Kumar, M Pawan and Koller, Daphne},
+  booktitle={Computer Vision and Pattern Recognition (CVPR), 2010 IEEE Conference on},
+  pages={3217--3224},
+  year={2010},
+  organization={IEEE}
+}
+
+@article{nieuwenhuis-et-al-ijcv12,
+  title={Spatially Varying Color Distributions for Interactive Multilabel Segmentation},
+  author={Nieuwenhuis, Claudia and Cremers, Daniel},
+  year={2012},
+  publisher={Pattern Analysis and Machine Intelligence, Transac}
+}
+
+@inproceedings{Cremers-et-al-11,
+  title={A convex framework for image segmentation with moment constraints},
+  author={Klodt, Maria and Cremers, Daniel},
+  booktitle={Computer Vision (ICCV), 2011 IEEE International Conference on},
+  pages={2236--2243},
+  year={2011},
+  organization={IEEE}
+}
+
+@article{Schoenemann-Cremers-pami10,
+  title={A combinatorial solution for model-based image segmentation and real-time tracking},
+  author={Schoenemann, Thomas and Cremers, Daniel},
+  journal={Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+  volume={32},
+  number={7},
+  pages={1153--1164},
+  year={2010},
+  publisher={IEEE}
+}
+
+@article{Cremers-12,
+  title={A Coding-Cost Framework for Super-Resolution Motion Layer Decomposition},
+  author={Schoenemann, Thomas and Cremers, Daniel},
+  journal={Image Processing, IEEE Transactions on},
+  volume={21},
+  number={3},
+  pages={1097--1110},
+  year={2012},
+  publisher={IEEE}
+}
+
+% I don't know the year for this one, but this choice is based on the context of the article and recentness
+@book{cremers,
+  title={Efficient dense scene flow from sparse or dense stereo data},
+  author={Wedel, Andreas and Rabe, Clemens and Vaudrey, Tobi and Brox, Thomas and Franke, Uwe and Cremers, Daniel},
+  year={2008},
+  publisher={Springer}
+}
+
+
+@inproceedings{lezama11,
+  title={Track to the future: Spatio-temporal video segmentation with long-range motion cues},
+  author={Lezama, Jos{\'e} and Alahari, Karteek and Sivic, Josef and Laptev, Ivan},
+  booktitle={Computer Vision and Pattern Recognition (CVPR), 2011 IEEE Conference on},
+  pages={3369--3376},
+  year={2011},
+  organization={IEEE}
+}
+
+@incollection{carreira_eccv12,
+  title={Semantic segmentation with second-order pooling},
+  author={Carreira, Joao and Caseiro, Rui and Batista, Jorge and Sminchisescu, Cristian},
+  booktitle={Computer Vision--ECCV 2012},
+  pages={430--443},
+  year={2012},
+  publisher={Springer}
+}
+
+@inproceedings{ayvaciS11,
+  title={Detachable object detection with efficient model selection},
+  author={Ayvaci, Alper and Soatto, Stefano},
+  booktitle={Energy Minimization Methods in Computer Vision and Pattern Recognition},
+  pages={191--204},
+  year={2011},
+  organization={Springer}
+}
+
+@article{wangA94,
+  title={Representing moving images with layers},
+  author={Wang, John YA and Adelson, Edward H},
+  journal={Image Processing, IEEE Transactions on},
+  volume={3},
+  number={5},
+  pages={625--638},
+  year={1994},
+  publisher={IEEE}
+}
+
+@article{Reid:2010ca,
+  title={Multiview segmentation and tracking of dynamic occluding layers},
+  author={Reid, Ian and Connor, Keith},
+  journal={Image and Vision Computing},
+  volume={28},
+  number={6},
+  pages={1022--1030},
+  year={2010},
+  publisher={Elsevier}
+}
+
+% OK, these don't even have a year, so I'm more uncertain about these ones
+@inproceedings{davison,
+  title={Live dense reconstruction with a single moving camera},
+  author={Newcombe, Richard A and Davison, Andrew J},
+  booktitle={Computer Vision and Pattern Recognition (CVPR), 2010 IEEE Conference on},
+  pages={1498--1505},
+  year={2010},
+  organization={IEEE}
+}
+
+@inproceedings{pock,
+  title={Dense reconstruction on-the-fly},
+  author={Wendel, Andreas and Maurer, Michael and Graber, Gottfried and Pock, Thomas and Bischof, Horst},
+  booktitle={Computer Vision and Pattern Recognition (CVPR), 2012 IEEE Conference on},
+  pages={1450--1457},
+  year={2012},
+  organization={IEEE}
+}
+
+% kinect and primesense I have no idea what to cite...
+
+@article{middlebury,
+  title={Mondrian Motion},
+  author={Bahls, Timothy and Middlebury, VT and Scharstein, Daniel and Szeliski, Richard and Redmond, WA},
+  year={2004},
+  publisher={Citeseer}
+}
+
+% Better understanding here since we have the year
+@inproceedings{ayvaciRS11IJCV,
+  title={Detachable object detection with efficient model selection},
+  author={Ayvaci, Alper and Soatto, Stefano},
+  booktitle={Energy Minimization Methods in Computer Vision and Pattern Recognition},
+  pages={191--204},
+  year={2011},
+  organization={Springer}
+}
+
+@incollection{RobFergus:2012vh,
+  title={Indoor segmentation and support inference from RGBD images},
+  author={Silberman, Nathan and Hoiem, Derek and Kohli, Pushmeet and Fergus, Rob},
+  booktitle={Computer Vision--ECCV 2012},
+  pages={746--760},
+  year={2012},
+  publisher={Springer}
+}
+
+@article{Kalogerakis:2010:labelMeshes,
+  title={Learning 3D mesh segmentation and labeling},
+  author={Kalogerakis, Evangelos and Hertzmann, Aaron and Singh, Karan},
+  journal={ACM Transactions on Graphics (TOG)},
+  volume={29},
+  number={4},
+  pages={102},
+  year={2010},
+  publisher={ACM}
+}
+
+@inproceedings{fei-fei,
+  title={Object bank: A high-level image representation for scene classification \& semantic feature sparsification},
+  author={Li, Li-Jia and Su, Hao and Fei-Fei, Li and Xing, Eric P},
+  booktitle={Advances in neural information processing systems},
+  pages={1378--1386},
+  year={2010}
+}
+
+% Another possibility for the one above
+incollection{russakovsky2012object,
+  title={Object-centric spatial pooling for image classification},
+  author={Russakovsky, Olga and Lin, Yuanqing and Yu, Kai and Fei-Fei, Li},
+  booktitle={Computer Vision--ECCV 2012},
+  pages={1--15},
+  year={2012},
+  publisher={Springer}
+}
+
+% I really don't know about this one
+@incollection{baoS12,
+  title={3D reconstruction of dynamic scenes with multiple handheld cameras},
+  author={Jiang, Hanqing and Liu, Haomin and Tan, Ping and Zhang, Guofeng and Bao, Hujun},
+  booktitle={Computer Vision--ECCV 2012},
+  pages={601--615},
+  year={2012},
+  publisher={Springer}
+}
+
+@article{jinYS07,
+  title={Mumford-shah on the move: Region-based segmentation on deforming manifolds with application to 3-d reconstruction of shape and appearance from multi-view images},
+  author={Jin, Hailin and Yezzi, Anthony J and Soatto, Stefano},
+  journal={Journal of Mathematical Imaging and Vision},
+  volume={29},
+  number={2-3},
+  pages={219--234},
+  year={2007},
+  publisher={Springer}
+}
+
+@incollection{jinYS04_2,
+  title={Region-based segmentation on evolving surfaces with application to 3D reconstruction of shape and piecewise constant radiance},
+  author={Jin, Hailin and Yezzi, Anthony J and Soatto, Stefano},
+  booktitle={Computer Vision-ECCV 2004},
+  pages={114--125},
+  year={2004},
+  publisher={Springer}
+}
+
+@inproceedings{laiBRF12,
+  title={Detection-based object labeling in 3d scenes},
+  author={Lai, Kevin and Bo, Liefeng and Ren, Xiaofeng and Fox, Dieter},
+  booktitle={Robotics and Automation (ICRA), 2012 IEEE International Conference on},
+  pages={1330--1337},
+  year={2012},
+  organization={IEEE}
+}
+
+@inproceedings{richtsfeldMPZV12,
+  title={Segmentation of unknown objects in indoor environments},
+  author={Richtsfeld, Andreas and Morwald, Thomas and Prankl, Johann and Zillich, Michael and Vincze, Markus},
+  booktitle={Intelligent Robots and Systems (IROS), 2012 IEEE/RSJ International Conference on},
+  pages={4791--4796},
+  year={2012},
+  organization={IEEE}
+}
+
+@incollection{bleyerRR12,
+  title={Extracting 3d scene-consistent object proposals and depth from stereo images},
+  author={Bleyer, Michael and Rhemann, Christoph and Rother, Carsten},
+  booktitle={Computer Vision--ECCV 2012},
+  pages={467--481},
+  year={2012},
+  publisher={Springer}
+}
+
+@article{zhangJB11,
+  title={Robust bilayer segmentation and motion/depth estimation with a handheld camera},
+  author={Zhang, Guofeng and Jia, Jiaya and Hua, Wei and Bao, Hujun},
+  journal={Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+  volume={33},
+  number={3},
+  pages={603--617},
+  year={2011},
+  publisher={IEEE}
+}
+% Another possibility for the one above
+ article{zhangJB11,
+  title={Research on multi-objective automatic tracking algorithm for vision-guide robot},
+  author={Zhang, Yuan and Wang, Peng and Xin, Jinglei and Kang, Shaochen and Jiang, Wenhao and Li, Xin},
+  journal={Journal of Computational Information Systems},
+  volume={7},
+  number={7},
+  pages={2395--2402},
+  year={2011}
+}
+
+@inproceedings{stucklerBB12,
+  title={Semantic mapping using object-class segmentation of rgb-d images},
+  author={Stuckler, Jorg and Biresev, Nenad and Behnke, Sven},
+  booktitle={Intelligent Robots and Systems (IROS), 2012 IEEE/RSJ International Conference on},
+  pages={3005--3010},
+  year={2012},
+  organization={IEEE}
+}
+
+@article{atanasovSLKPD13,
+  title={Nonmyopic View Planning for Active Object Detection},
+  author={Atanasov, Nikolay and Sankaran, Bharath and Ny, Jerome Le and Pappas, George J and Daniilidis, Kostas},
+  journal={arXiv preprint arXiv:1309.5401},
+  year={2013}
+}
+
+
+% For the attempted comparisons
+
+@article{ochs2013segmentation,
+  author       = "P. Ochs and J. Malik and T. Brox",
+  title        = "Segmentation of moving objects by long term video analysis",
+  journal      = "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+  year         = "2013",
+  note         = "Preprint",
+  url          = "http://lmb.informatik.uni-freiburg.de//Publications/2013/OB13a"
+}
+
+@inproceedings{lee2011key,
+  title={Key-segments for video object segmentation},
+  author={Lee, Yong Jae and Kim, Jaechul and Grauman, Kristen},
+  booktitle={Computer Vision (ICCV), 2011 IEEE International Conference on},
+  pages={1995--2002},
+  year={2011},
+  organization={IEEE}
+}
+
+
+% For more related work!!
+@INPROCEEDINGS{ren2012rgbd,
+  author    = {Xiaofeng Ren and Liefeng Bo and Fox, D.},
+  booktitle = {Computer Vision and Pattern Recognition (CVPR), 2012 IEEE Conference on},
+  title     = {RGB-(D) scene labeling: Features and algorithms},
+  year      = {2012},
+  month     = {June},
+  pages     = {2759-2766},
+  keywords  = {image colour analysis;image segmentation;trees (mathematics);Microsoft Kinect;RGB-(D) scene labeling;RGB-D features;RGB-D perception;contextual modeling;indoor scenes;kernel descriptors;local similarities;outdoor scenes;patch descriptors;scene labeling research;segmentation tree;superpixel MRF;Accuracy;Context modeling;Image color analysis;Image segmentation;Kernel;Labeling;Vegetation},
+  doi       = {10.1109/CVPR.2012.6247999},
+  ISSN      = {1063-6919},
+}
+
+@incollection{fitzgibbon2012indoor,
+  year={2012},
+  isbn={978-3-642-33714-7},
+  booktitle={Computer Vision – ECCV 2012},
+  volume={7576},
+  series={Lecture Notes in Computer Science},
+  editor={Fitzgibbon, Andrew and Lazebnik, Svetlana and Perona, Pietro and Sato, Yoichi and Schmid, Cordelia},
+  doi={10.1007/978-3-642-33715-4_54},
+  title={Indoor Segmentation and Support Inference from RGBD Images},
+  url={http://dx.doi.org/10.1007/978-3-642-33715-4_54},
+  publisher={Springer Berlin Heidelberg},
+  author={Silberman, Nathan and Hoiem, Derek and Kohli, Pushmeet and Fergus, Rob},
+  pages={746-760}
+}
+
+@article{couprie2013indoor,
+  author    = {Camille Couprie and
+               Cl{\'e}ment Farabet and
+               Laurent Najman and
+               Yann LeCun},
+  title     = {Indoor Semantic Segmentation using depth information},
+  journal   = {CoRR},
+  volume    = {abs/1301.3572},
+  year      = {2013},
+  ee        = {http://arxiv.org/abs/1301.3572},
+  bibsource = {DBLP, http://dblp.uni-trier.de}
+}
+
+@inproceedings{koppula2011semantic,
+  title={Semantic Labeling of 3D Point Clouds for Indoor Scenes.},
+  author={Koppula, Hema Swetha and Anand, Abhishek and Joachims, Thorsten and Saxena, Ashutosh},
+  booktitle={NIPS},
+  volume={1},
+  pages={4},
+  year={2011}
+}
+%   number={2},
+
+@inproceedings{roussos2012dense,
+  title={Dense multibody motion estimation and reconstruction from a handheld camera},
+  author={Roussos, Anastasios and Russell, Chris and Garg, Ravi and Agapito, Lourdes},
+  booktitle={Mixed and Augmented Reality (ISMAR), 2012 IEEE International Symposium on},
+  pages={31--40},
+  year={2012},
+  organization={IEEE}
+}
+
+@inproceedings{newcombe2011dtam,
+  title={DTAM: Dense tracking and mapping in real-time},
+  author={Newcombe, Richard A and Lovegrove, Steven J and Davison, Andrew J},
+  booktitle={Computer Vision (ICCV), 2011 IEEE International Conference on},
+  pages={2320--2327},
+  year={2011},
+  organization={IEEE}
+}
+
+@INPROCEEDINGS{zhange2011simultaneous,
+  author={Guofeng Zhang and Jiaya Jia and Hujun Bao},
+  booktitle={Computer Vision (ICCV), 2011 IEEE International Conference on},
+  title={Simultaneous multi-body stereo and segmentation},
+  year={2011},
+  month={Nov},
+  pages={826-833},
+  keywords={image segmentation;image sequences;optimisation;stereo image processing;dense depth maps;image segmentation;monocular image sequence;multibody stereo image;multiview stereo method;optimization;Cameras;Estimation;Geometry;Labeling;Motion segmentation;Stereo vision;Three dimensional displays},
+  doi={10.1109/ICCV.2011.6126322},
+  ISSN={1550-5499},
+}
+
+@incollection{brostow2008segmentation,
+  title={Segmentation and recognition using structure from motion point clouds},
+  author={Brostow, Gabriel J and Shotton, Jamie and Fauqueur, Julien and Cipolla, Roberto},
+  booktitle={Computer Vision--ECCV 2008},
+  pages={44--57},
+  year={2008},
+  publisher={Springer}
+}
+
+% STAR3D: Simultaneous Tracking And Reconstruction of 3D Objects Using RGB-D Data (PDF) Yuheng(Carl) Ren* (Oxford), Victor Prisacariu (Oxford), David Murray (Oxford), Ian Reid (University of Adelaide)
+
+@inproceedings{khler2013efficient,
+  title={Efficient 3D Scene Labeling Using Fields of Trees},
+  author={Khler, Olaf and Reid, Ian},
+  booktitle={Computer Vision (ICCV), 2013 IEEE International Conference on},
+  year={2013}
+}
+
+@inproceedings{li2013video,
+  title={Video Segmentation by Tracking Many Figure-Ground Segments},
+  author={Li, Fuxin and Kim, Taeyoung and Humayun, Ahmad and Tsai, David and Rehg, James},
+  booktitle={Computer Vision (ICCV), 2013 IEEE International Conference on},
+  year={2013}
+}
+
+@inproceedings{li2013composite,
+  title={Composite statistical inference for semantic segmentation},
+  author={Li, Fuxin and Carreira, Joao and Lebanon, Guy and Sminchisescu, Cristian},
+  booktitle={Computer Vision and Pattern Recognition (CVPR), 2013 IEEE Conference on},
+  pages={3302--3309},
+  year={2013},
+  organization={IEEE}
+}
+
+
+% Link: http://www.robots.ox.ac.uk/ActiveVision/Publications/kahler_etal_iccv2013/kahler_etal_iccv2013.pdf
+
+@inproceedings{zheng2013beyond,
+  title={Beyond Point Clouds: Scene Understanding by Reasoning Geometry and Physics},
+  author={Zheng, Bo and Zhao, Yibiao and Yu, Joey C and Ikeuchi, Katsushi and Zhu, Song-Chun},
+  booktitle={Computer Vision and Pattern Recognition (CVPR), 2013 IEEE Conference on},
+  pages={3127--3134},
+  year={2013},
+  organization={IEEE}
+}
+
+
+@article{lafarge2010insertion,
+  title={Insertion of 3-D-primitives in mesh-based representations: towards compact models preserving the details},
+  author={Lafarge, Florent and Keriven, Renaud and Br{\'e}dif, Mathieu},
+  journal={Image Processing, IEEE Transactions on},
+  volume={19},
+  number={7},
+  pages={1683--1694},
+  year={2010},
+  publisher={IEEE}
+}
+
+
+% Citations that were lost
+@article{Kumar08,
+  title={Learning layered motion segmentations of video},
+  author={Kumar, M Pawan and Torr, Philip HS and Zisserman, Andrew},
+  journal={International Journal of Computer Vision},
+  volume={76},
+  number={3},
+  pages={301--319},
+  year={2008},
+  publisher={Springer}
+}
+
+% Should we keep this one??
+@inproceedings{Kumar05a,
+  title={A hierarchical field framework for unified context-based classification},
+  author={Kumar, Sanjiv and Hebert, Martial},
+  booktitle={Computer Vision, 2005. ICCV 2005. Tenth IEEE International Conference on},
+  volume={2},
+  pages={1284--1291},
+  year={2005},
+  organization={IEEE}
+}
+
+
+@article{torralba,
+title = "The role of context in object recognition ",
+journal = "Trends in Cognitive Sciences ",
+volume = "11",
+number = "12",
+pages = "520 - 527",
+year = "2007",
+note = "",
+issn = "1364-6613",
+doi = "http://dx.doi.org/10.1016/j.tics.2007.09.009",
+url = "http://www.sciencedirect.com/science/article/pii/S1364661307002550",
+author = "Aude Oliva and Antonio Torralba"
+}
+
+@incollection{fast,
+  title={Machine learning for high-speed corner detection},
+  author={Rosten, Edward and Drummond, Tom},
+  booktitle={Computer Vision--ECCV 2006},
+  pages={430--443},
+  year={2006},
+  publisher={Springer}
+}
+

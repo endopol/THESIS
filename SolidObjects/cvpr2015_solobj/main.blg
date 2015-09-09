@@ -1,0 +1,161 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: bib/solidObjDet.bib
+Repeated entry---line 254 of file bib/solidObjDet.bib
+ : @inproceedings{Campbell13_NIPS
+ :                               ,
+I'm skipping whatever remains of this entry
+Database file #2: bib/solidObjDet2.bib
+Repeated entry---line 1 of file bib/solidObjDet2.bib
+ : @article{Zach2008
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 9 of file bib/solidObjDet2.bib
+ : @article{Klein2007
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 49 of file bib/solidObjDet2.bib
+ : @inproceedings{Graber2011
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 56 of file bib/solidObjDet2.bib
+ : @inproceedings{Newcombe2011a
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 75 of file bib/solidObjDet2.bib
+ : @inproceedings{Collins1996
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 112 of file bib/solidObjDet2.bib
+ : @inproceedings{Zach2007
+ :                        ,
+I'm skipping whatever remains of this entry
+Database file #3: bib/total2.bib
+Repeated entry---line 9335 of file bib/total2.bib
+ : @inproceedings{wangA94
+ :                       ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 9557 of file bib/total2.bib
+ : 
+ : @TECHREPORT{tuM,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Unbalanced braces---line 10272 of file bib/total2.bib
+ : 
+ : }
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 10295 of file bib/total2.bib
+ : 
+ : pages = {316-327 },
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field part---line 10345 of file bib/total2.bib
+ :    year = 
+ :           ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `)'---line 11717 of file bib/total2.bib
+ :         YEAR = "2000"
+ :                      }
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `)'---line 12311 of file bib/total2.bib
+ :         PAGES = "18A9"
+ :                       }
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 14354 of file bib/total2.bib
+ :         
+ :         AUTHOR = {V. Pavlovic and B. J. Frey and T. S. Huang},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 14396 of file bib/total2.bib
+ : PAGES = {1216--}
+ :                 1227,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 15497 of file bib/total2.bib
+ : 
+ : pages = {316-327 },
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field part---line 18596 of file bib/total2.bib
+ :   OPTvolume =  
+ :                ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 19596 of file bib/total2.bib
+ : 
+ : %   author =  "P Saisan and  G Doretto and  Y N Wu and S Soatto",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+"," immediately follows an entry type---line 44274 of file bib/total2.bib
+ : @bookcChentsov72
+ :                 ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 50394 of file bib/total2.bib
+ : notes = "pac-learning analysis of object localization; active localization is efficiently learnable, passive localization is not"
+ :                                                                                                                                  .
+I'm skipping whatever remains of this entry
+Database file #4: bib/taylorARS12.bib
+Repeated entry---line 286 of file bib/taylorARS12.bib
+ : @article{wangA94
+ :                 ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 458 of file bib/taylorARS12.bib
+ :   
+ :   title  = {}
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Database file #5: bib/ayvaciS13.bib
+Database file #6: bib/ayvaciS11mdl.bib
+Repeated entry---line 90 of file bib/ayvaciS11mdl.bib
+ : @article{wangA94
+ :                 ,
+I'm skipping whatever remains of this entry
+Database file #7: bib/trevor.bib
+Warning--empty journal in Lempitsky11
+Warning--empty journal in nieuwenhuis-et-al-ijcv12
+Warning--empty journal in ulen-strandmark-etal-itmi-12
+Warning--empty year in ulen-strandmark-etal-itmi-12
+Warning--there's a number but no volume in GuofengZhang:jmb
+You've used 63 entries,
+            2118 wiz_defined-function locations,
+            1182 strings with 22780 characters,
+and the built_in function-call counts, 26107 in all, are:
+= -- 2585
+> -- 1265
+< -- 30
++ -- 503
+- -- 430
+* -- 1747
+:= -- 4047
+add.period$ -- 210
+call.type$ -- 63
+change.case$ -- 401
+chr.to.int$ -- 0
+cite$ -- 68
+duplicate$ -- 1103
+empty$ -- 2033
+format.name$ -- 430
+if$ -- 5719
+int.to.chr$ -- 0
+int.to.str$ -- 63
+missing$ -- 64
+newline$ -- 318
+num.names$ -- 128
+pop$ -- 510
+preamble$ -- 1
+purify$ -- 339
+quote$ -- 0
+skip$ -- 832
+stack$ -- 0
+substring$ -- 1564
+swap$ -- 386
+text.length$ -- 30
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 250
+warning$ -- 5
+while$ -- 221
+width$ -- 65
+write$ -- 697
+(There were 24 error messages)
